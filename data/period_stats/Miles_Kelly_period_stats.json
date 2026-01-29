@@ -1,0 +1,91 @@
+{
+  "player_name": "Miles Kelly",
+  "player_id": 1642939,
+  "games_collected": 6,
+  "games_data": [
+    {
+      "game_id": "0022500677",
+      "player_id": 1642939,
+      "player_name": "Miles Kelly",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 0,
+      "1H_REB": 2,
+      "1H_AST": 1,
+      "1H_MIN": "4:01"
+    },
+    {
+      "game_id": "0022500593",
+      "player_id": 1642939,
+      "player_name": "Miles Kelly",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 2,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "4:56"
+    },
+    {
+      "game_id": "0022500583",
+      "player_id": 1642939,
+      "player_name": "Miles Kelly",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "4:01",
+      "1H_PTS": 3,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "7:27"
+    },
+    {
+      "game_id": "0022500575",
+      "player_id": 1642939,
+      "player_name": "Miles Kelly",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "4:34"
+    },
+    {
+      "game_id": "0022500561",
+      "player_id": 1642939,
+      "player_name": "Miles Kelly",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:15",
+      "1H_PTS": 2,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "6:24"
+    },
+    {
+      "game_id": "0022500546",
+      "player_id": 1642939,
+      "player_name": "Miles Kelly",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 5,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "6:38"
+    }
+  ],
+  "1Q_PTS_avg": 0.0,
+  "1Q_REB_avg": 0.0,
+  "1Q_AST_avg": 0.0,
+  "1H_PTS_avg": 2.0,
+  "1H_REB_avg": 0.67,
+  "1H_AST_avg": 0.33
+}

@@ -1,0 +1,78 @@
+{
+  "player_name": "Walker Kessler",
+  "player_id": 1631117,
+  "games_collected": 5,
+  "games_data": [
+    {
+      "game_id": "0022500025",
+      "player_id": 1631117,
+      "player_name": "Walker Kessler",
+      "1Q_PTS": 2,
+      "1Q_REB": 4,
+      "1Q_AST": 0,
+      "1Q_MIN": "6:59",
+      "1H_PTS": 4,
+      "1H_REB": 8,
+      "1H_AST": 0,
+      "1H_MIN": "16:21"
+    },
+    {
+      "game_id": "0022500135",
+      "player_id": 1631117,
+      "player_name": "Walker Kessler",
+      "1Q_PTS": 5,
+      "1Q_REB": 1,
+      "1Q_AST": 2,
+      "1Q_MIN": "6:23",
+      "1H_PTS": 10,
+      "1H_REB": 4,
+      "1H_AST": 2,
+      "1H_MIN": "14:18"
+    },
+    {
+      "game_id": "0022500120",
+      "player_id": 1631117,
+      "player_name": "Walker Kessler",
+      "1Q_PTS": 5,
+      "1Q_REB": 1,
+      "1Q_AST": 2,
+      "1Q_MIN": "7:06",
+      "1H_PTS": 14,
+      "1H_REB": 4,
+      "1H_AST": 3,
+      "1H_MIN": "15:55"
+    },
+    {
+      "game_id": "0022500098",
+      "player_id": 1631117,
+      "player_name": "Walker Kessler",
+      "1Q_PTS": 0,
+      "1Q_REB": 1,
+      "1Q_AST": 0,
+      "1Q_MIN": "7:56",
+      "1H_PTS": 0,
+      "1H_REB": 2,
+      "1H_AST": 2,
+      "1H_MIN": "13:54"
+    },
+    {
+      "game_id": "0022500087",
+      "player_id": 1631117,
+      "player_name": "Walker Kessler",
+      "1Q_PTS": 13,
+      "1Q_REB": 2,
+      "1Q_AST": 1,
+      "1Q_MIN": "7:34",
+      "1H_PTS": 15,
+      "1H_REB": 6,
+      "1H_AST": 3,
+      "1H_MIN": "15:55"
+    }
+  ],
+  "1Q_PTS_avg": 5.0,
+  "1Q_REB_avg": 1.8,
+  "1Q_AST_avg": 1.0,
+  "1H_PTS_avg": 8.6,
+  "1H_REB_avg": 4.8,
+  "1H_AST_avg": 2.0
+}

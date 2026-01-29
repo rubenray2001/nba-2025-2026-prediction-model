@@ -1,0 +1,113 @@
+{
+  "player_name": "Carter Bryant",
+  "player_id": 1642868,
+  "games_collected": 8,
+  "games_data": [
+    {
+      "game_id": "0022500679",
+      "player_id": 1642868,
+      "player_name": "Carter Bryant",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "2:39"
+    },
+    {
+      "game_id": "0022500632",
+      "player_id": 1642868,
+      "player_name": "Carter Bryant",
+      "1Q_PTS": 0,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "4:11",
+      "1H_PTS": 4,
+      "1H_REB": 2,
+      "1H_AST": 1,
+      "1H_MIN": "7:27"
+    },
+    {
+      "game_id": "0022500615",
+      "player_id": 1642868,
+      "player_name": "Carter Bryant",
+      "1Q_PTS": 2,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:08",
+      "1H_PTS": 2,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "5:07"
+    },
+    {
+      "game_id": "0022500611",
+      "player_id": 1642868,
+      "player_name": "Carter Bryant",
+      "1Q_PTS": 7,
+      "1Q_REB": 1,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:51",
+      "1H_PTS": 7,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "3:51"
+    },
+    {
+      "game_id": "0022500598",
+      "player_id": 1642868,
+      "player_name": "Carter Bryant",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:22",
+      "1H_PTS": 0,
+      "1H_REB": 2,
+      "1H_AST": 1,
+      "1H_MIN": "6:23"
+    },
+    {
+      "game_id": "0022500582",
+      "player_id": 1642868,
+      "player_name": "Carter Bryant",
+      "1Q_PTS": 2,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "5:23",
+      "1H_PTS": 2,
+      "1H_REB": 2,
+      "1H_AST": 0,
+      "1H_MIN": "6:51"
+    },
+    {
+      "game_id": "0022500523",
+      "player_id": 1642868,
+      "player_name": "Carter Bryant",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 2,
+      "1H_REB": 2,
+      "1H_AST": 0,
+      "1H_MIN": "3:39"
+    },
+    {
+      "game_id": "0022500512",
+      "player_id": 1642868,
+      "player_name": "Carter Bryant",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:35",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "5:39"
+    }
+  ],
+  "1Q_PTS_avg": 1.57,
+  "1Q_REB_avg": 0.29,
+  "1Q_AST_avg": 0.14,
+  "1H_PTS_avg": 2.12,
+  "1H_REB_avg": 1.12,
+  "1H_AST_avg": 0.25
+}

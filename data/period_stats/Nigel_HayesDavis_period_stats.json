@@ -1,0 +1,52 @@
+{
+  "player_name": "Nigel Hayes-Davis",
+  "player_id": 1628502,
+  "games_collected": 3,
+  "games_data": [
+    {
+      "game_id": "0022500669",
+      "player_id": 1628502,
+      "player_name": "Nigel Hayes-Davis",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 1,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "7:16"
+    },
+    {
+      "game_id": "0022500346",
+      "player_id": 1628502,
+      "player_name": "Nigel Hayes-Davis",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:32",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "2:44"
+    },
+    {
+      "game_id": "0022500317",
+      "player_id": 1628502,
+      "player_name": "Nigel Hayes-Davis",
+      "1Q_PTS": 2,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:54",
+      "1H_PTS": 2,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "6:19"
+    }
+  ],
+  "1Q_PTS_avg": 0.67,
+  "1Q_REB_avg": 0.0,
+  "1Q_AST_avg": 0.0,
+  "1H_PTS_avg": 1.0,
+  "1H_REB_avg": 0.33,
+  "1H_AST_avg": 0.0
+}

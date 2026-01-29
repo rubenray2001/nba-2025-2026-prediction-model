@@ -1,0 +1,48 @@
+{
+  "player_name": "Devin Carter",
+  "player_id": 1642269,
+  "games_collected": 3,
+  "games_data": [
+    {
+      "game_id": "0022500223",
+      "player_id": 1642269,
+      "player_name": "Devin Carter",
+      "1Q_PTS": 2,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "5:01",
+      "1H_PTS": 5,
+      "1H_REB": 5,
+      "1H_AST": 1,
+      "1H_MIN": "11:10"
+    },
+    {
+      "game_id": "0022500181",
+      "player_id": 1642269,
+      "player_name": "Devin Carter",
+      "1Q_PTS": 0,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "4:49",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "4:49"
+    },
+    {
+      "game_id": "0022500162",
+      "player_id": 1642269,
+      "player_name": "Devin Carter",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "3:24"
+    }
+  ],
+  "1Q_PTS_avg": 1.0,
+  "1Q_REB_avg": 1.0,
+  "1Q_AST_avg": 1.0,
+  "1H_PTS_avg": 1.67,
+  "1H_REB_avg": 2.0,
+  "1H_AST_avg": 0.67
+}

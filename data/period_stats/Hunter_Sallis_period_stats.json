@@ -1,0 +1,19 @@
+{
+  "player_name": "Hunter Sallis",
+  "player_id": 1642282,
+  "games_collected": 1,
+  "games_data": [
+    {
+      "game_id": "0022500114",
+      "player_id": 1642282,
+      "player_name": "Hunter Sallis",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "1:24"
+    }
+  ],
+  "1H_PTS_avg": 0.0,
+  "1H_REB_avg": 0.0,
+  "1H_AST_avg": 0.0
+}

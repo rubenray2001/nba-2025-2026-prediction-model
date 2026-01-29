@@ -1,0 +1,26 @@
+{
+  "player_name": "Orlando Robinson",
+  "player_id": 1631115,
+  "games_collected": 1,
+  "games_data": [
+    {
+      "game_id": "0022500277",
+      "player_id": 1631115,
+      "player_name": "Orlando Robinson",
+      "1Q_PTS": 5,
+      "1Q_REB": 2,
+      "1Q_AST": 0,
+      "1Q_MIN": "5:51",
+      "1H_PTS": 7,
+      "1H_REB": 3,
+      "1H_AST": 0,
+      "1H_MIN": "9:59"
+    }
+  ],
+  "1Q_PTS_avg": 5.0,
+  "1Q_REB_avg": 2.0,
+  "1Q_AST_avg": 0.0,
+  "1H_PTS_avg": 7.0,
+  "1H_REB_avg": 3.0,
+  "1H_AST_avg": 0.0
+}

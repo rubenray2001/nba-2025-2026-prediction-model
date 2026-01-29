@@ -1,0 +1,66 @@
+{
+  "player_name": "Justin Edwards",
+  "player_id": 1642348,
+  "games_collected": 5,
+  "games_data": [
+    {
+      "game_id": "0022500666",
+      "player_id": 1642348,
+      "player_name": "Justin Edwards",
+      "1Q_PTS": 5,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "7:17",
+      "1H_PTS": 5,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "11:19"
+    },
+    {
+      "game_id": "0022500613",
+      "player_id": 1642348,
+      "player_name": "Justin Edwards",
+      "1Q_PTS": 3,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:28",
+      "1H_PTS": 5,
+      "1H_REB": 1,
+      "1H_AST": 2,
+      "1H_MIN": "9:31"
+    },
+    {
+      "game_id": "0022500458",
+      "player_id": 1642348,
+      "player_name": "Justin Edwards",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "3:34"
+    },
+    {
+      "game_id": "0022500442",
+      "player_id": 1642348,
+      "player_name": "Justin Edwards",
+      "1H_PTS": 9,
+      "1H_REB": 3,
+      "1H_AST": 0,
+      "1H_MIN": "10:17"
+    },
+    {
+      "game_id": "0022500427",
+      "player_id": 1642348,
+      "player_name": "Justin Edwards",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 1,
+      "1H_MIN": "4:16"
+    }
+  ],
+  "1Q_PTS_avg": 4.0,
+  "1Q_REB_avg": 0.0,
+  "1Q_AST_avg": 0.0,
+  "1H_PTS_avg": 3.8,
+  "1H_REB_avg": 1.0,
+  "1H_AST_avg": 0.6
+}

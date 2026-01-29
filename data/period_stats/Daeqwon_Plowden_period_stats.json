@@ -1,0 +1,19 @@
+{
+  "player_name": "Daeqwon Plowden",
+  "player_id": 1631342,
+  "games_collected": 1,
+  "games_data": [
+    {
+      "game_id": "0022500223",
+      "player_id": 1631342,
+      "player_name": "Daeqwon Plowden",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "3:34"
+    }
+  ],
+  "1H_PTS_avg": 0.0,
+  "1H_REB_avg": 1.0,
+  "1H_AST_avg": 0.0
+}

@@ -1,0 +1,39 @@
+{
+  "player_name": "Brandon Clarke",
+  "player_id": 1629634,
+  "games_collected": 2,
+  "games_data": [
+    {
+      "game_id": "0022500391",
+      "player_id": 1629634,
+      "player_name": "Brandon Clarke",
+      "1Q_PTS": 2,
+      "1Q_REB": 3,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:52",
+      "1H_PTS": 2,
+      "1H_REB": 3,
+      "1H_AST": 0,
+      "1H_MIN": "3:52"
+    },
+    {
+      "game_id": "0022500368",
+      "player_id": 1629634,
+      "player_name": "Brandon Clarke",
+      "1Q_PTS": 0,
+      "1Q_REB": 1,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:42",
+      "1H_PTS": 4,
+      "1H_REB": 2,
+      "1H_AST": 1,
+      "1H_MIN": "8:25"
+    }
+  ],
+  "1Q_PTS_avg": 1.0,
+  "1Q_REB_avg": 2.0,
+  "1Q_AST_avg": 0.0,
+  "1H_PTS_avg": 3.0,
+  "1H_REB_avg": 2.5,
+  "1H_AST_avg": 0.5
+}

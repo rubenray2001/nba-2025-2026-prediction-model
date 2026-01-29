@@ -1,0 +1,52 @@
+{
+  "player_name": "Obi Toppin",
+  "player_id": 1630167,
+  "games_collected": 3,
+  "games_data": [
+    {
+      "game_id": "0022500110",
+      "player_id": 1630167,
+      "player_name": "Obi Toppin",
+      "1Q_PTS": 4,
+      "1Q_REB": 5,
+      "1Q_AST": 0,
+      "1Q_MIN": "7:28",
+      "1H_PTS": 9,
+      "1H_REB": 6,
+      "1H_AST": 0,
+      "1H_MIN": "13:18"
+    },
+    {
+      "game_id": "0022500103",
+      "player_id": 1630167,
+      "player_name": "Obi Toppin",
+      "1Q_PTS": 5,
+      "1Q_REB": 4,
+      "1Q_AST": 0,
+      "1Q_MIN": "7:58",
+      "1H_PTS": 5,
+      "1H_REB": 5,
+      "1H_AST": 1,
+      "1H_MIN": "13:55"
+    },
+    {
+      "game_id": "0022500005",
+      "player_id": 1630167,
+      "player_name": "Obi Toppin",
+      "1Q_PTS": 4,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "7:55",
+      "1H_PTS": 10,
+      "1H_REB": 3,
+      "1H_AST": 1,
+      "1H_MIN": "15:16"
+    }
+  ],
+  "1Q_PTS_avg": 4.33,
+  "1Q_REB_avg": 3.33,
+  "1Q_AST_avg": 0.33,
+  "1H_PTS_avg": 8.0,
+  "1H_REB_avg": 4.67,
+  "1H_AST_avg": 0.67
+}

@@ -1,0 +1,79 @@
+{
+  "player_name": "Drew Timme",
+  "player_id": 1631166,
+  "games_collected": 6,
+  "games_data": [
+    {
+      "game_id": "0022500661",
+      "player_id": 1631166,
+      "player_name": "Drew Timme",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "0:23"
+    },
+    {
+      "game_id": "0022500648",
+      "player_id": 1631166,
+      "player_name": "Drew Timme",
+      "1H_PTS": 0,
+      "1H_REB": 2,
+      "1H_AST": 1,
+      "1H_MIN": "7:11"
+    },
+    {
+      "game_id": "0022500633",
+      "player_id": 1631166,
+      "player_name": "Drew Timme",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "2:10"
+    },
+    {
+      "game_id": "0022500617",
+      "player_id": 1631166,
+      "player_name": "Drew Timme",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 7,
+      "1H_REB": 2,
+      "1H_AST": 0,
+      "1H_MIN": "5:18"
+    },
+    {
+      "game_id": "0022500607",
+      "player_id": 1631166,
+      "player_name": "Drew Timme",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 3,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "7:46"
+    },
+    {
+      "game_id": "0022500601",
+      "player_id": 1631166,
+      "player_name": "Drew Timme",
+      "1Q_PTS": 7,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "5:29",
+      "1H_PTS": 14,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "11:44"
+    }
+  ],
+  "1Q_PTS_avg": 2.33,
+  "1Q_REB_avg": 0.0,
+  "1Q_AST_avg": 0.0,
+  "1H_PTS_avg": 4.0,
+  "1H_REB_avg": 1.17,
+  "1H_AST_avg": 0.33
+}

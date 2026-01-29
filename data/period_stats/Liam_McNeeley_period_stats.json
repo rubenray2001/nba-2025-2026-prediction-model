@@ -1,0 +1,83 @@
+{
+  "player_name": "Liam McNeeley",
+  "player_id": 1642862,
+  "games_collected": 6,
+  "games_data": [
+    {
+      "game_id": "0022500528",
+      "player_id": 1642862,
+      "player_name": "Liam McNeeley",
+      "1H_PTS": 2,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "6:48"
+    },
+    {
+      "game_id": "0022500516",
+      "player_id": 1642862,
+      "player_name": "Liam McNeeley",
+      "1Q_PTS": 2,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:44",
+      "1H_PTS": 6,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "8:46"
+    },
+    {
+      "game_id": "0022500489",
+      "player_id": 1642862,
+      "player_name": "Liam McNeeley",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "1:42",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "7:09"
+    },
+    {
+      "game_id": "0022500481",
+      "player_id": 1642862,
+      "player_name": "Liam McNeeley",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 0,
+      "1H_REB": 2,
+      "1H_AST": 0,
+      "1H_MIN": "4:09"
+    },
+    {
+      "game_id": "0022500462",
+      "player_id": 1642862,
+      "player_name": "Liam McNeeley",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:33",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "5:38"
+    },
+    {
+      "game_id": "0022500447",
+      "player_id": 1642862,
+      "player_name": "Liam McNeeley",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "4:07"
+    }
+  ],
+  "1Q_PTS_avg": 0.5,
+  "1Q_REB_avg": 0.0,
+  "1Q_AST_avg": 0.0,
+  "1H_PTS_avg": 1.33,
+  "1H_REB_avg": 1.0,
+  "1H_AST_avg": 0.0
+}

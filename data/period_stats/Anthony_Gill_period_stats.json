@@ -1,0 +1,65 @@
+{
+  "player_name": "Anthony Gill",
+  "player_id": 1630264,
+  "games_collected": 4,
+  "games_data": [
+    {
+      "game_id": "0022500664",
+      "player_id": 1630264,
+      "player_name": "Anthony Gill",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 1,
+      "1Q_MIN": "3:26",
+      "1H_PTS": 2,
+      "1H_REB": 2,
+      "1H_AST": 1,
+      "1H_MIN": "6:11"
+    },
+    {
+      "game_id": "0022500645",
+      "player_id": 1630264,
+      "player_name": "Anthony Gill",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 2,
+      "1Q_MIN": "3:17",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 2,
+      "1H_MIN": "3:17"
+    },
+    {
+      "game_id": "0022500629",
+      "player_id": 1630264,
+      "player_name": "Anthony Gill",
+      "1Q_PTS": 0,
+      "1Q_REB": 1,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:46",
+      "1H_PTS": 0,
+      "1H_REB": 3,
+      "1H_AST": 0,
+      "1H_MIN": "6:42"
+    },
+    {
+      "game_id": "0022500518",
+      "player_id": 1630264,
+      "player_name": "Anthony Gill",
+      "1Q_PTS": 3,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:55",
+      "1H_PTS": 3,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "10:15"
+    }
+  ],
+  "1Q_PTS_avg": 0.75,
+  "1Q_REB_avg": 0.25,
+  "1Q_AST_avg": 0.75,
+  "1H_PTS_avg": 1.25,
+  "1H_REB_avg": 1.5,
+  "1H_AST_avg": 0.75
+}

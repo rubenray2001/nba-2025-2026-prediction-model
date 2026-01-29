@@ -1,0 +1,78 @@
+{
+  "player_name": "Ethan Thompson",
+  "player_id": 1630679,
+  "games_collected": 5,
+  "games_data": [
+    {
+      "game_id": "0022500595",
+      "player_id": 1630679,
+      "player_name": "Ethan Thompson",
+      "1Q_PTS": 1,
+      "1Q_REB": 3,
+      "1Q_AST": 1,
+      "1Q_MIN": "7:02",
+      "1H_PTS": 1,
+      "1H_REB": 3,
+      "1H_AST": 1,
+      "1H_MIN": "12:19"
+    },
+    {
+      "game_id": "0022500528",
+      "player_id": 1630679,
+      "player_name": "Ethan Thompson",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 3,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "5:18"
+    },
+    {
+      "game_id": "0022500510",
+      "player_id": 1630679,
+      "player_name": "Ethan Thompson",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "1:58",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "4:40"
+    },
+    {
+      "game_id": "0022500436",
+      "player_id": 1630679,
+      "player_name": "Ethan Thompson",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "1:28",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "5:15"
+    },
+    {
+      "game_id": "0022500426",
+      "player_id": 1630679,
+      "player_name": "Ethan Thompson",
+      "1Q_PTS": 5,
+      "1Q_REB": 3,
+      "1Q_AST": 0,
+      "1Q_MIN": "6:58",
+      "1H_PTS": 8,
+      "1H_REB": 3,
+      "1H_AST": 0,
+      "1H_MIN": "10:51"
+    }
+  ],
+  "1Q_PTS_avg": 1.2,
+  "1Q_REB_avg": 1.2,
+  "1Q_AST_avg": 0.2,
+  "1H_PTS_avg": 2.4,
+  "1H_REB_avg": 1.4,
+  "1H_AST_avg": 0.2
+}

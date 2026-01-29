@@ -1,0 +1,87 @@
+{
+  "player_name": "Duop Reath",
+  "player_id": 1641871,
+  "games_collected": 6,
+  "games_data": [
+    {
+      "game_id": "0022500606",
+      "player_id": 1641871,
+      "player_name": "Duop Reath",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 1,
+      "1Q_MIN": "3:43",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 1,
+      "1H_MIN": "7:30"
+    },
+    {
+      "game_id": "0022500601",
+      "player_id": 1641871,
+      "player_name": "Duop Reath",
+      "1Q_PTS": 5,
+      "1Q_REB": 2,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:39",
+      "1H_PTS": 5,
+      "1H_REB": 4,
+      "1H_AST": 0,
+      "1H_MIN": "6:58"
+    },
+    {
+      "game_id": "0022500585",
+      "player_id": 1641871,
+      "player_name": "Duop Reath",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:42",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "5:09"
+    },
+    {
+      "game_id": "0022500570",
+      "player_id": 1641871,
+      "player_name": "Duop Reath",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "4:25"
+    },
+    {
+      "game_id": "0022500420",
+      "player_id": 1641871,
+      "player_name": "Duop Reath",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 1,
+      "1Q_MIN": "2:31",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 1,
+      "1H_MIN": "2:31"
+    },
+    {
+      "game_id": "0022500408",
+      "player_id": 1641871,
+      "player_name": "Duop Reath",
+      "1Q_PTS": 0,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "2:32",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "5:39"
+    }
+  ],
+  "1Q_PTS_avg": 1.0,
+  "1Q_REB_avg": 0.6,
+  "1Q_AST_avg": 0.6,
+  "1H_PTS_avg": 0.83,
+  "1H_REB_avg": 1.17,
+  "1H_AST_avg": 0.5
+}

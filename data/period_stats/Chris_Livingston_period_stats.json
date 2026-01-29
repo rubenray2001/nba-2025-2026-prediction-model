@@ -1,0 +1,19 @@
+{
+  "player_name": "Chris Livingston",
+  "player_id": 1641753,
+  "games_collected": 1,
+  "games_data": [
+    {
+      "game_id": "0022500284",
+      "player_id": 1641753,
+      "player_name": "Chris Livingston",
+      "1H_PTS": 3,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "6:38"
+    }
+  ],
+  "1H_PTS_avg": 3.0,
+  "1H_REB_avg": 1.0,
+  "1H_AST_avg": 0.0
+}

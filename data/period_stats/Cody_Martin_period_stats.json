@@ -1,0 +1,61 @@
+{
+  "player_name": "Cody Martin",
+  "player_id": 1628998,
+  "games_collected": 4,
+  "games_data": [
+    {
+      "game_id": "0022500211",
+      "player_id": 1628998,
+      "player_name": "Cody Martin",
+      "1H_PTS": 1,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "2:53"
+    },
+    {
+      "game_id": "0022500196",
+      "player_id": 1628998,
+      "player_name": "Cody Martin",
+      "1Q_PTS": 0,
+      "1Q_REB": 2,
+      "1Q_AST": 1,
+      "1Q_MIN": "7:37",
+      "1H_PTS": 2,
+      "1H_REB": 3,
+      "1H_AST": 2,
+      "1H_MIN": "14:56"
+    },
+    {
+      "game_id": "0022500189",
+      "player_id": 1628998,
+      "player_name": "Cody Martin",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "4:34"
+    },
+    {
+      "game_id": "0022500173",
+      "player_id": 1628998,
+      "player_name": "Cody Martin",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 2,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "3:15"
+    }
+  ],
+  "1Q_PTS_avg": 0.0,
+  "1Q_REB_avg": 0.67,
+  "1Q_AST_avg": 0.33,
+  "1H_PTS_avg": 1.25,
+  "1H_REB_avg": 1.0,
+  "1H_AST_avg": 0.5
+}

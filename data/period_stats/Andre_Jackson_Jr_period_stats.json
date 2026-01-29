@@ -1,0 +1,19 @@
+{
+  "player_name": "Andre Jackson Jr.",
+  "player_id": 1641748,
+  "games_collected": 1,
+  "games_data": [
+    {
+      "game_id": "0022500353",
+      "player_id": 1641748,
+      "player_name": "Andre Jackson Jr.",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "3:16"
+    }
+  ],
+  "1H_PTS_avg": 0.0,
+  "1H_REB_avg": 0.0,
+  "1H_AST_avg": 0.0
+}

@@ -1,0 +1,19 @@
+{
+  "player_name": "Kobe Brown",
+  "player_id": 1641738,
+  "games_collected": 1,
+  "games_data": [
+    {
+      "game_id": "0022500590",
+      "player_id": 1641738,
+      "player_name": "Kobe Brown",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "5:09"
+    }
+  ],
+  "1H_PTS_avg": 0.0,
+  "1H_REB_avg": 1.0,
+  "1H_AST_avg": 0.0
+}

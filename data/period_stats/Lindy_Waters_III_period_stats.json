@@ -1,0 +1,92 @@
+{
+  "player_name": "Lindy Waters III",
+  "player_id": 1630322,
+  "games_collected": 7,
+  "games_data": [
+    {
+      "game_id": "0022500611",
+      "player_id": 1630322,
+      "player_name": "Lindy Waters III",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "3:40"
+    },
+    {
+      "game_id": "0022500582",
+      "player_id": 1630322,
+      "player_name": "Lindy Waters III",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "4:35"
+    },
+    {
+      "game_id": "0022500568",
+      "player_id": 1630322,
+      "player_name": "Lindy Waters III",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 1,
+      "1Q_MIN": "5:36",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 1,
+      "1H_MIN": "5:36"
+    },
+    {
+      "game_id": "0022500552",
+      "player_id": 1630322,
+      "player_name": "Lindy Waters III",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 2,
+      "1H_MIN": "6:04"
+    },
+    {
+      "game_id": "0022500545",
+      "player_id": 1630322,
+      "player_name": "Lindy Waters III",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "4:12"
+    },
+    {
+      "game_id": "0022500490",
+      "player_id": 1630322,
+      "player_name": "Lindy Waters III",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "5:54"
+    },
+    {
+      "game_id": "0022500476",
+      "player_id": 1630322,
+      "player_name": "Lindy Waters III",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 6,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "7:56"
+    }
+  ],
+  "1Q_PTS_avg": 0.0,
+  "1Q_REB_avg": 0.0,
+  "1Q_AST_avg": 0.25,
+  "1H_PTS_avg": 0.86,
+  "1H_REB_avg": 0.29,
+  "1H_AST_avg": 0.57
+}

@@ -1,0 +1,39 @@
+{
+  "player_name": "Jahmai Mashack",
+  "player_id": 1642942,
+  "games_collected": 2,
+  "games_data": [
+    {
+      "game_id": "0022500406",
+      "player_id": 1642942,
+      "player_name": "Jahmai Mashack",
+      "1Q_PTS": 0,
+      "1Q_REB": 2,
+      "1Q_AST": 1,
+      "1Q_MIN": "2:57",
+      "1H_PTS": 0,
+      "1H_REB": 2,
+      "1H_AST": 2,
+      "1H_MIN": "5:00"
+    },
+    {
+      "game_id": "0022500368",
+      "player_id": 1642942,
+      "player_name": "Jahmai Mashack",
+      "1Q_PTS": 0,
+      "1Q_REB": 1,
+      "1Q_AST": 0,
+      "1Q_MIN": "1:32",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "3:32"
+    }
+  ],
+  "1Q_PTS_avg": 0.0,
+  "1Q_REB_avg": 1.5,
+  "1Q_AST_avg": 0.5,
+  "1H_PTS_avg": 0.0,
+  "1H_REB_avg": 1.5,
+  "1H_AST_avg": 1.0
+}

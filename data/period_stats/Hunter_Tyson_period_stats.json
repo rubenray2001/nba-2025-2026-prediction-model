@@ -1,0 +1,91 @@
+{
+  "player_name": "Hunter Tyson",
+  "player_id": 1641816,
+  "games_collected": 6,
+  "games_data": [
+    {
+      "game_id": "0022500640",
+      "player_id": 1641816,
+      "player_name": "Hunter Tyson",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 1,
+      "1Q_MIN": "3:24",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 2,
+      "1H_MIN": "5:59"
+    },
+    {
+      "game_id": "0022500605",
+      "player_id": 1641816,
+      "player_name": "Hunter Tyson",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "5:25"
+    },
+    {
+      "game_id": "0022500567",
+      "player_id": 1641816,
+      "player_name": "Hunter Tyson",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "2:44"
+    },
+    {
+      "game_id": "0022500554",
+      "player_id": 1641816,
+      "player_name": "Hunter Tyson",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 1,
+      "1Q_MIN": "4:18",
+      "1H_PTS": 2,
+      "1H_REB": 3,
+      "1H_AST": 2,
+      "1H_MIN": "9:45"
+    },
+    {
+      "game_id": "0022500537",
+      "player_id": 1641816,
+      "player_name": "Hunter Tyson",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 1,
+      "1Q_MIN": "5:08",
+      "1H_PTS": 0,
+      "1H_REB": 2,
+      "1H_AST": 2,
+      "1H_MIN": "7:53"
+    },
+    {
+      "game_id": "0022500507",
+      "player_id": 1641816,
+      "player_name": "Hunter Tyson",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "1:51",
+      "1H_PTS": 5,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "9:20"
+    }
+  ],
+  "1Q_PTS_avg": 0.0,
+  "1Q_REB_avg": 0.0,
+  "1Q_AST_avg": 0.5,
+  "1H_PTS_avg": 1.17,
+  "1H_REB_avg": 1.33,
+  "1H_AST_avg": 1.17
+}

@@ -1,0 +1,78 @@
+{
+  "player_name": "Bobi Klintman",
+  "player_id": 1641752,
+  "games_collected": 5,
+  "games_data": [
+    {
+      "game_id": "0022500041",
+      "player_id": 1641752,
+      "player_name": "Bobi Klintman",
+      "1Q_PTS": 2,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:36",
+      "1H_PTS": 2,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "4:43"
+    },
+    {
+      "game_id": "0022500214",
+      "player_id": 1641752,
+      "player_name": "Bobi Klintman",
+      "1Q_PTS": 3,
+      "1Q_REB": 2,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:49",
+      "1H_PTS": 3,
+      "1H_REB": 3,
+      "1H_AST": 0,
+      "1H_MIN": "7:04"
+    },
+    {
+      "game_id": "0022500199",
+      "player_id": 1641752,
+      "player_name": "Bobi Klintman",
+      "1Q_PTS": 3,
+      "1Q_REB": 1,
+      "1Q_AST": 2,
+      "1Q_MIN": "3:14",
+      "1H_PTS": 3,
+      "1H_REB": 1,
+      "1H_AST": 2,
+      "1H_MIN": "3:14"
+    },
+    {
+      "game_id": "0022500195",
+      "player_id": 1641752,
+      "player_name": "Bobi Klintman",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "5:36"
+    },
+    {
+      "game_id": "0022500031",
+      "player_id": 1641752,
+      "player_name": "Bobi Klintman",
+      "1Q_PTS": 2,
+      "1Q_REB": 2,
+      "1Q_AST": 0,
+      "1Q_MIN": "5:51",
+      "1H_PTS": 2,
+      "1H_REB": 2,
+      "1H_AST": 0,
+      "1H_MIN": "5:51"
+    }
+  ],
+  "1Q_PTS_avg": 2.0,
+  "1Q_REB_avg": 1.0,
+  "1Q_AST_avg": 0.4,
+  "1H_PTS_avg": 2.0,
+  "1H_REB_avg": 1.2,
+  "1H_AST_avg": 0.4
+}

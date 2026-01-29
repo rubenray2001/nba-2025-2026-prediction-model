@@ -1,0 +1,26 @@
+{
+  "player_name": "Jahmir Young",
+  "player_id": 1642443,
+  "games_collected": 1,
+  "games_data": [
+    {
+      "game_id": "0022500354",
+      "player_id": 1642443,
+      "player_name": "Jahmir Young",
+      "1Q_PTS": 0,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "3:29",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "6:21"
+    }
+  ],
+  "1Q_PTS_avg": 0.0,
+  "1Q_REB_avg": 1.0,
+  "1Q_AST_avg": 1.0,
+  "1H_PTS_avg": 0.0,
+  "1H_REB_avg": 1.0,
+  "1H_AST_avg": 1.0
+}

@@ -1,0 +1,39 @@
+{
+  "player_name": "N'Faly Dante",
+  "player_id": 1642368,
+  "games_collected": 2,
+  "games_data": [
+    {
+      "game_id": "0022500101",
+      "player_id": 1642368,
+      "player_name": "N'Faly Dante",
+      "1Q_PTS": 0,
+      "1Q_REB": 3,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:54",
+      "1H_PTS": 0,
+      "1H_REB": 3,
+      "1H_AST": 0,
+      "1H_MIN": "2:54"
+    },
+    {
+      "game_id": "0022500090",
+      "player_id": 1642368,
+      "player_name": "N'Faly Dante",
+      "1Q_PTS": 0,
+      "1Q_REB": 3,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:42",
+      "1H_PTS": 0,
+      "1H_REB": 3,
+      "1H_AST": 0,
+      "1H_MIN": "3:42"
+    }
+  ],
+  "1Q_PTS_avg": 0.0,
+  "1Q_REB_avg": 3.0,
+  "1Q_AST_avg": 0.0,
+  "1H_PTS_avg": 0.0,
+  "1H_REB_avg": 3.0,
+  "1H_AST_avg": 0.0
+}

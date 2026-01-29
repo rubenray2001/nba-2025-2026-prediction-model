@@ -1,0 +1,105 @@
+{
+  "player_name": "Mason Plumlee",
+  "player_id": 203486,
+  "games_collected": 8,
+  "games_data": [
+    {
+      "game_id": "0022500402",
+      "player_id": 203486,
+      "player_name": "Mason Plumlee",
+      "1Q_PTS": 3,
+      "1Q_REB": 1,
+      "1Q_AST": 0,
+      "1Q_MIN": "4:07",
+      "1H_PTS": 5,
+      "1H_REB": 3,
+      "1H_AST": 0,
+      "1H_MIN": "8:34"
+    },
+    {
+      "game_id": "0022500390",
+      "player_id": 203486,
+      "player_name": "Mason Plumlee",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "4:10"
+    },
+    {
+      "game_id": "0022501218",
+      "player_id": 203486,
+      "player_name": "Mason Plumlee",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "0:00",
+      "1H_PTS": 4,
+      "1H_REB": 4,
+      "1H_AST": 3,
+      "1H_MIN": "7:11"
+    },
+    {
+      "game_id": "0022500359",
+      "player_id": 203486,
+      "player_name": "Mason Plumlee",
+      "1Q_PTS": 2,
+      "1Q_REB": 1,
+      "1Q_AST": 2,
+      "1Q_MIN": "7:48",
+      "1H_PTS": 2,
+      "1H_REB": 2,
+      "1H_AST": 2,
+      "1H_MIN": "12:38"
+    },
+    {
+      "game_id": "0022500344",
+      "player_id": 203486,
+      "player_name": "Mason Plumlee",
+      "1H_PTS": 0,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "2:20"
+    },
+    {
+      "game_id": "0022500276",
+      "player_id": 203486,
+      "player_name": "Mason Plumlee",
+      "1Q_PTS": 2,
+      "1Q_REB": 2,
+      "1Q_AST": 2,
+      "1Q_MIN": "5:24",
+      "1H_PTS": 5,
+      "1H_REB": 5,
+      "1H_AST": 5,
+      "1H_MIN": "12:09"
+    },
+    {
+      "game_id": "0022500268",
+      "player_id": 203486,
+      "player_name": "Mason Plumlee",
+      "1H_PTS": 0,
+      "1H_REB": 2,
+      "1H_AST": 0,
+      "1H_MIN": "3:34"
+    },
+    {
+      "game_id": "0022500043",
+      "player_id": 203486,
+      "player_name": "Mason Plumlee",
+      "1Q_PTS": 2,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:51",
+      "1H_PTS": 4,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "7:15"
+    }
+  ],
+  "1Q_PTS_avg": 1.8,
+  "1Q_REB_avg": 0.8,
+  "1Q_AST_avg": 0.8,
+  "1H_PTS_avg": 2.5,
+  "1H_REB_avg": 2.25,
+  "1H_AST_avg": 1.38
+}

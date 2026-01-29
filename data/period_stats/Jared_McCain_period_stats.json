@@ -1,0 +1,118 @@
+{
+  "player_name": "Jared McCain",
+  "player_id": 1642272,
+  "games_collected": 9,
+  "games_data": [
+    {
+      "game_id": "0022500666",
+      "player_id": 1642272,
+      "player_name": "Jared McCain",
+      "1Q_PTS": 5,
+      "1Q_REB": 1,
+      "1Q_AST": 2,
+      "1Q_MIN": "8:40",
+      "1H_PTS": 5,
+      "1H_REB": 1,
+      "1H_AST": 2,
+      "1H_MIN": "12:07"
+    },
+    {
+      "game_id": "0022500657",
+      "player_id": 1642272,
+      "player_name": "Jared McCain",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:04",
+      "1H_PTS": 2,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "5:37"
+    },
+    {
+      "game_id": "0022500572",
+      "player_id": 1642272,
+      "player_name": "Jared McCain",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "3:10"
+    },
+    {
+      "game_id": "0022500560",
+      "player_id": 1642272,
+      "player_name": "Jared McCain",
+      "1H_PTS": 2,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "4:25"
+    },
+    {
+      "game_id": "0022500550",
+      "player_id": 1642272,
+      "player_name": "Jared McCain",
+      "1Q_PTS": 3,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "3:53",
+      "1H_PTS": 5,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "7:45"
+    },
+    {
+      "game_id": "0022500533",
+      "player_id": 1642272,
+      "player_name": "Jared McCain",
+      "1H_PTS": 2,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "4:32"
+    },
+    {
+      "game_id": "0022500518",
+      "player_id": 1642272,
+      "player_name": "Jared McCain",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 0,
+      "1Q_MIN": "2:55",
+      "1H_PTS": 0,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "4:43"
+    },
+    {
+      "game_id": "0022500507",
+      "player_id": 1642272,
+      "player_name": "Jared McCain",
+      "1Q_PTS": 0,
+      "1Q_REB": 0,
+      "1Q_AST": 1,
+      "1Q_MIN": "3:07",
+      "1H_PTS": 3,
+      "1H_REB": 0,
+      "1H_AST": 2,
+      "1H_MIN": "11:48"
+    },
+    {
+      "game_id": "0022500487",
+      "player_id": 1642272,
+      "player_name": "Jared McCain",
+      "1Q_PTS": 0,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "2:52",
+      "1H_PTS": 3,
+      "1H_REB": 2,
+      "1H_AST": 1,
+      "1H_MIN": "10:38"
+    }
+  ],
+  "1Q_PTS_avg": 1.33,
+  "1Q_REB_avg": 0.5,
+  "1Q_AST_avg": 0.83,
+  "1H_PTS_avg": 2.44,
+  "1H_REB_avg": 0.56,
+  "1H_AST_avg": 0.78
+}

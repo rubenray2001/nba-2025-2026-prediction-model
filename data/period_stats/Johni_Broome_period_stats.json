@@ -1,0 +1,19 @@
+{
+  "player_name": "Johni Broome",
+  "player_id": 1641780,
+  "games_collected": 1,
+  "games_data": [
+    {
+      "game_id": "0022500070",
+      "player_id": 1641780,
+      "player_name": "Johni Broome",
+      "1H_PTS": 2,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "4:55"
+    }
+  ],
+  "1H_PTS_avg": 2.0,
+  "1H_REB_avg": 0.0,
+  "1H_AST_avg": 0.0
+}

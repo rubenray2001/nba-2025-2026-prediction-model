@@ -1,0 +1,65 @@
+{
+  "player_name": "Jalen Green",
+  "player_id": 1630224,
+  "games_collected": 4,
+  "games_data": [
+    {
+      "game_id": "0022500636",
+      "player_id": 1630224,
+      "player_name": "Jalen Green",
+      "1Q_PTS": 4,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "4:14",
+      "1H_PTS": 4,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "4:14"
+    },
+    {
+      "game_id": "0022500613",
+      "player_id": 1630224,
+      "player_name": "Jalen Green",
+      "1Q_PTS": 4,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "5:49",
+      "1H_PTS": 7,
+      "1H_REB": 2,
+      "1H_AST": 2,
+      "1H_MIN": "9:10"
+    },
+    {
+      "game_id": "0022500190",
+      "player_id": 1630224,
+      "player_name": "Jalen Green",
+      "1Q_PTS": 2,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "6:48",
+      "1H_PTS": 2,
+      "1H_REB": 1,
+      "1H_AST": 1,
+      "1H_MIN": "6:48"
+    },
+    {
+      "game_id": "0022500182",
+      "player_id": 1630224,
+      "player_name": "Jalen Green",
+      "1Q_PTS": 8,
+      "1Q_REB": 1,
+      "1Q_AST": 1,
+      "1Q_MIN": "6:47",
+      "1H_PTS": 16,
+      "1H_REB": 2,
+      "1H_AST": 2,
+      "1H_MIN": "13:13"
+    }
+  ],
+  "1Q_PTS_avg": 4.5,
+  "1Q_REB_avg": 1.0,
+  "1Q_AST_avg": 1.0,
+  "1H_PTS_avg": 7.25,
+  "1H_REB_avg": 1.5,
+  "1H_AST_avg": 1.5
+}

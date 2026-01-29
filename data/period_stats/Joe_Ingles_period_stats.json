@@ -1,0 +1,19 @@
+{
+  "player_name": "Joe Ingles",
+  "player_id": 204060,
+  "games_collected": 1,
+  "games_data": [
+    {
+      "game_id": "0022500542",
+      "player_id": 204060,
+      "player_name": "Joe Ingles",
+      "1H_PTS": 3,
+      "1H_REB": 0,
+      "1H_AST": 1,
+      "1H_MIN": "3:29"
+    }
+  ],
+  "1H_PTS_avg": 3.0,
+  "1H_REB_avg": 0.0,
+  "1H_AST_avg": 1.0
+}

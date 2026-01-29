@@ -1,0 +1,113 @@
+{
+  "player_name": "Moussa Cisse",
+  "player_id": 1630619,
+  "games_collected": 8,
+  "games_data": [
+    {
+      "game_id": "0022500630",
+      "player_id": 1630619,
+      "player_name": "Moussa Cisse",
+      "1Q_PTS": 1,
+      "1Q_REB": 1,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:48",
+      "1H_PTS": 1,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "6:01"
+    },
+    {
+      "game_id": "0022500016",
+      "player_id": 1630619,
+      "player_name": "Moussa Cisse",
+      "1Q_PTS": 0,
+      "1Q_REB": 2,
+      "1Q_AST": 0,
+      "1Q_MIN": "6:03",
+      "1H_PTS": 2,
+      "1H_REB": 5,
+      "1H_AST": 1,
+      "1H_MIN": "9:17"
+    },
+    {
+      "game_id": "0022500593",
+      "player_id": 1630619,
+      "player_name": "Moussa Cisse",
+      "1Q_PTS": 2,
+      "1Q_REB": 2,
+      "1Q_AST": 0,
+      "1Q_MIN": "5:02",
+      "1H_PTS": 4,
+      "1H_REB": 4,
+      "1H_AST": 0,
+      "1H_MIN": "11:04"
+    },
+    {
+      "game_id": "0022500583",
+      "player_id": 1630619,
+      "player_name": "Moussa Cisse",
+      "1Q_PTS": 4,
+      "1Q_REB": 4,
+      "1Q_AST": 1,
+      "1Q_MIN": "5:44",
+      "1H_PTS": 10,
+      "1H_REB": 8,
+      "1H_AST": 2,
+      "1H_MIN": "11:14"
+    },
+    {
+      "game_id": "0022500561",
+      "player_id": 1630619,
+      "player_name": "Moussa Cisse",
+      "1Q_PTS": 0,
+      "1Q_REB": 4,
+      "1Q_AST": 0,
+      "1Q_MIN": "4:03",
+      "1H_PTS": 0,
+      "1H_REB": 5,
+      "1H_AST": 0,
+      "1H_MIN": "5:28"
+    },
+    {
+      "game_id": "0022500546",
+      "player_id": 1630619,
+      "player_name": "Moussa Cisse",
+      "1Q_PTS": 2,
+      "1Q_REB": 2,
+      "1Q_AST": 0,
+      "1Q_MIN": "5:24",
+      "1H_PTS": 2,
+      "1H_REB": 5,
+      "1H_AST": 0,
+      "1H_MIN": "7:55"
+    },
+    {
+      "game_id": "0022500432",
+      "player_id": 1630619,
+      "player_name": "Moussa Cisse",
+      "1Q_PTS": 0,
+      "1Q_REB": 2,
+      "1Q_AST": 0,
+      "1Q_MIN": "5:47",
+      "1H_PTS": 0,
+      "1H_REB": 2,
+      "1H_AST": 0,
+      "1H_MIN": "5:47"
+    },
+    {
+      "game_id": "0022501224",
+      "player_id": 1630619,
+      "player_name": "Moussa Cisse",
+      "1H_PTS": 5,
+      "1H_REB": 1,
+      "1H_AST": 0,
+      "1H_MIN": "5:25"
+    }
+  ],
+  "1Q_PTS_avg": 1.29,
+  "1Q_REB_avg": 2.43,
+  "1Q_AST_avg": 0.14,
+  "1H_PTS_avg": 3.0,
+  "1H_REB_avg": 3.88,
+  "1H_AST_avg": 0.38
+}

@@ -1,0 +1,35 @@
+{
+  "player_name": "Kobe Bufkin",
+  "player_id": 1641723,
+  "games_collected": 2,
+  "games_data": [
+    {
+      "game_id": "0022500601",
+      "player_id": 1641723,
+      "player_name": "Kobe Bufkin",
+      "1H_PTS": 4,
+      "1H_REB": 0,
+      "1H_AST": 0,
+      "1H_MIN": "4:29"
+    },
+    {
+      "game_id": "0022500586",
+      "player_id": 1641723,
+      "player_name": "Kobe Bufkin",
+      "1Q_PTS": 0,
+      "1Q_REB": 1,
+      "1Q_AST": 0,
+      "1Q_MIN": "3:42",
+      "1H_PTS": 0,
+      "1H_REB": 2,
+      "1H_AST": 0,
+      "1H_MIN": "9:28"
+    }
+  ],
+  "1Q_PTS_avg": 0.0,
+  "1Q_REB_avg": 1.0,
+  "1Q_AST_avg": 0.0,
+  "1H_PTS_avg": 2.0,
+  "1H_REB_avg": 1.0,
+  "1H_AST_avg": 0.0
+}
