@@ -393,7 +393,8 @@ class NBA1HEnsembleModel:
         is_over = difference > 0
         
         # Calculate lock score (0-100) based on multiple factors
-        lock_score, lock_factors = self._calculate_lock_score(features, details, prop_line, difference, recent_games)
+        has_real_data = details.get('has_real_period_data', False)
+        lock_score, lock_factors = self._calculate_lock_score(features, details, prop_line, difference, recent_games, has_real_data)
         
         # Apply 1Q-specific adjustments if this is a 1Q prediction
         if period == '1q':
@@ -401,7 +402,8 @@ class NBA1HEnsembleModel:
             lock_score, lock_factors = apply_1q_adjustments(
                 lock_score, lock_factors, features, prop_line, difference, period,
                 player_name=features.get('PLAYER_NAME'),
-                recent_games=recent_games
+                recent_games=recent_games,
+                has_real_period_data=has_real_data
             )
         
         # Determine pick and confidence based on lock score - USE PERIOD-SPECIFIC THRESHOLDS
@@ -474,7 +476,8 @@ class NBA1HEnsembleModel:
         details: Dict,
         prop_line: float,
         difference: float,
-        recent_games: list = None
+        recent_games: list = None,
+        has_real_period_data: bool = False
     ) -> Tuple[int, List[Dict]]:
         """
         EXTREME ACCURACY lock score calculation.
@@ -489,7 +492,19 @@ class NBA1HEnsembleModel:
         abs_diff = abs(difference)
         
         # =================================================================
-        # FACTOR 0: Prediction Reliability Check (MAJOR PENALTY)
+        # FACTOR 0A: REAL PERIOD DATA BOOST (NEW - CRITICAL!)
+        # Having actual 1Q/1H data dramatically increases prediction accuracy
+        # =================================================================
+        if has_real_period_data:
+            score += 20
+            factors.append({
+                'name': '📊 Real Period Data', 
+                'score': '+20', 
+                'desc': 'Using actual 1Q/1H game data - high accuracy'
+            })
+        
+        # =================================================================
+        # FACTOR 0B: Prediction Reliability Check (MAJOR PENALTY)
         # =================================================================
         if details.get('prediction_capped'):
             score -= 25
@@ -1362,7 +1377,8 @@ def get_adjusted_1q_ratio(player_name: str, base_ratio: float) -> float:
 
 def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict, 
                           prop_line: float, difference: float, period: str,
-                          player_name: str = None, recent_games: list = None) -> tuple:
+                          player_name: str = None, recent_games: list = None,
+                          has_real_period_data: bool = False) -> tuple:
     """
     Apply comprehensive 1Q-specific adjustments for higher accuracy.
     1Q has higher variance, so we need stricter criteria and smarter analysis.
@@ -1375,12 +1391,24 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
     abs_diff = abs(difference)
     
     # =========================================================================
-    # 1Q FACTOR 1: Base variance penalty (1Q is inherently volatile)
+    # 1Q FACTOR 0: REAL DATA BONUS - Offsets variance when we have actual 1Q data
     # =========================================================================
-    adjusted_score -= 8
+    if has_real_period_data:
+        adjusted_score += 15  # Big bonus for having real 1Q data
+        lock_factors.append({
+            'name': '✅ Real 1Q Data',
+            'score': '+15',
+            'desc': 'Using actual 1Q stats - more reliable than estimates'
+        })
+    
+    # =========================================================================
+    # 1Q FACTOR 1: Base variance penalty (reduced if we have real data)
+    # =========================================================================
+    variance_penalty = -4 if has_real_period_data else -8  # Less penalty with real data
+    adjusted_score += variance_penalty
     lock_factors.append({
         'name': '⏱️ 1Q Variance',
-        'score': '-8',
+        'score': str(variance_penalty),
         'desc': '1st Quarter has higher variance than 1st Half'
     })
     
@@ -1421,23 +1449,24 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
                 })
     
     # =========================================================================
-    # 1Q FACTOR 3: Edge size (stricter requirements)
+    # 1Q FACTOR 3: Edge size (stricter requirements - reduced if real data)
     # =========================================================================
-    min_edge_1q = 1.5  # Minimum 1.5 point edge for 1Q
-    if abs_diff < 1.0:
-        adjusted_score -= 15
+    min_edge_1q = 1.0 if has_real_period_data else 1.5  # Lower bar with real data
+    if abs_diff < 0.5:  # Only penalize truly tiny edges
+        penalty = -8 if has_real_period_data else -15
+        adjusted_score += penalty
         lock_factors.append({
             'name': '🚨 Tiny 1Q Edge',
-            'score': '-15',
-            'desc': f'1Q needs 1.5+ pt edge, only have {abs_diff:.1f} - too risky'
+            'score': str(penalty),
+            'desc': f'1Q edge only {abs_diff:.1f} - risky'
         })
     elif abs_diff < min_edge_1q:
-        penalty = int((min_edge_1q - abs_diff) * 12)
+        penalty = int((min_edge_1q - abs_diff) * (6 if has_real_period_data else 12))
         adjusted_score -= penalty
         lock_factors.append({
             'name': '⚠️ Small 1Q Edge',
             'score': f'-{penalty}',
-            'desc': f'1Q needs {min_edge_1q}+ pt edge, have {abs_diff:.1f}'
+            'desc': f'1Q edge {abs_diff:.1f} (want {min_edge_1q}+)'
         })
     elif abs_diff >= 3.0:
         adjusted_score += 10
@@ -1455,18 +1484,19 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
         })
     
     # =========================================================================
-    # 1Q FACTOR 4: Consistency (heavily weighted for 1Q)
+    # 1Q FACTOR 4: Consistency (reduced penalties with real data)
     # =========================================================================
     consistency = features.get('PTS_consistency') or features.get('PRA_consistency')
     l10_std = features.get('PTS_L10_std') or features.get('PRA_L10_std')
     
     if consistency is not None:
         if consistency > 0.35:  # Very inconsistent
-            adjusted_score -= 15
+            penalty = -8 if has_real_period_data else -15  # Less harsh with real data
+            adjusted_score += penalty
             lock_factors.append({
                 'name': '🎰 High 1Q Risk',
-                'score': '-15',
-                'desc': f'Very inconsistent ({consistency:.0%} CV) - dangerous for 1Q'
+                'score': str(penalty),
+                'desc': f'Inconsistent ({consistency:.0%} CV) - use caution'
             })
         elif consistency > 0.28:
             adjusted_score -= 8
@@ -1506,66 +1536,68 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
             })
     
     # =========================================================================
-    # 1Q FACTOR 5: Sample size (need more data for 1Q confidence)
+    # 1Q FACTOR 5: Sample size (skip if we have real period data)
     # =========================================================================
-    games_played = features.get('games_played', 0)
-    if games_played < 10:
-        adjusted_score -= 20
-        lock_factors.append({
-            'name': '🚨 1Q Data Risk',
-            'score': '-20',
-            'desc': f'Only {games_played} games - not enough for 1Q prediction'
-        })
-    elif games_played < 20:
-        penalty = int((20 - games_played) * 0.8)
-        adjusted_score -= penalty
-        lock_factors.append({
-            'name': '📊 Limited 1Q Data',
-            'score': f'-{penalty}',
-            'desc': f'1Q needs 20+ games, have {games_played}'
-        })
-    elif games_played >= 30:
+    if not has_real_period_data:  # Only penalize sample size if using estimates
+        games_played = features.get('games_played', 0)
+        if games_played < 10:
+            adjusted_score -= 15
+            lock_factors.append({
+                'name': '🚨 1Q Data Risk',
+                'score': '-15',
+                'desc': f'Only {games_played} games - not enough for 1Q prediction'
+            })
+        elif games_played < 20:
+            penalty = int((20 - games_played) * 0.5)
+            adjusted_score -= penalty
+            lock_factors.append({
+                'name': '📊 Limited 1Q Data',
+                'score': f'-{penalty}',
+                'desc': f'1Q needs 20+ games, have {games_played}'
+            })
+    elif features.get('games_played', 0) >= 30:
         adjusted_score += 5
         lock_factors.append({
             'name': '📊 Strong Sample',
             'score': '+5',
-            'desc': f'{games_played} games - good data for 1Q'
+            'desc': f'{features.get("games_played", 0)} games - good data for 1Q'
         })
     
     # =========================================================================
-    # 1Q FACTOR 6: Line vs average analysis
+    # 1Q FACTOR 6: Line vs average analysis (skip coinflip if real data)
     # =========================================================================
-    l5_avg = features.get('PTS_L5_avg') or features.get('PRA_L5_avg')
-    season_avg = features.get('PTS_season_avg') or features.get('PRA_season_avg')
-    
-    if l5_avg:
-        ratio = get_period_ratio('points', '1q')
-        avg_1q = l5_avg * ratio
-        line_vs_avg = prop_line - avg_1q
+    # When we have real period data, we're using actual 1Q avg, not estimated
+    if not has_real_period_data:
+        l5_avg = features.get('PTS_L5_avg') or features.get('PRA_L5_avg')
         
-        if abs(line_vs_avg) < 0.5:
-            adjusted_score -= 12
-            lock_factors.append({
-                'name': '⚖️ 1Q Coinflip',
-                'score': '-12',
-                'desc': f'Line ({prop_line}) = 1Q avg ({avg_1q:.1f}) - pure gamble'
-            })
-        elif is_over and line_vs_avg > 1.5:
-            # Line is well above average, OVER is risky
-            adjusted_score -= 8
-            lock_factors.append({
-                'name': '⚠️ Line Above Avg',
-                'score': '-8',
-                'desc': f'Line ({prop_line}) above 1Q avg ({avg_1q:.1f}) - OVER harder'
-            })
-        elif not is_over and line_vs_avg < -1.5:
-            # Line is well below average, UNDER is risky
-            adjusted_score -= 8
-            lock_factors.append({
-                'name': '⚠️ Line Below Avg',
-                'score': '-8',
-                'desc': f'Line ({prop_line}) below 1Q avg ({avg_1q:.1f}) - UNDER harder'
-            })
+        if l5_avg:
+            ratio = get_period_ratio('points', '1q')
+            avg_1q = l5_avg * ratio
+            line_vs_avg = prop_line - avg_1q
+            
+            if abs(line_vs_avg) < 0.5:
+                adjusted_score -= 10
+                lock_factors.append({
+                    'name': '⚖️ 1Q Coinflip',
+                    'score': '-10',
+                    'desc': f'Line ({prop_line}) ≈ estimated 1Q avg ({avg_1q:.1f})'
+                })
+            elif is_over and line_vs_avg > 1.5:
+                # Line is well above average, OVER is risky
+                adjusted_score -= 8
+                lock_factors.append({
+                    'name': '⚠️ Line Above Avg',
+                    'score': '-8',
+                    'desc': f'Line ({prop_line}) above 1Q avg ({avg_1q:.1f}) - OVER harder'
+                })
+            elif not is_over and line_vs_avg < -1.5:
+                # Line is well below average, UNDER is risky
+                adjusted_score -= 8
+                lock_factors.append({
+                    'name': '⚠️ Line Below Avg',
+                    'score': '-8',
+                    'desc': f'Line ({prop_line}) below 1Q avg ({avg_1q:.1f}) - UNDER harder'
+                })
     
     # =========================================================================
     # 1Q FACTOR 7: Recent momentum (more important for 1Q)
@@ -1979,6 +2011,15 @@ def make_prediction(
         lock_score = 50
         lock_factors = []
         
+        # REAL DATA BOOST - Having actual 1Q/1H data is the gold standard!
+        if has_real_data and data_source == "REAL":
+            lock_score += 20
+            lock_factors.append({
+                'name': '📊 Real Period Data', 
+                'score': '+20', 
+                'desc': 'Using actual 1Q/1H game data - high accuracy'
+            })
+        
         # Unreliable prediction penalty
         if prediction_capped:
             lock_score -= 25
@@ -2246,7 +2287,8 @@ def make_prediction(
             lock_score, lock_factors = apply_1q_adjustments(
                 lock_score, lock_factors, features, prop_line, difference, period,
                 player_name=features.get('PLAYER_NAME', player_name),
-                recent_games=recent_list
+                recent_games=recent_list,
+                has_real_period_data=has_real_data
             )
         
         # Determine pick based on lock score - USE PERIOD-SPECIFIC THRESHOLDS
