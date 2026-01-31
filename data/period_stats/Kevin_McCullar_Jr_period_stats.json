@@ -1,8 +1,17 @@
 {
-  "player_name": "Kevin McCullar Jr.",
+  "player_name": "Kevin McCullar Jr",
   "player_id": 1641755,
-  "games_collected": 9,
+  "games_collected": 10,
   "games_data": [
+    {
+      "game_id": "0022500372",
+      "player_id": 1641755,
+      "player_name": "Kevin McCullar Jr",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "0:01"
+    },
     {
       "game_id": "0022500596",
       "player_id": 1641755,
@@ -117,10 +126,14 @@
       "1H_MIN": "3:58"
     }
   ],
-  "1Q_PTS_avg": 0.75,
-  "1Q_REB_avg": 0.75,
-  "1Q_AST_avg": 0.88,
-  "1H_PTS_avg": 1.56,
-  "1H_REB_avg": 1.56,
-  "1H_AST_avg": 1.11
+  "last_updated": "2026-01-30T12:19:20.276028",
+  "1Q_PTS_avg": 0.6666666666666666,
+  "1Q_REB_avg": 0.6666666666666666,
+  "1Q_AST_avg": 0.7777777777777778,
+  "1H_PTS_avg": 1.5555555555555556,
+  "1H_REB_avg": 1.5555555555555556,
+  "1H_AST_avg": 1.1111111111111112,
+  "FULL_PTS_avg": null,
+  "FULL_REB_avg": null,
+  "FULL_AST_avg": null
 }

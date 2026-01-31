@@ -161,20 +161,77 @@ def search_player(player_name: str) -> Optional[Dict]:
     return result
 
 
-def get_player_game_logs(player_id: int, season: str = CURRENT_SEASON) -> pd.DataFrame:
+def get_last_game_date(cache_file: str) -> Optional[datetime]:
+    """Get the date of the most recent game in cached data."""
+    try:
+        if not os.path.exists(cache_file):
+            return None
+        df = pd.read_csv(cache_file)
+        if df.empty or 'GAME_DATE' not in df.columns:
+            return None
+        # GAME_DATE format is like "DEC 25, 2025"
+        dates = pd.to_datetime(df['GAME_DATE'], format='%b %d, %Y', errors='coerce')
+        if dates.isna().all():
+            # Try alternative format
+            dates = pd.to_datetime(df['GAME_DATE'], errors='coerce')
+        return dates.max().to_pydatetime() if not dates.isna().all() else None
+    except Exception:
+        return None
+
+
+def get_player_game_logs(player_id: int, season: str = CURRENT_SEASON, force_refresh: bool = False) -> pd.DataFrame:
     """
-    Fetch player game logs for a season
-    Performance: File-based caching with 6-hour TTL
+    Fetch player game logs for a season with SMART INCREMENTAL UPDATES.
+    
+    Only fetches from API if:
+    - No cached data exists
+    - force_refresh=True
+    - Last game in cache is 2+ days old (player might have new games)
+    
+    Args:
+        player_id: NBA player ID
+        season: Season string like "2024-25"
+        force_refresh: If True, always fetch fresh data
+    
+    Returns:
+        DataFrame with game logs
     """
     ensure_dirs()
     cache_file = os.path.join(DATA_DIR, "player_logs", f"{player_id}_{season.replace('-', '_')}.csv")
     
-    # Check file cache
-    if os.path.exists(cache_file):
-        cache_time = datetime.fromtimestamp(os.path.getmtime(cache_file))
-        if datetime.now() - cache_time < timedelta(hours=6):
-            return pd.read_csv(cache_file)
+    # Check if we need to update
+    needs_update = force_refresh
+    cached_df = None
     
+    if os.path.exists(cache_file):
+        cached_df = pd.read_csv(cache_file)
+        
+        if not force_refresh and not cached_df.empty:
+            last_game_date = get_last_game_date(cache_file)
+            
+            if last_game_date:
+                days_since_last_game = (datetime.now() - last_game_date).days
+                
+                # If last game was today or yesterday, cache is fresh
+                # (Players rarely play back-to-back, and games are in evening)
+                if days_since_last_game <= 1:
+                    return cached_df
+                
+                # If last game was 2+ days ago, player might have new games
+                needs_update = True
+            else:
+                # Couldn't parse dates, check file age instead
+                cache_time = datetime.fromtimestamp(os.path.getmtime(cache_file))
+                if datetime.now() - cache_time < timedelta(hours=6):
+                    return cached_df
+                needs_update = True
+    else:
+        needs_update = True
+    
+    if not needs_update:
+        return cached_df if cached_df is not None else pd.DataFrame()
+    
+    # Fetch fresh data from API
     try:
         game_log = playergamelog.PlayerGameLog(
             player_id=player_id,
@@ -183,12 +240,26 @@ def get_player_game_logs(player_id: int, season: str = CURRENT_SEASON) -> pd.Dat
         )
         time.sleep(0.6)  # Rate limiting
         
-        df = game_log.get_data_frames()[0]
-        if not df.empty:
-            df.to_csv(cache_file, index=False)
-        return df
+        new_df = game_log.get_data_frames()[0]
+        
+        if not new_df.empty:
+            # Check if we actually got new games
+            if cached_df is not None and not cached_df.empty:
+                old_count = len(cached_df)
+                new_count = len(new_df)
+                if new_count > old_count:
+                    print(f"  +{new_count - old_count} new games for player {player_id}")
+            
+            new_df.to_csv(cache_file, index=False)
+            return new_df
+        elif cached_df is not None:
+            return cached_df
+        return pd.DataFrame()
+        
     except Exception as e:
         print(f"Error fetching game logs for player {player_id}: {e}")
+        if cached_df is not None:
+            return cached_df
         if os.path.exists(cache_file):
             return pd.read_csv(cache_file)
         return pd.DataFrame()
@@ -413,6 +484,142 @@ def collect_training_data(player_ids: List[int] = None, seasons: List[str] = Non
         return final_df
     
     return pd.DataFrame()
+
+
+def get_cached_player_ids() -> List[int]:
+    """Get list of all player IDs that have cached data."""
+    ensure_dirs()
+    logs_dir = os.path.join(DATA_DIR, "player_logs")
+    
+    if not os.path.exists(logs_dir):
+        return []
+    
+    player_ids = set()
+    for filename in os.listdir(logs_dir):
+        if filename.endswith('.csv'):
+            # Extract player ID from filename like "1234567_2024_25.csv"
+            try:
+                player_id = int(filename.split('_')[0])
+                player_ids.add(player_id)
+            except (ValueError, IndexError):
+                continue
+    
+    return list(player_ids)
+
+
+def incremental_update(num_players: int = None, current_season_only: bool = True) -> Dict:
+    """
+    Smart incremental update - only fetches new games for players who have played recently.
+    
+    This is MUCH faster than full collection because:
+    1. Only checks current season (not historical)
+    2. Uses smart caching - skips players whose data is fresh
+    3. Only downloads if player might have new games
+    
+    Args:
+        num_players: Number of players to update. If None, updates ALL cached players.
+        current_season_only: If True, only update current season (faster)
+    
+    Returns:
+        Dict with update statistics
+    """
+    ensure_dirs()
+    
+    print(f"\n{'='*60}")
+    print("INCREMENTAL UPDATE - Smart Data Refresh")
+    print(f"{'='*60}")
+    
+    seasons = [CURRENT_SEASON] if current_season_only else SEASONS_TO_FETCH
+    
+    # Get players to update
+    cached_players = get_cached_player_ids()
+    
+    if cached_players:
+        print(f"\nFound {len(cached_players)} players with cached data")
+        player_ids = cached_players
+        
+        # Also check for any new active players not in cache
+        print("Checking for new active players...")
+        players_df = get_all_active_players()
+        if not players_df.empty:
+            active_ids = set(players_df['PERSON_ID'].tolist())
+            new_players = active_ids - set(cached_players)
+            if new_players:
+                print(f"Found {len(new_players)} new players to add")
+                player_ids = list(set(player_ids) | new_players)
+    else:
+        # No cached data, get active players
+        print("\nNo cached data found. Fetching active players...")
+        players_df = get_all_active_players()
+        if players_df.empty:
+            print("Error: Could not fetch active players")
+            return {"error": "No players found"}
+        player_ids = players_df['PERSON_ID'].tolist()
+    
+    # Apply limit if specified
+    if num_players is not None:
+        player_ids = player_ids[:num_players]
+        print(f"Limiting to {num_players} players")
+    
+    stats = {
+        "players_checked": 0,
+        "players_updated": 0,
+        "players_skipped": 0,
+        "new_games_found": 0,
+        "api_calls": 0,
+        "cache_hits": 0,
+    }
+    
+    print(f"\nChecking {len(player_ids)} players for new games...")
+    print("-" * 60)
+    
+    for i, player_id in enumerate(player_ids):
+        stats["players_checked"] += 1
+        
+        for season in seasons:
+            cache_file = os.path.join(DATA_DIR, "player_logs", f"{player_id}_{season.replace('-', '_')}.csv")
+            
+            # Check current cache state
+            old_count = 0
+            if os.path.exists(cache_file):
+                try:
+                    old_df = pd.read_csv(cache_file)
+                    old_count = len(old_df)
+                except:
+                    pass
+            
+            # This will use smart caching - only fetches if needed
+            logs = get_player_game_logs(player_id, season)
+            
+            new_count = len(logs) if not logs.empty else 0
+            
+            if new_count > old_count:
+                diff = new_count - old_count
+                stats["new_games_found"] += diff
+                stats["players_updated"] += 1
+                stats["api_calls"] += 1
+            elif old_count > 0:
+                stats["cache_hits"] += 1
+                stats["players_skipped"] += 1
+            else:
+                stats["api_calls"] += 1
+        
+        # Progress update every 25 players
+        if (i + 1) % 25 == 0:
+            print(f"Progress: {i+1}/{len(player_ids)} | Updated: {stats['players_updated']} | New games: {stats['new_games_found']}")
+    
+    print(f"\n{'='*60}")
+    print("INCREMENTAL UPDATE COMPLETE")
+    print(f"{'='*60}")
+    print(f"Players checked:  {stats['players_checked']}")
+    print(f"Players updated:  {stats['players_updated']}")
+    print(f"Players skipped:  {stats['players_skipped']} (cache fresh)")
+    print(f"New games found:  {stats['new_games_found']}")
+    print(f"API calls made:   {stats['api_calls']}")
+    print(f"Cache hits:       {stats['cache_hits']}")
+    print()
+    
+    return stats
 
 
 def get_player_current_team(player_id: int) -> Optional[str]:

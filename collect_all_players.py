@@ -17,6 +17,7 @@ import os
 import sys
 import time
 import json
+import shutil
 from datetime import datetime
 from typing import List, Dict
 
@@ -30,8 +31,14 @@ from period_boxscore_collector import (
     collect_player_period_stats,
     save_player_period_stats,
     load_player_period_stats,
+    get_recent_game_ids,
+    get_player_id,
+    get_1h_boxscore,
+    get_1q_boxscore,
+    get_full_game_boxscore,
     PERIOD_DATA_DIR
 )
+import pandas as pd
 
 # ============================================================================
 # Configuration
@@ -276,6 +283,364 @@ def collect_top_players(n: int = 100):
 # Quick Stats
 # ============================================================================
 
+_player_id_cache: Dict[str, int] = {}
+
+
+def _normalize_player_name(name: str) -> str:
+    """Normalize player names for matching (remove punctuation, lowercase)."""
+    return ''.join(ch for ch in name.lower() if ch.isalnum() or ch.isspace()).strip()
+
+
+def resolve_player_id(player_name: str) -> int:
+    """
+    Resolve player ID with robust name matching.
+    Tries direct lookup, then normalized lookup to handle dots/hyphens.
+    """
+    if player_name in _player_id_cache:
+        return _player_id_cache[player_name]
+
+    # First try the standard lookup
+    player_id = get_player_id(player_name)
+    if player_id:
+        _player_id_cache[player_name] = player_id
+        return player_id
+
+    # Fallback: normalized matching against static player list
+    target = _normalize_player_name(player_name)
+    for player in players.get_players():
+        if _normalize_player_name(player['full_name']) == target:
+            _player_id_cache[player_name] = player['id']
+            return player['id']
+
+    # Final fallback: contains match (normalized)
+    for player in players.get_players():
+        if target in _normalize_player_name(player['full_name']):
+            _player_id_cache[player_name] = player['id']
+            return player['id']
+
+    _player_id_cache[player_name] = 0
+    return 0
+
+
+def backup_player_stats(player_name: str) -> bool:
+    """Create a backup of player's stats before modifying. Returns True if backup created."""
+    safe_name = player_name.replace(' ', '_').replace("'", "")
+    filepath = os.path.join(PERIOD_DATA_DIR, f'{safe_name}_period_stats.json')
+    backup_path = os.path.join(PERIOD_DATA_DIR, f'{safe_name}_period_stats.backup.json')
+    
+    if os.path.exists(filepath):
+        try:
+            shutil.copy2(filepath, backup_path)
+            return True
+        except Exception as e:
+            print(f"[WARNING] Could not create backup for {player_name}: {e}")
+            return False
+    return False
+
+
+def restore_player_stats(player_name: str) -> bool:
+    """Restore player stats from backup. Returns True if restored."""
+    safe_name = player_name.replace(' ', '_').replace("'", "")
+    filepath = os.path.join(PERIOD_DATA_DIR, f'{safe_name}_period_stats.json')
+    backup_path = os.path.join(PERIOD_DATA_DIR, f'{safe_name}_period_stats.backup.json')
+    
+    if os.path.exists(backup_path):
+        try:
+            shutil.copy2(backup_path, filepath)
+            return True
+        except Exception as e:
+            print(f"[ERROR] Could not restore backup for {player_name}: {e}")
+            return False
+    return False
+
+
+def cleanup_backup(player_name: str):
+    """Remove backup file after successful update."""
+    safe_name = player_name.replace(' ', '_').replace("'", "")
+    backup_path = os.path.join(PERIOD_DATA_DIR, f'{safe_name}_period_stats.backup.json')
+    
+    if os.path.exists(backup_path):
+        try:
+            os.remove(backup_path)
+        except:
+            pass  # Not critical if cleanup fails
+
+
+def collect_new_games_for_player(player_name: str, player_id: int, season: str = CURRENT_SEASON) -> Dict:
+    """
+    Collect ONLY new games for a player (games not already in their data).
+    
+    SAFETY FEATURES:
+    - Creates backup before any modification
+    - Validates new data before saving
+    - Restores from backup if anything goes wrong
+    - Never loses existing games
+    
+    Returns:
+        Dict with update stats: {'new_games': N, 'total_games': M, 'updated': bool}
+    """
+    # Load existing data
+    existing_stats = load_player_period_stats(player_name)
+    
+    if not existing_stats:
+        # No existing data - this shouldn't happen in update mode
+        return {'new_games': 0, 'total_games': 0, 'updated': False, 'reason': 'no_existing_data'}
+    
+    # Get existing game IDs - PRESERVE THESE
+    existing_games = existing_stats.get('games_data', [])
+    original_game_count = len(existing_games)
+    existing_game_ids = set(g.get('game_id') for g in existing_games if g.get('game_id'))
+    
+    # Get current game IDs from API
+    try:
+        current_game_ids = get_recent_game_ids(player_id=player_id, season=season, last_n_games=30)
+    except Exception as e:
+        # API error - don't touch existing data
+        return {'new_games': 0, 'total_games': original_game_count, 'updated': False, 'reason': f'api_error: {str(e)[:30]}'}
+    
+    if not current_game_ids:
+        # No games returned - don't touch existing data
+        return {'new_games': 0, 'total_games': original_game_count, 'updated': False, 'reason': 'api_returned_empty'}
+    
+    # Find NEW games (in current but not in existing)
+    new_game_ids = [gid for gid in current_game_ids if gid not in existing_game_ids]
+    
+    if not new_game_ids:
+        return {'new_games': 0, 'total_games': original_game_count, 'updated': False, 'reason': 'no_new_games'}
+    
+    # CREATE BACKUP before making any changes
+    backup_created = backup_player_stats(player_name)
+    
+    # Collect data for new games only
+    new_games_data = []
+    
+    try:
+        for game_id in new_game_ids:
+            game_data = {
+                'game_id': game_id,
+                'player_id': player_id,
+                'player_name': player_name
+            }
+            
+            # Get 1st Quarter stats
+            df_1q = get_1q_boxscore(game_id)
+            if df_1q is not None and not df_1q.empty:
+                player_row = df_1q[df_1q['PLAYER_ID'] == player_id]
+                if not player_row.empty:
+                    row = player_row.iloc[0]
+                    game_data['1Q_PTS'] = row.get('PTS', 0)
+                    game_data['1Q_REB'] = row.get('REB', 0)
+                    game_data['1Q_AST'] = row.get('AST', 0)
+                    game_data['1Q_MIN'] = row.get('MIN', '0:00')
+            
+            # Get 1st Half stats
+            df_1h = get_1h_boxscore(game_id)
+            if df_1h is not None and not df_1h.empty:
+                player_row = df_1h[df_1h['PLAYER_ID'] == player_id]
+                if not player_row.empty:
+                    row = player_row.iloc[0]
+                    game_data['1H_PTS'] = row.get('PTS', 0)
+                    game_data['1H_REB'] = row.get('REB', 0)
+                    game_data['1H_AST'] = row.get('AST', 0)
+                    game_data['1H_MIN'] = row.get('MIN', '0:00')
+            
+            # Get Full Game stats
+            df_full = get_full_game_boxscore(game_id)
+            if df_full is not None and not df_full.empty:
+                player_row = df_full[df_full['PLAYER_ID'] == player_id]
+                if not player_row.empty:
+                    row = player_row.iloc[0]
+                    game_data['FULL_PTS'] = row.get('PTS', 0)
+                    game_data['FULL_REB'] = row.get('REB', 0)
+                    game_data['FULL_AST'] = row.get('AST', 0)
+                    game_data['FULL_MIN'] = row.get('MIN', '0:00')
+            
+            # Only add if we got data
+            if any(k.startswith('1Q_') or k.startswith('1H_') for k in game_data.keys()):
+                new_games_data.append(game_data)
+    
+    except Exception as e:
+        # Error during collection - restore backup and return
+        if backup_created:
+            restore_player_stats(player_name)
+            cleanup_backup(player_name)
+        return {'new_games': 0, 'total_games': original_game_count, 'updated': False, 'reason': f'collection_error: {str(e)[:30]}'}
+    
+    if not new_games_data:
+        # No new period data found - cleanup backup and return (no changes made)
+        cleanup_backup(player_name)
+        return {'new_games': 0, 'total_games': original_game_count, 'updated': False, 'reason': 'no_period_data'}
+    
+    # Merge new games with existing (new games go at the front - most recent)
+    all_games = new_games_data + existing_games
+    
+    # SAFETY CHECK: Verify we haven't lost any games
+    if len(all_games) < original_game_count:
+        # Something went wrong - restore backup
+        if backup_created:
+            restore_player_stats(player_name)
+        cleanup_backup(player_name)
+        return {'new_games': 0, 'total_games': original_game_count, 'updated': False, 'reason': 'data_validation_failed'}
+    
+    # Recalculate averages and save
+    try:
+        df = pd.DataFrame(all_games)
+        
+        updated_stats = {
+            'player_name': player_name,
+            'player_id': player_id,
+            'games_collected': len(all_games),
+            'games_data': all_games,
+            'last_updated': datetime.now().isoformat(),
+            
+            # 1Q Averages
+            '1Q_PTS_avg': df['1Q_PTS'].mean() if '1Q_PTS' in df.columns else None,
+            '1Q_REB_avg': df['1Q_REB'].mean() if '1Q_REB' in df.columns else None,
+            '1Q_AST_avg': df['1Q_AST'].mean() if '1Q_AST' in df.columns else None,
+            
+            # 1H Averages  
+            '1H_PTS_avg': df['1H_PTS'].mean() if '1H_PTS' in df.columns else None,
+            '1H_REB_avg': df['1H_REB'].mean() if '1H_REB' in df.columns else None,
+            '1H_AST_avg': df['1H_AST'].mean() if '1H_AST' in df.columns else None,
+            
+            # Full Game Averages
+            'FULL_PTS_avg': df['FULL_PTS'].mean() if 'FULL_PTS' in df.columns else None,
+            'FULL_REB_avg': df['FULL_REB'].mean() if 'FULL_REB' in df.columns else None,
+            'FULL_AST_avg': df['FULL_AST'].mean() if 'FULL_AST' in df.columns else None,
+        }
+        
+        # Calculate ratios
+        if updated_stats['FULL_PTS_avg'] and updated_stats['FULL_PTS_avg'] > 0:
+            updated_stats['1H_PTS_ratio'] = updated_stats['1H_PTS_avg'] / updated_stats['FULL_PTS_avg']
+            updated_stats['1Q_PTS_ratio'] = updated_stats['1Q_PTS_avg'] / updated_stats['FULL_PTS_avg'] if updated_stats['1Q_PTS_avg'] else None
+        
+        if updated_stats['FULL_REB_avg'] and updated_stats['FULL_REB_avg'] > 0:
+            updated_stats['1H_REB_ratio'] = updated_stats['1H_REB_avg'] / updated_stats['FULL_REB_avg']
+            updated_stats['1Q_REB_ratio'] = updated_stats['1Q_REB_avg'] / updated_stats['FULL_REB_avg'] if updated_stats['1Q_REB_avg'] else None
+        
+        if updated_stats['FULL_AST_avg'] and updated_stats['FULL_AST_avg'] > 0:
+            updated_stats['1H_AST_ratio'] = updated_stats['1H_AST_avg'] / updated_stats['FULL_AST_avg']
+            updated_stats['1Q_AST_ratio'] = updated_stats['1Q_AST_avg'] / updated_stats['FULL_AST_avg'] if updated_stats['1Q_AST_avg'] else None
+        
+        # FINAL SAFETY CHECK before saving
+        if updated_stats['games_collected'] < original_game_count:
+            raise ValueError(f"Game count dropped from {original_game_count} to {updated_stats['games_collected']}")
+        
+        # Save updated stats
+        save_player_period_stats(player_name, updated_stats)
+        
+        # Success - cleanup backup
+        cleanup_backup(player_name)
+        
+    except Exception as e:
+        # Error during save - restore backup
+        if backup_created:
+            restore_player_stats(player_name)
+        cleanup_backup(player_name)
+        return {'new_games': 0, 'total_games': original_game_count, 'updated': False, 'reason': f'save_error: {str(e)[:30]}'}
+    
+    return {
+        'new_games': len(new_games_data),
+        'total_games': len(all_games),
+        'updated': True,
+        'reason': 'success'
+    }
+
+
+def smart_update_all_players():
+    """
+    Smart incremental update - only fetches NEW games for players who have played.
+    
+    This is MUCH faster than full collection because:
+    1. Only checks players who already have data
+    2. Only downloads games not already in the database
+    3. Skips players with no new games
+    """
+    print(f"\n{'='*70}")
+    print("SMART INCREMENTAL UPDATE")
+    print("Only fetching NEW games since last update")
+    print(f"{'='*70}\n")
+    
+    # Get all players with existing data
+    if not os.path.exists(PERIOD_DATA_DIR):
+        print("[ERROR] No period stats directory found. Run full collection first.")
+        return
+    
+    player_files = [f for f in os.listdir(PERIOD_DATA_DIR) 
+                    if f.endswith('_period_stats.json') and not f.startswith('_')]
+    
+    if not player_files:
+        print("[ERROR] No player data found. Run full collection first.")
+        return
+    
+    print(f"Found {len(player_files)} players with existing data")
+    
+    # Stats tracking
+    stats = {
+        'players_checked': 0,
+        'players_updated': 0,
+        'players_skipped': 0,
+        'new_games_total': 0,
+        'errors': 0
+    }
+    
+    # Process each player
+    for i, filename in enumerate(player_files):
+        player_name = filename.replace('_period_stats.json', '').replace('_', ' ')
+        safe_name = player_name.encode('ascii', 'replace').decode('ascii')
+        
+        stats['players_checked'] += 1
+        
+        # Get player ID
+        # Prefer stored player_id from existing data to avoid name mismatches
+        existing_stats = load_player_period_stats(player_name)
+        player_id = existing_stats.get('player_id') if existing_stats else 0
+        if not player_id:
+            player_id = resolve_player_id(player_name)
+        if not player_id:
+            print(f"[{i+1}/{len(player_files)}] {safe_name}: Could not find player ID")
+            stats['errors'] += 1
+            continue
+        
+        print(f"[{i+1}/{len(player_files)}] {safe_name}...", end=" ", flush=True)
+        
+        try:
+            result = collect_new_games_for_player(player_name, player_id)
+            
+            if result['updated']:
+                stats['players_updated'] += 1
+                stats['new_games_total'] += result['new_games']
+                print(f"+{result['new_games']} new games (total: {result['total_games']})")
+            else:
+                stats['players_skipped'] += 1
+                reason = result.get('reason', 'unknown')
+                if reason == 'no_new_games':
+                    print("up to date")
+                else:
+                    print(f"skipped ({reason})")
+                    
+        except Exception as e:
+            stats['errors'] += 1
+            print(f"ERROR: {str(e)[:40]}")
+        
+        # Progress save every 50 players
+        if (i + 1) % 50 == 0:
+            print(f"\n--- Progress: {stats['players_updated']} updated, {stats['new_games_total']} new games ---\n")
+    
+    # Summary
+    print(f"\n{'='*70}")
+    print("UPDATE COMPLETE")
+    print(f"{'='*70}")
+    print(f"Players checked:  {stats['players_checked']}")
+    print(f"Players updated:  {stats['players_updated']}")
+    print(f"Players skipped:  {stats['players_skipped']} (already up to date)")
+    print(f"New games added:  {stats['new_games_total']}")
+    print(f"Errors:           {stats['errors']}")
+    print()
+    
+    return stats
+
+
 def show_collection_stats():
     """Show stats about collected data"""
     if not os.path.exists(PERIOD_DATA_DIR):
@@ -315,7 +680,8 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description='Collect 1H/1Q stats for NBA players')
-    parser.add_argument('--all', action='store_true', help='Collect all players')
+    parser.add_argument('--all', action='store_true', help='Collect all players (full collection)')
+    parser.add_argument('--update', action='store_true', help='Smart update - only fetch NEW games (fast!)')
     parser.add_argument('--top', type=int, default=None, help='Collect top N scorers')
     parser.add_argument('--test', type=int, default=None, help='Test with N players')
     parser.add_argument('--stats', action='store_true', help='Show collection stats')
@@ -325,6 +691,9 @@ if __name__ == "__main__":
     
     if args.stats:
         show_collection_stats()
+    elif args.update:
+        # Smart incremental update - only new games!
+        smart_update_all_players()
     elif args.all:
         collect_all_players_period_stats(resume=args.resume)
     elif args.top:
@@ -335,10 +704,13 @@ if __name__ == "__main__":
     else:
         # Default: show stats and prompt
         show_collection_stats()
-        print("\n" + "="*60)
+        print("\n" + "="*70)
         print("USAGE:")
-        print("="*60)
+        print("="*70)
+        print("  python collect_all_players.py --update    # FAST: Only fetch new games")
         print("  python collect_all_players.py --test 5    # Test with 5 players")
         print("  python collect_all_players.py --top 50    # Collect top 50 scorers")
-        print("  python collect_all_players.py --all       # Collect ALL players")
+        print("  python collect_all_players.py --all       # Collect ALL players (slow)")
         print("  python collect_all_players.py --stats     # Show collection stats")
+        print()
+        print("RECOMMENDED: Use --update for daily refreshes (only downloads new games)")

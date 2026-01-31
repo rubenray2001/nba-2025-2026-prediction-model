@@ -1,8 +1,25 @@
 {
   "player_name": "Zach Edey",
   "player_id": 1641744,
-  "games_collected": 10,
+  "games_collected": 11,
   "games_data": [
+    {
+      "game_id": "0022500228",
+      "player_id": 1641744,
+      "player_name": "Zach Edey",
+      "1Q_PTS": "3",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:35",
+      "1H_PTS": "3",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "11:55",
+      "FULL_PTS": "13",
+      "FULL_REB": "7",
+      "FULL_AST": "0",
+      "FULL_MIN": "24:42"
+    },
     {
       "game_id": "0022500360",
       "player_id": 1641744,
@@ -134,10 +151,18 @@
       "1H_MIN": "9:42"
     }
   ],
-  "1Q_PTS_avg": 4.4,
-  "1Q_REB_avg": 3.3,
-  "1Q_AST_avg": 0.2,
-  "1H_PTS_avg": 8.3,
-  "1H_REB_avg": 6.4,
-  "1H_AST_avg": 0.5
+  "last_updated": "2026-01-30T15:59:07.288762",
+  "1Q_PTS_avg": 4.2727272727272725,
+  "1Q_REB_avg": 3.1818181818181817,
+  "1Q_AST_avg": 0.18181818181818182,
+  "1H_PTS_avg": 7.818181818181818,
+  "1H_REB_avg": 6.090909090909091,
+  "1H_AST_avg": 0.45454545454545453,
+  "FULL_PTS_avg": 13.0,
+  "FULL_REB_avg": 7.0,
+  "FULL_AST_avg": 0.0,
+  "1H_PTS_ratio": 0.6013986013986015,
+  "1Q_PTS_ratio": 0.32867132867132864,
+  "1H_REB_ratio": 0.8701298701298701,
+  "1Q_REB_ratio": 0.45454545454545453
 }

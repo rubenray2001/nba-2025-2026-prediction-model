@@ -14,6 +14,7 @@ from data_collector import (
     get_all_active_players,
     get_player_multi_season_logs,
     collect_training_data,
+    incremental_update,
     ensure_dirs
 )
 from feature_engineering import prepare_training_data
@@ -160,13 +161,43 @@ def train_models(data_path: str = None, target: str = 'both'):
     print(f"{'='*50}\n")
 
 
+def update_data(num_players: int = None):
+    """
+    Incrementally update player data - only fetches new games.
+    Much faster than full collection!
+    
+    Args:
+        num_players: If None, updates ALL cached players. Otherwise limits to N players.
+    """
+    print(f"\n{'='*50}")
+    print("INCREMENTAL DATA UPDATE")
+    print("Only fetching new games since last update")
+    print(f"{'='*50}\n")
+    
+    stats = incremental_update(num_players=num_players, current_season_only=True)
+    
+    if stats.get("new_games_found", 0) > 0:
+        print(f"\nFound {stats['new_games_found']} new games!")
+        print("Your cached data is now up to date.")
+    else:
+        print("\nNo new games found - your data is already current!")
+    
+    return stats
+
+
 def main():
     parser = argparse.ArgumentParser(description='NBA 1H Prediction Model Training')
     
     parser.add_argument(
         '--collect', 
         action='store_true',
-        help='Collect training data'
+        help='Collect training data (full collection)'
+    )
+    
+    parser.add_argument(
+        '--update',
+        action='store_true',
+        help='Incremental update - only fetch NEW games (fast!)'
     )
     
     parser.add_argument(
@@ -179,7 +210,7 @@ def main():
         '--players', 
         type=int, 
         default=100,
-        help='Number of players to collect data for (default: 100)'
+        help='Number of players to process. For --collect: default 100. For --update: default ALL cached players.'
     )
     
     parser.add_argument(
@@ -199,11 +230,23 @@ def main():
     
     args = parser.parse_args()
     
-    if not args.collect and not args.train:
-        print("Please specify --collect or --train (or both)")
+    if not args.collect and not args.train and not args.update:
+        print("Please specify --collect, --update, or --train")
+        print("\nExamples:")
+        print("  python train_model.py --update              # Quick update (new games only)")
+        print("  python train_model.py --update --train      # Update + retrain")
+        print("  python train_model.py --collect --train     # Full collection + train")
+        print()
         parser.print_help()
         return
     
+    # Incremental update (fast - only new games)
+    if args.update:
+        # If --players not specified with --update, update ALL cached players
+        num = args.players if '--players' in sys.argv else None
+        update_data(num_players=num)
+    
+    # Full collection (slow - all seasons)
     if args.collect:
         df = collect_player_data(num_players=args.players)
         if df is not None and args.train:

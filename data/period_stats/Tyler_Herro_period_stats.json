@@ -1,8 +1,25 @@
 {
   "player_name": "Tyler Herro",
   "player_id": 1629639,
-  "games_collected": 10,
+  "games_collected": 11,
   "games_data": [
+    {
+      "game_id": "0022500286",
+      "player_id": 1629639,
+      "player_name": "Tyler Herro",
+      "1Q_PTS": "0",
+      "1Q_REB": "4",
+      "1Q_AST": "0",
+      "1Q_MIN": "7:45",
+      "1H_PTS": "8",
+      "1H_REB": "7",
+      "1H_AST": "0",
+      "1H_MIN": "14:57",
+      "FULL_PTS": "24",
+      "FULL_REB": "7",
+      "FULL_AST": "0",
+      "FULL_MIN": "29:23"
+    },
     {
       "game_id": "0022500580",
       "player_id": 1629639,
@@ -134,10 +151,18 @@
       "1H_MIN": "13:45"
     }
   ],
-  "1Q_PTS_avg": 6.0,
-  "1Q_REB_avg": 1.6,
-  "1Q_AST_avg": 0.8,
-  "1H_PTS_avg": 11.6,
-  "1H_REB_avg": 2.6,
-  "1H_AST_avg": 1.5
+  "last_updated": "2026-01-30T15:40:49.721739",
+  "1Q_PTS_avg": 5.454545454545454,
+  "1Q_REB_avg": 1.8181818181818181,
+  "1Q_AST_avg": 0.7272727272727273,
+  "1H_PTS_avg": 11.272727272727273,
+  "1H_REB_avg": 3.0,
+  "1H_AST_avg": 1.3636363636363635,
+  "FULL_PTS_avg": 24.0,
+  "FULL_REB_avg": 7.0,
+  "FULL_AST_avg": 0.0,
+  "1H_PTS_ratio": 0.4696969696969697,
+  "1Q_PTS_ratio": 0.22727272727272727,
+  "1H_REB_ratio": 0.42857142857142855,
+  "1Q_REB_ratio": 0.2597402597402597
 }
