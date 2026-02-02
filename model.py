@@ -166,13 +166,27 @@ class NBA1HEnsembleModel:
                     for train_idx, val_idx in tscv.split(X_scaled):
                         X_train, X_val = X_scaled[train_idx], X_scaled[val_idx]
                         y_train, y_val = y[train_idx], y[val_idx]
-                        model.fit(X_train, y_train, verbose=False)
-                        y_val_pred = model.predict(X_val)
+                        # Create fresh CatBoost model for each fold
+                        from catboost import CatBoostRegressor
+                        fold_model = CatBoostRegressor(**MODEL_CONFIG['catboost'])
+                        fold_model.fit(X_train, y_train, eval_set=(X_val, y_val), verbose=False, early_stopping_rounds=50)
+                        y_val_pred = fold_model.predict(X_val)
                         cv_mae_scores.append(mean_absolute_error(y_val, y_val_pred))
                     cv_scores_mean = np.mean(cv_mae_scores)
                     cv_scores_std = np.std(cv_mae_scores)
-                    # Final fit on all data
+                    # Final fit on ALL data (no early stopping for final model)
+                    # This ensures the model sees all training data
+                    model = CatBoostRegressor(
+                        iterations=1000,
+                        depth=8,
+                        learning_rate=0.03,
+                        l2_leaf_reg=3,
+                        random_seed=42,
+                        verbose=False,
+                        loss_function="MAE"
+                    )
                     model.fit(X_scaled, y, verbose=False)
+                    self.models['catboost'] = model
                 else:
                     # Standard sklearn cross-validation for LightGBM and XGBoost
                     cv_scores = cross_val_score(model, X_scaled, y, cv=tscv, scoring='neg_mean_absolute_error')

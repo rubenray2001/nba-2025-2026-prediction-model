@@ -22,23 +22,18 @@ from model import NBA1HEnsembleModel
 from config import SEASONS_TO_FETCH, DATA_DIR
 
 
-def collect_player_data(num_players: int = 100, seasons: list = None):
+def collect_player_data(num_players: int = None, seasons: list = None):
     """
     Collect training data for specified number of players.
     
     Args:
-        num_players: Number of players to collect data for
+        num_players: Number of players to collect data for (None = ALL players)
         seasons: List of seasons to fetch
     """
     if seasons is None:
         seasons = SEASONS_TO_FETCH
     
     ensure_dirs()
-    
-    print(f"\n{'='*50}")
-    print(f"Collecting data for {num_players} players")
-    print(f"Seasons: {', '.join(seasons)}")
-    print(f"{'='*50}\n")
     
     # Get active players
     print("Fetching active players list...")
@@ -50,8 +45,15 @@ def collect_player_data(num_players: int = 100, seasons: list = None):
     
     print(f"Found {len(players_df)} active players")
     
-    # Limit to requested number
-    player_ids = players_df['PERSON_ID'].tolist()[:num_players]
+    # Use all players if num_players not specified
+    player_ids = players_df['PERSON_ID'].tolist()
+    if num_players is not None:
+        player_ids = player_ids[:num_players]
+    
+    print(f"\n{'='*50}")
+    print(f"Collecting data for {len(player_ids)} players")
+    print(f"Seasons: {', '.join(seasons)}")
+    print(f"{'='*50}\n")
     
     # Collect data
     all_data = []
@@ -209,8 +211,8 @@ def main():
     parser.add_argument(
         '--players', 
         type=int, 
-        default=100,
-        help='Number of players to process. For --collect: default 100. For --update: default ALL cached players.'
+        default=None,
+        help='Number of players to process. Default: ALL available players.'
     )
     
     parser.add_argument(

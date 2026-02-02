@@ -44,14 +44,14 @@ MODEL_CONFIG = {
         "n_jobs": -1
     },
     "catboost": {
-        "iterations": 800,
+        "iterations": 1000,
         "depth": 8,
         "learning_rate": 0.03,
         "l2_leaf_reg": 3,
         "random_seed": 42,
         "verbose": False,
-        "early_stopping_rounds": 50,
-        "use_best_model": True
+        "loss_function": "MAE",
+        "task_type": "CPU"
     }
 }
 

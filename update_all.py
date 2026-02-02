@@ -4,8 +4,12 @@ Runs all necessary updates to keep the model current.
 
 Usage:
     python update_all.py           # Update data only (fast, ~5-10 min)
-    python update_all.py --retrain # Update data + retrain model (~15-20 min)
-    python update_all.py --full    # Full refresh + retrain (slow, ~1+ hour)
+    python update_all.py --retrain # Update data + regenerate training + retrain (30-60 min)
+
+The --retrain flag:
+- Collects fresh training data from ALL player logs
+- Retrains the model with updated data
+- This is required for the model to learn from new games
 """
 
 import subprocess
@@ -58,13 +62,10 @@ def main():
     """)
     
     # Parse arguments
-    retrain = "--retrain" in sys.argv
-    full_refresh = "--full" in sys.argv
+    retrain = "--retrain" in sys.argv or "--full" in sys.argv
     
-    if full_refresh:
-        print("  Mode: FULL REFRESH (update all + retrain)")
-    elif retrain:
-        print("  Mode: UPDATE + RETRAIN")
+    if retrain:
+        print("  Mode: UPDATE + REGENERATE TRAINING DATA + RETRAIN")
     else:
         print("  Mode: DATA UPDATE ONLY (fast)")
     
@@ -84,17 +85,10 @@ def main():
         steps_failed += 1
         print("  Warning: Period stats update had issues, continuing...")
     
-    # Step 2: Update player game logs + team stats
-    if full_refresh:
-        # Full refresh - fetch all players
-        cmd = [sys.executable, "train_model.py", "--update", "--players", "150"]
-    else:
-        # Incremental update only
-        cmd = [sys.executable, "train_model.py", "--update"]
-    
+    # Step 2: Update player game logs + team stats (all players)
     if run_command(
         "Step 2/3: Updating player game logs & team stats...",
-        cmd
+        [sys.executable, "train_model.py", "--update"]
     ):
         steps_completed += 1
     else:
@@ -102,10 +96,10 @@ def main():
         print("  Warning: Game logs update had issues, continuing...")
     
     # Step 3: Retrain model (optional)
-    if retrain or full_refresh:
+    if retrain:
         if run_command(
-            "Step 3/3: Retraining prediction model...",
-            [sys.executable, "train_model.py"]
+            "Step 3/3: Regenerating training data + Retraining model (ALL players)...",
+            [sys.executable, "train_model.py", "--collect", "--train"]
         ):
             steps_completed += 1
         else:
