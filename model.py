@@ -411,11 +411,12 @@ class NBA1HEnsembleModel:
         
         # Calculate lock score (0-100) based on multiple factors
         has_real_data = details.get('has_real_period_data', False)
-        lock_score, lock_factors = self._calculate_lock_score(features, details, prop_line, difference, recent_games, has_real_data)
+        lock_score, lock_factors = self._calculate_lock_score(features, details, prop_line, difference, recent_games, has_real_data, period=period)
         
         # Apply 1Q-specific adjustments if this is a 1Q prediction
         if period == '1q':
             features['games_played'] = len(recent_games) if recent_games else 0
+            features['_prop_type'] = self.target  # Pass prop type for correct stat lookup
             lock_score, lock_factors = apply_1q_adjustments(
                 lock_score, lock_factors, features, prop_line, difference, period,
                 player_name=features.get('PLAYER_NAME'),
@@ -453,7 +454,7 @@ class NBA1HEnsembleModel:
             confidence_desc += " (1Q requires higher standards)"
         
         # Generate reasoning
-        reasons = self._generate_reasoning(features, details, prop_line, difference)
+        reasons = self._generate_reasoning(features, details, prop_line, difference, period=period)
         
         # Add warning if prediction was capped
         if details.get('prediction_capped'):
@@ -494,7 +495,8 @@ class NBA1HEnsembleModel:
         prop_line: float,
         difference: float,
         recent_games: list = None,
-        has_real_period_data: bool = False
+        has_real_period_data: bool = False,
+        period: str = '1h'
     ) -> Tuple[int, List[Dict]]:
         """
         EXTREME ACCURACY lock score calculation.
@@ -504,7 +506,8 @@ class NBA1HEnsembleModel:
         score = 50  # Start at neutral
         factors = []
         stat_col = self.target_col
-        ratio = FIRST_HALF_RATIOS.get(self.target, 0.48)
+        # Use period-aware ratio (1Q ~0.24 vs 1H ~0.48)
+        ratio = get_period_ratio(self.target, period)
         is_over = difference > 0
         abs_diff = abs(difference)
         
@@ -799,8 +802,11 @@ class NBA1HEnsembleModel:
                 hits = 0
                 total = 0
                 for game in recent_games:
-                    # Get full game stat and estimate 1H
-                    full_stat = game.get(stat_col) or game.get('PTS', 0)
+                    # Get full game stat - properly handle PRA by summing components
+                    if stat_col == 'PRA':
+                        full_stat = (game.get('PTS', 0) or 0) + (game.get('REB', 0) or 0) + (game.get('AST', 0) or 0)
+                    else:
+                        full_stat = game.get(stat_col) or game.get('PTS', 0) or 0
                     est_1h = full_stat * ratio
                     if est_1h > 0 or full_stat > 0:  # Valid game
                         total += 1
@@ -860,7 +866,7 @@ class NBA1HEnsembleModel:
         # =================================================================
         # FACTOR 13: Sample Size / Data Quality
         # =================================================================
-        games_played = features.get('games_played') or len(recent_games) if recent_games else 0
+        games_played = features.get('games_played') or (len(recent_games) if recent_games else 0)
         l10_avg = features.get(f'{stat_col}_L10_avg')
         
         if games_played < 5:
@@ -951,7 +957,11 @@ class NBA1HEnsembleModel:
                 l3_hits = 0
                 l3_total = 0
                 for game in l3_games:
-                    full_stat = game.get(stat_col) or game.get('PTS', 0)
+                    # Properly handle PRA by summing components
+                    if stat_col == 'PRA':
+                        full_stat = (game.get('PTS', 0) or 0) + (game.get('REB', 0) or 0) + (game.get('AST', 0) or 0)
+                    else:
+                        full_stat = game.get(stat_col) or game.get('PTS', 0) or 0
                     est_1h = full_stat * ratio
                     if est_1h > 0 or full_stat > 0:
                         l3_total += 1
@@ -1111,22 +1121,25 @@ class NBA1HEnsembleModel:
         features: Dict, 
         details: Dict, 
         prop_line: float,
-        difference: float
+        difference: float,
+        period: str = '1h'
     ) -> List[str]:
         """Generate human-readable reasoning for the prediction"""
         reasons = []
         stat_name = self.target
         stat_col = self.target_col
-        ratio = FIRST_HALF_RATIOS.get(self.target, 0.48)
+        # Use period-aware ratio (1Q ~0.24 vs 1H ~0.48)
+        ratio = get_period_ratio(self.target, period)
+        period_label = "1Q" if period == '1q' else "1H"
         
         # Recent form
         l5_avg = features.get(f'{stat_col}_L5_avg')
         if l5_avg is not None:
             l5_1h = l5_avg * ratio
             if l5_1h > prop_line * 1.1:
-                reasons.append(f"Recent form strong: averaging {l5_avg:.1f} {stat_name}/game (est. {l5_1h:.1f} 1H) over last 5")
+                reasons.append(f"Recent form strong: averaging {l5_avg:.1f} {stat_name}/game (est. {l5_1h:.1f} {period_label}) over last 5")
             elif l5_1h < prop_line * 0.9:
-                reasons.append(f"Recent form concerns: averaging {l5_avg:.1f} {stat_name}/game (est. {l5_1h:.1f} 1H) over last 5")
+                reasons.append(f"Recent form concerns: averaging {l5_avg:.1f} {stat_name}/game (est. {l5_1h:.1f} {period_label}) over last 5")
             else:
                 reasons.append(f"Recent form neutral: averaging {l5_avg:.1f} {stat_name}/game over last 5")
         
@@ -1135,9 +1148,9 @@ class NBA1HEnsembleModel:
         if season_avg is not None:
             season_1h = season_avg * ratio
             if season_1h > prop_line:
-                reasons.append(f"Season average ({season_avg:.1f}) suggests 1H of {season_1h:.1f}, above line")
+                reasons.append(f"Season average ({season_avg:.1f}) suggests {period_label} of {season_1h:.1f}, above line")
             else:
-                reasons.append(f"Season average ({season_avg:.1f}) suggests 1H of {season_1h:.1f}, below line")
+                reasons.append(f"Season average ({season_avg:.1f}) suggests {period_label} of {season_1h:.1f}, below line")
         
         # Home/Away
         is_home = features.get('IS_HOME', 0)
@@ -1165,7 +1178,7 @@ class NBA1HEnsembleModel:
         vs_opp_avg = features.get(f'vs_opp_{stat_col.lower()}_avg')
         if vs_opp_avg is not None and vs_opp_avg > 0:
             vs_1h = vs_opp_avg * ratio
-            reasons.append(f"Historical vs opponent: {vs_opp_avg:.1f} {stat_name}/game (est. {vs_1h:.1f} 1H)")
+            reasons.append(f"Historical vs opponent: {vs_opp_avg:.1f} {stat_name}/game (est. {vs_1h:.1f} {period_label})")
         
         # Variance/consistency
         l5_std = features.get(f'{stat_col}_L5_std')
@@ -1532,8 +1545,11 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
     # =========================================================================
     # 1Q FACTOR 4: Consistency (reduced penalties with real data)
     # =========================================================================
-    consistency = features.get('PTS_consistency') or features.get('PRA_consistency')
-    l10_std = features.get('PTS_L10_std') or features.get('PRA_L10_std')
+    _1q_prop = features.get('_prop_type', 'points')
+    _1q_stat_map = {'points': 'PTS', 'rebounds': 'REB', 'assists': 'AST', 'pra': 'PRA'}
+    _1q_col = _1q_stat_map.get(_1q_prop, 'PTS')
+    consistency = features.get(f'{_1q_col}_consistency')
+    l10_std = features.get(f'{_1q_col}_L10_std')
     
     if consistency is not None:
         if consistency > 0.35:  # Very inconsistent
@@ -1614,10 +1630,10 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
     # =========================================================================
     # When we have real period data, we're using actual 1Q avg, not estimated
     if not has_real_period_data:
-        l5_avg = features.get('PTS_L5_avg') or features.get('PRA_L5_avg')
+        l5_avg = features.get(f'{_1q_col}_L5_avg')
         
         if l5_avg:
-            ratio = get_period_ratio('points', '1q')
+            ratio = get_period_ratio(_1q_prop, '1q')
             avg_1q = l5_avg * ratio
             line_vs_avg = prop_line - avg_1q
             
@@ -1648,7 +1664,7 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
     # =========================================================================
     # 1Q FACTOR 7: Recent momentum (more important for 1Q)
     # =========================================================================
-    momentum = features.get('PTS_momentum') or features.get('PRA_momentum')
+    momentum = features.get(f'{_1q_col}_momentum')
     if momentum is not None:
         if is_over and momentum > 0.15:
             adjusted_score += 6
@@ -1703,8 +1719,8 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
     # 1Q FACTOR 9: Home court (stronger impact in Q1 due to crowd energy)
     # =========================================================================
     is_home = features.get('IS_HOME', 0)
-    home_avg = features.get('PTS_home_avg') or features.get('PRA_home_avg')
-    away_avg = features.get('PTS_away_avg') or features.get('PRA_away_avg')
+    home_avg = features.get(f'{_1q_col}_home_avg')
+    away_avg = features.get(f'{_1q_col}_away_avg')
     
     if home_avg and away_avg:
         home_away_diff = home_avg - away_avg
@@ -1726,11 +1742,11 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
     # =========================================================================
     # 1Q FACTOR 10: Floor/Ceiling analysis (critical for 1Q)
     # =========================================================================
-    floor = features.get('PTS_floor') or features.get('PRA_floor')
-    ceiling = features.get('PTS_ceiling') or features.get('PRA_ceiling')
+    floor = features.get(f'{_1q_col}_floor')
+    ceiling = features.get(f'{_1q_col}_ceiling')
     
     if floor and ceiling:
-        ratio = get_period_ratio('points', '1q')
+        ratio = get_period_ratio(_1q_prop, '1q')
         floor_1q = floor * ratio
         ceiling_1q = ceiling * ratio
         
@@ -1768,13 +1784,21 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
     # =========================================================================
     if recent_games and len(recent_games) >= 3:
         try:
-            ratio = get_period_ratio('points', '1q')
+            # Determine actual prop type from the features context
+            _prop_type = features.get('_prop_type', 'points')
+            ratio = get_period_ratio(_prop_type, '1q')
             l3_games = recent_games[:3]
             l3_hits = 0
             l3_total = 0
             
             for game in l3_games:
-                stat = game.get('PTS') or game.get('PRA', 0)
+                # Use the correct stat column based on prop type
+                _stat_map = {'points': 'PTS', 'rebounds': 'REB', 'assists': 'AST', 'pra': 'PRA'}
+                _stat_key = _stat_map.get(_prop_type, 'PTS')
+                if _stat_key == 'PRA':
+                    stat = (game.get('PTS', 0) or 0) + (game.get('REB', 0) or 0) + (game.get('AST', 0) or 0)
+                else:
+                    stat = game.get(_stat_key) or game.get('PTS', 0) or 0
                 if stat and stat > 0:
                     est_1q = stat * ratio
                     l3_total += 1
@@ -1819,14 +1843,8 @@ def apply_1q_adjustments(lock_score: int, lock_factors: list, features: dict,
     # =========================================================================
     # 1Q FACTOR 12: STAT-SPECIFIC 1Q ADJUSTMENTS (rebounds/assists)
     # =========================================================================
-    # Detect stat type from features
-    stat_type = 'points'  # Default
-    if features.get('REB_L5_avg'):
-        stat_type = 'rebounds'
-    elif features.get('AST_L5_avg'):
-        stat_type = 'assists'
-    elif features.get('PRA_L5_avg'):
-        stat_type = 'pra'
+    # Use prop type from features (set by caller), not heuristic detection
+    stat_type = features.get('_prop_type', 'points')
     
     # Get stat-specific 1Q ratios
     from config import STAT_VARIANCE, EARLY_REBOUNDERS, EARLY_PLAYMAKERS
@@ -2381,7 +2399,11 @@ def make_prediction(
                 hits = 0
                 total = 0
                 for game in recent_list:
-                    full_stat = game.get(stat_col) or game.get('PTS', 0)
+                    # Properly handle PRA by summing components
+                    if stat_col == 'PRA':
+                        full_stat = (game.get('PTS', 0) or 0) + (game.get('REB', 0) or 0) + (game.get('AST', 0) or 0)
+                    else:
+                        full_stat = game.get(stat_col) or game.get('PTS', 0) or 0
                     est_1h = full_stat * ratio
                     if est_1h > 0 or full_stat > 0:
                         total += 1
@@ -2679,6 +2701,7 @@ def make_prediction(
                 features['games_played'] = len(recent_list) if recent_list else 0
             else:
                 features['games_played'] = 0
+            features['_prop_type'] = prop_type  # Pass prop type for correct stat lookup
             
             lock_score, lock_factors = apply_1q_adjustments(
                 lock_score, lock_factors, features, prop_line, difference, period,

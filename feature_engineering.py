@@ -711,18 +711,33 @@ def create_prediction_features(
     return latest, recent_games
 
 
+def _safe_float(val, default=0):
+    """Safely convert a value to float, handling None, NaN, and non-numeric types."""
+    if val is None:
+        return default
+    try:
+        f = float(val)
+        if np.isnan(f):
+            return default
+        return f
+    except (TypeError, ValueError):
+        return default
+
+
 def _calculate_composite_features(features: Dict, prop_line: float, prop_type: str) -> Dict:
     """
     Calculate composite features that combine multiple signals.
     """
-    stat_col = 'PTS' if prop_type == 'points' else 'PRA'
+    # Properly map all prop types to their stat columns
+    stat_map = {'points': 'PTS', 'rebounds': 'REB', 'assists': 'AST', 'pra': 'PRA'}
+    stat_col = stat_map.get(prop_type, 'PTS')
     ratio = FIRST_HALF_RATIOS.get(prop_type, 0.48)
     
-    # Estimate 1H values for comparison
-    l5_avg = features.get(f'{stat_col}_L5_avg', 0) or 0
-    l10_avg = features.get(f'{stat_col}_L10_avg', 0) or 0
-    season_avg = features.get(f'{stat_col}_season_avg', 0) or 0
-    ewm_5 = features.get(f'{stat_col}_ewm_5', 0) or 0
+    # Estimate 1H values for comparison - use NaN-safe helper
+    l5_avg = _safe_float(features.get(f'{stat_col}_L5_avg'))
+    l10_avg = _safe_float(features.get(f'{stat_col}_L10_avg'))
+    season_avg = _safe_float(features.get(f'{stat_col}_season_avg'))
+    ewm_5 = _safe_float(features.get(f'{stat_col}_ewm_5'))
     
     # Weighted prediction (recent weighted more)
     weighted_pred = (
@@ -741,33 +756,59 @@ def _calculate_composite_features(features: Dict, prop_line: float, prop_type: s
         features['EDGE_PCT'] = (pred_1h - prop_line) / prop_line * 100
     
     # Consistency score (lower = more consistent)
-    std = features.get(f'{stat_col}_L10_std', 0) or 0
-    mean = features.get(f'{stat_col}_L10_avg', 1) or 1
+    std = _safe_float(features.get(f'{stat_col}_L10_std'))
+    mean = _safe_float(features.get(f'{stat_col}_L10_avg'), default=1)
     features['CONSISTENCY_SCORE'] = std / mean if mean > 0 else 1
     
     # Momentum score
-    momentum = features.get(f'{stat_col}_momentum', 0) or 0
+    momentum = _safe_float(features.get(f'{stat_col}_momentum'))
     features['MOMENTUM_SCORE'] = momentum
     
     # Floor/ceiling for prop comparison
-    floor = features.get(f'{stat_col}_floor', 0) or 0
-    ceiling = features.get(f'{stat_col}_ceiling', 0) or 0
+    floor = _safe_float(features.get(f'{stat_col}_floor'))
+    ceiling = _safe_float(features.get(f'{stat_col}_ceiling'))
     features['FLOOR_1H'] = floor * ratio
     features['CEILING_1H'] = ceiling * ratio
     
     return features
 
 
+def _apply_per_player_features(player_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Apply all per-player feature engineering to a single player's game log.
+    
+    Rolling stats, expanding means, rest days, streaks, etc. MUST be computed
+    per-player to prevent cross-player data leakage in training.
+    
+    Assumes row-level features (opponent tiers, day-of-week) are already present.
+    """
+    if player_df.empty or len(player_df) < 2:
+        return player_df
+    
+    player_df = calculate_rolling_stats(player_df)
+    player_df = calculate_weighted_averages(player_df)
+    player_df = calculate_momentum_features(player_df)
+    player_df = calculate_consistency_score(player_df)
+    player_df = add_home_away_features(player_df)
+    player_df = add_rest_days_feature(player_df)
+    player_df = calculate_vs_opponent_features(player_df)
+    player_df = calculate_floor_ceiling(player_df)
+    player_df = calculate_minutes_features(player_df)
+    player_df = calculate_usage_proxy(player_df)
+    
+    return player_df
+
+
 def prepare_training_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, List[str]]:
     """
     Prepare training data with all features for EXTREME accuracy.
+    
+    CRITICAL: Per-player feature engineering prevents cross-player data leakage.
+    Rolling averages, expanding stats, rest days, streaks, etc. are all computed
+    within each player's own game history, NOT across the combined dataset.
     """
-    df = calculate_rolling_stats(df)
-    df = calculate_weighted_averages(df)
-    df = calculate_momentum_features(df)
-    df = calculate_consistency_score(df)
-    df = add_home_away_features(df)
-    df = add_rest_days_feature(df)
+    # ── Step 1: Row-level features (safe to apply globally) ──
+    # These don't use rolling/expanding windows, so cross-player is fine
     df = add_day_of_week_features(df)
     
     def_stats = get_team_defensive_stats()
@@ -776,10 +817,36 @@ def prepare_training_data(df: pd.DataFrame) -> Tuple[pd.DataFrame, List[str]]:
     else:
         df = add_opponent_features(df)
     
-    df = calculate_vs_opponent_features(df)
-    df = calculate_floor_ceiling(df)
-    df = calculate_minutes_features(df)
-    df = calculate_usage_proxy(df)
+    # ── Step 2: Per-player feature engineering ──
+    # Rolling stats, expanding means, rest days, etc. MUST be per-player
+    if 'PLAYER_ID' in df.columns and df['PLAYER_ID'].nunique() > 1:
+        print("  Applying per-player feature engineering (prevents cross-player contamination)...")
+        player_groups = []
+        player_ids = df['PLAYER_ID'].unique()
+        
+        for i, pid in enumerate(player_ids):
+            player_df = df[df['PLAYER_ID'] == pid].copy()
+            if len(player_df) >= 2:
+                player_df = _apply_per_player_features(player_df)
+                player_groups.append(player_df)
+            if (i + 1) % 50 == 0:
+                print(f"    Processed {i+1}/{len(player_ids)} players...")
+        
+        if player_groups:
+            df = pd.concat(player_groups, ignore_index=True)
+        print(f"  Completed: {len(player_ids)} players, {len(df)} game records")
+    else:
+        # Single player or no PLAYER_ID column (prediction path / legacy)
+        df = calculate_rolling_stats(df)
+        df = calculate_weighted_averages(df)
+        df = calculate_momentum_features(df)
+        df = calculate_consistency_score(df)
+        df = add_home_away_features(df)
+        df = add_rest_days_feature(df)
+        df = calculate_vs_opponent_features(df)
+        df = calculate_floor_ceiling(df)
+        df = calculate_minutes_features(df)
+        df = calculate_usage_proxy(df)
     
     # Define all feature columns
     feature_cols = []

@@ -302,18 +302,18 @@ def collect_player_period_stats(
         'FULL_AST_avg': df['FULL_AST'].mean() if 'FULL_AST' in df.columns else None,
     }
     
-    # Calculate actual ratios
-    if result['FULL_PTS_avg'] and result['FULL_PTS_avg'] > 0:
-        result['1H_PTS_ratio'] = result['1H_PTS_avg'] / result['FULL_PTS_avg']
-        result['1Q_PTS_ratio'] = result['1Q_PTS_avg'] / result['FULL_PTS_avg'] if result['1Q_PTS_avg'] else None
+    # Calculate actual ratios - guard against None numerators and 0.0 falsy issue
+    if result['FULL_PTS_avg'] is not None and result['FULL_PTS_avg'] > 0:
+        result['1H_PTS_ratio'] = result['1H_PTS_avg'] / result['FULL_PTS_avg'] if result['1H_PTS_avg'] is not None else None
+        result['1Q_PTS_ratio'] = result['1Q_PTS_avg'] / result['FULL_PTS_avg'] if result['1Q_PTS_avg'] is not None else None
     
-    if result['FULL_REB_avg'] and result['FULL_REB_avg'] > 0:
-        result['1H_REB_ratio'] = result['1H_REB_avg'] / result['FULL_REB_avg']
-        result['1Q_REB_ratio'] = result['1Q_REB_avg'] / result['FULL_REB_avg'] if result['1Q_REB_avg'] else None
+    if result['FULL_REB_avg'] is not None and result['FULL_REB_avg'] > 0:
+        result['1H_REB_ratio'] = result['1H_REB_avg'] / result['FULL_REB_avg'] if result['1H_REB_avg'] is not None else None
+        result['1Q_REB_ratio'] = result['1Q_REB_avg'] / result['FULL_REB_avg'] if result['1Q_REB_avg'] is not None else None
     
-    if result['FULL_AST_avg'] and result['FULL_AST_avg'] > 0:
-        result['1H_AST_ratio'] = result['1H_AST_avg'] / result['FULL_AST_avg']
-        result['1Q_AST_ratio'] = result['1Q_AST_avg'] / result['FULL_AST_avg'] if result['1Q_AST_avg'] else None
+    if result['FULL_AST_avg'] is not None and result['FULL_AST_avg'] > 0:
+        result['1H_AST_ratio'] = result['1H_AST_avg'] / result['FULL_AST_avg'] if result['1H_AST_avg'] is not None else None
+        result['1Q_AST_ratio'] = result['1Q_AST_avg'] / result['FULL_AST_avg'] if result['1Q_AST_avg'] is not None else None
     
     return result
 
@@ -420,10 +420,16 @@ def collect_multiple_players(
                 
                 # Print summary
                 print(f"\n  Summary for {player_name}:")
-                print(f"  1H Points: {stats.get('1H_PTS_avg', 'N/A'):.1f} avg (ratio: {stats.get('1H_PTS_ratio', 'N/A'):.2%})")
-                print(f"  1Q Points: {stats.get('1Q_PTS_avg', 'N/A'):.1f} avg (ratio: {stats.get('1Q_PTS_ratio', 'N/A'):.2%})")
-                print(f"  1H Rebounds: {stats.get('1H_REB_avg', 'N/A'):.1f} avg")
-                print(f"  1Q Rebounds: {stats.get('1Q_REB_avg', 'N/A'):.1f} avg")
+                _1h_pts = stats.get('1H_PTS_avg')
+                _1q_pts = stats.get('1Q_PTS_avg')
+                _1h_ratio = stats.get('1H_PTS_ratio')
+                _1q_ratio = stats.get('1Q_PTS_ratio')
+                _1h_reb = stats.get('1H_REB_avg')
+                _1q_reb = stats.get('1Q_REB_avg')
+                print(f"  1H Points: {f'{_1h_pts:.1f}' if _1h_pts is not None else 'N/A'} avg (ratio: {f'{_1h_ratio:.2%}' if _1h_ratio is not None else 'N/A'})")
+                print(f"  1Q Points: {f'{_1q_pts:.1f}' if _1q_pts is not None else 'N/A'} avg (ratio: {f'{_1q_ratio:.2%}' if _1q_ratio is not None else 'N/A'})")
+                print(f"  1H Rebounds: {f'{_1h_reb:.1f}' if _1h_reb is not None else 'N/A'} avg")
+                print(f"  1Q Rebounds: {f'{_1q_reb:.1f}' if _1q_reb is not None else 'N/A'} avg")
             else:
                 print(f"  [WARNING] No data collected for {player_name}")
                 
