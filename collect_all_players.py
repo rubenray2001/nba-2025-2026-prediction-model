@@ -486,6 +486,13 @@ def collect_new_games_for_player(player_name: str, player_id: int, season: str =
     try:
         df = pd.DataFrame(all_games)
         
+        # Ensure numeric columns are properly converted
+        numeric_cols = ['1Q_PTS', '1Q_REB', '1Q_AST', '1H_PTS', '1H_REB', '1H_AST', 
+                        'FULL_PTS', 'FULL_REB', 'FULL_AST']
+        for col in numeric_cols:
+            if col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors='coerce')
+        
         updated_stats = {
             'player_name': player_name,
             'player_id': player_id,
@@ -494,19 +501,19 @@ def collect_new_games_for_player(player_name: str, player_id: int, season: str =
             'last_updated': datetime.now().isoformat(),
             
             # 1Q Averages
-            '1Q_PTS_avg': df['1Q_PTS'].mean() if '1Q_PTS' in df.columns else None,
-            '1Q_REB_avg': df['1Q_REB'].mean() if '1Q_REB' in df.columns else None,
-            '1Q_AST_avg': df['1Q_AST'].mean() if '1Q_AST' in df.columns else None,
+            '1Q_PTS_avg': float(df['1Q_PTS'].mean()) if '1Q_PTS' in df.columns and df['1Q_PTS'].notna().any() else None,
+            '1Q_REB_avg': float(df['1Q_REB'].mean()) if '1Q_REB' in df.columns and df['1Q_REB'].notna().any() else None,
+            '1Q_AST_avg': float(df['1Q_AST'].mean()) if '1Q_AST' in df.columns and df['1Q_AST'].notna().any() else None,
             
             # 1H Averages  
-            '1H_PTS_avg': df['1H_PTS'].mean() if '1H_PTS' in df.columns else None,
-            '1H_REB_avg': df['1H_REB'].mean() if '1H_REB' in df.columns else None,
-            '1H_AST_avg': df['1H_AST'].mean() if '1H_AST' in df.columns else None,
+            '1H_PTS_avg': float(df['1H_PTS'].mean()) if '1H_PTS' in df.columns and df['1H_PTS'].notna().any() else None,
+            '1H_REB_avg': float(df['1H_REB'].mean()) if '1H_REB' in df.columns and df['1H_REB'].notna().any() else None,
+            '1H_AST_avg': float(df['1H_AST'].mean()) if '1H_AST' in df.columns and df['1H_AST'].notna().any() else None,
             
             # Full Game Averages
-            'FULL_PTS_avg': df['FULL_PTS'].mean() if 'FULL_PTS' in df.columns else None,
-            'FULL_REB_avg': df['FULL_REB'].mean() if 'FULL_REB' in df.columns else None,
-            'FULL_AST_avg': df['FULL_AST'].mean() if 'FULL_AST' in df.columns else None,
+            'FULL_PTS_avg': float(df['FULL_PTS'].mean()) if 'FULL_PTS' in df.columns and df['FULL_PTS'].notna().any() else None,
+            'FULL_REB_avg': float(df['FULL_REB'].mean()) if 'FULL_REB' in df.columns and df['FULL_REB'].notna().any() else None,
+            'FULL_AST_avg': float(df['FULL_AST'].mean()) if 'FULL_AST' in df.columns and df['FULL_AST'].notna().any() else None,
         }
         
         # Calculate ratios

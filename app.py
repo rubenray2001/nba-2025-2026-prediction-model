@@ -169,6 +169,50 @@ def main():
     init_session_state()
     st.markdown(CSS_STYLES, unsafe_allow_html=True)
     
+    # Sidebar with injury info
+    with st.sidebar:
+        st.header("🏥 Injury Report")
+        
+        try:
+            from injury_tracker import get_injuries, get_out_players
+            
+            injuries = get_injuries()
+            total_out = sum(len([p for p in team_injuries if p['status'] == 'Out']) 
+                          for team_injuries in injuries.values())
+            
+            st.metric("Players OUT", total_out)
+            
+            # Show teams with significant injuries
+            with st.expander("View by Team", expanded=False):
+                teams_with_injuries = [(t, i) for t, i in injuries.items() if i]
+                teams_with_injuries.sort(key=lambda x: len([p for p in x[1] if p['status'] == 'Out']), reverse=True)
+                
+                for team, team_injuries in teams_with_injuries[:15]:
+                    out_players = [p['name'] for p in team_injuries if p['status'] == 'Out']
+                    gtd_players = [p['name'] for p in team_injuries if p['status'] in ['Day-To-Day', 'Questionable', 'Doubtful']]
+                    
+                    if out_players or gtd_players:
+                        st.markdown(f"**{team}**")
+                        if out_players:
+                            st.markdown(f"🔴 {', '.join(out_players[:3])}")
+                        if gtd_players:
+                            st.markdown(f"🟡 {', '.join(gtd_players[:3])}")
+                        st.divider()
+            
+            # Refresh button
+            if st.button("🔄 Refresh Injuries"):
+                from injury_tracker import get_injuries
+                get_injuries(force_refresh=True)
+                st.rerun()
+                
+        except ImportError:
+            st.info("Injury tracking not available")
+        except Exception as e:
+            st.error(f"Could not load injuries: {str(e)}")
+        
+        st.divider()
+        st.caption("Injuries affect predictions automatically")
+    
     # Header
     st.title("🏀 Prizepicks NBA 1H & 1Q Prop Predictor")
     st.markdown("*Ensemble ML Model for 1st Half & 1st Quarter Props*")
@@ -181,6 +225,8 @@ def main():
     2. **Look for 🎯 ELITE or ✅ SOLID picks** - these have BOTH high score AND big edge
     3. **Avoid ⚠️ THIN EDGE picks** - high score but small edge (<2 pts) can flip easily
     4. For Flex plays, only use picks with **Score 85+ AND Edge 2.5+**
+    5. **⭐ NEVER take UNDER on star/volatile players** unless edge is 3.5+ pts
+    6. **🔄 Watch for recently traded players** - old team stats may not apply
     """)
     
     # Main tabs
@@ -909,15 +955,27 @@ def display_batch_results(results: list):
         else:
             quality = "❌ SKIP"
         
+        # Check for injury conflict (UNDER pick but injuries favor OVER)
+        pick = r.get('pick', '')
+        injury_boost = r.get('injury_boost', 1.0) or 1.0
+        is_under = 'UNDER' in pick
+        injury_conflict = is_under and injury_boost > 1.05
+        
+        # Add warning emoji to pick if injury conflict
+        display_pick = pick
+        if injury_conflict:
+            display_pick = f"🏥 {pick}"
+        
         summary_data.append({
             'Player': r.get('player_name', 'Unknown'),
             'Type': prop_type.upper() if isinstance(prop_type, str) else 'POINTS',
             'Line': prop_line,
             'Predicted': r.get('predicted_1h', 0) or 0,
-            'Pick': r.get('pick', 'N/A'),
+            'Pick': display_pick,
             'Score': lock_score,
             'Edge': edge,
-            'Quality': quality
+            'Quality': quality,
+            'InjBoost': f"+{(injury_boost-1)*100:.0f}%" if injury_boost > 1.01 else ""
         })
     
     if summary_data:
@@ -954,6 +1012,12 @@ def display_batch_results(results: list):
             st.dataframe(styled, use_container_width=True, hide_index=True)
         except:
             st.dataframe(df, use_container_width=True, hide_index=True)
+        
+        # Check if any picks have injury conflicts
+        has_injury_conflicts = any('🏥' in str(d.get('Pick', '')) for d in summary_data)
+        
+        if has_injury_conflicts:
+            st.warning("🏥 **INJURY CONFLICT:** Picks marked with 🏥 are UNDER picks where injuries suggest higher scoring. These may be riskier than the score indicates.")
         
         # Quality guide
         st.markdown("---")
@@ -1512,6 +1576,19 @@ def add_to_history(result: dict, prop_type: str, opponent: str, is_home: bool, p
 
 def display_prediction(result: dict, prop_type: str, prop_line: float, period: str = '1h'):
     """Display single prediction result with lock rating"""
+    
+    # Check if player is OUT
+    if result.get('error'):
+        error_msg = result.get('error', 'Unknown error')
+        player_name = result.get('player_name', 'Player')
+        injury_status = result.get('injury_status')
+        
+        st.error(f"🏥 **{error_msg}**")
+        if injury_status:
+            st.warning(f"Injury: {injury_status.get('injury', 'Unknown')} | Status: {injury_status.get('status', 'OUT')}")
+        st.info("This player cannot be predicted while listed as OUT. Check injury reports for updates.")
+        return
+    
     pick = result.get('pick', 'N/A')
     confidence = result.get('confidence', 'N/A')
     confidence_desc = result.get('confidence_desc', '')
@@ -1610,6 +1687,34 @@ def display_prediction(result: dict, prop_type: str, prop_line: float, period: s
     elif lock_score >= 85 and abs_edge >= 3.5:
         st.success("✅ **EDGE + CONFIDENCE:** Both score AND edge are strong. This is an ideal pick for Flex plays.")
     
+    # INJURY CONFLICT WARNING
+    injury_info = result.get('injury_info')
+    injury_boost = result.get('injury_boost', 1.0)
+    if injury_info and injury_boost and injury_boost > 1.05:
+        is_under = 'UNDER' in pick
+        if is_under:
+            teammate_boost = injury_info.get('teammate_boost', 1.0)
+            opp_boost = injury_info.get('opponent_boost', 1.0)
+            out_teammates = injury_info.get('out_teammates', [])
+            
+            warning_parts = []
+            if teammate_boost > 1.05 and out_teammates:
+                warning_parts.append(f"**{', '.join(out_teammates[:2])}** OUT (+{(teammate_boost-1)*100:.0f}% usage boost)")
+            if opp_boost > 1.05:
+                warning_parts.append(f"Opponent injuries make scoring easier (+{(opp_boost-1)*100:.0f}%)")
+            
+            if warning_parts:
+                st.error(f"""
+                🏥 **INJURY CONFLICT - PROCEED WITH CAUTION**
+                
+                This is an **UNDER** pick, but injuries suggest **higher scoring**:
+                - {chr(10).join(['- ' + p for p in warning_parts])}
+                
+                Total injury boost: **+{(injury_boost-1)*100:.1f}%** to prediction
+                
+                Consider: The line may already account for injuries, OR this UNDER may be riskier than it appears.
+                """)
+    
     # Warning banner for unreliable predictions
     if result.get('prediction_warning'):
         st.markdown(f"""
@@ -1676,6 +1781,40 @@ def display_prediction(result: dict, prop_type: str, prop_line: float, period: s
                     <p style="color: #cccccc; margin: 5px 0 0 0; font-size: 0.85em;">{factor.get('desc', '')}</p>
                 </div>
                 """, unsafe_allow_html=True)
+    
+    # Display injury information if available
+    injury_info = result.get('injury_info')
+    injury_boost = result.get('injury_boost', 1.0)
+    
+    if injury_info or (injury_boost and injury_boost != 1.0):
+        st.divider()
+        st.subheader("🏥 Injury Impact")
+        
+        icol1, icol2 = st.columns(2)
+        
+        with icol1:
+            if injury_info:
+                out_teammates = injury_info.get('out_teammates', [])
+                if out_teammates:
+                    st.markdown(f"**Teammates OUT:** {', '.join(out_teammates[:3])}")
+                    teammate_boost = injury_info.get('teammate_boost', 1.0)
+                    if teammate_boost > 1.0:
+                        boost_pct = (teammate_boost - 1) * 100
+                        st.markdown(f"📈 Usage boost: **+{boost_pct:.0f}%**")
+        
+        with icol2:
+            if injury_info:
+                out_opponents = injury_info.get('out_opponents', [])
+                if out_opponents:
+                    st.markdown(f"**Opponents OUT:** {', '.join(out_opponents[:3])}")
+                    opp_boost = injury_info.get('opponent_boost', 1.0)
+                    if opp_boost > 1.0:
+                        boost_pct = (opp_boost - 1) * 100
+                        st.markdown(f"🎯 Easier matchup: **+{boost_pct:.0f}%**")
+        
+        if injury_boost and injury_boost != 1.0:
+            total_pct = (injury_boost - 1) * 100
+            st.info(f"**Combined Injury Adjustment:** +{total_pct:.1f}% to prediction")
     
     st.divider()
     

@@ -1,8 +1,25 @@
 {
   "player_name": "Alex Caruso",
   "player_id": 1627936,
-  "games_collected": 30,
+  "games_collected": 31,
   "games_data": [
+    {
+      "game_id": "0022500723",
+      "player_id": 1627936,
+      "player_name": "Alex Caruso",
+      "1Q_PTS": "2",
+      "1Q_REB": "0",
+      "1Q_AST": "3",
+      "1Q_MIN": "6:29",
+      "1H_PTS": "2",
+      "1H_REB": "0",
+      "1H_AST": "3",
+      "1H_MIN": "12:30",
+      "FULL_PTS": "6",
+      "FULL_REB": "0",
+      "FULL_AST": "3",
+      "FULL_MIN": "18:51"
+    },
     {
       "game_id": "0022500442",
       "player_id": 1627936,
@@ -474,20 +491,20 @@
       "1H_MIN": "10:39"
     }
   ],
-  "last_updated": "2026-01-30T08:39:32.994135",
-  "1Q_PTS_avg": 1.5666666666666667,
-  "1Q_REB_avg": 0.4666666666666667,
-  "1Q_AST_avg": 0.4,
-  "1H_PTS_avg": 3.1,
-  "1H_REB_avg": 1.3333333333333333,
-  "1H_AST_avg": 1.0333333333333334,
-  "FULL_PTS_avg": 5.75,
-  "FULL_REB_avg": 3.05,
-  "FULL_AST_avg": 2.05,
-  "1H_PTS_ratio": 0.5391304347826087,
-  "1Q_PTS_ratio": 0.27246376811594203,
-  "1H_REB_ratio": 0.4371584699453552,
-  "1Q_REB_ratio": 0.15300546448087432,
-  "1H_AST_ratio": 0.5040650406504066,
-  "1Q_AST_ratio": 0.19512195121951223
+  "last_updated": "2026-02-04T07:49:18.833219",
+  "1Q_PTS_avg": 1.5806451612903225,
+  "1Q_REB_avg": 0.45161290322580644,
+  "1Q_AST_avg": 0.4838709677419355,
+  "1H_PTS_avg": 3.064516129032258,
+  "1H_REB_avg": 1.2903225806451613,
+  "1H_AST_avg": 1.096774193548387,
+  "FULL_PTS_avg": 5.761904761904762,
+  "FULL_REB_avg": 2.9047619047619047,
+  "FULL_AST_avg": 2.0952380952380953,
+  "1H_PTS_ratio": 0.5318581711543588,
+  "1Q_PTS_ratio": 0.2743268461743535,
+  "1H_REB_ratio": 0.44420941300899,
+  "1Q_REB_ratio": 0.15547329455314648,
+  "1H_AST_ratio": 0.5234604105571847,
+  "1Q_AST_ratio": 0.23093841642228738
 }

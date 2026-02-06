@@ -1,0 +1,967 @@
+{
+  "timestamp": "2026-02-05T21:06:19.556715",
+  "injuries": {
+    "ATL": [
+      {
+        "name": "Trae Young",
+        "status": "Out",
+        "injury": "Back",
+        "team": "ATL",
+        "position": ""
+      },
+      {
+        "name": "Bogdan Bogdanovic",
+        "status": "Out",
+        "injury": "Knee",
+        "team": "ATL",
+        "position": ""
+      },
+      {
+        "name": "Onyeka Okongwu",
+        "position": "",
+        "status": "Out",
+        "team": "ATL"
+      },
+      {
+        "name": "Gabe Vincent",
+        "position": "",
+        "status": "Out",
+        "team": "ATL"
+      },
+      {
+        "name": "Buddy Hield",
+        "position": "",
+        "status": "Out",
+        "team": "ATL"
+      },
+      {
+        "name": "Jonathan Kuminga",
+        "position": "",
+        "status": "Out",
+        "team": "ATL"
+      }
+    ],
+    "BOS": [
+      {
+        "name": "John Tonje",
+        "position": "",
+        "status": "Out",
+        "team": "BOS"
+      },
+      {
+        "name": "Jayson Tatum",
+        "position": "",
+        "status": "Out",
+        "team": "BOS"
+      }
+    ],
+    "BKN": [
+      {
+        "name": "Ben Simmons",
+        "status": "Out",
+        "injury": "Back",
+        "team": "BKN",
+        "position": ""
+      },
+      {
+        "name": "Josh Minott",
+        "position": "",
+        "status": "Out",
+        "team": "BKN"
+      },
+      {
+        "name": "Ochai Agbaji",
+        "position": "",
+        "status": "Out",
+        "team": "BKN"
+      }
+    ],
+    "CHA": [
+      {
+        "name": "LaMelo Ball",
+        "status": "Out",
+        "injury": "Wrist",
+        "team": "CHA",
+        "position": ""
+      },
+      {
+        "name": "Mark Williams",
+        "status": "Out",
+        "injury": "Foot",
+        "team": "CHA",
+        "position": ""
+      },
+      {
+        "name": "Tidjane Salaun",
+        "position": "",
+        "status": "Out",
+        "team": "CHA"
+      },
+      {
+        "name": "Xavier Tillman",
+        "position": "",
+        "status": "Out",
+        "team": "CHA"
+      },
+      {
+        "name": "Coby White",
+        "position": "",
+        "status": "Out",
+        "team": "CHA"
+      }
+    ],
+    "CHI": [
+      {
+        "name": "Lonzo Ball",
+        "status": "Out",
+        "injury": "Knee",
+        "team": "CHI",
+        "position": ""
+      },
+      {
+        "name": "Zach LaVine",
+        "status": "Questionable",
+        "injury": "Knee",
+        "team": "CHI",
+        "position": ""
+      },
+      {
+        "name": "Collin Sexton",
+        "position": "",
+        "status": "Out",
+        "team": "CHI"
+      },
+      {
+        "name": "Nick Richards",
+        "position": "",
+        "status": "Out",
+        "team": "CHI"
+      },
+      {
+        "name": "Tre Jones",
+        "position": "",
+        "status": "Out",
+        "team": "CHI"
+      },
+      {
+        "name": "Leonard Miller",
+        "position": "",
+        "status": "Out",
+        "team": "CHI"
+      },
+      {
+        "name": "Rob Dillingham",
+        "position": "",
+        "status": "Out",
+        "team": "CHI"
+      },
+      {
+        "name": "Josh Giddey",
+        "position": "",
+        "status": "Out",
+        "team": "CHI"
+      },
+      {
+        "name": "Zach Collins",
+        "position": "",
+        "status": "Out",
+        "team": "CHI"
+      },
+      {
+        "name": "Noa Essengue",
+        "position": "",
+        "status": "Out",
+        "team": "CHI"
+      }
+    ],
+    "CLE": [
+      {
+        "name": "James Harden",
+        "position": "",
+        "status": "Out",
+        "team": "CLE"
+      },
+      {
+        "name": "Evan Mobley",
+        "position": "",
+        "status": "Out",
+        "team": "CLE"
+      },
+      {
+        "name": "Max Strus",
+        "position": "",
+        "status": "Out",
+        "team": "CLE"
+      }
+    ],
+    "DAL": [
+      {
+        "name": "Luka Doncic",
+        "status": "Out",
+        "injury": "Calf",
+        "team": "DAL",
+        "position": ""
+      },
+      {
+        "name": "Marvin Bagley III",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "DAL"
+      },
+      {
+        "name": "Khris Middleton",
+        "position": "",
+        "status": "Out",
+        "team": "DAL"
+      },
+      {
+        "name": "Brandon Williams",
+        "position": "",
+        "status": "Out",
+        "team": "DAL"
+      },
+      {
+        "name": "Tyus Jones",
+        "position": "",
+        "status": "Out",
+        "team": "DAL"
+      },
+      {
+        "name": "Kyrie Irving",
+        "position": "",
+        "status": "Out",
+        "team": "DAL"
+      },
+      {
+        "name": "Dereck Lively II",
+        "position": "",
+        "status": "Out",
+        "team": "DAL"
+      }
+    ],
+    "DEN": [
+      {
+        "name": "Aaron Gordon",
+        "status": "Day-To-Day",
+        "injury": "Calf",
+        "team": "DEN",
+        "position": ""
+      },
+      {
+        "name": "Peyton Watson",
+        "position": "",
+        "status": "Out",
+        "team": "DEN"
+      },
+      {
+        "name": "Spencer Jones",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "DEN"
+      },
+      {
+        "name": "Cameron Johnson",
+        "position": "",
+        "status": "Out",
+        "team": "DEN"
+      },
+      {
+        "name": "Tamar Bates",
+        "position": "",
+        "status": "Out",
+        "team": "DEN"
+      }
+    ],
+    "DET": [
+      {
+        "name": "Jalen Duren",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "DET"
+      },
+      {
+        "name": "Tobias Harris",
+        "position": "",
+        "status": "Out",
+        "team": "DET"
+      },
+      {
+        "name": "Dario Saric",
+        "position": "",
+        "status": "Out",
+        "team": "DET"
+      },
+      {
+        "name": "Tolu Smith",
+        "position": "",
+        "status": "Out",
+        "team": "DET"
+      }
+    ],
+    "GSW": [
+      {
+        "name": "Stephen Curry",
+        "status": "Day-To-Day",
+        "injury": "Knee",
+        "team": "GSW",
+        "position": ""
+      },
+      {
+        "name": "Kristaps Porzingis",
+        "position": "",
+        "status": "Out",
+        "team": "GSW"
+      },
+      {
+        "name": "Seth Curry",
+        "position": "",
+        "status": "Out",
+        "team": "GSW"
+      },
+      {
+        "name": "Jimmy Butler III",
+        "position": "",
+        "status": "Out",
+        "team": "GSW"
+      }
+    ],
+    "HOU": [
+      {
+        "name": "Tari Eason",
+        "position": "",
+        "status": "Out",
+        "team": "HOU"
+      },
+      {
+        "name": "Steven Adams",
+        "position": "",
+        "status": "Out",
+        "team": "HOU"
+      },
+      {
+        "name": "Fred VanVleet",
+        "position": "",
+        "status": "Out",
+        "team": "HOU"
+      }
+    ],
+    "IND": [
+      {
+        "name": "Ivica Zubac",
+        "position": "",
+        "status": "Out",
+        "team": "IND"
+      },
+      {
+        "name": "Kobe Brown",
+        "position": "",
+        "status": "Out",
+        "team": "IND"
+      },
+      {
+        "name": "Micah Potter",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "IND"
+      },
+      {
+        "name": "Obi Toppin",
+        "position": "",
+        "status": "Out",
+        "team": "IND"
+      },
+      {
+        "name": "Tyrese Haliburton",
+        "position": "",
+        "status": "Out",
+        "team": "IND"
+      }
+    ],
+    "LAC": [
+      {
+        "name": "Kawhi Leonard",
+        "status": "Out",
+        "injury": "Knee",
+        "team": "LAC",
+        "position": ""
+      },
+      {
+        "name": "Isaiah Jackson",
+        "position": "",
+        "status": "Out",
+        "team": "LAC"
+      },
+      {
+        "name": "Bennedict Mathurin",
+        "position": "",
+        "status": "Out",
+        "team": "LAC"
+      },
+      {
+        "name": "Darius Garland",
+        "position": "",
+        "status": "Out",
+        "team": "LAC"
+      },
+      {
+        "name": "Bradley Beal",
+        "position": "",
+        "status": "Out",
+        "team": "LAC"
+      }
+    ],
+    "LAL": [
+      {
+        "name": "Anthony Davis",
+        "status": "Day-To-Day",
+        "injury": "Foot",
+        "team": "LAL",
+        "position": ""
+      },
+      {
+        "name": "Luke Kennard",
+        "position": "",
+        "status": "Out",
+        "team": "LAL"
+      },
+      {
+        "name": "Luka Doncic",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "LAL"
+      },
+      {
+        "name": "Adou Thiero",
+        "position": "",
+        "status": "Out",
+        "team": "LAL"
+      }
+    ],
+    "MEM": [
+      {
+        "name": "Ja Morant",
+        "status": "Out",
+        "injury": "Shoulder",
+        "team": "MEM",
+        "position": ""
+      },
+      {
+        "name": "Eric Gordon",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MEM"
+      },
+      {
+        "name": "Santi Aldama",
+        "position": "",
+        "status": "Out",
+        "team": "MEM"
+      },
+      {
+        "name": "Scotty Pippen Jr.",
+        "position": "",
+        "status": "Out",
+        "team": "MEM"
+      },
+      {
+        "name": "Ty Jerome",
+        "position": "",
+        "status": "Out",
+        "team": "MEM"
+      },
+      {
+        "name": "Walter Clayton Jr.",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MEM"
+      },
+      {
+        "name": "Taylor Hendricks",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MEM"
+      },
+      {
+        "name": "Kyle Anderson",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MEM"
+      },
+      {
+        "name": "Zach Edey",
+        "position": "",
+        "status": "Out",
+        "team": "MEM"
+      },
+      {
+        "name": "Brandon Clarke",
+        "position": "",
+        "status": "Out",
+        "team": "MEM"
+      }
+    ],
+    "MIA": [
+      {
+        "name": "Jimmy Butler",
+        "status": "Out",
+        "injury": "Suspension",
+        "team": "MIA",
+        "position": ""
+      },
+      {
+        "name": "Tyler Herro",
+        "position": "",
+        "status": "Out",
+        "team": "MIA"
+      },
+      {
+        "name": "Terry Rozier",
+        "position": "",
+        "status": "Out",
+        "team": "MIA"
+      }
+    ],
+    "MIL": [
+      {
+        "name": "Giannis Antetokounmpo",
+        "status": "Day-To-Day",
+        "injury": "Back",
+        "team": "MIL",
+        "position": ""
+      },
+      {
+        "name": "Khris Middleton",
+        "status": "Out",
+        "injury": "Ankle",
+        "team": "MIL",
+        "position": ""
+      },
+      {
+        "name": "Bobby Portis",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MIL"
+      },
+      {
+        "name": "Gary Harris",
+        "position": "",
+        "status": "Out",
+        "team": "MIL"
+      },
+      {
+        "name": "Ousmane Dieng",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MIL"
+      },
+      {
+        "name": "Taurean Prince",
+        "position": "",
+        "status": "Out",
+        "team": "MIL"
+      }
+    ],
+    "MIN": [
+      {
+        "name": "Terrence Shannon Jr.",
+        "position": "",
+        "status": "Out",
+        "team": "MIN"
+      },
+      {
+        "name": "Julius Randle",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MIN"
+      },
+      {
+        "name": "Julian Phillips",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MIN"
+      },
+      {
+        "name": "Ayo Dosunmu",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MIN"
+      }
+    ],
+    "NOP": [
+      {
+        "name": "Zion Williamson",
+        "status": "Out",
+        "injury": "Hamstring",
+        "team": "NOP",
+        "position": ""
+      },
+      {
+        "name": "Brandon Ingram",
+        "status": "Questionable",
+        "injury": "Ankle",
+        "team": "NOP",
+        "position": ""
+      },
+      {
+        "name": "Dejounte Murray",
+        "status": "Out",
+        "injury": "Hand",
+        "team": "NOP",
+        "position": ""
+      },
+      {
+        "name": "Dalen Terry",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "NOP"
+      },
+      {
+        "name": "Hunter Dickinson",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "NOP"
+      }
+    ],
+    "NYK": [
+      {
+        "name": "Josh Hart",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "NYK"
+      },
+      {
+        "name": "Miles McBride",
+        "position": "",
+        "status": "Out",
+        "team": "NYK"
+      },
+      {
+        "name": "Jose Alvarado",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "NYK"
+      }
+    ],
+    "OKC": [
+      {
+        "name": "Jared McCain",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "OKC"
+      },
+      {
+        "name": "Chet Holmgren",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "OKC"
+      },
+      {
+        "name": "Isaiah Hartenstein",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "OKC"
+      },
+      {
+        "name": "Luguentz Dort",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "OKC"
+      },
+      {
+        "name": "Alex Caruso",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "OKC"
+      },
+      {
+        "name": "Ajay Mitchell",
+        "position": "",
+        "status": "Out",
+        "team": "OKC"
+      },
+      {
+        "name": "Shai Gilgeous-Alexander",
+        "position": "",
+        "status": "Out",
+        "team": "OKC"
+      },
+      {
+        "name": "Jalen Williams",
+        "position": "",
+        "status": "Out",
+        "team": "OKC"
+      },
+      {
+        "name": "Nikola Topic",
+        "position": "",
+        "status": "Out",
+        "team": "OKC"
+      },
+      {
+        "name": "Thomas Sorber",
+        "position": "",
+        "status": "Out",
+        "team": "OKC"
+      }
+    ],
+    "ORL": [
+      {
+        "name": "Paolo Banchero",
+        "status": "Out",
+        "injury": "Oblique",
+        "team": "ORL",
+        "position": ""
+      },
+      {
+        "name": "Franz Wagner",
+        "status": "Out",
+        "injury": "Oblique",
+        "team": "ORL",
+        "position": ""
+      },
+      {
+        "name": "Colin Castleton",
+        "position": "",
+        "status": "Out",
+        "team": "ORL"
+      }
+    ],
+    "PHI": [
+      {
+        "name": "Joel Embiid",
+        "status": "Out",
+        "injury": "Knee",
+        "team": "PHI",
+        "position": ""
+      }
+    ],
+    "PHX": [
+      {
+        "name": "Kevin Durant",
+        "status": "Day-To-Day",
+        "injury": "Calf",
+        "team": "PHX",
+        "position": ""
+      },
+      {
+        "name": "Bradley Beal",
+        "status": "Day-To-Day",
+        "injury": "Calf",
+        "team": "PHX",
+        "position": ""
+      },
+      {
+        "name": "Isaiah Livers",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "PHX"
+      },
+      {
+        "name": "Jalen Green",
+        "position": "",
+        "status": "Out",
+        "team": "PHX"
+      },
+      {
+        "name": "Amir Coffey",
+        "position": "",
+        "status": "Out",
+        "team": "PHX"
+      },
+      {
+        "name": "Cole Anthony",
+        "position": "",
+        "status": "Out",
+        "team": "PHX"
+      },
+      {
+        "name": "Devin Booker",
+        "position": "",
+        "status": "Out",
+        "team": "PHX"
+      }
+    ],
+    "POR": [
+      {
+        "name": "Deni Avdija",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "POR"
+      },
+      {
+        "name": "Kris Murray",
+        "position": "",
+        "status": "Out",
+        "team": "POR"
+      },
+      {
+        "name": "Matisse Thybulle",
+        "position": "",
+        "status": "Out",
+        "team": "POR"
+      },
+      {
+        "name": "Damian Lillard",
+        "position": "",
+        "status": "Out",
+        "team": "POR"
+      }
+    ],
+    "SAC": [
+      {
+        "name": "Domantas Sabonis",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "SAC"
+      },
+      {
+        "name": "Keegan Murray",
+        "position": "",
+        "status": "Out",
+        "team": "SAC"
+      }
+    ],
+    "SAS": [
+      {
+        "name": "Victor Wembanyama",
+        "status": "Day-To-Day",
+        "injury": "Back",
+        "team": "SAS",
+        "position": ""
+      },
+      {
+        "name": "Lindy Waters III",
+        "position": "",
+        "status": "Out",
+        "team": "SAS"
+      },
+      {
+        "name": "Jeremy Sochan",
+        "position": "",
+        "status": "Out",
+        "team": "SAS"
+      },
+      {
+        "name": "Luke Kornet",
+        "position": "",
+        "status": "Out",
+        "team": "SAS"
+      },
+      {
+        "name": "David Jones Garcia",
+        "position": "",
+        "status": "Out",
+        "team": "SAS"
+      }
+    ],
+    "TOR": [
+      {
+        "name": "Scottie Barnes",
+        "status": "Day-To-Day",
+        "injury": "Ankle",
+        "team": "TOR",
+        "position": ""
+      },
+      {
+        "name": "Trayce Jackson-Davis",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "TOR"
+      },
+      {
+        "name": "Jakob Poeltl",
+        "position": "",
+        "status": "Out",
+        "team": "TOR"
+      },
+      {
+        "name": "Chucky Hepburn",
+        "position": "",
+        "status": "Out",
+        "team": "TOR"
+      }
+    ],
+    "UTA": [
+      {
+        "name": "Kevin Love",
+        "position": "",
+        "status": "Out",
+        "team": "UTA"
+      },
+      {
+        "name": "Vince Williams Jr.",
+        "position": "",
+        "status": "Out",
+        "team": "UTA"
+      },
+      {
+        "name": "Jaren Jackson Jr.",
+        "position": "",
+        "status": "Out",
+        "team": "UTA"
+      },
+      {
+        "name": "John Konchar",
+        "position": "",
+        "status": "Out",
+        "team": "UTA"
+      },
+      {
+        "name": "Keyonte George",
+        "position": "",
+        "status": "Out",
+        "team": "UTA"
+      },
+      {
+        "name": "Elijah Harkless",
+        "position": "",
+        "status": "Out",
+        "team": "UTA"
+      },
+      {
+        "name": "Walker Kessler",
+        "position": "",
+        "status": "Out",
+        "team": "UTA"
+      }
+    ],
+    "WAS": [
+      {
+        "name": "Jaden Hardy",
+        "position": "",
+        "status": "Out",
+        "team": "WAS"
+      },
+      {
+        "name": "Tre Johnson",
+        "position": "",
+        "status": "Out",
+        "team": "WAS"
+      },
+      {
+        "name": "Dante Exum",
+        "position": "",
+        "status": "Out",
+        "team": "WAS"
+      },
+      {
+        "name": "Anthony Davis",
+        "position": "",
+        "status": "Out",
+        "team": "WAS"
+      },
+      {
+        "name": "Cam Whitmore",
+        "position": "",
+        "status": "Out",
+        "team": "WAS"
+      },
+      {
+        "name": "Trae Young",
+        "position": "",
+        "status": "Out",
+        "team": "WAS"
+      }
+    ]
+  }
+}

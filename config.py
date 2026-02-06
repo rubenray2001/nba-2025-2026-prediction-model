@@ -330,6 +330,71 @@ SUSPICIOUS_EDGE_THRESHOLDS = {
 }
 
 # =============================================================================
+# HIGH VARIANCE PLAYERS - UNDER picks are DANGEROUS on these players
+# These players have extreme game-to-game variance and can explode any night
+# =============================================================================
+
+HIGH_VARIANCE_STARS = [
+    # Superstars with massive upside ceilings - UNDER is always risky
+    "Victor Wembanyama", "Luka Doncic", "Luka Dončić",
+    "Anthony Edwards", "Ja Morant", "Trae Young", "LaMelo Ball",
+    "Shai Gilgeous-Alexander", "Jayson Tatum", "Giannis Antetokounmpo",
+    "Stephen Curry", "Kevin Durant", "Donovan Mitchell",
+    "Damian Lillard", "Devin Booker", "Kyrie Irving",
+    "Anthony Davis", "Nikola Jokic", "Joel Embiid",
+    "Tyrese Maxey", "De'Aaron Fox", "Cade Cunningham",
+    "Jalen Brunson", "Paolo Banchero", "Zion Williamson",
+]
+
+# Role-expanding young players - their averages don't reflect current usage
+ROLE_EXPANDING_PLAYERS = [
+    "Isaiah Collier", "Cooper Flagg", "Dylan Harper", "Stephon Castle",
+    "Matas Buzelis", "Moussa Diabaté", "Asa Newell", "Derik Queen",
+    "Dalton Knecht", "Chet Holmgren", "Cam Thomas", "Jalen Green",
+    "Amen Thompson", "Ausar Thompson", "Jaime Jaquez Jr",
+    "Bub Carrington", "Jaylen Wells", "Donovan Clingan",
+]
+
+# Recently traded players - their stats from old team may not apply
+# Format: "Player Name": {"new_team": "ABR", "old_team": "ABR", "trade_date": "YYYY-MM-DD"}
+# NOTE: Remove players from this list once they've played ~15+ games on new team
+# and their period stats reflect the new team context
+RECENTLY_TRADED_PLAYERS = {
+    "Luka Doncic": {"new_team": "LAL", "old_team": "DAL", "trade_date": "2026-01-01"},
+    "Luka Dončić": {"new_team": "LAL", "old_team": "DAL", "trade_date": "2026-01-01"},
+    "CJ McCollum": {"new_team": "ATL", "old_team": "NOP", "trade_date": "2026-01-15"},
+    # Kevin Durant removed - has enough games on HOU for stats to be valid
+}
+
+# =============================================================================
+# UNDER PICK SAFETY THRESHOLDS
+# =============================================================================
+
+# Minimum edge (in points) required for UNDER picks by player type
+UNDER_MIN_EDGE = {
+    "star": 3.5,          # Need 3.5+ pts edge for UNDER on a star
+    "high_variance": 3.0, # Need 3.0+ pts edge for UNDER on volatile player
+    "role_expanding": 2.5,# Need 2.5+ pts edge for UNDER on role-expanding player
+    "default": 1.5        # Standard UNDER minimum edge
+}
+
+# Volatility penalty for UNDER picks (applied to lock score)
+UNDER_VOLATILITY_PENALTY = {
+    "star": -15,          # -15 lock score for UNDER on a star player
+    "high_variance": -10, # -10 for high variance player
+    "role_expanding": -8, # -8 for role expanding player
+}
+
+# =============================================================================
+# ROLE CHANGE DETECTION THRESHOLDS
+# =============================================================================
+
+# If recent 5-game avg deviates from season avg by this %, flag as role change
+ROLE_CHANGE_THRESHOLD = 0.30  # 30% deviation = likely role change
+# Use recent form more when role change detected
+ROLE_CHANGE_RECENT_WEIGHT = 0.70  # 70% weight to recent 5 games when role change detected
+
+# =============================================================================
 # DATA PATHS
 # =============================================================================
 

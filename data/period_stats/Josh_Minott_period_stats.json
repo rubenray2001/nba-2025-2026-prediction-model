@@ -1,8 +1,25 @@
 {
   "player_name": "Josh Minott",
   "player_id": 1631169,
-  "games_collected": 28,
+  "games_collected": 29,
   "games_data": [
+    {
+      "game_id": "0022500728",
+      "player_id": 1631169,
+      "player_name": "Josh Minott",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:23",
+      "1H_PTS": "0",
+      "1H_REB": "1",
+      "1H_AST": "0",
+      "1H_MIN": "5:23",
+      "FULL_PTS": "0",
+      "FULL_REB": "2",
+      "FULL_AST": "0",
+      "FULL_MIN": "7:04"
+    },
     {
       "game_id": "0022500320",
       "player_id": 1631169,
@@ -400,20 +417,20 @@
       "1H_MIN": "15:59"
     }
   ],
-  "last_updated": "2026-01-30T11:51:10.303816",
-  "1Q_PTS_avg": 1.16,
-  "1Q_REB_avg": 0.96,
-  "1Q_AST_avg": 0.12,
-  "1H_PTS_avg": 3.7916666666666665,
-  "1H_REB_avg": 2.2916666666666665,
-  "1H_AST_avg": 0.625,
-  "FULL_PTS_avg": 7.466666666666667,
-  "FULL_REB_avg": 5.066666666666666,
-  "FULL_AST_avg": 1.1333333333333333,
-  "1H_PTS_ratio": 0.5078125,
-  "1Q_PTS_ratio": 0.15535714285714283,
-  "1H_REB_ratio": 0.45230263157894735,
-  "1Q_REB_ratio": 0.18947368421052632,
-  "1H_AST_ratio": 0.5514705882352942,
-  "1Q_AST_ratio": 0.10588235294117647
+  "last_updated": "2026-02-05T09:10:24.687488",
+  "1Q_PTS_avg": 1.1153846153846154,
+  "1Q_REB_avg": 0.9615384615384616,
+  "1Q_AST_avg": 0.11538461538461539,
+  "1H_PTS_avg": 3.64,
+  "1H_REB_avg": 2.24,
+  "1H_AST_avg": 0.6,
+  "FULL_PTS_avg": 7.0,
+  "FULL_REB_avg": 4.875,
+  "FULL_AST_avg": 1.0625,
+  "1H_PTS_ratio": 0.52,
+  "1Q_PTS_ratio": 0.15934065934065936,
+  "1H_REB_ratio": 0.45948717948717954,
+  "1Q_REB_ratio": 0.19723865877712032,
+  "1H_AST_ratio": 0.5647058823529412,
+  "1Q_AST_ratio": 0.1085972850678733
 }

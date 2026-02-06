@@ -1,8 +1,25 @@
 {
   "player_name": "Santi Aldama",
   "player_id": 1630583,
-  "games_collected": 30,
+  "games_collected": 31,
   "games_data": [
+    {
+      "game_id": "0022500731",
+      "player_id": 1630583,
+      "player_name": "Santi Aldama",
+      "1Q_PTS": "3",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:58",
+      "1H_PTS": "4",
+      "1H_REB": "1",
+      "1H_AST": "0",
+      "1H_MIN": "11:50",
+      "FULL_PTS": "12",
+      "FULL_REB": "6",
+      "FULL_AST": "0",
+      "FULL_MIN": "24:08"
+    },
     {
       "game_id": "0022500443",
       "player_id": 1630583,
@@ -474,20 +491,20 @@
       "1H_MIN": "15:26"
     }
   ],
-  "last_updated": "2026-01-30T15:06:31.113668",
-  "1Q_PTS_avg": 4.333333333333333,
-  "1Q_REB_avg": 2.2,
-  "1Q_AST_avg": 0.8333333333333334,
-  "1H_PTS_avg": 8.033333333333333,
-  "1H_REB_avg": 4.3,
-  "1H_AST_avg": 1.8333333333333333,
-  "FULL_PTS_avg": 15.3,
-  "FULL_REB_avg": 6.75,
-  "FULL_AST_avg": 3.35,
-  "1H_PTS_ratio": 0.5250544662309368,
-  "1Q_PTS_ratio": 0.28322440087145967,
-  "1H_REB_ratio": 0.637037037037037,
-  "1Q_REB_ratio": 0.32592592592592595,
-  "1H_AST_ratio": 0.5472636815920398,
-  "1Q_AST_ratio": 0.24875621890547264
+  "last_updated": "2026-02-05T09:38:24.215035",
+  "1Q_PTS_avg": 4.290322580645161,
+  "1Q_REB_avg": 2.161290322580645,
+  "1Q_AST_avg": 0.8064516129032258,
+  "1H_PTS_avg": 7.903225806451613,
+  "1H_REB_avg": 4.193548387096774,
+  "1H_AST_avg": 1.7741935483870968,
+  "FULL_PTS_avg": 15.142857142857142,
+  "FULL_REB_avg": 6.714285714285714,
+  "FULL_AST_avg": 3.1904761904761907,
+  "1H_PTS_ratio": 0.5219111381618989,
+  "1Q_PTS_ratio": 0.283323189287888,
+  "1H_REB_ratio": 0.6245710363761152,
+  "1Q_REB_ratio": 0.3218943033630748,
+  "1H_AST_ratio": 0.556090515166105,
+  "1Q_AST_ratio": 0.25276841598459315
 }

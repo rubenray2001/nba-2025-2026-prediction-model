@@ -1,8 +1,21 @@
 {
   "player_name": "Doug McDermott",
   "player_id": 203926,
-  "games_collected": 5,
+  "games_collected": 6,
   "games_data": [
+    {
+      "game_id": "0022500707",
+      "player_id": 203926,
+      "player_name": "Doug McDermott",
+      "1H_PTS": "3",
+      "1H_REB": "0",
+      "1H_AST": "0",
+      "1H_MIN": "5:38",
+      "FULL_PTS": "3",
+      "FULL_REB": "0",
+      "FULL_AST": "0",
+      "FULL_MIN": "5:38"
+    },
     {
       "game_id": "0022500515",
       "player_id": 203926,
@@ -65,10 +78,16 @@
       "1H_MIN": "3:17"
     }
   ],
+  "last_updated": "2026-02-03T10:05:50.573149",
   "1Q_PTS_avg": 0.0,
   "1Q_REB_avg": 0.0,
   "1Q_AST_avg": 0.0,
-  "1H_PTS_avg": 1.8,
-  "1H_REB_avg": 0.6,
-  "1H_AST_avg": 0.0
+  "1H_PTS_avg": 2.0,
+  "1H_REB_avg": 0.5,
+  "1H_AST_avg": 0.0,
+  "FULL_PTS_avg": 3.0,
+  "FULL_REB_avg": 0.0,
+  "FULL_AST_avg": 0.0,
+  "1H_PTS_ratio": 0.6666666666666666,
+  "1Q_PTS_ratio": null
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Jalen Green",
   "player_id": 1630224,
-  "games_collected": 4,
+  "games_collected": 5,
   "games_data": [
+    {
+      "game_id": "0022500693",
+      "player_id": 1630224,
+      "player_name": "Jalen Green",
+      "1Q_PTS": "2",
+      "1Q_REB": "3",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:37",
+      "1H_PTS": "5",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "9:28",
+      "FULL_PTS": "11",
+      "FULL_REB": "4",
+      "FULL_AST": "1",
+      "FULL_MIN": "15:34"
+    },
     {
       "game_id": "0022500636",
       "player_id": 1630224,
@@ -56,10 +73,20 @@
       "1H_MIN": "13:13"
     }
   ],
-  "1Q_PTS_avg": 4.5,
-  "1Q_REB_avg": 1.0,
-  "1Q_AST_avg": 1.0,
-  "1H_PTS_avg": 7.25,
-  "1H_REB_avg": 1.5,
-  "1H_AST_avg": 1.5
+  "last_updated": "2026-02-03T10:18:13.965691",
+  "1Q_PTS_avg": 4.0,
+  "1Q_REB_avg": 1.4,
+  "1Q_AST_avg": 0.8,
+  "1H_PTS_avg": 6.8,
+  "1H_REB_avg": 1.8,
+  "1H_AST_avg": 1.2,
+  "FULL_PTS_avg": 11.0,
+  "FULL_REB_avg": 4.0,
+  "FULL_AST_avg": 1.0,
+  "1H_PTS_ratio": 0.6181818181818182,
+  "1Q_PTS_ratio": 0.36363636363636365,
+  "1H_REB_ratio": 0.45,
+  "1Q_REB_ratio": 0.35,
+  "1H_AST_ratio": 1.2,
+  "1Q_AST_ratio": 0.8
 }

@@ -1,0 +1,76 @@
+{
+  "ATL": [
+    {"name": "Trae Young", "status": "Out", "injury": "Back"},
+    {"name": "Bogdan Bogdanovic", "status": "Out", "injury": "Knee"}
+  ],
+  "BOS": [],
+  "BKN": [
+    {"name": "Ben Simmons", "status": "Out", "injury": "Back"}
+  ],
+  "CHA": [
+    {"name": "LaMelo Ball", "status": "Out", "injury": "Wrist"},
+    {"name": "Mark Williams", "status": "Out", "injury": "Foot"}
+  ],
+  "CHI": [
+    {"name": "Lonzo Ball", "status": "Out", "injury": "Knee"},
+    {"name": "Zach LaVine", "status": "Questionable", "injury": "Knee"}
+  ],
+  "CLE": [],
+  "DAL": [
+    {"name": "Luka Doncic", "status": "Out", "injury": "Calf"}
+  ],
+  "DEN": [
+    {"name": "Aaron Gordon", "status": "Day-To-Day", "injury": "Calf"}
+  ],
+  "DET": [],
+  "GSW": [
+    {"name": "Stephen Curry", "status": "Day-To-Day", "injury": "Knee"}
+  ],
+  "HOU": [],
+  "IND": [],
+  "LAC": [
+    {"name": "Kawhi Leonard", "status": "Out", "injury": "Knee"}
+  ],
+  "LAL": [
+    {"name": "Anthony Davis", "status": "Day-To-Day", "injury": "Foot"}
+  ],
+  "MEM": [
+    {"name": "Ja Morant", "status": "Out", "injury": "Shoulder"}
+  ],
+  "MIA": [
+    {"name": "Jimmy Butler", "status": "Out", "injury": "Suspension"}
+  ],
+  "MIL": [
+    {"name": "Giannis Antetokounmpo", "status": "Day-To-Day", "injury": "Back"},
+    {"name": "Khris Middleton", "status": "Out", "injury": "Ankle"}
+  ],
+  "MIN": [],
+  "NOP": [
+    {"name": "Zion Williamson", "status": "Out", "injury": "Hamstring"},
+    {"name": "Brandon Ingram", "status": "Questionable", "injury": "Ankle"},
+    {"name": "Dejounte Murray", "status": "Out", "injury": "Hand"}
+  ],
+  "NYK": [],
+  "OKC": [],
+  "ORL": [
+    {"name": "Paolo Banchero", "status": "Out", "injury": "Oblique"},
+    {"name": "Franz Wagner", "status": "Out", "injury": "Oblique"}
+  ],
+  "PHI": [
+    {"name": "Joel Embiid", "status": "Out", "injury": "Knee"}
+  ],
+  "PHX": [
+    {"name": "Kevin Durant", "status": "Day-To-Day", "injury": "Calf"},
+    {"name": "Bradley Beal", "status": "Day-To-Day", "injury": "Calf"}
+  ],
+  "POR": [],
+  "SAC": [],
+  "SAS": [
+    {"name": "Victor Wembanyama", "status": "Day-To-Day", "injury": "Back"}
+  ],
+  "TOR": [
+    {"name": "Scottie Barnes", "status": "Day-To-Day", "injury": "Ankle"}
+  ],
+  "UTA": [],
+  "WAS": []
+}

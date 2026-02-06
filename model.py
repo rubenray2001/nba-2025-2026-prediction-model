@@ -10,6 +10,7 @@ Performance Optimized:
 """
 
 import os
+import json
 import joblib
 import numpy as np
 import pandas as pd
@@ -35,7 +36,9 @@ from config import (
     MIN_EDGE_REQUIREMENTS, MIN_GAMES_FOR_CONFIDENCE, SUSPICIOUS_EDGE_THRESHOLDS,
     PLAYER_SCORING_STYLES, Q1_RATIO_ADJUSTMENTS,
     STAT_VARIANCE, STAT_MIN_EDGE_PCT, STAT_CONSISTENCY, POSITION_STAT_BONUSES,
-    EARLY_REBOUNDERS, EARLY_PLAYMAKERS, STAT_LINE_VOLATILITY
+    EARLY_REBOUNDERS, EARLY_PLAYMAKERS, STAT_LINE_VOLATILITY,
+    HIGH_VARIANCE_STARS, ROLE_EXPANDING_PLAYERS, RECENTLY_TRADED_PLAYERS,
+    UNDER_MIN_EDGE, UNDER_VOLATILITY_PENALTY, ROLE_CHANGE_THRESHOLD, ROLE_CHANGE_RECENT_WEIGHT
 )
 
 # ============================================================================
@@ -1308,16 +1311,33 @@ def get_player_period_ratio(player_name: str, prop_type: str, period: str = '1h'
         
         stats = load_player_period_stats(player_name)
         if stats:
-            # Map prop_type to stat column
-            stat_map = {'points': 'PTS', 'rebounds': 'REB', 'assists': 'AST', 'pra': 'PTS'}
-            stat_key = stat_map.get(prop_type, 'PTS')
-            
             period_key = '1H' if period.lower() == '1h' else '1Q'
-            ratio_key = f'{period_key}_{stat_key}_ratio'
             
-            real_ratio = stats.get(ratio_key)
-            if real_ratio and real_ratio > 0:
-                return (real_ratio, True)  # Real data!
+            if prop_type == 'pra':
+                # PRA ratio: weighted average of PTS, REB, AST ratios
+                pts_ratio = stats.get(f'{period_key}_PTS_ratio')
+                reb_ratio = stats.get(f'{period_key}_REB_ratio')
+                ast_ratio = stats.get(f'{period_key}_AST_ratio')
+                
+                # Get full-game averages to weight the ratios properly
+                full_pts = stats.get('FULL_PTS_avg', 0) or 0
+                full_reb = stats.get('FULL_REB_avg', 0) or 0
+                full_ast = stats.get('FULL_AST_avg', 0) or 0
+                full_pra = full_pts + full_reb + full_ast
+                
+                if pts_ratio and reb_ratio and ast_ratio and full_pra > 0:
+                    # Weight each ratio by its proportion of total PRA
+                    pra_ratio = (pts_ratio * full_pts + reb_ratio * full_reb + ast_ratio * full_ast) / full_pra
+                    return (pra_ratio, True)
+            else:
+                # Single stat ratio
+                stat_map = {'points': 'PTS', 'rebounds': 'REB', 'assists': 'AST'}
+                stat_key = stat_map.get(prop_type, 'PTS')
+                ratio_key = f'{period_key}_{stat_key}_ratio'
+                
+                real_ratio = stats.get(ratio_key)
+                if real_ratio and real_ratio > 0:
+                    return (real_ratio, True)  # Real data!
     except ImportError:
         pass  # Module not available, use defaults
     except Exception:
@@ -1340,15 +1360,27 @@ def get_player_period_average(player_name: str, prop_type: str, period: str = '1
         
         stats = load_player_period_stats(player_name)
         if stats:
-            stat_map = {'points': 'PTS', 'rebounds': 'REB', 'assists': 'AST'}
-            stat_key = stat_map.get(prop_type, 'PTS')
-            
             period_key = '1H' if period.lower() == '1h' else '1Q'
-            avg_key = f'{period_key}_{stat_key}_avg'
             
-            real_avg = stats.get(avg_key)
-            if real_avg is not None and real_avg >= 0:
-                return (real_avg, True)  # Real data!
+            if prop_type == 'pra':
+                # PRA = Points + Rebounds + Assists
+                pts_avg = stats.get(f'{period_key}_PTS_avg')
+                reb_avg = stats.get(f'{period_key}_REB_avg')
+                ast_avg = stats.get(f'{period_key}_AST_avg')
+                
+                if pts_avg is not None and reb_avg is not None and ast_avg is not None:
+                    pra_avg = pts_avg + reb_avg + ast_avg
+                    if pra_avg >= 0:
+                        return (pra_avg, True)  # Real PRA data!
+            else:
+                # Single stat average
+                stat_map = {'points': 'PTS', 'rebounds': 'REB', 'assists': 'AST'}
+                stat_key = stat_map.get(prop_type, 'PTS')
+                avg_key = f'{period_key}_{stat_key}_avg'
+                
+                real_avg = stats.get(avg_key)
+                if real_avg is not None and real_avg >= 0:
+                    return (real_avg, True)  # Real data!
     except ImportError:
         pass
     except Exception:
@@ -1987,6 +2019,133 @@ def make_prediction(
         except Exception:
             pass  # Any error, skip boost
         
+        # =====================================================================
+        # INJURY IMPACT ADJUSTMENT
+        # =====================================================================
+        injury_boost = 1.0
+        injury_info = None
+        try:
+            from injury_tracker import get_injury_features
+            
+            # Get player's team - try multiple sources
+            player_team = features.get('TEAM', '')
+            
+            if not player_team:
+                # Try to get from matchup in features
+                matchup = features.get('MATCHUP', '')
+                if matchup:
+                    # Matchup format: "PHI @ GSW" or "PHI vs. BOS"
+                    if '@' in matchup:
+                        player_team = matchup.split('@')[0].strip()
+                    elif 'vs.' in matchup:
+                        player_team = matchup.split('vs.')[0].strip()
+                    # Handle case like "PHI @ GSW" -> "PHI"
+                    if ' ' in player_team:
+                        player_team = player_team.split()[-1]
+            
+            if not player_team and recent_games is not None:
+                # Try to get from recent games
+                if hasattr(recent_games, 'iloc') and len(recent_games) > 0:
+                    last_matchup = recent_games.iloc[-1].get('MATCHUP', '')
+                    if last_matchup:
+                        if '@' in last_matchup:
+                            player_team = last_matchup.split('@')[0].strip()
+                        elif 'vs.' in last_matchup:
+                            player_team = last_matchup.split('vs.')[0].strip()
+                        if ' ' in player_team:
+                            player_team = player_team.split()[-1]
+            
+            if player_team and opponent:
+                injury_data = get_injury_features(
+                    player_name=player_name,
+                    player_team=player_team,
+                    opponent_team=opponent,
+                    stat_type=prop_type
+                )
+                
+                if injury_data:
+                    injury_info = injury_data
+                    combined_boost = injury_data.get('combined_injury_boost', 1.0)
+                    
+                    # Check if the player themselves is OUT
+                    if injury_data.get('player_is_out'):
+                        # Player is OUT - return warning
+                        return {
+                            'error': f"{player_name} is listed as OUT",
+                            'pick': None,
+                            'player_name': player_name,
+                            'injury_status': injury_data.get('player_status')
+                        }
+                    
+                    # Apply injury boost
+                    if combined_boost != 1.0:
+                        injury_boost = combined_boost
+                        first_half_est = first_half_est * injury_boost
+                        full_game_est = full_game_est * injury_boost
+        except ImportError:
+            pass  # Injury tracker not available
+        except Exception as e:
+            pass  # Any error, skip injury adjustment
+        
+        # =====================================================================
+        # ROLE CHANGE DETECTION: If recent form drastically differs from
+        # overall average, trust recent form more (player's role is changing)
+        # =====================================================================
+        role_change_detected = False
+        role_change_direction = None  # 'up' or 'down'
+        
+        if has_real_data and real_period_avg is not None and l5_avg and season_avg and season_avg > 0:
+            # Compare recent 5-game full-game avg to season avg
+            recent_deviation = (l5_avg - season_avg) / season_avg
+            
+            if abs(recent_deviation) >= ROLE_CHANGE_THRESHOLD:
+                role_change_detected = True
+                role_change_direction = 'up' if recent_deviation > 0 else 'down'
+                
+                # Also check if this player is in the known role-expanding list
+                is_known_role_change = player_name in ROLE_EXPANDING_PLAYERS
+                
+                # Blend: use more recent data
+                recent_weight = ROLE_CHANGE_RECENT_WEIGHT if is_known_role_change else 0.55
+                
+                # Get recent period average from last ~5 games of period data
+                try:
+                    period_prefix = "1H" if period == '1h' else "1Q"
+                    period_file = os.path.join('data', 'period_stats', 
+                        f"{player_name.replace(' ', '_')}_period_stats.json")
+                    if os.path.exists(period_file):
+                        with open(period_file, 'r') as f:
+                            pdata = json.load(f)
+                        recent_period_games = pdata.get('games_data', [])[-5:]
+                        if recent_period_games:
+                            recent_period_vals = []
+                            for g in recent_period_games:
+                                if prop_type == 'pra':
+                                    val = (float(g.get(f'{period_prefix}_PTS', 0)) + 
+                                           float(g.get(f'{period_prefix}_REB', 0)) + 
+                                           float(g.get(f'{period_prefix}_AST', 0)))
+                                else:
+                                    val = float(g.get(f'{period_prefix}_{stat_col}', 0))
+                                recent_period_vals.append(val)
+                            if recent_period_vals:
+                                recent_5_period_avg = sum(recent_period_vals) / len(recent_period_vals)
+                                # Blend recent period avg with overall period avg
+                                first_half_est = (recent_5_period_avg * recent_weight + 
+                                                 real_period_avg * (1 - recent_weight))
+                                full_game_est = first_half_est / ratio if ratio > 0 else first_half_est * 2
+                except Exception:
+                    pass  # If anything fails, keep original estimate
+        
+        # =====================================================================
+        # TRADE DETECTION: Flag recently traded players
+        # =====================================================================
+        is_recently_traded = False
+        trade_info = RECENTLY_TRADED_PLAYERS.get(player_name)
+        if trade_info:
+            is_recently_traded = True
+            # Reduce confidence - stats from old team may not apply
+            # We'll handle this in lock score below
+        
         # SANITY CHECK: Cap unrealistic predictions (too high OR too low)
         prediction_warning = None
         prediction_capped = False
@@ -2163,6 +2322,58 @@ def make_prediction(
                 lock_score += 8
                 lock_factors.append({'name': '🛡️ Low Ceiling', 'score': '+8', 'desc': f'Ceiling ({ceiling_1h:.1f}) below line'})
         
+        # INJURY IMPACT FACTORS (0-15 points)
+        if injury_info:
+            teammate_boost = injury_info.get('teammate_out_boost', 1.0)
+            opp_boost = injury_info.get('opponent_injury_boost', 1.0)
+            out_teammates = injury_info.get('out_teammates', [])
+            out_opponents = injury_info.get('out_opponents', [])
+            
+            # Teammate OUT boost (more usage for this player)
+            if teammate_boost > 1.05 and is_over:
+                boost_pct = (teammate_boost - 1) * 100
+                lock_score += 10
+                teammates_str = ', '.join(out_teammates[:2]) if out_teammates else 'star'
+                lock_factors.append({
+                    'name': '🏥 Teammate OUT', 
+                    'score': '+10', 
+                    'desc': f'{teammates_str} OUT - {boost_pct:.0f}% usage boost expected'
+                })
+            elif teammate_boost > 1.02 and is_over:
+                lock_score += 5
+                lock_factors.append({
+                    'name': '🏥 Teammate OUT', 
+                    'score': '+5', 
+                    'desc': 'Minor teammate absence - slight usage boost'
+                })
+            
+            # Opponent injury boost (easier matchup)
+            if opp_boost > 1.05 and is_over:
+                boost_pct = (opp_boost - 1) * 100
+                lock_score += 8
+                opps_str = ', '.join(out_opponents[:2]) if out_opponents else 'defender'
+                lock_factors.append({
+                    'name': '🏥 Opponent OUT', 
+                    'score': '+8', 
+                    'desc': f'{opps_str} OUT - easier matchup'
+                })
+            elif opp_boost > 1.02 and is_over:
+                lock_score += 4
+                lock_factors.append({
+                    'name': '🏥 Opponent OUT', 
+                    'score': '+4', 
+                    'desc': 'Minor opponent absence - slightly easier matchup'
+                })
+            
+            # Warning for UNDER picks when injuries favor OVER
+            if (teammate_boost > 1.05 or opp_boost > 1.05) and not is_over:
+                lock_score -= 8
+                lock_factors.append({
+                    'name': '⚠️ Injury Favors OVER', 
+                    'score': '-8', 
+                    'desc': 'Injuries suggest higher production - UNDER risky'
+                })
+        
         # Hit rate from recent games
         if recent_games is not None and len(recent_games) > 0:
             try:
@@ -2211,6 +2422,177 @@ def make_prediction(
             except Exception as e:
                 # Log but continue - hit rate is supplementary
                 print(f"[DEBUG] Fallback hit rate error: {e}")
+        
+        # =====================================================================
+        # UNDER PICK VOLATILITY PENALTY (NEW - addresses Wemby/Collier type busts)
+        # =====================================================================
+        is_star_player = player_name in HIGH_VARIANCE_STARS
+        is_role_expanding = player_name in ROLE_EXPANDING_PLAYERS
+        
+        if not is_over:  # UNDER pick
+            # Calculate real 1H standard deviation from period data if available
+            real_1h_std = None
+            try:
+                period_prefix = "1H" if period == '1h' else "1Q"
+                period_file = os.path.join('data', 'period_stats', 
+                    f"{player_name.replace(' ', '_')}_period_stats.json")
+                if os.path.exists(period_file):
+                    with open(period_file, 'r') as f:
+                        pdata = json.load(f)
+                    games = pdata.get('games_data', [])
+                    if games:
+                        if prop_type == 'pra':
+                            vals = [float(g.get(f'{period_prefix}_PTS', 0)) + 
+                                   float(g.get(f'{period_prefix}_REB', 0)) + 
+                                   float(g.get(f'{period_prefix}_AST', 0)) for g in games]
+                        else:
+                            stat_key = f'{period_prefix}_{stat_col}'
+                            vals = [float(g.get(stat_key, 0)) for g in games]
+                        if vals and len(vals) >= 5:
+                            mean_val = sum(vals) / len(vals)
+                            real_1h_std = (sum((v - mean_val)**2 for v in vals) / len(vals)) ** 0.5
+                            # Count how many times they EXCEEDED the line
+                            times_over = sum(1 for v in vals if v > prop_line)
+                            over_rate = times_over / len(vals)
+                            
+                            # If player goes OVER this line >40% of the time, UNDER is risky
+                            if over_rate >= 0.50:
+                                lock_score -= 15
+                                lock_factors.append({
+                                    'name': '🚨 Real Data Warns OVER',
+                                    'score': '-15',
+                                    'desc': f'Player exceeds {prop_line} line in {over_rate:.0%} of real {period_prefix} games!'
+                                })
+                            elif over_rate >= 0.35:
+                                lock_score -= 8
+                                lock_factors.append({
+                                    'name': '⚠️ Frequent Over Risk',
+                                    'score': '-8',
+                                    'desc': f'Exceeds line in {over_rate:.0%} of real {period_prefix} games'
+                                })
+                            
+                            # Check recent 5 games specifically
+                            recent_vals = vals[-5:]
+                            recent_over_rate = sum(1 for v in recent_vals if v > prop_line) / len(recent_vals)
+                            if recent_over_rate >= 0.60:
+                                lock_score -= 10
+                                lock_factors.append({
+                                    'name': '🔥 Recent Trend Over',
+                                    'score': '-10',
+                                    'desc': f'Exceeded line in {recent_over_rate:.0%} of last 5 {period_prefix} games'
+                                })
+            except Exception:
+                pass
+            
+            # Star player UNDER penalty
+            if is_star_player:
+                penalty = UNDER_VOLATILITY_PENALTY.get('star', -15)
+                lock_score += penalty  # penalty is negative
+                lock_factors.append({
+                    'name': '⭐ Star Player UNDER Risk',
+                    'score': str(penalty),
+                    'desc': f'{player_name} is a high-variance star - UNDER is inherently risky'
+                })
+                
+                # Check if edge is large enough for a star UNDER
+                min_edge_star = UNDER_MIN_EDGE.get('star', 3.5)
+                if abs_diff < min_edge_star:
+                    lock_score -= 10
+                    lock_factors.append({
+                        'name': '🚨 Edge Too Small for Star UNDER',
+                        'score': '-10',
+                        'desc': f'Need {min_edge_star}+ pt edge for UNDER on stars, only have {abs_diff:.1f}'
+                    })
+            
+            # Role-expanding player UNDER penalty
+            elif is_role_expanding:
+                penalty = UNDER_VOLATILITY_PENALTY.get('role_expanding', -8)
+                lock_score += penalty
+                lock_factors.append({
+                    'name': '📈 Role Expanding - UNDER Risk',
+                    'score': str(penalty),
+                    'desc': f'{player_name} is getting increased role - UNDER risky'
+                })
+                
+                min_edge_role = UNDER_MIN_EDGE.get('role_expanding', 2.5)
+                if abs_diff < min_edge_role:
+                    lock_score -= 8
+                    lock_factors.append({
+                        'name': '⚠️ Edge Too Small for Expanding Role',
+                        'score': '-8',
+                        'desc': f'Need {min_edge_role}+ pt edge, only have {abs_diff:.1f}'
+                    })
+        
+        # OVER pick on star player - use real hit rate from period data
+        elif is_over and (is_star_player or is_role_expanding):
+            try:
+                period_prefix = "1H" if period == '1h' else "1Q"
+                period_file = os.path.join('data', 'period_stats', 
+                    f"{player_name.replace(' ', '_')}_period_stats.json")
+                if os.path.exists(period_file):
+                    with open(period_file, 'r') as f:
+                        pdata = json.load(f)
+                    games = pdata.get('games_data', [])
+                    if games:
+                        if prop_type == 'pra':
+                            vals = [float(g.get(f'{period_prefix}_PTS', 0)) + 
+                                   float(g.get(f'{period_prefix}_REB', 0)) + 
+                                   float(g.get(f'{period_prefix}_AST', 0)) for g in games]
+                        else:
+                            stat_key = f'{period_prefix}_{stat_col}'
+                            vals = [float(g.get(stat_key, 0)) for g in games]
+                        if vals and len(vals) >= 5:
+                            times_over = sum(1 for v in vals if v > prop_line)
+                            over_rate = times_over / len(vals)
+                            if over_rate >= 0.70:
+                                lock_score += 8
+                                lock_factors.append({
+                                    'name': '📊 Strong Real Over Rate',
+                                    'score': '+8',
+                                    'desc': f'Exceeds line in {over_rate:.0%} of real {period_prefix} games'
+                                })
+            except Exception:
+                pass
+        
+        # =====================================================================
+        # TRADE DETECTION PENALTY (NEW - addresses Luka/CJ on new teams)
+        # =====================================================================
+        if is_recently_traded:
+            lock_score -= 15
+            trade_info_msg = RECENTLY_TRADED_PLAYERS.get(player_name, {})
+            lock_factors.append({
+                'name': '🔄 Recently Traded',
+                'score': '-15',
+                'desc': f'Traded from {trade_info_msg.get("old_team", "?")} to {trade_info_msg.get("new_team", "?")} - stats may not apply in new system'
+            })
+        
+        # =====================================================================
+        # ROLE CHANGE DETECTION FACTOR
+        # =====================================================================
+        if role_change_detected:
+            if role_change_direction == 'up' and not is_over:
+                # Role expanding + picking UNDER = dangerous
+                lock_score -= 10
+                lock_factors.append({
+                    'name': '📈 Role Expanding - UNDER Danger',
+                    'score': '-10',
+                    'desc': f'Recent form {abs(((l5_avg - season_avg) / season_avg)):.0%} above season avg - role increasing'
+                })
+            elif role_change_direction == 'down' and is_over:
+                # Role shrinking + picking OVER = dangerous
+                lock_score -= 10
+                lock_factors.append({
+                    'name': '📉 Role Shrinking - OVER Danger',
+                    'score': '-10',
+                    'desc': f'Recent form below season avg - may be losing minutes/role'
+                })
+            elif role_change_direction == 'up' and is_over:
+                lock_score += 5
+                lock_factors.append({
+                    'name': '📈 Role Expanding',
+                    'score': '+5',
+                    'desc': 'Player trending up - supports OVER'
+                })
         
         # B2B factor (0-6 points)
         if features.get('IS_B2B'):
@@ -2380,7 +2762,14 @@ def make_prediction(
             'has_real_period_data': has_real_data,
             'player_period_ratio': round(ratio, 4) if ratio else None,
             'advanced_boost': round(advanced_boost, 3) if advanced_boost != 1.0 else None,
-            'advanced_boost_info': advanced_boost_info
+            'advanced_boost_info': advanced_boost_info,
+            'injury_boost': round(injury_boost, 3) if injury_boost != 1.0 else None,
+            'injury_info': {
+                'out_teammates': injury_info.get('out_teammates', []) if injury_info else [],
+                'out_opponents': injury_info.get('out_opponents', []) if injury_info else [],
+                'teammate_boost': round(injury_info.get('teammate_out_boost', 1.0), 3) if injury_info else 1.0,
+                'opponent_boost': round(injury_info.get('opponent_injury_boost', 1.0), 3) if injury_info else 1.0,
+            } if injury_info and (injury_info.get('out_teammates') or injury_info.get('out_opponents')) else None
         }
         
         # Include warning info if prediction was capped
@@ -2399,6 +2788,333 @@ def make_prediction(
     result['model_type'] = 'ensemble'
     result['period'] = period
     result['period_label'] = "1Q" if period == '1q' else "1H"
+    
+    # =====================================================================
+    # INJURY IMPACT ADJUSTMENT (Trained Model Path)
+    # =====================================================================
+    try:
+        from injury_tracker import get_injury_features
+        
+        # Get player's team from features
+        player_team = None
+        matchup = features.get('MATCHUP', '')
+        if matchup:
+            if '@' in matchup:
+                player_team = matchup.split('@')[0].strip()
+            elif 'vs.' in matchup:
+                player_team = matchup.split('vs.')[0].strip()
+            if player_team and ' ' in player_team:
+                player_team = player_team.split()[-1]
+        
+        if not player_team and recent_games_list:
+            last_matchup = recent_games_list[-1].get('MATCHUP', '') if recent_games_list else ''
+            if last_matchup:
+                if '@' in last_matchup:
+                    player_team = last_matchup.split('@')[0].strip()
+                elif 'vs.' in last_matchup:
+                    player_team = last_matchup.split('vs.')[0].strip()
+                if player_team and ' ' in player_team:
+                    player_team = player_team.split()[-1]
+        
+        if player_team and opponent:
+            injury_data = get_injury_features(
+                player_name=player_name,
+                player_team=player_team,
+                opponent_team=opponent,
+                stat_type=prop_type
+            )
+            
+            if injury_data:
+                # Check if player is OUT
+                if injury_data.get('player_is_out'):
+                    return {
+                        'error': f"{player_name} is listed as OUT",
+                        'pick': None,
+                        'player_name': player_name,
+                        'injury_status': injury_data.get('player_status')
+                    }
+                
+                # Apply injury boost to prediction
+                combined_boost = injury_data.get('combined_injury_boost', 1.0)
+                if combined_boost != 1.0:
+                    # Update prediction values
+                    if 'predicted_1h' in result:
+                        original_pred = result['predicted_1h']
+                        result['predicted_1h'] = round(original_pred * combined_boost, 1)
+                    if 'full_game_prediction' in result:
+                        original_full = result['full_game_prediction']
+                        result['full_game_prediction'] = round(original_full * combined_boost, 1)
+                    if 'difference' in result and 'prop_line' in result:
+                        result['difference'] = round(result['predicted_1h'] - result['prop_line'], 1)
+                    
+                    result['injury_boost'] = round(combined_boost, 3)
+                    result['injury_info'] = {
+                        'out_teammates': injury_data.get('out_teammates', []),
+                        'out_opponents': injury_data.get('out_opponents', []),
+                        'teammate_boost': round(injury_data.get('teammate_out_boost', 1.0), 3),
+                        'opponent_boost': round(injury_data.get('opponent_injury_boost', 1.0), 3),
+                    }
+                    
+                    # Adjust lock_score based on injuries
+                    is_over = 'OVER' in result.get('pick', '')
+                    lock_score = result.get('lock_score', 50)
+                    lock_factors = result.get('lock_factors', [])
+                    teammate_boost = injury_data.get('teammate_out_boost', 1.0)
+                    opp_boost = injury_data.get('opponent_injury_boost', 1.0)
+                    out_teammates = injury_data.get('out_teammates', [])
+                    out_opponents = injury_data.get('out_opponents', [])
+                    
+                    # Boost for OVER picks when injuries help
+                    if teammate_boost > 1.05 and is_over:
+                        boost_pct = (teammate_boost - 1) * 100
+                        lock_score += 10
+                        teammates_str = ', '.join(out_teammates[:2]) if out_teammates else 'star'
+                        lock_factors.append({
+                            'name': '🏥 Teammate OUT', 
+                            'score': '+10', 
+                            'desc': f'{teammates_str} OUT - {boost_pct:.0f}% usage boost'
+                        })
+                    elif teammate_boost > 1.02 and is_over:
+                        lock_score += 5
+                        lock_factors.append({
+                            'name': '🏥 Teammate OUT', 
+                            'score': '+5', 
+                            'desc': 'Minor teammate absence'
+                        })
+                    
+                    if opp_boost > 1.05 and is_over:
+                        lock_score += 8
+                        opps_str = ', '.join(out_opponents[:2]) if out_opponents else 'defender'
+                        lock_factors.append({
+                            'name': '🏥 Opponent OUT', 
+                            'score': '+8', 
+                            'desc': f'{opps_str} OUT - easier matchup'
+                        })
+                    elif opp_boost > 1.02 and is_over:
+                        lock_score += 4
+                        lock_factors.append({
+                            'name': '🏥 Opponent OUT', 
+                            'score': '+4', 
+                            'desc': 'Slightly easier matchup'
+                        })
+                    
+                    # Penalty for UNDER when injuries favor OVER
+                    if (teammate_boost > 1.05 or opp_boost > 1.05) and not is_over:
+                        lock_score -= 8
+                        lock_factors.append({
+                            'name': '⚠️ Injury Favors OVER', 
+                            'score': '-8', 
+                            'desc': 'Injuries suggest higher production - UNDER risky'
+                        })
+                    
+                    result['lock_score'] = min(100, max(0, lock_score))
+                    result['lock_factors'] = lock_factors
+    except ImportError:
+        pass  # Injury tracker not available
+    except Exception:
+        pass  # Any error, skip injury adjustment
+    
+    # =====================================================================
+    # STAR PLAYER / TRADE / ROLE CHANGE ADJUSTMENTS (Trained Model Path)
+    # These protect against common failure modes regardless of model path
+    # =====================================================================
+    try:
+        is_over_trained = 'OVER' in result.get('pick', '')
+        lock_score = result.get('lock_score', 50)
+        lock_factors = result.get('lock_factors', [])
+        predicted_1h = result.get('predicted_1h', 0)
+        prop_line_val = result.get('prop_line', prop_line)
+        abs_diff = abs(predicted_1h - prop_line_val)
+        
+        is_star = player_name in HIGH_VARIANCE_STARS
+        is_expanding = player_name in ROLE_EXPANDING_PLAYERS
+        is_traded = player_name in RECENTLY_TRADED_PLAYERS
+        
+        stat_col_map = {'points': 'PTS', 'rebounds': 'REB', 'assists': 'AST', 'pra': 'PRA'}
+        stat_col_t = stat_col_map.get(prop_type, 'PTS')
+        period_prefix = "1H" if period == '1h' else "1Q"
+        
+        # --- UNDER PICK PROTECTIONS ---
+        if not is_over_trained:
+            # Read real period data for hit rate analysis
+            try:
+                period_file = os.path.join('data', 'period_stats', 
+                    f"{player_name.replace(' ', '_')}_period_stats.json")
+                if os.path.exists(period_file):
+                    with open(period_file, 'r') as f:
+                        pdata = json.load(f)
+                    games = pdata.get('games_data', [])
+                    if games:
+                        if prop_type == 'pra':
+                            vals = [float(g.get(f'{period_prefix}_PTS', 0)) + 
+                                   float(g.get(f'{period_prefix}_REB', 0)) + 
+                                   float(g.get(f'{period_prefix}_AST', 0)) for g in games]
+                        else:
+                            vals = [float(g.get(f'{period_prefix}_{stat_col_t}', 0)) for g in games]
+                        
+                        if vals and len(vals) >= 5:
+                            times_over = sum(1 for v in vals if v > prop_line_val)
+                            over_rate = times_over / len(vals)
+                            
+                            if over_rate >= 0.50:
+                                lock_score -= 15
+                                lock_factors.append({
+                                    'name': '🚨 Real Data Warns OVER',
+                                    'score': '-15',
+                                    'desc': f'Player exceeds {prop_line_val} line in {over_rate:.0%} of real {period_prefix} games!'
+                                })
+                            elif over_rate >= 0.35:
+                                lock_score -= 8
+                                lock_factors.append({
+                                    'name': '⚠️ Frequent Over Risk',
+                                    'score': '-8',
+                                    'desc': f'Exceeds line in {over_rate:.0%} of real {period_prefix} games'
+                                })
+                            
+                            recent_vals = vals[-5:]
+                            recent_over_rate = sum(1 for v in recent_vals if v > prop_line_val) / len(recent_vals)
+                            if recent_over_rate >= 0.60:
+                                lock_score -= 10
+                                lock_factors.append({
+                                    'name': '🔥 Recent Trend Over',
+                                    'score': '-10',
+                                    'desc': f'Exceeded line in {recent_over_rate:.0%} of last 5 {period_prefix} games'
+                                })
+            except Exception:
+                pass
+            
+            # Star player UNDER penalty
+            if is_star:
+                penalty = UNDER_VOLATILITY_PENALTY.get('star', -15)
+                lock_score += penalty
+                lock_factors.append({
+                    'name': '⭐ Star Player UNDER Risk',
+                    'score': str(penalty),
+                    'desc': f'{player_name} is a high-variance star - UNDER is inherently risky'
+                })
+                min_edge = UNDER_MIN_EDGE.get('star', 3.5)
+                if abs_diff < min_edge:
+                    lock_score -= 10
+                    lock_factors.append({
+                        'name': '🚨 Edge Too Small for Star UNDER',
+                        'score': '-10',
+                        'desc': f'Need {min_edge}+ pt edge for UNDER on stars, only have {abs_diff:.1f}'
+                    })
+            
+            # Role-expanding player UNDER penalty
+            elif is_expanding:
+                penalty = UNDER_VOLATILITY_PENALTY.get('role_expanding', -8)
+                lock_score += penalty
+                lock_factors.append({
+                    'name': '📈 Role Expanding - UNDER Risk',
+                    'score': str(penalty),
+                    'desc': f'{player_name} is getting increased role - UNDER risky'
+                })
+                min_edge = UNDER_MIN_EDGE.get('role_expanding', 2.5)
+                if abs_diff < min_edge:
+                    lock_score -= 8
+                    lock_factors.append({
+                        'name': '⚠️ Edge Too Small for Expanding Role',
+                        'score': '-8',
+                        'desc': f'Need {min_edge}+ pt edge, only have {abs_diff:.1f}'
+                    })
+        
+        # --- OVER PICK: use real data hit rate for confirmation ---
+        elif is_over_trained and (is_star or is_expanding):
+            try:
+                period_file = os.path.join('data', 'period_stats', 
+                    f"{player_name.replace(' ', '_')}_period_stats.json")
+                if os.path.exists(period_file):
+                    with open(period_file, 'r') as f:
+                        pdata = json.load(f)
+                    games = pdata.get('games_data', [])
+                    if games:
+                        if prop_type == 'pra':
+                            vals = [float(g.get(f'{period_prefix}_PTS', 0)) + 
+                                   float(g.get(f'{period_prefix}_REB', 0)) + 
+                                   float(g.get(f'{period_prefix}_AST', 0)) for g in games]
+                        else:
+                            vals = [float(g.get(f'{period_prefix}_{stat_col_t}', 0)) for g in games]
+                        if vals and len(vals) >= 5:
+                            times_over = sum(1 for v in vals if v > prop_line_val)
+                            over_rate = times_over / len(vals)
+                            if over_rate >= 0.70:
+                                lock_score += 8
+                                lock_factors.append({
+                                    'name': '📊 Strong Real Over Rate',
+                                    'score': '+8',
+                                    'desc': f'Exceeds line in {over_rate:.0%} of real {period_prefix} games'
+                                })
+            except Exception:
+                pass
+        
+        # --- TRADE DETECTION ---
+        if is_traded:
+            lock_score -= 15
+            trade_data = RECENTLY_TRADED_PLAYERS.get(player_name, {})
+            lock_factors.append({
+                'name': '🔄 Recently Traded',
+                'score': '-15',
+                'desc': f'Traded from {trade_data.get("old_team", "?")} to {trade_data.get("new_team", "?")} - stats may not apply'
+            })
+        
+        # --- ROLE CHANGE DETECTION ---
+        # Check if recent form significantly deviates from season average
+        try:
+            l5_avg_t = features.get(f'{stat_col_t}_L5_avg')
+            season_avg_t = features.get(f'{stat_col_t}_season_avg')
+            if l5_avg_t and season_avg_t and season_avg_t > 0:
+                deviation = (l5_avg_t - season_avg_t) / season_avg_t
+                if abs(deviation) >= ROLE_CHANGE_THRESHOLD:
+                    if deviation > 0 and not is_over_trained:
+                        lock_score -= 10
+                        lock_factors.append({
+                            'name': '📈 Role Expanding - UNDER Danger',
+                            'score': '-10',
+                            'desc': f'Recent form {abs(deviation):.0%} above season avg - role increasing'
+                        })
+                    elif deviation < 0 and is_over_trained:
+                        lock_score -= 10
+                        lock_factors.append({
+                            'name': '📉 Role Shrinking - OVER Danger',
+                            'score': '-10',
+                            'desc': f'Recent form below season avg - may be losing role'
+                        })
+                    elif deviation > 0 and is_over_trained:
+                        lock_score += 5
+                        lock_factors.append({
+                            'name': '📈 Role Expanding',
+                            'score': '+5',
+                            'desc': 'Player trending up - supports OVER'
+                        })
+        except Exception:
+            pass
+        
+        # Update result with adjusted scores
+        result['lock_score'] = min(100, max(0, lock_score))
+        result['lock_factors'] = lock_factors
+        
+        # Re-evaluate pick label if lock score changed significantly
+        thresholds = LOCK_THRESHOLDS_1Q if period == '1q' else LOCK_THRESHOLDS
+        new_score = result['lock_score']
+        direction = "OVER" if is_over_trained else "UNDER"
+        if new_score >= thresholds['lock']:
+            result['pick'] = f"🔒 LOCK {direction}"
+            result['confidence'] = "LOCK"
+        elif new_score >= thresholds['strong']:
+            result['pick'] = f"🔥 STRONG {direction}"
+            result['confidence'] = "HIGH"
+        elif new_score >= thresholds['playable']:
+            result['pick'] = f"✅ {direction}"
+            result['confidence'] = "MEDIUM"
+        elif new_score >= thresholds['lean']:
+            result['pick'] = f"⚠️ LEAN {direction}"
+            result['confidence'] = "LOW"
+        else:
+            result['pick'] = "❓ SKIP"
+            result['confidence'] = "AVOID"
+    except Exception as e:
+        pass  # Don't break existing functionality
     
     return result
 

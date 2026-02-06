@@ -1,8 +1,25 @@
 {
   "player_name": "Domantas Sabonis",
   "player_id": 1627734,
-  "games_collected": 18,
+  "games_collected": 19,
   "games_data": [
+    {
+      "game_id": "0022500731",
+      "player_id": 1627734,
+      "player_name": "Domantas Sabonis",
+      "1Q_PTS": "8",
+      "1Q_REB": "5",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:58",
+      "1H_PTS": "20",
+      "1H_REB": "7",
+      "1H_AST": "1",
+      "1H_MIN": "13:51",
+      "FULL_PTS": "24",
+      "FULL_REB": "15",
+      "FULL_AST": "3",
+      "FULL_MIN": "24:04"
+    },
     {
       "game_id": "0022500680",
       "player_id": 1627734,
@@ -270,20 +287,20 @@
       "1H_MIN": "12:33"
     }
   ],
-  "last_updated": "2026-01-30T10:04:41.793083",
-  "1Q_PTS_avg": 4.833333333333333,
-  "1Q_REB_avg": 2.611111111111111,
-  "1Q_AST_avg": 1.6666666666666667,
-  "1H_PTS_avg": 9.277777777777779,
-  "1H_REB_avg": 5.333333333333333,
-  "1H_AST_avg": 2.4444444444444446,
-  "FULL_PTS_avg": 15.125,
-  "FULL_REB_avg": 13.125,
-  "FULL_AST_avg": 3.75,
-  "1H_PTS_ratio": 0.6134067952249771,
-  "1Q_PTS_ratio": 0.3195592286501377,
-  "1H_REB_ratio": 0.40634920634920635,
-  "1Q_REB_ratio": 0.19894179894179895,
-  "1H_AST_ratio": 0.6518518518518519,
-  "1Q_AST_ratio": 0.4444444444444445
+  "last_updated": "2026-02-05T08:45:24.516372",
+  "1Q_PTS_avg": 5.0,
+  "1Q_REB_avg": 2.736842105263158,
+  "1Q_AST_avg": 1.5789473684210527,
+  "1H_PTS_avg": 9.842105263157896,
+  "1H_REB_avg": 5.421052631578948,
+  "1H_AST_avg": 2.3684210526315788,
+  "FULL_PTS_avg": 16.11111111111111,
+  "FULL_REB_avg": 13.333333333333334,
+  "FULL_AST_avg": 3.6666666666666665,
+  "1H_PTS_ratio": 0.6108892921960073,
+  "1Q_PTS_ratio": 0.3103448275862069,
+  "1H_REB_ratio": 0.40657894736842104,
+  "1Q_REB_ratio": 0.20526315789473684,
+  "1H_AST_ratio": 0.6459330143540669,
+  "1Q_AST_ratio": 0.430622009569378
 }
