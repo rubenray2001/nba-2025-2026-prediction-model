@@ -1,8 +1,25 @@
 {
   "player_name": "Bilal Coulibaly",
   "player_id": 1641731,
-  "games_collected": 30,
+  "games_collected": 31,
   "games_data": [
+    {
+      "game_id": "0022500733",
+      "player_id": 1641731,
+      "player_name": "Bilal Coulibaly",
+      "1Q_PTS": "2",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "8:47",
+      "1H_PTS": "2",
+      "1H_REB": "1",
+      "1H_AST": "1",
+      "1H_MIN": "15:23",
+      "FULL_PTS": "11",
+      "FULL_REB": "5",
+      "FULL_AST": "4",
+      "FULL_MIN": "36:14"
+    },
     {
       "game_id": "0022500718",
       "player_id": 1641731,
@@ -474,20 +491,20 @@
       "1H_MIN": "9:11"
     }
   ],
-  "last_updated": "2026-02-04T07:57:31.287467",
-  "1Q_PTS_avg": 3.2,
-  "1Q_REB_avg": 1.1666666666666667,
-  "1Q_AST_avg": 0.8333333333333334,
-  "1H_PTS_avg": 6.333333333333333,
-  "1H_REB_avg": 2.3,
-  "1H_AST_avg": 1.4333333333333333,
-  "FULL_PTS_avg": 9.55,
-  "FULL_REB_avg": 4.4,
-  "FULL_AST_avg": 2.5,
-  "1H_PTS_ratio": 0.663176265270506,
-  "1Q_PTS_ratio": 0.33507853403141363,
-  "1H_REB_ratio": 0.5227272727272726,
-  "1Q_REB_ratio": 0.26515151515151514,
-  "1H_AST_ratio": 0.5733333333333334,
-  "1Q_AST_ratio": 0.33333333333333337
+  "last_updated": "2026-02-06T22:09:20.462099",
+  "1Q_PTS_avg": 3.161290322580645,
+  "1Q_REB_avg": 1.1612903225806452,
+  "1Q_AST_avg": 0.8064516129032258,
+  "1H_PTS_avg": 6.193548387096774,
+  "1H_REB_avg": 2.2580645161290325,
+  "1H_AST_avg": 1.4193548387096775,
+  "FULL_PTS_avg": 9.619047619047619,
+  "FULL_REB_avg": 4.428571428571429,
+  "FULL_AST_avg": 2.5714285714285716,
+  "1H_PTS_ratio": 0.643883743213031,
+  "1Q_PTS_ratio": 0.32864899393165126,
+  "1H_REB_ratio": 0.5098855359001041,
+  "1Q_REB_ratio": 0.26222684703433924,
+  "1H_AST_ratio": 0.5519713261648745,
+  "1Q_AST_ratio": 0.3136200716845878
 }

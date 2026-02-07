@@ -1,8 +1,25 @@
 {
   "player_name": "Jarred Vanderbilt",
   "player_id": 1629020,
-  "games_collected": 33,
+  "games_collected": 34,
   "games_data": [
+    {
+      "game_id": "0022500740",
+      "player_id": 1629020,
+      "player_name": "Jarred Vanderbilt",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "2:40",
+      "1H_PTS": "2",
+      "1H_REB": "3",
+      "1H_AST": "1",
+      "1H_MIN": "8:38",
+      "FULL_PTS": "6",
+      "FULL_REB": "6",
+      "FULL_AST": "1",
+      "FULL_MIN": "23:00"
+    },
     {
       "game_id": "0022500719",
       "player_id": 1629020,
@@ -521,20 +538,20 @@
       "1H_MIN": "11:51"
     }
   ],
-  "last_updated": "2026-02-04T08:27:01.584442",
-  "1Q_PTS_avg": 0.9375,
-  "1Q_REB_avg": 1.09375,
-  "1Q_AST_avg": 0.3125,
-  "1H_PTS_avg": 2.393939393939394,
-  "1H_REB_avg": 2.515151515151515,
-  "1H_AST_avg": 0.6060606060606061,
-  "FULL_PTS_avg": 5.391304347826087,
-  "FULL_REB_avg": 4.913043478260869,
-  "FULL_AST_avg": 1.391304347826087,
-  "1H_PTS_ratio": 0.44403714565004887,
-  "1Q_PTS_ratio": 0.17389112903225806,
-  "1H_REB_ratio": 0.5119334942343793,
-  "1Q_REB_ratio": 0.22262168141592922,
-  "1H_AST_ratio": 0.4356060606060606,
-  "1Q_AST_ratio": 0.224609375
+  "last_updated": "2026-02-06T22:39:57.613481",
+  "1Q_PTS_avg": 0.9090909090909091,
+  "1Q_REB_avg": 1.0909090909090908,
+  "1Q_AST_avg": 0.30303030303030304,
+  "1H_PTS_avg": 2.3823529411764706,
+  "1H_REB_avg": 2.5294117647058822,
+  "1H_AST_avg": 0.6176470588235294,
+  "FULL_PTS_avg": 5.416666666666667,
+  "FULL_REB_avg": 4.958333333333333,
+  "FULL_AST_avg": 1.375,
+  "1H_PTS_ratio": 0.43981900452488687,
+  "1Q_PTS_ratio": 0.1678321678321678,
+  "1H_REB_ratio": 0.5101334651507662,
+  "1Q_REB_ratio": 0.22001527883880825,
+  "1H_AST_ratio": 0.44919786096256686,
+  "1Q_AST_ratio": 0.22038567493112948
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Ziaire Williams",
   "player_id": 1630533,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500734",
+      "player_id": 1630533,
+      "player_name": "Ziaire Williams",
+      "1Q_PTS": "1",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:40",
+      "1H_PTS": "1",
+      "1H_REB": "2",
+      "1H_AST": "0",
+      "1H_MIN": "9:17",
+      "FULL_PTS": "1",
+      "FULL_REB": "2",
+      "FULL_AST": "0",
+      "FULL_MIN": "16:59"
+    },
     {
       "game_id": "0022500719",
       "player_id": 1630533,
@@ -491,20 +508,20 @@
       "1H_MIN": "8:17"
     }
   ],
-  "last_updated": "2026-02-04T09:18:53.148467",
-  "1Q_PTS_avg": 2.3225806451612905,
-  "1Q_REB_avg": 0.6451612903225806,
-  "1Q_AST_avg": 0.16129032258064516,
-  "1H_PTS_avg": 4.354838709677419,
-  "1H_REB_avg": 1.064516129032258,
-  "1H_AST_avg": 0.3870967741935484,
-  "FULL_PTS_avg": 8.666666666666666,
-  "FULL_REB_avg": 2.5238095238095237,
-  "FULL_AST_avg": 0.9047619047619048,
-  "1H_PTS_ratio": 0.5024813895781638,
-  "1Q_PTS_ratio": 0.2679900744416874,
-  "1H_REB_ratio": 0.4217894096165551,
-  "1Q_REB_ratio": 0.2556299452221546,
-  "1H_AST_ratio": 0.42784380305602715,
-  "1Q_AST_ratio": 0.17826825127334464
+  "last_updated": "2026-02-06T23:34:13.257332",
+  "1Q_PTS_avg": 2.28125,
+  "1Q_REB_avg": 0.65625,
+  "1Q_AST_avg": 0.15625,
+  "1H_PTS_avg": 4.25,
+  "1H_REB_avg": 1.09375,
+  "1H_AST_avg": 0.375,
+  "FULL_PTS_avg": 8.318181818181818,
+  "FULL_REB_avg": 2.5,
+  "FULL_AST_avg": 0.8636363636363636,
+  "1H_PTS_ratio": 0.5109289617486339,
+  "1Q_PTS_ratio": 0.27424863387978143,
+  "1H_REB_ratio": 0.4375,
+  "1Q_REB_ratio": 0.2625,
+  "1H_AST_ratio": 0.4342105263157895,
+  "1Q_AST_ratio": 0.18092105263157895
 }

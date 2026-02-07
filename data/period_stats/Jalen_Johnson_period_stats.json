@@ -1,8 +1,25 @@
 {
   "player_name": "Jalen Johnson",
   "player_id": 1630552,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500735",
+      "player_id": 1630552,
+      "player_name": "Jalen Johnson",
+      "1Q_PTS": "2",
+      "1Q_REB": "3",
+      "1Q_AST": "4",
+      "1Q_MIN": "8:31",
+      "1H_PTS": "5",
+      "1H_REB": "6",
+      "1H_AST": "8",
+      "1H_MIN": "17:13",
+      "FULL_PTS": "22",
+      "FULL_REB": "16",
+      "FULL_AST": "15",
+      "FULL_MIN": "38:39"
+    },
     {
       "game_id": "0022500720",
       "player_id": 1630552,
@@ -508,20 +525,20 @@
       "1H_MIN": "17:50"
     }
   ],
-  "last_updated": "2026-02-04T08:24:02.374689",
-  "1Q_PTS_avg": 6.0625,
-  "1Q_REB_avg": 2.90625,
-  "1Q_AST_avg": 2.03125,
-  "1H_PTS_avg": 11.59375,
-  "1H_REB_avg": 5.8125,
-  "1H_AST_avg": 4.625,
-  "FULL_PTS_avg": 24.636363636363637,
-  "FULL_REB_avg": 10.590909090909092,
-  "FULL_AST_avg": 9.5,
-  "1H_PTS_ratio": 0.4705950184501845,
-  "1Q_PTS_ratio": 0.24607933579335792,
-  "1H_REB_ratio": 0.5488197424892703,
-  "1Q_REB_ratio": 0.2744098712446352,
-  "1H_AST_ratio": 0.4868421052631579,
-  "1Q_AST_ratio": 0.2138157894736842
+  "last_updated": "2026-02-06T22:37:04.758137",
+  "1Q_PTS_avg": 5.9393939393939394,
+  "1Q_REB_avg": 2.909090909090909,
+  "1Q_AST_avg": 2.090909090909091,
+  "1H_PTS_avg": 11.393939393939394,
+  "1H_REB_avg": 5.818181818181818,
+  "1H_AST_avg": 4.7272727272727275,
+  "FULL_PTS_avg": 24.52173913043478,
+  "FULL_REB_avg": 10.826086956521738,
+  "FULL_AST_avg": 9.73913043478261,
+  "1H_PTS_ratio": 0.4646464646464647,
+  "1Q_PTS_ratio": 0.24220932731571032,
+  "1H_REB_ratio": 0.5374224169404893,
+  "1Q_REB_ratio": 0.26871120847024466,
+  "1H_AST_ratio": 0.48538961038961037,
+  "1Q_AST_ratio": 0.21469155844155843
 }

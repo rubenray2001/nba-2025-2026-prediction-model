@@ -1,8 +1,25 @@
 {
   "player_name": "Karlo Matkovi\u0107",
   "player_id": 1631255,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500744",
+      "player_id": 1631255,
+      "player_name": "Karlo Matkovi\u0107",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "1",
+      "1Q_MIN": "3:15",
+      "1H_PTS": "0",
+      "1H_REB": "2",
+      "1H_AST": "1",
+      "1H_MIN": "7:23",
+      "FULL_PTS": "0",
+      "FULL_REB": "2",
+      "FULL_AST": "1",
+      "FULL_MIN": "7:23"
+    },
     {
       "game_id": "0022500729",
       "player_id": 1631255,
@@ -508,20 +525,20 @@
       "1H_MIN": "2:51"
     }
   ],
-  "last_updated": "2026-02-05T09:12:23.689065",
-  "1Q_PTS_avg": 2.25,
+  "last_updated": "2026-02-06T22:55:25.203880",
+  "1Q_PTS_avg": 2.1818181818181817,
   "1Q_REB_avg": 1.0,
-  "1Q_AST_avg": 0.21875,
-  "1H_PTS_avg": 3.65625,
-  "1H_REB_avg": 1.71875,
-  "1H_AST_avg": 0.34375,
-  "FULL_PTS_avg": 5.2727272727272725,
-  "FULL_REB_avg": 3.6363636363636362,
+  "1Q_AST_avg": 0.24242424242424243,
+  "1H_PTS_avg": 3.5454545454545454,
+  "1H_REB_avg": 1.7272727272727273,
+  "1H_AST_avg": 0.36363636363636365,
+  "FULL_PTS_avg": 5.043478260869565,
+  "FULL_REB_avg": 3.5652173913043477,
   "FULL_AST_avg": 1.0,
-  "1H_PTS_ratio": 0.693426724137931,
-  "1Q_PTS_ratio": 0.4267241379310345,
-  "1H_REB_ratio": 0.47265625,
-  "1Q_REB_ratio": 0.275,
-  "1H_AST_ratio": 0.34375,
-  "1Q_AST_ratio": 0.21875
+  "1H_PTS_ratio": 0.7029780564263323,
+  "1Q_PTS_ratio": 0.4326018808777429,
+  "1H_REB_ratio": 0.4844789356984479,
+  "1Q_REB_ratio": 0.2804878048780488,
+  "1H_AST_ratio": 0.36363636363636365,
+  "1Q_AST_ratio": 0.24242424242424243
 }

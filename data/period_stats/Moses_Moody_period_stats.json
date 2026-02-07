@@ -1,8 +1,25 @@
 {
   "player_name": "Moses Moody",
   "player_id": 1630541,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500739",
+      "player_id": 1630541,
+      "player_name": "Moses Moody",
+      "1Q_PTS": "3",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "7:31",
+      "1H_PTS": "6",
+      "1H_REB": "2",
+      "1H_AST": "0",
+      "1H_MIN": "15:59",
+      "FULL_PTS": "6",
+      "FULL_REB": "8",
+      "FULL_AST": "1",
+      "FULL_MIN": "30:54"
+    },
     {
       "game_id": "0022500724",
       "player_id": 1630541,
@@ -508,20 +525,20 @@
       "1H_MIN": "14:06"
     }
   ],
-  "last_updated": "2026-02-04T08:53:08.345020",
-  "1Q_PTS_avg": 3.03125,
-  "1Q_REB_avg": 1.09375,
-  "1Q_AST_avg": 0.46875,
-  "1H_PTS_avg": 5.96875,
-  "1H_REB_avg": 1.78125,
-  "1H_AST_avg": 0.6875,
-  "FULL_PTS_avg": 9.0,
-  "FULL_REB_avg": 3.1363636363636362,
-  "FULL_AST_avg": 1.3636363636363635,
-  "1H_PTS_ratio": 0.6631944444444444,
-  "1Q_PTS_ratio": 0.3368055555555556,
-  "1H_REB_ratio": 0.5679347826086957,
-  "1Q_REB_ratio": 0.348731884057971,
-  "1H_AST_ratio": 0.5041666666666667,
-  "1Q_AST_ratio": 0.34375
+  "last_updated": "2026-02-06T23:07:56.711458",
+  "1Q_PTS_avg": 3.0303030303030303,
+  "1Q_REB_avg": 1.0606060606060606,
+  "1Q_AST_avg": 0.45454545454545453,
+  "1H_PTS_avg": 5.96969696969697,
+  "1H_REB_avg": 1.7878787878787878,
+  "1H_AST_avg": 0.6666666666666666,
+  "FULL_PTS_avg": 8.869565217391305,
+  "FULL_REB_avg": 3.347826086956522,
+  "FULL_AST_avg": 1.3478260869565217,
+  "1H_PTS_ratio": 0.6730540701128936,
+  "1Q_PTS_ratio": 0.34165181224004754,
+  "1H_REB_ratio": 0.5340417158598977,
+  "1Q_REB_ratio": 0.3168044077134986,
+  "1H_AST_ratio": 0.49462365591397844,
+  "1Q_AST_ratio": 0.33724340175953077
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Jahmai Mashack",
   "player_id": 1642942,
-  "games_collected": 3,
+  "games_collected": 4,
   "games_data": [
+    {
+      "game_id": "0022500745",
+      "player_id": 1642942,
+      "player_name": "Jahmai Mashack",
+      "1Q_PTS": "2",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:29",
+      "1H_PTS": "2",
+      "1H_REB": "1",
+      "1H_AST": "0",
+      "1H_MIN": "9:35",
+      "FULL_PTS": "5",
+      "FULL_REB": "1",
+      "FULL_AST": "1",
+      "FULL_MIN": "20:11"
+    },
     {
       "game_id": "0022500731",
       "player_id": 1642942,
@@ -47,20 +64,20 @@
       "1H_MIN": "3:32"
     }
   ],
-  "last_updated": "2026-02-05T08:54:06.054480",
-  "1Q_PTS_avg": 0.0,
-  "1Q_REB_avg": 1.6666666666666667,
-  "1Q_AST_avg": 1.0,
-  "1H_PTS_avg": 0.0,
-  "1H_REB_avg": 2.0,
-  "1H_AST_avg": 1.3333333333333333,
-  "FULL_PTS_avg": 2.0,
-  "FULL_REB_avg": 4.0,
-  "FULL_AST_avg": 5.0,
-  "1H_PTS_ratio": 0.0,
-  "1Q_PTS_ratio": null,
-  "1H_REB_ratio": 0.5,
-  "1Q_REB_ratio": 0.4166666666666667,
-  "1H_AST_ratio": 0.26666666666666666,
-  "1Q_AST_ratio": 0.2
+  "last_updated": "2026-02-06T22:35:57.856893",
+  "1Q_PTS_avg": 0.5,
+  "1Q_REB_avg": 1.5,
+  "1Q_AST_avg": 0.75,
+  "1H_PTS_avg": 0.5,
+  "1H_REB_avg": 1.75,
+  "1H_AST_avg": 1.0,
+  "FULL_PTS_avg": 3.5,
+  "FULL_REB_avg": 2.5,
+  "FULL_AST_avg": 3.0,
+  "1H_PTS_ratio": 0.14285714285714285,
+  "1Q_PTS_ratio": 0.14285714285714285,
+  "1H_REB_ratio": 0.7,
+  "1Q_REB_ratio": 0.6,
+  "1H_AST_ratio": 0.3333333333333333,
+  "1Q_AST_ratio": 0.25
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Anthony Gill",
   "player_id": 1630264,
-  "games_collected": 8,
+  "games_collected": 9,
   "games_data": [
+    {
+      "game_id": "0022500733",
+      "player_id": 1630264,
+      "player_name": "Anthony Gill",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "3:13",
+      "1H_PTS": "4",
+      "1H_REB": "0",
+      "1H_AST": "0",
+      "1H_MIN": "10:03",
+      "FULL_PTS": "11",
+      "FULL_REB": "3",
+      "FULL_AST": "2",
+      "FULL_MIN": "29:50"
+    },
     {
       "game_id": "0022500718",
       "player_id": 1630264,
@@ -120,18 +137,20 @@
       "1H_MIN": "10:15"
     }
   ],
-  "last_updated": "2026-02-04T07:54:31.417610",
-  "1Q_PTS_avg": 0.8571428571428571,
-  "1Q_REB_avg": 0.7142857142857143,
-  "1Q_AST_avg": 0.42857142857142855,
-  "1H_PTS_avg": 1.0,
-  "1H_REB_avg": 1.625,
-  "1H_AST_avg": 0.375,
-  "FULL_PTS_avg": 2.25,
-  "FULL_REB_avg": 4.0,
-  "FULL_AST_avg": 0.0,
-  "1H_PTS_ratio": 0.4444444444444444,
-  "1Q_PTS_ratio": 0.38095238095238093,
-  "1H_REB_ratio": 0.40625,
-  "1Q_REB_ratio": 0.17857142857142858
+  "last_updated": "2026-02-06T22:06:51.719242",
+  "1Q_PTS_avg": 0.75,
+  "1Q_REB_avg": 0.625,
+  "1Q_AST_avg": 0.375,
+  "1H_PTS_avg": 1.3333333333333333,
+  "1H_REB_avg": 1.4444444444444444,
+  "1H_AST_avg": 0.3333333333333333,
+  "FULL_PTS_avg": 4.0,
+  "FULL_REB_avg": 3.8,
+  "FULL_AST_avg": 0.4,
+  "1H_PTS_ratio": 0.3333333333333333,
+  "1Q_PTS_ratio": 0.1875,
+  "1H_REB_ratio": 0.3801169590643275,
+  "1Q_REB_ratio": 0.16447368421052633,
+  "1H_AST_ratio": 0.8333333333333333,
+  "1Q_AST_ratio": 0.9375
 }

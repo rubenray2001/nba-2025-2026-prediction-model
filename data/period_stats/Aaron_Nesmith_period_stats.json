@@ -1,8 +1,25 @@
 {
   "player_name": "Aaron Nesmith",
   "player_id": 1630174,
-  "games_collected": 29,
+  "games_collected": 30,
   "games_data": [
+    {
+      "game_id": "0022500743",
+      "player_id": 1630174,
+      "player_name": "Aaron Nesmith",
+      "1Q_PTS": "3",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "9:52",
+      "1H_PTS": "8",
+      "1H_REB": "1",
+      "1H_AST": "0",
+      "1H_MIN": "17:01",
+      "FULL_PTS": "12",
+      "FULL_REB": "1",
+      "FULL_AST": "1",
+      "FULL_MIN": "26:51"
+    },
     {
       "game_id": "0022500713",
       "player_id": 1630174,
@@ -457,20 +474,20 @@
       "1H_MIN": "17:38"
     }
   ],
-  "last_updated": "2026-02-03T09:30:14.153837",
-  "1Q_PTS_avg": 3.5517241379310347,
-  "1Q_REB_avg": 1.3793103448275863,
-  "1Q_AST_avg": 0.6896551724137931,
-  "1H_PTS_avg": 8.137931034482758,
-  "1H_REB_avg": 3.0,
-  "1H_AST_avg": 1.2413793103448276,
-  "FULL_PTS_avg": 15.263157894736842,
-  "FULL_REB_avg": 4.684210526315789,
-  "FULL_AST_avg": 2.0526315789473686,
-  "1H_PTS_ratio": 0.5331747919143875,
-  "1Q_PTS_ratio": 0.23269916765755055,
-  "1H_REB_ratio": 0.6404494382022472,
-  "1Q_REB_ratio": 0.29445951181712515,
-  "1H_AST_ratio": 0.6047745358090185,
-  "1Q_AST_ratio": 0.3359858532272325
+  "last_updated": "2026-02-06T21:59:05.112460",
+  "1Q_PTS_avg": 3.533333333333333,
+  "1Q_REB_avg": 1.3333333333333333,
+  "1Q_AST_avg": 0.6666666666666666,
+  "1H_PTS_avg": 8.133333333333333,
+  "1H_REB_avg": 2.933333333333333,
+  "1H_AST_avg": 1.2,
+  "FULL_PTS_avg": 15.1,
+  "FULL_REB_avg": 4.5,
+  "FULL_AST_avg": 2.0,
+  "1H_PTS_ratio": 0.5386313465783664,
+  "1Q_PTS_ratio": 0.23399558498896247,
+  "1H_REB_ratio": 0.6518518518518518,
+  "1Q_REB_ratio": 0.2962962962962963,
+  "1H_AST_ratio": 0.6,
+  "1Q_AST_ratio": 0.3333333333333333
 }

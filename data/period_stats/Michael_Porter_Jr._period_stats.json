@@ -1,8 +1,25 @@
 {
   "player_name": "Michael Porter Jr.",
   "player_id": 1629008,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500734",
+      "player_id": 1629008,
+      "player_name": "Michael Porter Jr.",
+      "1Q_PTS": "3",
+      "1Q_REB": "0",
+      "1Q_AST": "2",
+      "1Q_MIN": "9:08",
+      "1H_PTS": "9",
+      "1H_REB": "2",
+      "1H_AST": "2",
+      "1H_MIN": "20:40",
+      "FULL_PTS": "9",
+      "FULL_REB": "2",
+      "FULL_AST": "2",
+      "FULL_MIN": "32:19"
+    },
     {
       "game_id": "0022500719",
       "player_id": 1629008,
@@ -531,20 +548,20 @@
       "FULL_MIN": "33:16"
     }
   ],
-  "last_updated": "2026-02-04T08:51:45.250007",
-  "1Q_PTS_avg": 7.580645161290323,
-  "1Q_REB_avg": 2.064516129032258,
-  "1Q_AST_avg": 1.1290322580645162,
-  "1H_PTS_avg": 14.548387096774194,
-  "1H_REB_avg": 3.6774193548387095,
-  "1H_AST_avg": 2.064516129032258,
-  "FULL_PTS_avg": 25.806451612903224,
-  "FULL_REB_avg": 7.096774193548387,
-  "FULL_AST_avg": 3.2580645161290325,
-  "1H_PTS_ratio": 0.5637500000000001,
-  "1Q_PTS_ratio": 0.29375,
-  "1H_REB_ratio": 0.5181818181818182,
-  "1Q_REB_ratio": 0.2909090909090909,
-  "1H_AST_ratio": 0.6336633663366336,
-  "1Q_AST_ratio": 0.34653465346534656
+  "last_updated": "2026-02-06T23:06:30.317935",
+  "1Q_PTS_avg": 7.4375,
+  "1Q_REB_avg": 2.0,
+  "1Q_AST_avg": 1.15625,
+  "1H_PTS_avg": 14.375,
+  "1H_REB_avg": 3.625,
+  "1H_AST_avg": 2.0625,
+  "FULL_PTS_avg": 25.28125,
+  "FULL_REB_avg": 6.9375,
+  "FULL_AST_avg": 3.21875,
+  "1H_PTS_ratio": 0.5686032138442522,
+  "1Q_PTS_ratio": 0.2941903584672435,
+  "1H_REB_ratio": 0.5225225225225225,
+  "1Q_REB_ratio": 0.2882882882882883,
+  "1H_AST_ratio": 0.6407766990291263,
+  "1Q_AST_ratio": 0.3592233009708738
 }

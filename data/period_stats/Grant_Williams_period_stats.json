@@ -1,8 +1,25 @@
 {
   "player_name": "Grant Williams",
   "player_id": 1629684,
-  "games_collected": 10,
+  "games_collected": 11,
   "games_data": [
+    {
+      "game_id": "0022500737",
+      "player_id": 1629684,
+      "player_name": "Grant Williams",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:26",
+      "1H_PTS": "0",
+      "1H_REB": "1",
+      "1H_AST": "0",
+      "1H_MIN": "7:07",
+      "FULL_PTS": "2",
+      "FULL_REB": "3",
+      "FULL_AST": "0",
+      "FULL_MIN": "15:56"
+    },
     {
       "game_id": "0022500712",
       "player_id": 1629684,
@@ -142,20 +159,20 @@
       "1H_MIN": "8:23"
     }
   ],
-  "last_updated": "2026-02-03T10:10:11.161721",
-  "1Q_PTS_avg": 2.3,
+  "last_updated": "2026-02-06T22:30:32.722948",
+  "1Q_PTS_avg": 2.090909090909091,
   "1Q_REB_avg": 1.0,
-  "1Q_AST_avg": 0.3,
-  "1H_PTS_avg": 3.8,
-  "1H_REB_avg": 2.3,
-  "1H_AST_avg": 0.5,
-  "FULL_PTS_avg": 9.5,
-  "FULL_REB_avg": 6.5,
-  "FULL_AST_avg": 1.5,
-  "1H_PTS_ratio": 0.39999999999999997,
-  "1Q_PTS_ratio": 0.2421052631578947,
-  "1H_REB_ratio": 0.3538461538461538,
-  "1Q_REB_ratio": 0.15384615384615385,
-  "1H_AST_ratio": 0.3333333333333333,
-  "1Q_AST_ratio": 0.19999999999999998
+  "1Q_AST_avg": 0.2727272727272727,
+  "1H_PTS_avg": 3.4545454545454546,
+  "1H_REB_avg": 2.1818181818181817,
+  "1H_AST_avg": 0.45454545454545453,
+  "FULL_PTS_avg": 7.0,
+  "FULL_REB_avg": 5.333333333333333,
+  "FULL_AST_avg": 1.0,
+  "1H_PTS_ratio": 0.4935064935064935,
+  "1Q_PTS_ratio": 0.2987012987012987,
+  "1H_REB_ratio": 0.40909090909090906,
+  "1Q_REB_ratio": 0.1875,
+  "1H_AST_ratio": 0.45454545454545453,
+  "1Q_AST_ratio": 0.2727272727272727
 }

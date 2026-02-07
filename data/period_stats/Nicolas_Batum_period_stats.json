@@ -1,8 +1,25 @@
 {
   "player_name": "Nicolas Batum",
   "player_id": 201587,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500746",
+      "player_id": 201587,
+      "player_name": "Nicolas Batum",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:17",
+      "1H_PTS": "0",
+      "1H_REB": "3",
+      "1H_AST": "1",
+      "1H_MIN": "9:15",
+      "FULL_PTS": "3",
+      "FULL_REB": "3",
+      "FULL_AST": "2",
+      "FULL_MIN": "15:50"
+    },
     {
       "game_id": "0022500732",
       "player_id": 201587,
@@ -542,20 +559,20 @@
       "1H_MIN": "12:39"
     }
   ],
-  "last_updated": "2026-02-05T09:26:49.190046",
-  "1Q_PTS_avg": 1.2941176470588236,
-  "1Q_REB_avg": 0.5,
-  "1Q_AST_avg": 0.14705882352941177,
-  "1H_PTS_avg": 2.8529411764705883,
-  "1H_REB_avg": 1.1470588235294117,
-  "1H_AST_avg": 0.4117647058823529,
-  "FULL_PTS_avg": 5.041666666666667,
-  "FULL_REB_avg": 2.5,
-  "FULL_AST_avg": 0.9166666666666666,
-  "1H_PTS_ratio": 0.565872630043753,
-  "1Q_PTS_ratio": 0.2566844919786096,
-  "1H_REB_ratio": 0.4588235294117647,
-  "1Q_REB_ratio": 0.2,
-  "1H_AST_ratio": 0.44919786096256686,
-  "1Q_AST_ratio": 0.16042780748663102
+  "last_updated": "2026-02-06T23:10:42.981153",
+  "1Q_PTS_avg": 1.2571428571428571,
+  "1Q_REB_avg": 0.4857142857142857,
+  "1Q_AST_avg": 0.14285714285714285,
+  "1H_PTS_avg": 2.7714285714285714,
+  "1H_REB_avg": 1.2,
+  "1H_AST_avg": 0.42857142857142855,
+  "FULL_PTS_avg": 4.96,
+  "FULL_REB_avg": 2.52,
+  "FULL_AST_avg": 0.96,
+  "1H_PTS_ratio": 0.5587557603686636,
+  "1Q_PTS_ratio": 0.2534562211981567,
+  "1H_REB_ratio": 0.47619047619047616,
+  "1Q_REB_ratio": 0.1927437641723356,
+  "1H_AST_ratio": 0.4464285714285714,
+  "1Q_AST_ratio": 0.1488095238095238
 }

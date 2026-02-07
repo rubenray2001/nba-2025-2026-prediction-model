@@ -1,8 +1,25 @@
 {
   "player_name": "Kelel Ware",
   "player_id": 1642276,
-  "games_collected": 33,
+  "games_collected": 34,
   "games_data": [
+    {
+      "game_id": "0022500741",
+      "player_id": 1642276,
+      "player_name": "Kelel Ware",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "3:20",
+      "1H_PTS": "2",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "7:22",
+      "FULL_PTS": "2",
+      "FULL_REB": "5",
+      "FULL_AST": "0",
+      "FULL_MIN": "9:32"
+    },
     {
       "game_id": "0022500720",
       "player_id": 1642276,
@@ -517,20 +534,20 @@
       "1H_MIN": "14:53"
     }
   ],
-  "last_updated": "2026-02-04T08:42:00.707309",
-  "1Q_PTS_avg": 3.4375,
-  "1Q_REB_avg": 2.5625,
-  "1Q_AST_avg": 0.15625,
-  "1H_PTS_avg": 6.121212121212121,
-  "1H_REB_avg": 5.0606060606060606,
-  "1H_AST_avg": 0.3333333333333333,
-  "FULL_PTS_avg": 12.454545454545455,
-  "FULL_REB_avg": 9.727272727272727,
-  "FULL_AST_avg": 0.5,
-  "1H_PTS_ratio": 0.4914841849148418,
-  "1Q_PTS_ratio": 0.2760036496350365,
-  "1H_REB_ratio": 0.5202492211838007,
-  "1Q_REB_ratio": 0.26343457943925236,
-  "1H_AST_ratio": 0.6666666666666666,
-  "1Q_AST_ratio": 0.3125
+  "last_updated": "2026-02-06T22:56:17.903003",
+  "1Q_PTS_avg": 3.3333333333333335,
+  "1Q_REB_avg": 2.515151515151515,
+  "1Q_AST_avg": 0.15151515151515152,
+  "1H_PTS_avg": 6.0,
+  "1H_REB_avg": 5.0,
+  "1H_AST_avg": 0.3235294117647059,
+  "FULL_PTS_avg": 12.0,
+  "FULL_REB_avg": 9.521739130434783,
+  "FULL_AST_avg": 0.4782608695652174,
+  "1H_PTS_ratio": 0.5,
+  "1Q_PTS_ratio": 0.2777777777777778,
+  "1H_REB_ratio": 0.5251141552511415,
+  "1Q_REB_ratio": 0.2641483326414833,
+  "1H_AST_ratio": 0.6764705882352942,
+  "1Q_AST_ratio": 0.3168044077134986
 }

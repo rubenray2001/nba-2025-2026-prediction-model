@@ -1,8 +1,25 @@
 {
   "player_name": "Alex Sarr",
   "player_id": 1642259,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500733",
+      "player_id": 1642259,
+      "player_name": "Alex Sarr",
+      "1Q_PTS": "7",
+      "1Q_REB": "5",
+      "1Q_AST": "1",
+      "1Q_MIN": "8:38",
+      "1H_PTS": "9",
+      "1H_REB": "6",
+      "1H_AST": "1",
+      "1H_MIN": "13:48",
+      "FULL_PTS": "12",
+      "FULL_REB": "6",
+      "FULL_AST": "1",
+      "FULL_MIN": "18:01"
+    },
     {
       "game_id": "0022500718",
       "player_id": 1642259,
@@ -508,20 +525,20 @@
       "1H_MIN": "14:14"
     }
   ],
-  "last_updated": "2026-02-04T07:49:22.967190",
-  "1Q_PTS_avg": 5.1875,
-  "1Q_REB_avg": 2.28125,
-  "1Q_AST_avg": 0.9375,
-  "1H_PTS_avg": 10.03125,
-  "1H_REB_avg": 3.9375,
-  "1H_AST_avg": 1.46875,
-  "FULL_PTS_avg": 17.09090909090909,
-  "FULL_REB_avg": 7.863636363636363,
-  "FULL_AST_avg": 2.6363636363636362,
-  "1H_PTS_ratio": 0.5869348404255319,
-  "1Q_PTS_ratio": 0.3035239361702128,
-  "1H_REB_ratio": 0.5007225433526011,
-  "1Q_REB_ratio": 0.29010115606936415,
-  "1H_AST_ratio": 0.5571120689655172,
-  "1Q_AST_ratio": 0.3556034482758621
+  "last_updated": "2026-02-06T22:01:45.150272",
+  "1Q_PTS_avg": 5.242424242424242,
+  "1Q_REB_avg": 2.3636363636363638,
+  "1Q_AST_avg": 0.9393939393939394,
+  "1H_PTS_avg": 10.0,
+  "1H_REB_avg": 4.0,
+  "1H_AST_avg": 1.4545454545454546,
+  "FULL_PTS_avg": 16.869565217391305,
+  "FULL_REB_avg": 7.782608695652174,
+  "FULL_AST_avg": 2.5652173913043477,
+  "1H_PTS_ratio": 0.5927835051546392,
+  "1Q_PTS_ratio": 0.3107622617931896,
+  "1H_REB_ratio": 0.5139664804469274,
+  "1Q_REB_ratio": 0.30370746571863894,
+  "1H_AST_ratio": 0.5670261941448382,
+  "1Q_AST_ratio": 0.36620441705187473
 }

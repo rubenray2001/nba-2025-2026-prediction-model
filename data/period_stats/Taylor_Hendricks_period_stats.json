@@ -1,8 +1,25 @@
 {
   "player_name": "Taylor Hendricks",
   "player_id": 1641707,
-  "games_collected": 29,
+  "games_collected": 30,
   "games_data": [
+    {
+      "game_id": "0022500745",
+      "player_id": 1641707,
+      "player_name": "Taylor Hendricks",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:01",
+      "1H_PTS": "2",
+      "1H_REB": "2",
+      "1H_AST": "0",
+      "1H_MIN": "10:07",
+      "FULL_PTS": "5",
+      "FULL_REB": "5",
+      "FULL_AST": "0",
+      "FULL_MIN": "20:54"
+    },
     {
       "game_id": "0022500694",
       "player_id": 1641707,
@@ -453,20 +470,20 @@
       "1H_MIN": "6:53"
     }
   ],
-  "last_updated": "2026-02-03T11:26:43.885044",
-  "1Q_PTS_avg": 1.5185185185185186,
-  "1Q_REB_avg": 0.7777777777777778,
-  "1Q_AST_avg": 0.1111111111111111,
-  "1H_PTS_avg": 2.5517241379310347,
-  "1H_REB_avg": 1.5172413793103448,
-  "1H_AST_avg": 0.3793103448275862,
-  "FULL_PTS_avg": 5.7,
-  "FULL_REB_avg": 3.1,
-  "FULL_AST_avg": 0.6,
-  "1H_PTS_ratio": 0.4476709013914096,
-  "1Q_PTS_ratio": 0.2664067576348278,
-  "1H_REB_ratio": 0.489432703003337,
-  "1Q_REB_ratio": 0.25089605734767023,
-  "1H_AST_ratio": 0.632183908045977,
-  "1Q_AST_ratio": 0.18518518518518517
+  "last_updated": "2026-02-06T23:25:39.205746",
+  "1Q_PTS_avg": 1.4642857142857142,
+  "1Q_REB_avg": 0.7857142857142857,
+  "1Q_AST_avg": 0.10714285714285714,
+  "1H_PTS_avg": 2.533333333333333,
+  "1H_REB_avg": 1.5333333333333334,
+  "1H_AST_avg": 0.36666666666666664,
+  "FULL_PTS_avg": 5.666666666666667,
+  "FULL_REB_avg": 3.1904761904761907,
+  "FULL_AST_avg": 0.5714285714285714,
+  "1H_PTS_ratio": 0.44705882352941173,
+  "1Q_PTS_ratio": 0.2584033613445378,
+  "1H_REB_ratio": 0.48059701492537316,
+  "1Q_REB_ratio": 0.2462686567164179,
+  "1H_AST_ratio": 0.6416666666666666,
+  "1Q_AST_ratio": 0.1875
 }

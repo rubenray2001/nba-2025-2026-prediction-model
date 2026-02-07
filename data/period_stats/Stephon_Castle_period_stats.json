@@ -1,8 +1,25 @@
 {
   "player_name": "Stephon Castle",
   "player_id": 1642264,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500738",
+      "player_id": 1642264,
+      "player_name": "Stephon Castle",
+      "1Q_PTS": "4",
+      "1Q_REB": "0",
+      "1Q_AST": "1",
+      "1Q_MIN": "4:07",
+      "1H_PTS": "8",
+      "1H_REB": "1",
+      "1H_AST": "3",
+      "1H_MIN": "9:07",
+      "FULL_PTS": "18",
+      "FULL_REB": "7",
+      "FULL_AST": "6",
+      "FULL_MIN": "21:40"
+    },
     {
       "game_id": "0022500730",
       "player_id": 1642264,
@@ -508,20 +525,20 @@
       "1H_MIN": "17:24"
     }
   ],
-  "last_updated": "2026-02-05T09:39:11.988124",
-  "1Q_PTS_avg": 4.71875,
-  "1Q_REB_avg": 1.28125,
-  "1Q_AST_avg": 2.46875,
-  "1H_PTS_avg": 8.34375,
-  "1H_REB_avg": 2.375,
-  "1H_AST_avg": 4.0,
-  "FULL_PTS_avg": 17.045454545454547,
-  "FULL_REB_avg": 4.7272727272727275,
-  "FULL_AST_avg": 6.954545454545454,
-  "1H_PTS_ratio": 0.48949999999999994,
-  "1Q_PTS_ratio": 0.2768333333333333,
-  "1H_REB_ratio": 0.5024038461538461,
-  "1Q_REB_ratio": 0.27103365384615385,
-  "1H_AST_ratio": 0.5751633986928105,
-  "1Q_AST_ratio": 0.35498366013071897
+  "last_updated": "2026-02-06T23:24:27.758940",
+  "1Q_PTS_avg": 4.696969696969697,
+  "1Q_REB_avg": 1.2424242424242424,
+  "1Q_AST_avg": 2.4242424242424243,
+  "1H_PTS_avg": 8.333333333333334,
+  "1H_REB_avg": 2.3333333333333335,
+  "1H_AST_avg": 3.9696969696969697,
+  "FULL_PTS_avg": 17.08695652173913,
+  "FULL_REB_avg": 4.826086956521739,
+  "FULL_AST_avg": 6.913043478260869,
+  "1H_PTS_ratio": 0.48770144189991527,
+  "1Q_PTS_ratio": 0.2748862672526795,
+  "1H_REB_ratio": 0.4834834834834835,
+  "1Q_REB_ratio": 0.25743925743925744,
+  "1H_AST_ratio": 0.574232894987612,
+  "1Q_AST_ratio": 0.35067657709167144
 }

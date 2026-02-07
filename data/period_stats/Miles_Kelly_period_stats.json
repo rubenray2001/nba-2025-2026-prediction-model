@@ -1,8 +1,25 @@
 {
   "player_name": "Miles Kelly",
   "player_id": 1642939,
-  "games_collected": 7,
+  "games_collected": 8,
   "games_data": [
+    {
+      "game_id": "0022500738",
+      "player_id": 1642939,
+      "player_name": "Miles Kelly",
+      "1Q_PTS": "2",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "2:50",
+      "1H_PTS": "2",
+      "1H_REB": "2",
+      "1H_AST": "1",
+      "1H_MIN": "5:48",
+      "FULL_PTS": "5",
+      "FULL_REB": "2",
+      "FULL_AST": "1",
+      "FULL_MIN": "8:53"
+    },
     {
       "game_id": "0022500721",
       "player_id": 1642939,
@@ -95,18 +112,20 @@
       "1H_MIN": "6:38"
     }
   ],
-  "last_updated": "2026-02-04T08:52:09.873685",
-  "1Q_PTS_avg": 0.0,
-  "1Q_REB_avg": 0.0,
+  "last_updated": "2026-02-06T23:07:00.029991",
+  "1Q_PTS_avg": 0.2857142857142857,
+  "1Q_REB_avg": 0.14285714285714285,
   "1Q_AST_avg": 0.0,
-  "1H_PTS_avg": 1.7142857142857142,
-  "1H_REB_avg": 0.7142857142857143,
-  "1H_AST_avg": 0.2857142857142857,
-  "FULL_PTS_avg": 0.0,
-  "FULL_REB_avg": 3.0,
+  "1H_PTS_avg": 1.75,
+  "1H_REB_avg": 0.875,
+  "1H_AST_avg": 0.375,
+  "FULL_PTS_avg": 2.5,
+  "FULL_REB_avg": 2.5,
   "FULL_AST_avg": 1.0,
-  "1H_REB_ratio": 0.2380952380952381,
-  "1Q_REB_ratio": null,
-  "1H_AST_ratio": 0.2857142857142857,
+  "1H_PTS_ratio": 0.7,
+  "1Q_PTS_ratio": 0.11428571428571428,
+  "1H_REB_ratio": 0.35,
+  "1Q_REB_ratio": 0.05714285714285714,
+  "1H_AST_ratio": 0.375,
   "1Q_AST_ratio": null
 }

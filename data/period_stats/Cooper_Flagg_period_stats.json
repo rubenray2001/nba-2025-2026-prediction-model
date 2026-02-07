@@ -1,8 +1,25 @@
 {
   "player_name": "Cooper Flagg",
   "player_id": 1642843,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500738",
+      "player_id": 1642843,
+      "player_name": "Cooper Flagg",
+      "1Q_PTS": "4",
+      "1Q_REB": "2",
+      "1Q_AST": "1",
+      "1Q_MIN": "9:10",
+      "1H_PTS": "10",
+      "1H_REB": "3",
+      "1H_AST": "2",
+      "1H_MIN": "18:12",
+      "FULL_PTS": "32",
+      "FULL_REB": "6",
+      "FULL_AST": "4",
+      "FULL_MIN": "38:32"
+    },
     {
       "game_id": "0022500721",
       "player_id": 1642843,
@@ -508,20 +525,20 @@
       "1H_MIN": "18:19"
     }
   ],
-  "last_updated": "2026-02-04T08:09:14.004872",
-  "1Q_PTS_avg": 5.3125,
-  "1Q_REB_avg": 1.21875,
-  "1Q_AST_avg": 0.9375,
-  "1H_PTS_avg": 11.1875,
-  "1H_REB_avg": 3.1875,
-  "1H_AST_avg": 2.03125,
-  "FULL_PTS_avg": 24.5,
-  "FULL_REB_avg": 6.590909090909091,
-  "FULL_AST_avg": 4.545454545454546,
-  "1H_PTS_ratio": 0.45663265306122447,
-  "1Q_PTS_ratio": 0.21683673469387754,
-  "1H_REB_ratio": 0.4836206896551724,
-  "1Q_REB_ratio": 0.18491379310344827,
-  "1H_AST_ratio": 0.44687499999999997,
-  "1Q_AST_ratio": 0.20625
+  "last_updated": "2026-02-06T22:21:31.201251",
+  "1Q_PTS_avg": 5.2727272727272725,
+  "1Q_REB_avg": 1.2424242424242424,
+  "1Q_AST_avg": 0.9393939393939394,
+  "1H_PTS_avg": 11.151515151515152,
+  "1H_REB_avg": 3.1818181818181817,
+  "1H_AST_avg": 2.0303030303030303,
+  "FULL_PTS_avg": 24.82608695652174,
+  "FULL_REB_avg": 6.565217391304348,
+  "FULL_AST_avg": 4.521739130434782,
+  "1H_PTS_ratio": 0.44918537387889407,
+  "1Q_PTS_ratio": 0.21238656264925967,
+  "1H_REB_ratio": 0.48464780252859724,
+  "1Q_REB_ratio": 0.1892434276540237,
+  "1H_AST_ratio": 0.44900932400932403,
+  "1Q_AST_ratio": 0.20775058275058278
 }

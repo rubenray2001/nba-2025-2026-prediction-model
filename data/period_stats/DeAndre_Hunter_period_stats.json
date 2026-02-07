@@ -1,8 +1,25 @@
 {
   "player_name": "DeAndre Hunter",
   "player_id": 1629631,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500746",
+      "player_id": 1629631,
+      "player_name": "DeAndre Hunter",
+      "1Q_PTS": "2",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "9:04",
+      "1H_PTS": "4",
+      "1H_REB": "0",
+      "1H_AST": "0",
+      "1H_MIN": "14:40",
+      "FULL_PTS": "6",
+      "FULL_REB": "1",
+      "FULL_AST": "0",
+      "FULL_MIN": "24:34"
+    },
     {
       "game_id": "0022500731",
       "player_id": 1629631,
@@ -508,20 +525,20 @@
       "1H_MIN": "11:24"
     }
   ],
-  "last_updated": "2026-02-05T08:44:09.715556",
-  "1Q_PTS_avg": 3.59375,
-  "1Q_REB_avg": 1.09375,
-  "1Q_AST_avg": 0.53125,
-  "1H_PTS_avg": 6.34375,
-  "1H_REB_avg": 2.09375,
-  "1H_AST_avg": 0.90625,
-  "FULL_PTS_avg": 13.045454545454545,
-  "FULL_REB_avg": 3.909090909090909,
-  "FULL_AST_avg": 1.5,
-  "1H_PTS_ratio": 0.4862804878048781,
-  "1Q_PTS_ratio": 0.27547909407665505,
-  "1H_REB_ratio": 0.5356104651162791,
-  "1Q_REB_ratio": 0.279796511627907,
-  "1H_AST_ratio": 0.6041666666666666,
-  "1Q_AST_ratio": 0.3541666666666667
+  "last_updated": "2026-02-06T22:24:58.021466",
+  "1Q_PTS_avg": 3.5454545454545454,
+  "1Q_REB_avg": 1.0606060606060606,
+  "1Q_AST_avg": 0.5151515151515151,
+  "1H_PTS_avg": 6.2727272727272725,
+  "1H_REB_avg": 2.0303030303030303,
+  "1H_AST_avg": 0.8787878787878788,
+  "FULL_PTS_avg": 12.73913043478261,
+  "FULL_REB_avg": 3.782608695652174,
+  "FULL_AST_avg": 1.434782608695652,
+  "1H_PTS_ratio": 0.4923983865963388,
+  "1Q_PTS_ratio": 0.27831213155445234,
+  "1H_REB_ratio": 0.5367467781260885,
+  "1Q_REB_ratio": 0.28039010797631486,
+  "1H_AST_ratio": 0.6124885215794307,
+  "1Q_AST_ratio": 0.3590449954086318
 }

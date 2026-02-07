@@ -1,8 +1,25 @@
 {
   "player_name": "Jay Huff",
   "player_id": 1630643,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500743",
+      "player_id": 1630643,
+      "player_name": "Jay Huff",
+      "1Q_PTS": "5",
+      "1Q_REB": "1",
+      "1Q_AST": "1",
+      "1Q_MIN": "6:58",
+      "1H_PTS": "5",
+      "1H_REB": "3",
+      "1H_AST": "1",
+      "1H_MIN": "16:25",
+      "FULL_PTS": "5",
+      "FULL_REB": "3",
+      "FULL_AST": "1",
+      "FULL_MIN": "22:45"
+    },
     {
       "game_id": "0022500717",
       "player_id": 1630643,
@@ -508,20 +525,20 @@
       "1H_MIN": "9:12"
     }
   ],
-  "last_updated": "2026-02-04T08:28:43.088969",
-  "1Q_PTS_avg": 2.935483870967742,
-  "1Q_REB_avg": 1.2580645161290323,
-  "1Q_AST_avg": 0.3870967741935484,
-  "1H_PTS_avg": 5.5625,
-  "1H_REB_avg": 2.03125,
-  "1H_AST_avg": 0.78125,
-  "FULL_PTS_avg": 9.608695652173912,
-  "FULL_REB_avg": 4.304347826086956,
-  "FULL_AST_avg": 1.608695652173913,
-  "1H_PTS_ratio": 0.5789027149321267,
-  "1Q_PTS_ratio": 0.3055028462998103,
-  "1H_REB_ratio": 0.4719065656565657,
-  "1Q_REB_ratio": 0.29227761485826004,
-  "1H_AST_ratio": 0.4856418918918919,
-  "1Q_AST_ratio": 0.24062772449869224
+  "last_updated": "2026-02-06T22:41:49.229331",
+  "1Q_PTS_avg": 3.0,
+  "1Q_REB_avg": 1.25,
+  "1Q_AST_avg": 0.40625,
+  "1H_PTS_avg": 5.545454545454546,
+  "1H_REB_avg": 2.0606060606060606,
+  "1H_AST_avg": 0.7878787878787878,
+  "FULL_PTS_avg": 9.416666666666666,
+  "FULL_REB_avg": 4.25,
+  "FULL_AST_avg": 1.5833333333333333,
+  "1H_PTS_ratio": 0.588897827835881,
+  "1Q_PTS_ratio": 0.3185840707964602,
+  "1H_REB_ratio": 0.48484848484848486,
+  "1Q_REB_ratio": 0.29411764705882354,
+  "1H_AST_ratio": 0.49760765550239233,
+  "1Q_AST_ratio": 0.2565789473684211
 }

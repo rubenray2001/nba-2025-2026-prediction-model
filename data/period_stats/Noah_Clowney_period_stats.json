@@ -1,8 +1,25 @@
 {
   "player_name": "Noah Clowney",
   "player_id": 1641730,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500734",
+      "player_id": 1641730,
+      "player_name": "Noah Clowney",
+      "1Q_PTS": "0",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "7:20",
+      "1H_PTS": "0",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "12:40",
+      "FULL_PTS": "0",
+      "FULL_REB": "4",
+      "FULL_AST": "0",
+      "FULL_MIN": "21:53"
+    },
     {
       "game_id": "0022500719",
       "player_id": 1641730,
@@ -491,20 +508,20 @@
       "1H_MIN": "14:17"
     }
   ],
-  "last_updated": "2026-02-04T08:57:59.313234",
-  "1Q_PTS_avg": 3.0,
-  "1Q_REB_avg": 1.1612903225806452,
-  "1Q_AST_avg": 0.5483870967741935,
-  "1H_PTS_avg": 6.709677419354839,
-  "1H_REB_avg": 2.2580645161290325,
-  "1H_AST_avg": 0.967741935483871,
-  "FULL_PTS_avg": 15.238095238095237,
-  "FULL_REB_avg": 3.9047619047619047,
-  "FULL_AST_avg": 1.8571428571428572,
-  "1H_PTS_ratio": 0.44032258064516133,
-  "1Q_PTS_ratio": 0.19687500000000002,
-  "1H_REB_ratio": 0.5782848151062157,
-  "1Q_REB_ratio": 0.2974036191974823,
-  "1H_AST_ratio": 0.5210918114143921,
-  "1Q_AST_ratio": 0.2952853598014888
+  "last_updated": "2026-02-06T23:12:49.194863",
+  "1Q_PTS_avg": 2.90625,
+  "1Q_REB_avg": 1.1875,
+  "1Q_AST_avg": 0.53125,
+  "1H_PTS_avg": 6.5,
+  "1H_REB_avg": 2.28125,
+  "1H_AST_avg": 0.9375,
+  "FULL_PTS_avg": 14.545454545454545,
+  "FULL_REB_avg": 3.909090909090909,
+  "FULL_AST_avg": 1.7727272727272727,
+  "1H_PTS_ratio": 0.446875,
+  "1Q_PTS_ratio": 0.1998046875,
+  "1H_REB_ratio": 0.5835755813953488,
+  "1Q_REB_ratio": 0.30377906976744184,
+  "1H_AST_ratio": 0.5288461538461539,
+  "1Q_AST_ratio": 0.29967948717948717
 }

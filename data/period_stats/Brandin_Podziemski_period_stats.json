@@ -1,8 +1,25 @@
 {
   "player_name": "Brandin Podziemski",
   "player_id": 1641764,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500739",
+      "player_id": 1641764,
+      "player_name": "Brandin Podziemski",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:29",
+      "1H_PTS": "0",
+      "1H_REB": "0",
+      "1H_AST": "0",
+      "1H_MIN": "4:29",
+      "FULL_PTS": "0",
+      "FULL_REB": "3",
+      "FULL_AST": "1",
+      "FULL_MIN": "12:11"
+    },
     {
       "game_id": "0022500724",
       "player_id": 1641764,
@@ -508,20 +525,20 @@
       "1H_MIN": "10:48"
     }
   ],
-  "last_updated": "2026-02-04T07:59:19.942537",
-  "1Q_PTS_avg": 2.5625,
-  "1Q_REB_avg": 1.28125,
-  "1Q_AST_avg": 0.96875,
-  "1H_PTS_avg": 5.46875,
-  "1H_REB_avg": 2.65625,
-  "1H_AST_avg": 2.03125,
-  "FULL_PTS_avg": 11.227272727272727,
-  "FULL_REB_avg": 4.636363636363637,
-  "FULL_AST_avg": 4.0,
-  "1H_PTS_ratio": 0.4870951417004049,
-  "1Q_PTS_ratio": 0.22823886639676114,
-  "1H_REB_ratio": 0.5729166666666666,
-  "1Q_REB_ratio": 0.27634803921568624,
-  "1H_AST_ratio": 0.5078125,
-  "1Q_AST_ratio": 0.2421875
+  "last_updated": "2026-02-06T22:11:04.692544",
+  "1Q_PTS_avg": 2.484848484848485,
+  "1Q_REB_avg": 1.2424242424242424,
+  "1Q_AST_avg": 0.9393939393939394,
+  "1H_PTS_avg": 5.303030303030303,
+  "1H_REB_avg": 2.5757575757575757,
+  "1H_AST_avg": 1.9696969696969697,
+  "FULL_PTS_avg": 10.73913043478261,
+  "FULL_REB_avg": 4.565217391304348,
+  "FULL_AST_avg": 3.869565217391304,
+  "1H_PTS_ratio": 0.49380444117286215,
+  "1Q_PTS_ratio": 0.231382652435284,
+  "1H_REB_ratio": 0.5642135642135642,
+  "1Q_REB_ratio": 0.27215007215007214,
+  "1H_AST_ratio": 0.5090228123935989,
+  "1Q_AST_ratio": 0.24276472591079334
 }

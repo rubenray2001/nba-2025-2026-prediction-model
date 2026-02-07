@@ -1,8 +1,25 @@
 {
   "player_name": "Justin Champagnie",
   "player_id": 1630551,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500733",
+      "player_id": 1630551,
+      "player_name": "Justin Champagnie",
+      "1Q_PTS": "9",
+      "1Q_REB": "6",
+      "1Q_AST": "1",
+      "1Q_MIN": "8:38",
+      "1H_PTS": "14",
+      "1H_REB": "6",
+      "1H_AST": "1",
+      "1H_MIN": "12:05",
+      "FULL_PTS": "14",
+      "FULL_REB": "7",
+      "FULL_AST": "1",
+      "FULL_MIN": "15:27"
+    },
     {
       "game_id": "0022500718",
       "player_id": 1630551,
@@ -504,20 +521,20 @@
       "1H_MIN": "13:23"
     }
   ],
-  "last_updated": "2026-02-04T08:39:55.459502",
-  "1Q_PTS_avg": 1.935483870967742,
-  "1Q_REB_avg": 1.1935483870967742,
-  "1Q_AST_avg": 0.25806451612903225,
-  "1H_PTS_avg": 4.71875,
-  "1H_REB_avg": 3.46875,
-  "1H_AST_avg": 0.53125,
-  "FULL_PTS_avg": 9.045454545454545,
-  "FULL_REB_avg": 6.863636363636363,
+  "last_updated": "2026-02-06T22:54:06.968634",
+  "1Q_PTS_avg": 2.15625,
+  "1Q_REB_avg": 1.34375,
+  "1Q_AST_avg": 0.28125,
+  "1H_PTS_avg": 5.0,
+  "1H_REB_avg": 3.5454545454545454,
+  "1H_AST_avg": 0.5454545454545454,
+  "FULL_PTS_avg": 9.26086956521739,
+  "FULL_REB_avg": 6.869565217391305,
   "FULL_AST_avg": 1.0,
-  "1H_PTS_ratio": 0.5216708542713568,
-  "1Q_PTS_ratio": 0.21397309126276545,
-  "1H_REB_ratio": 0.5053807947019868,
-  "1Q_REB_ratio": 0.17389446699423203,
-  "1H_AST_ratio": 0.53125,
-  "1Q_AST_ratio": 0.25806451612903225
+  "1H_PTS_ratio": 0.539906103286385,
+  "1Q_PTS_ratio": 0.23283450704225353,
+  "1H_REB_ratio": 0.5161104718066744,
+  "1Q_REB_ratio": 0.19560917721518986,
+  "1H_AST_ratio": 0.5454545454545454,
+  "1Q_AST_ratio": 0.28125
 }

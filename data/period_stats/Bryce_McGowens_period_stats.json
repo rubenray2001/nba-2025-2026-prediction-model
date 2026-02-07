@@ -1,8 +1,25 @@
 {
   "player_name": "Bryce McGowens",
   "player_id": 1631121,
-  "games_collected": 25,
+  "games_collected": 26,
   "games_data": [
+    {
+      "game_id": "0022500744",
+      "player_id": 1631121,
+      "player_name": "Bryce McGowens",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "1",
+      "1Q_MIN": "5:12",
+      "1H_PTS": "5",
+      "1H_REB": "1",
+      "1H_AST": "1",
+      "1H_MIN": "15:49",
+      "FULL_PTS": "11",
+      "FULL_REB": "1",
+      "FULL_AST": "4",
+      "FULL_MIN": "27:47"
+    },
     {
       "game_id": "0022500412",
       "player_id": 1631121,
@@ -381,20 +398,20 @@
       "1H_MIN": "8:36"
     }
   ],
-  "last_updated": "2026-01-30T09:26:47.600666",
-  "1Q_PTS_avg": 2.5,
-  "1Q_REB_avg": 0.5833333333333334,
-  "1Q_AST_avg": 0.3333333333333333,
-  "1H_PTS_avg": 4.36,
-  "1H_REB_avg": 1.04,
-  "1H_AST_avg": 0.68,
-  "FULL_PTS_avg": 9.928571428571429,
-  "FULL_REB_avg": 2.642857142857143,
-  "FULL_AST_avg": 1.5714285714285714,
-  "1H_PTS_ratio": 0.439136690647482,
-  "1Q_PTS_ratio": 0.2517985611510791,
-  "1H_REB_ratio": 0.39351351351351355,
-  "1Q_REB_ratio": 0.22072072072072074,
-  "1H_AST_ratio": 0.4327272727272728,
-  "1Q_AST_ratio": 0.21212121212121213
+  "last_updated": "2026-02-06T22:13:50.734657",
+  "1Q_PTS_avg": 2.4,
+  "1Q_REB_avg": 0.56,
+  "1Q_AST_avg": 0.36,
+  "1H_PTS_avg": 4.384615384615385,
+  "1H_REB_avg": 1.0384615384615385,
+  "1H_AST_avg": 0.6923076923076923,
+  "FULL_PTS_avg": 10.0,
+  "FULL_REB_avg": 2.533333333333333,
+  "FULL_AST_avg": 1.7333333333333334,
+  "1H_PTS_ratio": 0.4384615384615385,
+  "1Q_PTS_ratio": 0.24,
+  "1H_REB_ratio": 0.40991902834008104,
+  "1Q_REB_ratio": 0.2210526315789474,
+  "1H_AST_ratio": 0.3994082840236686,
+  "1Q_AST_ratio": 0.20769230769230768
 }

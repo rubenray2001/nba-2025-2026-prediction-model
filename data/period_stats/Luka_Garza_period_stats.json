@@ -1,8 +1,25 @@
 {
   "player_name": "Luka Garza",
   "player_id": 1630568,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500741",
+      "player_id": 1630568,
+      "player_name": "Luka Garza",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "3:02",
+      "1H_PTS": "0",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "5:15",
+      "FULL_PTS": "2",
+      "FULL_REB": "3",
+      "FULL_AST": "0",
+      "FULL_MIN": "10:09"
+    },
     {
       "game_id": "0022500728",
       "player_id": 1630568,
@@ -508,20 +525,20 @@
       "1H_MIN": "9:59"
     }
   ],
-  "last_updated": "2026-02-05T09:18:48.326056",
-  "1Q_PTS_avg": 3.1875,
-  "1Q_REB_avg": 1.4375,
-  "1Q_AST_avg": 0.28125,
-  "1H_PTS_avg": 5.3125,
-  "1H_REB_avg": 2.5625,
-  "1H_AST_avg": 0.65625,
-  "FULL_PTS_avg": 9.636363636363637,
-  "FULL_REB_avg": 4.863636363636363,
-  "FULL_AST_avg": 1.0,
-  "1H_PTS_ratio": 0.5512971698113207,
-  "1Q_PTS_ratio": 0.3307783018867924,
-  "1H_REB_ratio": 0.5268691588785047,
-  "1Q_REB_ratio": 0.29556074766355145,
-  "1H_AST_ratio": 0.65625,
-  "1Q_AST_ratio": 0.28125
+  "last_updated": "2026-02-06T23:02:13.162001",
+  "1Q_PTS_avg": 3.090909090909091,
+  "1Q_REB_avg": 1.4242424242424243,
+  "1Q_AST_avg": 0.2727272727272727,
+  "1H_PTS_avg": 5.151515151515151,
+  "1H_REB_avg": 2.5757575757575757,
+  "1H_AST_avg": 0.6363636363636364,
+  "FULL_PTS_avg": 9.304347826086957,
+  "FULL_REB_avg": 4.782608695652174,
+  "FULL_AST_avg": 0.9565217391304348,
+  "1H_PTS_ratio": 0.5536675162843386,
+  "1Q_PTS_ratio": 0.3322005097706032,
+  "1H_REB_ratio": 0.5385674931129476,
+  "1Q_REB_ratio": 0.2977961432506887,
+  "1H_AST_ratio": 0.6652892561983471,
+  "1Q_AST_ratio": 0.28512396694214875
 }

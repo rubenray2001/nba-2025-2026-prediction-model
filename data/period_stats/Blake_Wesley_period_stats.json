@@ -1,8 +1,25 @@
 {
   "player_name": "Blake Wesley",
   "player_id": 1631104,
-  "games_collected": 8,
+  "games_collected": 9,
   "games_data": [
+    {
+      "game_id": "0022500745",
+      "player_id": 1631104,
+      "player_name": "Blake Wesley",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "2:27",
+      "1H_PTS": "2",
+      "1H_REB": "0",
+      "1H_AST": "0",
+      "1H_MIN": "5:28",
+      "FULL_PTS": "4",
+      "FULL_REB": "1",
+      "FULL_AST": "3",
+      "FULL_MIN": "14:44"
+    },
     {
       "game_id": "0022500725",
       "player_id": 1631104,
@@ -116,20 +133,20 @@
       "1H_MIN": "9:07"
     }
   ],
-  "last_updated": "2026-02-04T07:58:12.804393",
-  "1Q_PTS_avg": 1.125,
-  "1Q_REB_avg": 0.5,
-  "1Q_AST_avg": 1.0,
-  "1H_PTS_avg": 3.5,
-  "1H_REB_avg": 1.25,
-  "1H_AST_avg": 2.125,
-  "FULL_PTS_avg": 7.5,
-  "FULL_REB_avg": 2.0,
-  "FULL_AST_avg": 4.0,
-  "1H_PTS_ratio": 0.4666666666666667,
-  "1Q_PTS_ratio": 0.15,
-  "1H_REB_ratio": 0.625,
-  "1Q_REB_ratio": 0.25,
-  "1H_AST_ratio": 0.53125,
-  "1Q_AST_ratio": 0.25
+  "last_updated": "2026-02-06T22:09:51.010929",
+  "1Q_PTS_avg": 1.0,
+  "1Q_REB_avg": 0.4444444444444444,
+  "1Q_AST_avg": 0.8888888888888888,
+  "1H_PTS_avg": 3.3333333333333335,
+  "1H_REB_avg": 1.1111111111111112,
+  "1H_AST_avg": 1.8888888888888888,
+  "FULL_PTS_avg": 6.333333333333333,
+  "FULL_REB_avg": 1.6666666666666667,
+  "FULL_AST_avg": 3.6666666666666665,
+  "1H_PTS_ratio": 0.5263157894736843,
+  "1Q_PTS_ratio": 0.15789473684210528,
+  "1H_REB_ratio": 0.6666666666666666,
+  "1Q_REB_ratio": 0.26666666666666666,
+  "1H_AST_ratio": 0.5151515151515151,
+  "1Q_AST_ratio": 0.24242424242424243
 }

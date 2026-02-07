@@ -1,8 +1,25 @@
 {
   "player_name": "Nikola Vu\u010devi\u0107",
   "player_id": 202696,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500741",
+      "player_id": 202696,
+      "player_name": "Nikola Vu\u010devi\u0107",
+      "1Q_PTS": "2",
+      "1Q_REB": "3",
+      "1Q_AST": "2",
+      "1Q_MIN": "7:05",
+      "1H_PTS": "3",
+      "1H_REB": "5",
+      "1H_AST": "3",
+      "1H_MIN": "14:37",
+      "FULL_PTS": "11",
+      "FULL_REB": "12",
+      "FULL_AST": "4",
+      "FULL_MIN": "27:53"
+    },
     {
       "game_id": "0022500705",
       "player_id": 202696,
@@ -491,20 +508,20 @@
       "1H_MIN": "15:59"
     }
   ],
-  "last_updated": "2026-02-03T11:07:12.625684",
-  "1Q_PTS_avg": 4.096774193548387,
-  "1Q_REB_avg": 2.5806451612903225,
-  "1Q_AST_avg": 1.2258064516129032,
-  "1H_PTS_avg": 7.580645161290323,
-  "1H_REB_avg": 4.483870967741935,
-  "1H_AST_avg": 2.161290322580645,
-  "FULL_PTS_avg": 16.285714285714285,
-  "FULL_REB_avg": 8.428571428571429,
-  "FULL_AST_avg": 3.6666666666666665,
-  "1H_PTS_ratio": 0.46547821165817777,
-  "1Q_PTS_ratio": 0.2515563101301641,
-  "1H_REB_ratio": 0.5319846910880262,
-  "1Q_REB_ratio": 0.306178239475123,
-  "1H_AST_ratio": 0.5894428152492669,
-  "1Q_AST_ratio": 0.33431085043988273
+  "last_updated": "2026-02-06T23:12:41.593043",
+  "1Q_PTS_avg": 4.03125,
+  "1Q_REB_avg": 2.59375,
+  "1Q_AST_avg": 1.25,
+  "1H_PTS_avg": 7.4375,
+  "1H_REB_avg": 4.5,
+  "1H_AST_avg": 2.1875,
+  "FULL_PTS_avg": 16.045454545454547,
+  "FULL_REB_avg": 8.590909090909092,
+  "FULL_AST_avg": 3.6818181818181817,
+  "1H_PTS_ratio": 0.4635269121813031,
+  "1Q_PTS_ratio": 0.2512393767705382,
+  "1H_REB_ratio": 0.5238095238095237,
+  "1Q_REB_ratio": 0.30191798941798936,
+  "1H_AST_ratio": 0.5941358024691358,
+  "1Q_AST_ratio": 0.3395061728395062
 }

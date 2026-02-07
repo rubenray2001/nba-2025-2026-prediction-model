@@ -1,8 +1,25 @@
 {
   "player_name": "Cam Spencer",
   "player_id": 1642285,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500745",
+      "player_id": 1642285,
+      "player_name": "Cam Spencer",
+      "1Q_PTS": "5",
+      "1Q_REB": "0",
+      "1Q_AST": "1",
+      "1Q_MIN": "6:25",
+      "1H_PTS": "10",
+      "1H_REB": "0",
+      "1H_AST": "3",
+      "1H_MIN": "11:56",
+      "FULL_PTS": "18",
+      "FULL_REB": "0",
+      "FULL_AST": "5",
+      "FULL_MIN": "25:58"
+    },
     {
       "game_id": "0022500731",
       "player_id": 1642285,
@@ -542,20 +559,20 @@
       "1H_MIN": "13:40"
     }
   ],
-  "last_updated": "2026-02-05T08:36:48.857654",
-  "1Q_PTS_avg": 2.4411764705882355,
-  "1Q_REB_avg": 0.6176470588235294,
-  "1Q_AST_avg": 1.7352941176470589,
-  "1H_PTS_avg": 5.264705882352941,
-  "1H_REB_avg": 1.2647058823529411,
-  "1H_AST_avg": 3.7058823529411766,
-  "FULL_PTS_avg": 14.0,
-  "FULL_REB_avg": 2.6666666666666665,
-  "FULL_AST_avg": 5.916666666666667,
-  "1H_PTS_ratio": 0.3760504201680672,
-  "1Q_PTS_ratio": 0.17436974789915968,
-  "1H_REB_ratio": 0.4742647058823529,
-  "1Q_REB_ratio": 0.23161764705882354,
-  "1H_AST_ratio": 0.6263463131731566,
-  "1Q_AST_ratio": 0.29328914664457334
+  "last_updated": "2026-02-06T22:16:51.509028",
+  "1Q_PTS_avg": 2.5142857142857142,
+  "1Q_REB_avg": 0.6,
+  "1Q_AST_avg": 1.7142857142857142,
+  "1H_PTS_avg": 5.4,
+  "1H_REB_avg": 1.2285714285714286,
+  "1H_AST_avg": 3.6857142857142855,
+  "FULL_PTS_avg": 14.16,
+  "FULL_REB_avg": 2.56,
+  "FULL_AST_avg": 5.88,
+  "1H_PTS_ratio": 0.38135593220338987,
+  "1Q_PTS_ratio": 0.17756255044390637,
+  "1H_REB_ratio": 0.4799107142857143,
+  "1Q_REB_ratio": 0.234375,
+  "1H_AST_ratio": 0.6268221574344023,
+  "1Q_AST_ratio": 0.2915451895043732
 }

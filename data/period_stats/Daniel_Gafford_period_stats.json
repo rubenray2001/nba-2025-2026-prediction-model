@@ -1,8 +1,25 @@
 {
   "player_name": "Daniel Gafford",
   "player_id": 1629655,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500738",
+      "player_id": 1629655,
+      "player_name": "Daniel Gafford",
+      "1Q_PTS": "8",
+      "1Q_REB": "3",
+      "1Q_AST": "1",
+      "1Q_MIN": "9:48",
+      "1H_PTS": "10",
+      "1H_REB": "4",
+      "1H_AST": "2",
+      "1H_MIN": "16:48",
+      "FULL_PTS": "16",
+      "FULL_REB": "10",
+      "FULL_AST": "2",
+      "FULL_MIN": "33:01"
+    },
     {
       "game_id": "0022500721",
       "player_id": 1629655,
@@ -476,20 +493,20 @@
       "1H_MIN": "12:12"
     }
   ],
-  "last_updated": "2026-02-04T08:10:53.681155",
-  "1Q_PTS_avg": 2.357142857142857,
-  "1Q_REB_avg": 1.5714285714285714,
-  "1Q_AST_avg": 0.10714285714285714,
-  "1H_PTS_avg": 4.25,
-  "1H_REB_avg": 3.5625,
-  "1H_AST_avg": 0.375,
-  "FULL_PTS_avg": 6.666666666666667,
-  "FULL_REB_avg": 5.777777777777778,
-  "FULL_AST_avg": 1.1111111111111112,
-  "1H_PTS_ratio": 0.6375,
-  "1Q_PTS_ratio": 0.3535714285714286,
-  "1H_REB_ratio": 0.6165865384615384,
-  "1Q_REB_ratio": 0.27197802197802196,
-  "1H_AST_ratio": 0.33749999999999997,
-  "1Q_AST_ratio": 0.09642857142857142
+  "last_updated": "2026-02-06T22:23:12.066090",
+  "1Q_PTS_avg": 2.5517241379310347,
+  "1Q_REB_avg": 1.6206896551724137,
+  "1Q_AST_avg": 0.13793103448275862,
+  "1H_PTS_avg": 4.424242424242424,
+  "1H_REB_avg": 3.5757575757575757,
+  "1H_AST_avg": 0.42424242424242425,
+  "FULL_PTS_avg": 7.157894736842105,
+  "FULL_REB_avg": 6.0,
+  "FULL_AST_avg": 1.1578947368421053,
+  "1H_PTS_ratio": 0.6180926916221033,
+  "1Q_PTS_ratio": 0.3564908722109534,
+  "1H_REB_ratio": 0.5959595959595959,
+  "1Q_REB_ratio": 0.27011494252873564,
+  "1H_AST_ratio": 0.36639118457300274,
+  "1Q_AST_ratio": 0.11912225705329153
 }

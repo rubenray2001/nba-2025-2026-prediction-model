@@ -1,8 +1,25 @@
 {
   "player_name": "Baylor Scheierman",
   "player_id": 1631248,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500741",
+      "player_id": 1631248,
+      "player_name": "Baylor Scheierman",
+      "1Q_PTS": "5",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:28",
+      "1H_PTS": "5",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "7:56",
+      "FULL_PTS": "5",
+      "FULL_REB": "7",
+      "FULL_AST": "2",
+      "FULL_MIN": "18:38"
+    },
     {
       "game_id": "0022500728",
       "player_id": 1631248,
@@ -484,20 +501,20 @@
       "1H_MIN": "10:38"
     }
   ],
-  "last_updated": "2026-02-05T08:29:42.465982",
-  "1Q_PTS_avg": 0.8846153846153846,
-  "1Q_REB_avg": 0.5384615384615384,
-  "1Q_AST_avg": 0.2692307692307692,
-  "1H_PTS_avg": 1.875,
-  "1H_REB_avg": 1.3125,
-  "1H_AST_avg": 0.46875,
-  "FULL_PTS_avg": 3.5454545454545454,
-  "FULL_REB_avg": 2.272727272727273,
-  "FULL_AST_avg": 0.9545454545454546,
-  "1H_PTS_ratio": 0.5288461538461539,
-  "1Q_PTS_ratio": 0.2495069033530572,
-  "1H_REB_ratio": 0.5774999999999999,
-  "1Q_REB_ratio": 0.2369230769230769,
-  "1H_AST_ratio": 0.49107142857142855,
-  "1Q_AST_ratio": 0.28205128205128205
+  "last_updated": "2026-02-06T22:08:58.597660",
+  "1Q_PTS_avg": 1.037037037037037,
+  "1Q_REB_avg": 0.5925925925925926,
+  "1Q_AST_avg": 0.25925925925925924,
+  "1H_PTS_avg": 1.9696969696969697,
+  "1H_REB_avg": 1.3636363636363635,
+  "1H_AST_avg": 0.45454545454545453,
+  "FULL_PTS_avg": 3.608695652173913,
+  "FULL_REB_avg": 2.4782608695652173,
+  "FULL_AST_avg": 1.0,
+  "1H_PTS_ratio": 0.5458196422051844,
+  "1Q_PTS_ratio": 0.28737170905845605,
+  "1H_REB_ratio": 0.5502392344497608,
+  "1Q_REB_ratio": 0.23911630929174787,
+  "1H_AST_ratio": 0.45454545454545453,
+  "1Q_AST_ratio": 0.25925925925925924
 }

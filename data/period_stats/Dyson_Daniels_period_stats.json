@@ -1,8 +1,25 @@
 {
   "player_name": "Dyson Daniels",
   "player_id": 1630700,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500735",
+      "player_id": 1630700,
+      "player_name": "Dyson Daniels",
+      "1Q_PTS": "5",
+      "1Q_REB": "1",
+      "1Q_AST": "1",
+      "1Q_MIN": "8:31",
+      "1H_PTS": "7",
+      "1H_REB": "3",
+      "1H_AST": "3",
+      "1H_MIN": "16:14",
+      "FULL_PTS": "11",
+      "FULL_REB": "6",
+      "FULL_AST": "6",
+      "FULL_MIN": "34:35"
+    },
     {
       "game_id": "0022500720",
       "player_id": 1630700,
@@ -508,20 +525,20 @@
       "1H_MIN": "16:30"
     }
   ],
-  "last_updated": "2026-02-04T08:15:27.440759",
-  "1Q_PTS_avg": 3.40625,
-  "1Q_REB_avg": 1.96875,
-  "1Q_AST_avg": 1.8125,
-  "1H_PTS_avg": 6.375,
-  "1H_REB_avg": 3.375,
-  "1H_AST_avg": 3.40625,
-  "FULL_PTS_avg": 12.045454545454545,
-  "FULL_REB_avg": 6.318181818181818,
-  "FULL_AST_avg": 6.2727272727272725,
-  "1H_PTS_ratio": 0.529245283018868,
-  "1Q_PTS_ratio": 0.28278301886792456,
-  "1H_REB_ratio": 0.5341726618705036,
-  "1Q_REB_ratio": 0.31160071942446044,
-  "1H_AST_ratio": 0.5430253623188406,
-  "1Q_AST_ratio": 0.28894927536231885
+  "last_updated": "2026-02-06T22:28:18.532079",
+  "1Q_PTS_avg": 3.4545454545454546,
+  "1Q_REB_avg": 1.9393939393939394,
+  "1Q_AST_avg": 1.7878787878787878,
+  "1H_PTS_avg": 6.393939393939394,
+  "1H_REB_avg": 3.3636363636363638,
+  "1H_AST_avg": 3.393939393939394,
+  "FULL_PTS_avg": 12.0,
+  "FULL_REB_avg": 6.304347826086956,
+  "FULL_AST_avg": 6.260869565217392,
+  "1H_PTS_ratio": 0.5328282828282828,
+  "1Q_PTS_ratio": 0.2878787878787879,
+  "1H_REB_ratio": 0.5335423197492164,
+  "1Q_REB_ratio": 0.30762800417972835,
+  "1H_AST_ratio": 0.5420875420875421,
+  "1Q_AST_ratio": 0.285563973063973
 }

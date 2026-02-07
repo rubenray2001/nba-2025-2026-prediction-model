@@ -1,8 +1,21 @@
 {
   "player_name": "Dwight Powell",
   "player_id": 203939,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500738",
+      "player_id": 203939,
+      "player_name": "Dwight Powell",
+      "1H_PTS": "0",
+      "1H_REB": "0",
+      "1H_AST": "0",
+      "1H_MIN": "2:11",
+      "FULL_PTS": "0",
+      "FULL_REB": "0",
+      "FULL_AST": "0",
+      "FULL_MIN": "2:11"
+    },
     {
       "game_id": "0022500721",
       "player_id": 203939,
@@ -471,20 +484,20 @@
       "1H_MIN": "9:25"
     }
   ],
-  "last_updated": "2026-02-04T08:15:21.750788",
+  "last_updated": "2026-02-06T22:28:09.813799",
   "1Q_PTS_avg": 0.9615384615384616,
   "1Q_REB_avg": 1.5384615384615385,
   "1Q_AST_avg": 0.38461538461538464,
-  "1H_PTS_avg": 1.5806451612903225,
-  "1H_REB_avg": 2.5483870967741935,
-  "1H_AST_avg": 0.6129032258064516,
-  "FULL_PTS_avg": 2.1904761904761907,
-  "FULL_REB_avg": 2.9047619047619047,
-  "FULL_AST_avg": 0.7619047619047619,
-  "1H_PTS_ratio": 0.7215988779803646,
-  "1Q_PTS_ratio": 0.4389632107023411,
-  "1H_REB_ratio": 0.8773135906927552,
-  "1Q_REB_ratio": 0.5296343001261035,
-  "1H_AST_ratio": 0.8044354838709677,
-  "1Q_AST_ratio": 0.5048076923076924
+  "1H_PTS_avg": 1.53125,
+  "1H_REB_avg": 2.46875,
+  "1H_AST_avg": 0.59375,
+  "FULL_PTS_avg": 2.090909090909091,
+  "FULL_REB_avg": 2.772727272727273,
+  "FULL_AST_avg": 0.7272727272727273,
+  "1H_PTS_ratio": 0.7323369565217391,
+  "1Q_PTS_ratio": 0.459866220735786,
+  "1H_REB_ratio": 0.8903688524590163,
+  "1Q_REB_ratio": 0.5548549810844893,
+  "1H_AST_ratio": 0.81640625,
+  "1Q_AST_ratio": 0.5288461538461539
 }

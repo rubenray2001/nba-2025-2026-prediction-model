@@ -1,8 +1,25 @@
 {
   "player_name": "Zaccharie Risacher",
   "player_id": 1642258,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500735",
+      "player_id": 1642258,
+      "player_name": "Zaccharie Risacher",
+      "1Q_PTS": "0",
+      "1Q_REB": "4",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:39",
+      "1H_PTS": "0",
+      "1H_REB": "4",
+      "1H_AST": "0",
+      "1H_MIN": "11:44",
+      "FULL_PTS": "0",
+      "FULL_REB": "6",
+      "FULL_AST": "0",
+      "FULL_MIN": "19:15"
+    },
     {
       "game_id": "0022500720",
       "player_id": 1642258,
@@ -508,20 +525,20 @@
       "1H_MIN": "12:52"
     }
   ],
-  "last_updated": "2026-02-04T09:18:29.399455",
-  "1Q_PTS_avg": 3.03125,
-  "1Q_REB_avg": 1.09375,
-  "1Q_AST_avg": 0.59375,
-  "1H_PTS_avg": 5.4375,
-  "1H_REB_avg": 1.65625,
-  "1H_AST_avg": 0.75,
-  "FULL_PTS_avg": 10.409090909090908,
-  "FULL_REB_avg": 3.272727272727273,
-  "FULL_AST_avg": 1.5909090909090908,
-  "1H_PTS_ratio": 0.5223799126637555,
-  "1Q_PTS_ratio": 0.29121179039301315,
-  "1H_REB_ratio": 0.5060763888888888,
-  "1Q_REB_ratio": 0.3342013888888889,
-  "1H_AST_ratio": 0.4714285714285715,
-  "1Q_AST_ratio": 0.3732142857142857
+  "last_updated": "2026-02-06T23:33:50.662432",
+  "1Q_PTS_avg": 2.9393939393939394,
+  "1Q_REB_avg": 1.1818181818181819,
+  "1Q_AST_avg": 0.5757575757575758,
+  "1H_PTS_avg": 5.2727272727272725,
+  "1H_REB_avg": 1.7272727272727273,
+  "1H_AST_avg": 0.7272727272727273,
+  "FULL_PTS_avg": 9.956521739130435,
+  "FULL_REB_avg": 3.391304347826087,
+  "FULL_AST_avg": 1.5217391304347827,
+  "1H_PTS_ratio": 0.5295752282651845,
+  "1Q_PTS_ratio": 0.2952229720788673,
+  "1H_REB_ratio": 0.5093240093240093,
+  "1Q_REB_ratio": 0.3484848484848485,
+  "1H_AST_ratio": 0.4779220779220779,
+  "1Q_AST_ratio": 0.37835497835497833
 }

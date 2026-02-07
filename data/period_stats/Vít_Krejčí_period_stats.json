@@ -1,8 +1,25 @@
 {
   "player_name": "V\u00edt Krej\u010d\u00ed",
   "player_id": 1630249,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500745",
+      "player_id": 1630249,
+      "player_name": "V\u00edt Krej\u010d\u00ed",
+      "1Q_PTS": "2",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:29",
+      "1H_PTS": "8",
+      "1H_REB": "0",
+      "1H_AST": "0",
+      "1H_MIN": "9:51",
+      "FULL_PTS": "11",
+      "FULL_REB": "0",
+      "FULL_AST": "1",
+      "FULL_MIN": "23:09"
+    },
     {
       "game_id": "0022500725",
       "player_id": 1630249,
@@ -491,20 +508,20 @@
       "1H_MIN": "14:03"
     }
   ],
-  "last_updated": "2026-02-04T09:16:01.551417",
-  "1Q_PTS_avg": 2.032258064516129,
-  "1Q_REB_avg": 0.5483870967741935,
-  "1Q_AST_avg": 0.4838709677419355,
-  "1H_PTS_avg": 4.225806451612903,
-  "1H_REB_avg": 0.8709677419354839,
-  "1H_AST_avg": 0.6451612903225806,
-  "FULL_PTS_avg": 9.952380952380953,
-  "FULL_REB_avg": 2.380952380952381,
-  "FULL_AST_avg": 1.2857142857142858,
-  "1H_PTS_ratio": 0.4246025621237845,
-  "1Q_PTS_ratio": 0.20419817873128568,
-  "1H_REB_ratio": 0.3658064516129032,
-  "1Q_REB_ratio": 0.23032258064516128,
-  "1H_AST_ratio": 0.5017921146953405,
-  "1Q_AST_ratio": 0.3763440860215054
+  "last_updated": "2026-02-06T23:31:16.216881",
+  "1Q_PTS_avg": 2.03125,
+  "1Q_REB_avg": 0.53125,
+  "1Q_AST_avg": 0.46875,
+  "1H_PTS_avg": 4.34375,
+  "1H_REB_avg": 0.84375,
+  "1H_AST_avg": 0.625,
+  "FULL_PTS_avg": 10.0,
+  "FULL_REB_avg": 2.272727272727273,
+  "FULL_AST_avg": 1.2727272727272727,
+  "1H_PTS_ratio": 0.434375,
+  "1Q_PTS_ratio": 0.203125,
+  "1H_REB_ratio": 0.37124999999999997,
+  "1Q_REB_ratio": 0.23374999999999999,
+  "1H_AST_ratio": 0.4910714285714286,
+  "1Q_AST_ratio": 0.36830357142857145
 }

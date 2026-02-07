@@ -1,8 +1,25 @@
 {
   "player_name": "Nikola Vucevic",
   "player_id": 202696,
-  "games_collected": 30,
+  "games_collected": 31,
   "games_data": [
+    {
+      "game_id": "0022500741",
+      "player_id": 202696,
+      "player_name": "Nikola Vucevic",
+      "1Q_PTS": "2",
+      "1Q_REB": "3",
+      "1Q_AST": "2",
+      "1Q_MIN": "7:05",
+      "1H_PTS": "3",
+      "1H_REB": "5",
+      "1H_AST": "3",
+      "1H_MIN": "14:37",
+      "FULL_PTS": "11",
+      "FULL_REB": "12",
+      "FULL_AST": "4",
+      "FULL_MIN": "27:53"
+    },
     {
       "game_id": "0022500705",
       "player_id": 202696,
@@ -506,20 +523,20 @@
       "1H_MIN": "16:40"
     }
   ],
-  "last_updated": "2026-02-03T11:07:07.629371",
-  "1Q_PTS_avg": 4.066666666666666,
-  "1Q_REB_avg": 2.6333333333333333,
-  "1Q_AST_avg": 1.2,
-  "1H_PTS_avg": 7.586206896551724,
-  "1H_REB_avg": 4.586206896551724,
-  "1H_AST_avg": 2.103448275862069,
-  "FULL_PTS_avg": 17.137931034482758,
-  "FULL_REB_avg": 8.413793103448276,
-  "FULL_AST_avg": 3.8275862068965516,
-  "1H_PTS_ratio": 0.4426559356136821,
-  "1Q_PTS_ratio": 0.23729040912139504,
-  "1H_REB_ratio": 0.5450819672131147,
-  "1Q_REB_ratio": 0.3129781420765027,
-  "1H_AST_ratio": 0.5495495495495496,
-  "1Q_AST_ratio": 0.31351351351351353
+  "last_updated": "2026-02-06T23:12:37.835567",
+  "1Q_PTS_avg": 4.0,
+  "1Q_REB_avg": 2.6451612903225805,
+  "1Q_AST_avg": 1.2258064516129032,
+  "1H_PTS_avg": 7.433333333333334,
+  "1H_REB_avg": 4.6,
+  "1H_AST_avg": 2.1333333333333333,
+  "FULL_PTS_avg": 16.933333333333334,
+  "FULL_REB_avg": 8.533333333333333,
+  "FULL_AST_avg": 3.8333333333333335,
+  "1H_PTS_ratio": 0.4389763779527559,
+  "1Q_PTS_ratio": 0.23622047244094488,
+  "1H_REB_ratio": 0.5390625,
+  "1Q_REB_ratio": 0.30997983870967744,
+  "1H_AST_ratio": 0.5565217391304348,
+  "1Q_AST_ratio": 0.31977559607293127
 }

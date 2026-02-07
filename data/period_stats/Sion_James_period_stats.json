@@ -1,8 +1,25 @@
 {
   "player_name": "Sion James",
   "player_id": 1642883,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500737",
+      "player_id": 1642883,
+      "player_name": "Sion James",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "2:58",
+      "1H_PTS": "0",
+      "1H_REB": "1",
+      "1H_AST": "0",
+      "1H_MIN": "10:47",
+      "FULL_PTS": "6",
+      "FULL_REB": "2",
+      "FULL_AST": "0",
+      "FULL_MIN": "21:53"
+    },
     {
       "game_id": "0022500712",
       "player_id": 1642883,
@@ -508,20 +525,20 @@
       "1H_MIN": "9:48"
     }
   ],
-  "last_updated": "2026-02-03T11:23:59.568532",
-  "1Q_PTS_avg": 1.875,
-  "1Q_REB_avg": 1.0625,
-  "1Q_AST_avg": 0.375,
-  "1H_PTS_avg": 2.71875,
-  "1H_REB_avg": 1.8125,
-  "1H_AST_avg": 1.0,
-  "FULL_PTS_avg": 5.454545454545454,
-  "FULL_REB_avg": 3.6818181818181817,
-  "FULL_AST_avg": 1.7727272727272727,
-  "1H_PTS_ratio": 0.49843750000000003,
-  "1Q_PTS_ratio": 0.34375,
-  "1H_REB_ratio": 0.49228395061728397,
-  "1Q_REB_ratio": 0.28858024691358025,
-  "1H_AST_ratio": 0.5641025641025641,
-  "1Q_AST_ratio": 0.21153846153846154
+  "last_updated": "2026-02-06T23:24:21.922392",
+  "1Q_PTS_avg": 1.8181818181818181,
+  "1Q_REB_avg": 1.0606060606060606,
+  "1Q_AST_avg": 0.36363636363636365,
+  "1H_PTS_avg": 2.6363636363636362,
+  "1H_REB_avg": 1.7878787878787878,
+  "1H_AST_avg": 0.9696969696969697,
+  "FULL_PTS_avg": 5.478260869565218,
+  "FULL_REB_avg": 3.608695652173913,
+  "FULL_AST_avg": 1.6956521739130435,
+  "1H_PTS_ratio": 0.4812409812409812,
+  "1Q_PTS_ratio": 0.33189033189033185,
+  "1H_REB_ratio": 0.4954362906170135,
+  "1Q_REB_ratio": 0.29390288426433003,
+  "1H_AST_ratio": 0.5718725718725719,
+  "1Q_AST_ratio": 0.21445221445221446
 }

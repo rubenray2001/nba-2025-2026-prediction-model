@@ -1,8 +1,25 @@
 {
   "player_name": "Carter Bryant",
   "player_id": 1642868,
-  "games_collected": 27,
+  "games_collected": 28,
   "games_data": [
+    {
+      "game_id": "0022500738",
+      "player_id": 1642868,
+      "player_name": "Carter Bryant",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:01",
+      "1H_PTS": "0",
+      "1H_REB": "2",
+      "1H_AST": "1",
+      "1H_MIN": "8:47",
+      "FULL_PTS": "2",
+      "FULL_REB": "2",
+      "FULL_AST": "2",
+      "FULL_MIN": "17:52"
+    },
     {
       "game_id": "0022500730",
       "player_id": 1642868,
@@ -423,20 +440,20 @@
       "1H_MIN": "5:39"
     }
   ],
-  "last_updated": "2026-02-05T08:37:15.092277",
-  "1Q_PTS_avg": 1.32,
-  "1Q_REB_avg": 0.6,
-  "1Q_AST_avg": 0.12,
-  "1H_PTS_avg": 2.259259259259259,
-  "1H_REB_avg": 1.3333333333333333,
-  "1H_AST_avg": 0.18518518518518517,
-  "FULL_PTS_avg": 3.0,
-  "FULL_REB_avg": 2.210526315789474,
-  "FULL_AST_avg": 0.15789473684210525,
-  "1H_PTS_ratio": 0.7530864197530863,
-  "1Q_PTS_ratio": 0.44,
-  "1H_REB_ratio": 0.603174603174603,
-  "1Q_REB_ratio": 0.2714285714285714,
-  "1H_AST_ratio": 1.1728395061728396,
-  "1Q_AST_ratio": 0.76
+  "last_updated": "2026-02-06T22:17:24.323381",
+  "1Q_PTS_avg": 1.2692307692307692,
+  "1Q_REB_avg": 0.5769230769230769,
+  "1Q_AST_avg": 0.11538461538461539,
+  "1H_PTS_avg": 2.1785714285714284,
+  "1H_REB_avg": 1.3571428571428572,
+  "1H_AST_avg": 0.21428571428571427,
+  "FULL_PTS_avg": 2.95,
+  "FULL_REB_avg": 2.2,
+  "FULL_AST_avg": 0.25,
+  "1H_PTS_ratio": 0.7384987893462469,
+  "1Q_PTS_ratio": 0.43024771838331155,
+  "1H_REB_ratio": 0.6168831168831168,
+  "1Q_REB_ratio": 0.2622377622377622,
+  "1H_AST_ratio": 0.8571428571428571,
+  "1Q_AST_ratio": 0.46153846153846156
 }

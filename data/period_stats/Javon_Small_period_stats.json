@@ -1,8 +1,25 @@
 {
   "player_name": "Javon Small",
   "player_id": 1642914,
-  "games_collected": 14,
+  "games_collected": 15,
   "games_data": [
+    {
+      "game_id": "0022500745",
+      "player_id": 1642914,
+      "player_name": "Javon Small",
+      "1Q_PTS": "2",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:01",
+      "1H_PTS": "6",
+      "1H_REB": "2",
+      "1H_AST": "0",
+      "1H_MIN": "10:23",
+      "FULL_PTS": "11",
+      "FULL_REB": "5",
+      "FULL_AST": "3",
+      "FULL_MIN": "21:36"
+    },
     {
       "game_id": "0022500731",
       "player_id": 1642914,
@@ -214,20 +231,20 @@
       "1H_MIN": "7:02"
     }
   ],
-  "last_updated": "2026-02-05T08:58:47.773738",
-  "1Q_PTS_avg": 0.5714285714285714,
-  "1Q_REB_avg": 0.6428571428571429,
-  "1Q_AST_avg": 0.7857142857142857,
-  "1H_PTS_avg": 2.5,
-  "1H_REB_avg": 1.0714285714285714,
-  "1H_AST_avg": 1.9285714285714286,
-  "FULL_PTS_avg": 6.285714285714286,
-  "FULL_REB_avg": 2.4285714285714284,
-  "FULL_AST_avg": 4.142857142857143,
-  "1H_PTS_ratio": 0.39772727272727276,
-  "1Q_PTS_ratio": 0.09090909090909091,
-  "1H_REB_ratio": 0.44117647058823534,
-  "1Q_REB_ratio": 0.26470588235294124,
-  "1H_AST_ratio": 0.46551724137931033,
-  "1Q_AST_ratio": 0.1896551724137931
+  "last_updated": "2026-02-06T22:41:26.359671",
+  "1Q_PTS_avg": 0.6666666666666666,
+  "1Q_REB_avg": 0.6666666666666666,
+  "1Q_AST_avg": 0.7333333333333333,
+  "1H_PTS_avg": 2.7333333333333334,
+  "1H_REB_avg": 1.1333333333333333,
+  "1H_AST_avg": 1.8,
+  "FULL_PTS_avg": 6.875,
+  "FULL_REB_avg": 2.75,
+  "FULL_AST_avg": 4.0,
+  "1H_PTS_ratio": 0.3975757575757576,
+  "1Q_PTS_ratio": 0.09696969696969697,
+  "1H_REB_ratio": 0.4121212121212121,
+  "1Q_REB_ratio": 0.2424242424242424,
+  "1H_AST_ratio": 0.45,
+  "1Q_AST_ratio": 0.18333333333333332
 }

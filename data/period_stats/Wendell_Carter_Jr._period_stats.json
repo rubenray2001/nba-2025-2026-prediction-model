@@ -1,8 +1,25 @@
 {
   "player_name": "Wendell Carter Jr.",
   "player_id": 1628976,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500734",
+      "player_id": 1628976,
+      "player_name": "Wendell Carter Jr.",
+      "1Q_PTS": "5",
+      "1Q_REB": "3",
+      "1Q_AST": "0",
+      "1Q_MIN": "7:20",
+      "1H_PTS": "5",
+      "1H_REB": "5",
+      "1H_AST": "0",
+      "1H_MIN": "11:21",
+      "FULL_PTS": "7",
+      "FULL_REB": "8",
+      "FULL_AST": "1",
+      "FULL_MIN": "21:49"
+    },
     {
       "game_id": "0022500723",
       "player_id": 1628976,
@@ -531,20 +548,20 @@
       "FULL_MIN": "31:46"
     }
   ],
-  "last_updated": "2026-02-04T09:16:07.368031",
-  "1Q_PTS_avg": 3.161290322580645,
-  "1Q_REB_avg": 2.225806451612903,
-  "1Q_AST_avg": 0.7741935483870968,
-  "1H_PTS_avg": 6.387096774193548,
-  "1H_REB_avg": 3.806451612903226,
-  "1H_AST_avg": 1.2258064516129032,
-  "FULL_PTS_avg": 11.774193548387096,
-  "FULL_REB_avg": 7.096774193548387,
-  "FULL_AST_avg": 2.096774193548387,
-  "1H_PTS_ratio": 0.5424657534246575,
-  "1Q_PTS_ratio": 0.2684931506849315,
-  "1H_REB_ratio": 0.5363636363636364,
-  "1Q_REB_ratio": 0.3136363636363636,
-  "1H_AST_ratio": 0.5846153846153846,
-  "1Q_AST_ratio": 0.36923076923076925
+  "last_updated": "2026-02-06T23:31:24.747799",
+  "1Q_PTS_avg": 3.21875,
+  "1Q_REB_avg": 2.25,
+  "1Q_AST_avg": 0.75,
+  "1H_PTS_avg": 6.34375,
+  "1H_REB_avg": 3.84375,
+  "1H_AST_avg": 1.1875,
+  "FULL_PTS_avg": 11.625,
+  "FULL_REB_avg": 7.125,
+  "FULL_AST_avg": 2.0625,
+  "1H_PTS_ratio": 0.5456989247311828,
+  "1Q_PTS_ratio": 0.2768817204301075,
+  "1H_REB_ratio": 0.5394736842105263,
+  "1Q_REB_ratio": 0.3157894736842105,
+  "1H_AST_ratio": 0.5757575757575758,
+  "1Q_AST_ratio": 0.36363636363636365
 }

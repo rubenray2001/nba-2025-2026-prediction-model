@@ -1,8 +1,25 @@
 {
   "player_name": "Corey Kispert",
   "player_id": 1630557,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500735",
+      "player_id": 1630557,
+      "player_name": "Corey Kispert",
+      "1Q_PTS": "7",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:21",
+      "1H_PTS": "11",
+      "1H_REB": "2",
+      "1H_AST": "0",
+      "1H_MIN": "12:08",
+      "FULL_PTS": "20",
+      "FULL_REB": "2",
+      "FULL_AST": "0",
+      "FULL_MIN": "24:34"
+    },
     {
       "game_id": "0022500720",
       "player_id": 1630557,
@@ -491,20 +508,20 @@
       "1H_MIN": "9:31"
     }
   ],
-  "last_updated": "2026-02-04T08:09:17.872992",
-  "1Q_PTS_avg": 2.7419354838709675,
-  "1Q_REB_avg": 0.6451612903225806,
-  "1Q_AST_avg": 0.45161290322580644,
-  "1H_PTS_avg": 5.161290322580645,
-  "1H_REB_avg": 1.2258064516129032,
-  "1H_AST_avg": 0.9032258064516129,
-  "FULL_PTS_avg": 9.619047619047619,
-  "FULL_REB_avg": 2.4285714285714284,
-  "FULL_AST_avg": 1.8571428571428572,
-  "1H_PTS_ratio": 0.5365697860108591,
-  "1Q_PTS_ratio": 0.2850526988182689,
-  "1H_REB_ratio": 0.5047438330170778,
-  "1Q_REB_ratio": 0.26565464895635676,
-  "1H_AST_ratio": 0.48635235732009924,
-  "1Q_AST_ratio": 0.24317617866004962
+  "last_updated": "2026-02-06T22:21:34.986998",
+  "1Q_PTS_avg": 2.875,
+  "1Q_REB_avg": 0.6875,
+  "1Q_AST_avg": 0.4375,
+  "1H_PTS_avg": 5.34375,
+  "1H_REB_avg": 1.25,
+  "1H_AST_avg": 0.875,
+  "FULL_PTS_avg": 10.090909090909092,
+  "FULL_REB_avg": 2.409090909090909,
+  "FULL_AST_avg": 1.7727272727272727,
+  "1H_PTS_ratio": 0.5295608108108107,
+  "1Q_PTS_ratio": 0.2849099099099099,
+  "1H_REB_ratio": 0.5188679245283019,
+  "1Q_REB_ratio": 0.285377358490566,
+  "1H_AST_ratio": 0.4935897435897436,
+  "1Q_AST_ratio": 0.2467948717948718
 }
