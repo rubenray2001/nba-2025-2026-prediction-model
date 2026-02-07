@@ -4,12 +4,14 @@ Runs all necessary updates to keep the model current.
 
 Usage:
     python update_all.py           # Update data only (fast, ~5-10 min)
-    python update_all.py --retrain # Update data + regenerate training + retrain (30-60 min)
+    python update_all.py --retrain # Update data + retrain + auto-push to GitHub (30-60 min)
+    python update_all.py --no-push # Update + retrain but skip git push
 
 The --retrain flag:
 - Collects fresh training data from ALL player logs
 - Retrains the model with updated data
-- This is required for the model to learn from new games
+- Auto-pushes ALL files (code + models + data) to GitHub
+- This ensures Streamlit Cloud always has the latest model
 """
 
 import subprocess
@@ -63,6 +65,7 @@ def main():
     
     # Parse arguments
     retrain = "--retrain" in sys.argv or "--full" in sys.argv
+    auto_push = "--no-push" not in sys.argv  # Push by default
     
     if retrain:
         print("  Mode: UPDATE + REGENERATE TRAINING DATA + RETRAIN")
@@ -109,6 +112,51 @@ def main():
         print("  Step 3/3: Skipping model retrain (use --retrain to include)")
         print(f"{'='*60}")
     
+    # Step 4: Auto-push to GitHub (ensures Streamlit Cloud gets new models)
+    if auto_push:
+        print(f"\n{'='*60}")
+        print("  Step 4: Pushing ALL changes to GitHub...")
+        print(f"{'='*60}")
+        
+        try:
+            # Stage everything: code, models, data, period stats
+            subprocess.run(["git", "add", "-A"], cwd=sys.path[0] or '.', check=True)
+            
+            # Check if there's anything to commit
+            status = subprocess.run(
+                ["git", "status", "--porcelain"], 
+                cwd=sys.path[0] or '.', capture_output=True, text=True
+            )
+            
+            if status.stdout.strip():
+                timestamp = datetime.now().strftime('%Y-%m-%d %H:%M')
+                msg = f"Auto-update {timestamp}: data"
+                if retrain:
+                    msg += " + retrained models"
+                
+                subprocess.run(
+                    ["git", "commit", "-m", msg], 
+                    cwd=sys.path[0] or '.', check=True
+                )
+                subprocess.run(
+                    ["git", "push"], 
+                    cwd=sys.path[0] or '.', check=True
+                )
+                print("  [OK] Pushed to GitHub - Streamlit Cloud will auto-deploy")
+                steps_completed += 1
+            else:
+                print("  [OK] No changes to push")
+                steps_completed += 1
+        except Exception as e:
+            print(f"  [ERROR] Git push failed: {e}")
+            print("  WARNING: Changes are NOT live on Streamlit Cloud!")
+            print("  Run manually: git add -A && git commit -m 'update' && git push")
+            steps_failed += 1
+    else:
+        print(f"\n{'='*60}")
+        print("  Step 4: Skipping git push (--no-push flag)")
+        print(f"{'='*60}")
+    
     # Summary
     total_time = time.time() - start_time
     minutes = int(total_time // 60)
@@ -122,8 +170,8 @@ def main():
     ║  Steps failed:    {steps_failed:<3}                                     ║
     ║  Total time:      {minutes}m {seconds}s{' '*(32-len(f'{minutes}m {seconds}s'))}║
     ╠══════════════════════════════════════════════════════════╣
-    ║  Your model is now up to date!                           ║
-    ║  Run predictions with: python app.py                     ║
+    ║  Model is up to date + pushed to GitHub!                 ║
+    ║  Streamlit Cloud will auto-deploy in ~2 min              ║
     ╚══════════════════════════════════════════════════════════╝
     """)
     
