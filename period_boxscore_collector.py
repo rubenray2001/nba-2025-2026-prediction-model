@@ -330,13 +330,38 @@ def save_player_period_stats(player_name: str, stats: Dict):
 
 
 def load_player_period_stats(player_name: str) -> Optional[Dict]:
-    """Load player's period stats from file"""
+    """Load player's period stats from file with robust name matching."""
+    import unicodedata
+    
+    # Primary: exact match with standard normalization
     safe_name = player_name.replace(' ', '_').replace("'", "")
     filepath = os.path.join(PERIOD_DATA_DIR, f'{safe_name}_period_stats.json')
     
     if os.path.exists(filepath):
         with open(filepath, 'r') as f:
             return json.load(f)
+    
+    # Secondary: strip all accents/diacritics and try again
+    # Handles Dončić -> Doncic, Schröder -> Schroder, etc.
+    normalized = unicodedata.normalize('NFD', safe_name)
+    ascii_name = ''.join(c for c in normalized if unicodedata.category(c) != 'Mn')
+    filepath2 = os.path.join(PERIOD_DATA_DIR, f'{ascii_name}_period_stats.json')
+    
+    if filepath2 != filepath and os.path.exists(filepath2):
+        with open(filepath2, 'r') as f:
+            return json.load(f)
+    
+    # Tertiary: search for partial match in directory
+    # Handles edge cases like "Jr" vs "Jr." or missing suffixes
+    try:
+        search_base = ascii_name.split('_')[0] + '_' + ascii_name.split('_')[1] if '_' in ascii_name else ascii_name
+        for fname in os.listdir(PERIOD_DATA_DIR):
+            if fname.startswith(search_base) and fname.endswith('_period_stats.json'):
+                with open(os.path.join(PERIOD_DATA_DIR, fname), 'r') as f:
+                    return json.load(f)
+    except (IndexError, OSError):
+        pass
+    
     return None
 
 
