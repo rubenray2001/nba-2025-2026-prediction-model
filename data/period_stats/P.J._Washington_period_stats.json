@@ -1,8 +1,25 @@
 {
   "player_name": "P.J. Washington",
   "player_id": 1629023,
-  "games_collected": 30,
+  "games_collected": 31,
   "games_data": [
+    {
+      "game_id": "0022500749",
+      "player_id": 1629023,
+      "player_name": "P.J. Washington",
+      "1Q_PTS": "0",
+      "1Q_REB": "2",
+      "1Q_AST": "2",
+      "1Q_MIN": "6:42",
+      "1H_PTS": "2",
+      "1H_REB": "3",
+      "1H_AST": "2",
+      "1H_MIN": "11:12",
+      "FULL_PTS": "10",
+      "FULL_REB": "5",
+      "FULL_AST": "3",
+      "FULL_MIN": "22:38"
+    },
     {
       "game_id": "0022500701",
       "player_id": 1629023,
@@ -514,20 +531,20 @@
       "FULL_MIN": "30:21"
     }
   ],
-  "last_updated": "2026-02-03T11:11:53.149756",
-  "1Q_PTS_avg": 3.2,
-  "1Q_REB_avg": 1.9333333333333333,
-  "1Q_AST_avg": 0.5333333333333333,
-  "1H_PTS_avg": 6.433333333333334,
-  "1H_REB_avg": 3.7,
-  "1H_AST_avg": 1.0333333333333334,
-  "FULL_PTS_avg": 14.1,
-  "FULL_REB_avg": 6.966666666666667,
-  "FULL_AST_avg": 1.6666666666666667,
-  "1H_PTS_ratio": 0.45626477541371163,
-  "1Q_PTS_ratio": 0.2269503546099291,
-  "1H_REB_ratio": 0.5311004784688995,
-  "1Q_REB_ratio": 0.27751196172248804,
-  "1H_AST_ratio": 0.62,
-  "1Q_AST_ratio": 0.32
+  "last_updated": "2026-02-08T05:29:17.274881",
+  "1Q_PTS_avg": 3.096774193548387,
+  "1Q_REB_avg": 1.935483870967742,
+  "1Q_AST_avg": 0.5806451612903226,
+  "1H_PTS_avg": 6.290322580645161,
+  "1H_REB_avg": 3.6774193548387095,
+  "1H_AST_avg": 1.064516129032258,
+  "FULL_PTS_avg": 13.96774193548387,
+  "FULL_REB_avg": 6.903225806451613,
+  "FULL_AST_avg": 1.7096774193548387,
+  "1H_PTS_ratio": 0.45034642032332567,
+  "1Q_PTS_ratio": 0.22170900692840648,
+  "1H_REB_ratio": 0.5327102803738317,
+  "1Q_REB_ratio": 0.28037383177570097,
+  "1H_AST_ratio": 0.6226415094339622,
+  "1Q_AST_ratio": 0.339622641509434
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Sidy Cissoko",
   "player_id": 1631321,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500755",
+      "player_id": 1631321,
+      "player_name": "Sidy Cissoko",
+      "1Q_PTS": "0",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "8:48",
+      "1H_PTS": "3",
+      "1H_REB": "5",
+      "1H_AST": "1",
+      "1H_MIN": "17:55",
+      "FULL_PTS": "7",
+      "FULL_REB": "10",
+      "FULL_AST": "4",
+      "FULL_MIN": "32:45"
+    },
     {
       "game_id": "0022500745",
       "player_id": 1631321,
@@ -542,20 +559,20 @@
       "1H_MIN": "9:58"
     }
   ],
-  "last_updated": "2026-02-06T23:23:57.072857",
-  "1Q_PTS_avg": 1.9705882352941178,
-  "1Q_REB_avg": 0.4117647058823529,
-  "1Q_AST_avg": 0.38235294117647056,
-  "1H_PTS_avg": 3.823529411764706,
-  "1H_REB_avg": 1.088235294117647,
-  "1H_AST_avg": 0.7941176470588235,
-  "FULL_PTS_avg": 7.916666666666667,
-  "FULL_REB_avg": 2.4583333333333335,
-  "FULL_AST_avg": 1.8333333333333333,
-  "1H_PTS_ratio": 0.48297213622291024,
-  "1Q_PTS_ratio": 0.24891640866873066,
-  "1H_REB_ratio": 0.44267198404785635,
-  "1Q_REB_ratio": 0.16749750747756728,
-  "1H_AST_ratio": 0.43315508021390375,
-  "1Q_AST_ratio": 0.20855614973262032
+  "last_updated": "2026-02-08T05:37:44.875626",
+  "1Q_PTS_avg": 1.9142857142857144,
+  "1Q_REB_avg": 0.45714285714285713,
+  "1Q_AST_avg": 0.37142857142857144,
+  "1H_PTS_avg": 3.8,
+  "1H_REB_avg": 1.2,
+  "1H_AST_avg": 0.8,
+  "FULL_PTS_avg": 7.88,
+  "FULL_REB_avg": 2.76,
+  "FULL_AST_avg": 1.92,
+  "1H_PTS_ratio": 0.48223350253807107,
+  "1Q_PTS_ratio": 0.24292965917331402,
+  "1H_REB_ratio": 0.4347826086956522,
+  "1Q_REB_ratio": 0.16563146997929606,
+  "1H_AST_ratio": 0.4166666666666667,
+  "1Q_AST_ratio": 0.19345238095238096
 }

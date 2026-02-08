@@ -1,8 +1,25 @@
 {
   "player_name": "Isaiah Collier",
   "player_id": 1642268,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500750",
+      "player_id": 1642268,
+      "player_name": "Isaiah Collier",
+      "1Q_PTS": "3",
+      "1Q_REB": "0",
+      "1Q_AST": "3",
+      "1Q_MIN": "5:26",
+      "1H_PTS": "7",
+      "1H_REB": "0",
+      "1H_AST": "6",
+      "1H_MIN": "12:51",
+      "FULL_PTS": "20",
+      "FULL_REB": "2",
+      "FULL_AST": "10",
+      "FULL_MIN": "31:34"
+    },
     {
       "game_id": "0022500735",
       "player_id": 1642268,
@@ -542,20 +559,20 @@
       "1H_MIN": "8:12"
     }
   ],
-  "last_updated": "2026-02-06T22:33:12.919440",
-  "1Q_PTS_avg": 2.5294117647058822,
-  "1Q_REB_avg": 0.5,
-  "1Q_AST_avg": 2.0294117647058822,
-  "1H_PTS_avg": 3.9705882352941178,
-  "1H_REB_avg": 1.1176470588235294,
-  "1H_AST_avg": 3.5,
-  "FULL_PTS_avg": 10.0,
-  "FULL_REB_avg": 2.375,
-  "FULL_AST_avg": 7.791666666666667,
-  "1H_PTS_ratio": 0.3970588235294118,
-  "1Q_PTS_ratio": 0.2529411764705882,
-  "1H_REB_ratio": 0.47058823529411764,
-  "1Q_REB_ratio": 0.21052631578947367,
-  "1H_AST_ratio": 0.4491978609625668,
-  "1Q_AST_ratio": 0.2604592639194715
+  "last_updated": "2026-02-08T04:47:45.814133",
+  "1Q_PTS_avg": 2.5428571428571427,
+  "1Q_REB_avg": 0.4857142857142857,
+  "1Q_AST_avg": 2.057142857142857,
+  "1H_PTS_avg": 4.057142857142857,
+  "1H_REB_avg": 1.0857142857142856,
+  "1H_AST_avg": 3.5714285714285716,
+  "FULL_PTS_avg": 10.4,
+  "FULL_REB_avg": 2.36,
+  "FULL_AST_avg": 7.88,
+  "1H_PTS_ratio": 0.39010989010989006,
+  "1Q_PTS_ratio": 0.24450549450549447,
+  "1H_REB_ratio": 0.46004842615012104,
+  "1Q_REB_ratio": 0.20581113801452786,
+  "1H_AST_ratio": 0.4532269760696157,
+  "1Q_AST_ratio": 0.2610587382160986
 }

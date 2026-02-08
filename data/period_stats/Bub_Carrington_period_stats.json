@@ -1,8 +1,25 @@
 {
   "player_name": "Bub Carrington",
   "player_id": 1642267,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500747",
+      "player_id": 1642267,
+      "player_name": "Bub Carrington",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "1",
+      "1Q_MIN": "7:21",
+      "1H_PTS": "7",
+      "1H_REB": "1",
+      "1H_AST": "3",
+      "1H_MIN": "17:09",
+      "FULL_PTS": "11",
+      "FULL_REB": "2",
+      "FULL_AST": "4",
+      "FULL_MIN": "22:06"
+    },
     {
       "game_id": "0022500733",
       "player_id": 1642267,
@@ -542,20 +559,20 @@
       "1H_MIN": "18:41"
     }
   ],
-  "last_updated": "2026-02-06T22:13:54.692520",
-  "1Q_PTS_avg": 2.9411764705882355,
-  "1Q_REB_avg": 1.0294117647058822,
-  "1Q_AST_avg": 1.1764705882352942,
-  "1H_PTS_avg": 5.382352941176471,
-  "1H_REB_avg": 2.088235294117647,
-  "1H_AST_avg": 2.411764705882353,
-  "FULL_PTS_avg": 11.791666666666666,
-  "FULL_REB_avg": 3.625,
-  "FULL_AST_avg": 4.541666666666667,
-  "1H_PTS_ratio": 0.45645395967574315,
-  "1Q_PTS_ratio": 0.24942839326543342,
-  "1H_REB_ratio": 0.5760649087221096,
-  "1Q_REB_ratio": 0.2839756592292089,
-  "1H_AST_ratio": 0.5310307609282244,
-  "1Q_AST_ratio": 0.25903939557474365
+  "last_updated": "2026-02-08T04:28:20.826747",
+  "1Q_PTS_avg": 2.857142857142857,
+  "1Q_REB_avg": 1.0,
+  "1Q_AST_avg": 1.1714285714285715,
+  "1H_PTS_avg": 5.428571428571429,
+  "1H_REB_avg": 2.057142857142857,
+  "1H_AST_avg": 2.4285714285714284,
+  "FULL_PTS_avg": 11.76,
+  "FULL_REB_avg": 3.56,
+  "FULL_AST_avg": 4.52,
+  "1H_PTS_ratio": 0.46161321671525757,
+  "1Q_PTS_ratio": 0.24295432458697766,
+  "1H_REB_ratio": 0.5778491171749598,
+  "1Q_REB_ratio": 0.2808988764044944,
+  "1H_AST_ratio": 0.5372945638432364,
+  "1Q_AST_ratio": 0.2591656131479141
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Walter Clayton Jr",
   "player_id": 1642383,
-  "games_collected": 33,
+  "games_collected": 34,
   "games_data": [
+    {
+      "game_id": "0022500755",
+      "player_id": 1642383,
+      "player_name": "Walter Clayton Jr",
+      "1Q_PTS": "2",
+      "1Q_REB": "0",
+      "1Q_AST": "2",
+      "1Q_MIN": "6:48",
+      "1H_PTS": "4",
+      "1H_REB": "1",
+      "1H_AST": "2",
+      "1H_MIN": "13:23",
+      "FULL_PTS": "8",
+      "FULL_REB": "4",
+      "FULL_AST": "7",
+      "FULL_MIN": "27:48"
+    },
     {
       "game_id": "0022500745",
       "player_id": 1642383,
@@ -489,20 +506,20 @@
       "1H_MIN": "9:09"
     }
   ],
-  "last_updated": "2026-02-06T23:31:20.981968",
-  "1Q_PTS_avg": 0.5,
-  "1Q_REB_avg": 0.25,
-  "1Q_AST_avg": 0.4166666666666667,
-  "1H_PTS_avg": 3.4545454545454546,
+  "last_updated": "2026-02-08T05:45:10.662439",
+  "1Q_PTS_avg": 0.56,
+  "1Q_REB_avg": 0.24,
+  "1Q_AST_avg": 0.48,
+  "1H_PTS_avg": 3.4705882352941178,
   "1H_REB_avg": 1.0,
-  "1H_AST_avg": 1.606060606060606,
-  "FULL_PTS_avg": 7.6521739130434785,
-  "FULL_REB_avg": 1.8695652173913044,
-  "FULL_AST_avg": 2.9130434782608696,
-  "1H_PTS_ratio": 0.4514462809917355,
-  "1Q_PTS_ratio": 0.06534090909090909,
-  "1H_REB_ratio": 0.5348837209302325,
-  "1Q_REB_ratio": 0.13372093023255813,
-  "1H_AST_ratio": 0.551334237901402,
-  "1Q_AST_ratio": 0.14303482587064678
+  "1H_AST_avg": 1.6176470588235294,
+  "FULL_PTS_avg": 7.666666666666667,
+  "FULL_REB_avg": 1.9583333333333333,
+  "FULL_AST_avg": 3.0833333333333335,
+  "1H_PTS_ratio": 0.45268542199488493,
+  "1Q_PTS_ratio": 0.07304347826086957,
+  "1H_REB_ratio": 0.5106382978723405,
+  "1Q_REB_ratio": 0.1225531914893617,
+  "1H_AST_ratio": 0.5246422893481717,
+  "1Q_AST_ratio": 0.15567567567567567
 }

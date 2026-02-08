@@ -1,8 +1,25 @@
 {
   "player_name": "Keyonte George",
   "player_id": 1641718,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500750",
+      "player_id": 1641718,
+      "player_name": "Keyonte George",
+      "1Q_PTS": "3",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "8:51",
+      "1H_PTS": "5",
+      "1H_REB": "1",
+      "1H_AST": "1",
+      "1H_MIN": "13:26",
+      "FULL_PTS": "5",
+      "FULL_REB": "1",
+      "FULL_AST": "1",
+      "FULL_MIN": "13:26"
+    },
     {
       "game_id": "0022500694",
       "player_id": 1641718,
@@ -443,20 +460,20 @@
       "1H_MIN": "17:51"
     }
   ],
-  "last_updated": "2026-02-03T10:42:34.113628",
-  "1Q_PTS_avg": 5.607142857142857,
-  "1Q_REB_avg": 1.25,
-  "1Q_AST_avg": 1.7857142857142858,
-  "1H_PTS_avg": 12.88888888888889,
-  "1H_REB_avg": 2.111111111111111,
-  "1H_AST_avg": 3.111111111111111,
-  "FULL_PTS_avg": 23.0625,
-  "FULL_REB_avg": 4.625,
-  "FULL_AST_avg": 6.625,
-  "1H_PTS_ratio": 0.5588678109003312,
-  "1Q_PTS_ratio": 0.24312814556716994,
-  "1H_REB_ratio": 0.4564564564564565,
-  "1Q_REB_ratio": 0.2702702702702703,
-  "1H_AST_ratio": 0.469601677148847,
-  "1Q_AST_ratio": 0.2695417789757413
+  "last_updated": "2026-02-08T05:12:07.022269",
+  "1Q_PTS_avg": 5.517241379310345,
+  "1Q_REB_avg": 1.2413793103448276,
+  "1Q_AST_avg": 1.7241379310344827,
+  "1H_PTS_avg": 12.607142857142858,
+  "1H_REB_avg": 2.0714285714285716,
+  "1H_AST_avg": 3.0357142857142856,
+  "FULL_PTS_avg": 22.0,
+  "FULL_REB_avg": 4.411764705882353,
+  "FULL_AST_avg": 6.294117647058823,
+  "1H_PTS_ratio": 0.573051948051948,
+  "1Q_PTS_ratio": 0.25078369905956116,
+  "1H_REB_ratio": 0.4695238095238095,
+  "1Q_REB_ratio": 0.28137931034482755,
+  "1H_AST_ratio": 0.4823097463284379,
+  "1Q_AST_ratio": 0.27392845633258134
 }

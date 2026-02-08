@@ -1,8 +1,25 @@
 {
   "player_name": "Asa Newell",
   "player_id": 1642854,
-  "games_collected": 29,
+  "games_collected": 30,
   "games_data": [
+    {
+      "game_id": "0022500751",
+      "player_id": 1642854,
+      "player_name": "Asa Newell",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "1",
+      "1Q_MIN": "3:26",
+      "1H_PTS": "5",
+      "1H_REB": "1",
+      "1H_AST": "1",
+      "1H_MIN": "6:14",
+      "FULL_PTS": "5",
+      "FULL_REB": "1",
+      "FULL_AST": "1",
+      "FULL_MIN": "8:06"
+    },
     {
       "game_id": "0022500735",
       "player_id": 1642854,
@@ -441,20 +458,20 @@
       "1H_MIN": "10:04"
     }
   ],
-  "last_updated": "2026-02-06T22:08:29.450012",
-  "1Q_PTS_avg": 0.88,
-  "1Q_REB_avg": 0.4,
-  "1Q_AST_avg": 0.08,
-  "1H_PTS_avg": 2.8620689655172415,
-  "1H_REB_avg": 1.1379310344827587,
-  "1H_AST_avg": 0.2413793103448276,
-  "FULL_PTS_avg": 6.684210526315789,
-  "FULL_REB_avg": 2.3157894736842106,
-  "FULL_AST_avg": 0.42105263157894735,
-  "1H_PTS_ratio": 0.4281835460222645,
-  "1Q_PTS_ratio": 0.13165354330708662,
-  "1H_REB_ratio": 0.49137931034482757,
-  "1Q_REB_ratio": 0.17272727272727273,
-  "1H_AST_ratio": 0.5732758620689655,
-  "1Q_AST_ratio": 0.19
+  "last_updated": "2026-02-08T04:23:13.046475",
+  "1Q_PTS_avg": 0.8461538461538461,
+  "1Q_REB_avg": 0.4230769230769231,
+  "1Q_AST_avg": 0.11538461538461539,
+  "1H_PTS_avg": 2.933333333333333,
+  "1H_REB_avg": 1.1333333333333333,
+  "1H_AST_avg": 0.26666666666666666,
+  "FULL_PTS_avg": 6.6,
+  "FULL_REB_avg": 2.25,
+  "FULL_AST_avg": 0.45,
+  "1H_PTS_ratio": 0.4444444444444444,
+  "1Q_PTS_ratio": 0.12820512820512822,
+  "1H_REB_ratio": 0.5037037037037037,
+  "1Q_REB_ratio": 0.18803418803418803,
+  "1H_AST_ratio": 0.5925925925925926,
+  "1Q_AST_ratio": 0.25641025641025644
 }

@@ -1,8 +1,21 @@
 {
   "player_name": "Jett Howard",
   "player_id": 1641724,
-  "games_collected": 20,
+  "games_collected": 21,
   "games_data": [
+    {
+      "game_id": "0022500750",
+      "player_id": 1641724,
+      "player_name": "Jett Howard",
+      "1H_PTS": "2",
+      "1H_REB": "0",
+      "1H_AST": "1",
+      "1H_MIN": "2:24",
+      "FULL_PTS": "2",
+      "FULL_REB": "0",
+      "FULL_AST": "1",
+      "FULL_MIN": "2:24"
+    },
     {
       "game_id": "0022500734",
       "player_id": 1641724,
@@ -292,20 +305,20 @@
       "1H_MIN": "7:01"
     }
   ],
-  "last_updated": "2026-02-06T22:45:20.949595",
+  "last_updated": "2026-02-08T04:59:20.478292",
   "1Q_PTS_avg": 1.1428571428571428,
   "1Q_REB_avg": 0.42857142857142855,
   "1Q_AST_avg": 0.35714285714285715,
   "1H_PTS_avg": 2.0,
-  "1H_REB_avg": 0.6,
-  "1H_AST_avg": 0.4,
-  "FULL_PTS_avg": 7.6923076923076925,
-  "FULL_REB_avg": 1.7692307692307692,
-  "FULL_AST_avg": 1.0769230769230769,
-  "1H_PTS_ratio": 0.26,
-  "1Q_PTS_ratio": 0.14857142857142855,
-  "1H_REB_ratio": 0.3391304347826087,
-  "1Q_REB_ratio": 0.24223602484472048,
-  "1H_AST_ratio": 0.37142857142857144,
-  "1Q_AST_ratio": 0.3316326530612245
+  "1H_REB_avg": 0.5714285714285714,
+  "1H_AST_avg": 0.42857142857142855,
+  "FULL_PTS_avg": 7.285714285714286,
+  "FULL_REB_avg": 1.6428571428571428,
+  "FULL_AST_avg": 1.0714285714285714,
+  "1H_PTS_ratio": 0.27450980392156865,
+  "1Q_PTS_ratio": 0.1568627450980392,
+  "1H_REB_ratio": 0.34782608695652173,
+  "1Q_REB_ratio": 0.2608695652173913,
+  "1H_AST_ratio": 0.39999999999999997,
+  "1Q_AST_ratio": 0.33333333333333337
 }

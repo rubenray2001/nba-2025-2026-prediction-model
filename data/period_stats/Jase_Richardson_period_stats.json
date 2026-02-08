@@ -1,8 +1,25 @@
 {
   "player_name": "Jase Richardson",
   "player_id": 1642859,
-  "games_collected": 21,
+  "games_collected": 22,
   "games_data": [
+    {
+      "game_id": "0022500750",
+      "player_id": 1642859,
+      "player_name": "Jase Richardson",
+      "1Q_PTS": "3",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:13",
+      "1H_PTS": "3",
+      "1H_REB": "0",
+      "1H_AST": "1",
+      "1H_MIN": "9:20",
+      "FULL_PTS": "5",
+      "FULL_REB": "0",
+      "FULL_AST": "2",
+      "FULL_MIN": "13:36"
+    },
     {
       "game_id": "0022500734",
       "player_id": 1642859,
@@ -313,20 +330,20 @@
       "1H_MIN": "7:34"
     }
   ],
-  "last_updated": "2026-02-06T22:40:41.568931",
-  "1Q_PTS_avg": 0.8421052631578947,
-  "1Q_REB_avg": 0.3684210526315789,
-  "1Q_AST_avg": 0.3157894736842105,
-  "1H_PTS_avg": 3.0476190476190474,
-  "1H_REB_avg": 0.8095238095238095,
-  "1H_AST_avg": 0.8095238095238095,
-  "FULL_PTS_avg": 6.909090909090909,
-  "FULL_REB_avg": 2.1818181818181817,
-  "FULL_AST_avg": 1.7272727272727273,
-  "1H_PTS_ratio": 0.44110275689223055,
-  "1Q_PTS_ratio": 0.12188365650969528,
-  "1H_REB_ratio": 0.37103174603174605,
-  "1Q_REB_ratio": 0.16885964912280702,
-  "1H_AST_ratio": 0.46867167919799496,
-  "1Q_AST_ratio": 0.1828254847645429
+  "last_updated": "2026-02-08T04:54:47.155175",
+  "1Q_PTS_avg": 0.95,
+  "1Q_REB_avg": 0.35,
+  "1Q_AST_avg": 0.3,
+  "1H_PTS_avg": 3.0454545454545454,
+  "1H_REB_avg": 0.7727272727272727,
+  "1H_AST_avg": 0.8181818181818182,
+  "FULL_PTS_avg": 6.75,
+  "FULL_REB_avg": 2.0,
+  "FULL_AST_avg": 1.75,
+  "1H_PTS_ratio": 0.4511784511784512,
+  "1Q_PTS_ratio": 0.14074074074074072,
+  "1H_REB_ratio": 0.38636363636363635,
+  "1Q_REB_ratio": 0.175,
+  "1H_AST_ratio": 0.4675324675324676,
+  "1Q_AST_ratio": 0.17142857142857143
 }

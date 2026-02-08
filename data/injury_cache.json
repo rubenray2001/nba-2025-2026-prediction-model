@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-06T20:17:45.371726",
+  "timestamp": "2026-02-07T22:45:00.738443",
   "injuries": {
     "ATL": [
       {
@@ -17,31 +17,19 @@
         "position": ""
       },
       {
-        "name": "Gabe Vincent",
-        "position": "",
-        "status": "Day-To-Day",
-        "team": "ATL"
-      },
-      {
         "name": "Jonathan Kuminga",
-        "position": "",
-        "status": "Out",
-        "team": "ATL"
-      },
-      {
-        "name": "Buddy Hield",
-        "position": "",
-        "status": "Day-To-Day",
-        "team": "ATL"
-      },
-      {
-        "name": "Onyeka Okongwu",
         "position": "",
         "status": "Out",
         "team": "ATL"
       }
     ],
     "BOS": [
+      {
+        "name": "Sam Hauser",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "BOS"
+      },
       {
         "name": "Jayson Tatum",
         "position": "",
@@ -74,9 +62,9 @@
         "position": ""
       },
       {
-        "name": "Tidjane Salaun",
+        "name": "Xavier Tillman",
         "position": "",
-        "status": "Day-To-Day",
+        "status": "Out",
         "team": "CHA"
       },
       {
@@ -108,15 +96,15 @@
         "position": ""
       },
       {
-        "name": "Tre Jones",
+        "name": "Jalen Smith",
         "position": "",
         "status": "Out",
         "team": "CHI"
       },
       {
-        "name": "Jalen Smith",
+        "name": "Tre Jones",
         "position": "",
-        "status": "Day-To-Day",
+        "status": "Out",
         "team": "CHI"
       },
       {
@@ -142,12 +130,6 @@
       {
         "name": "Dean Wade",
         "position": "",
-        "status": "Day-To-Day",
-        "team": "CLE"
-      },
-      {
-        "name": "James Harden",
-        "position": "",
         "status": "Out",
         "team": "CLE"
       },
@@ -171,24 +153,6 @@
         "injury": "Calf",
         "team": "DAL",
         "position": ""
-      },
-      {
-        "name": "Tyus Jones",
-        "position": "",
-        "status": "Day-To-Day",
-        "team": "DAL"
-      },
-      {
-        "name": "Marvin Bagley III",
-        "position": "",
-        "status": "Day-To-Day",
-        "team": "DAL"
-      },
-      {
-        "name": "Brandon Williams",
-        "position": "",
-        "status": "Out",
-        "team": "DAL"
       },
       {
         "name": "Khris Middleton",
@@ -218,27 +182,15 @@
         "position": ""
       },
       {
+        "name": "Jamal Murray",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "DEN"
+      },
+      {
         "name": "Spencer Jones",
         "position": "",
         "status": "Out",
-        "team": "DEN"
-      },
-      {
-        "name": "Cameron Johnson",
-        "position": "",
-        "status": "Out",
-        "team": "DEN"
-      },
-      {
-        "name": "Nikola Jokic",
-        "position": "",
-        "status": "Day-To-Day",
-        "team": "DEN"
-      },
-      {
-        "name": "Christian Braun",
-        "position": "",
-        "status": "Day-To-Day",
         "team": "DEN"
       },
       {
@@ -283,12 +235,6 @@
         "position": ""
       },
       {
-        "name": "Brandin Podziemski",
-        "position": "",
-        "status": "Day-To-Day",
-        "team": "GSW"
-      },
-      {
         "name": "Kristaps Porzingis",
         "position": "",
         "status": "Out",
@@ -322,6 +268,24 @@
       }
     ],
     "IND": [
+      {
+        "name": "Micah Potter",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "IND"
+      },
+      {
+        "name": "Aaron Nesmith",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "IND"
+      },
+      {
+        "name": "Ethan Thompson",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "IND"
+      },
       {
         "name": "Ivica Zubac",
         "position": "",
@@ -389,19 +353,19 @@
         "position": ""
       },
       {
-        "name": "Luke Kennard",
-        "position": "",
-        "status": "Day-To-Day",
-        "team": "LAL"
-      },
-      {
-        "name": "Adou Thiero",
+        "name": "Deandre Ayton",
         "position": "",
         "status": "Out",
         "team": "LAL"
       },
       {
         "name": "Luka Doncic",
+        "position": "",
+        "status": "Out",
+        "team": "LAL"
+      },
+      {
+        "name": "Adou Thiero",
         "position": "",
         "status": "Out",
         "team": "LAL"
@@ -416,25 +380,31 @@
         "position": ""
       },
       {
-        "name": "Kentavious Caldwell-Pope",
+        "name": "Cedric Coward",
         "position": "",
         "status": "Out",
         "team": "MEM"
       },
       {
-        "name": "Kyle Anderson",
+        "name": "Jaylen Wells",
+        "position": "",
+        "status": "Out",
+        "team": "MEM"
+      },
+      {
+        "name": "Cam Spencer",
+        "position": "",
+        "status": "Out",
+        "team": "MEM"
+      },
+      {
+        "name": "Scotty Pippen Jr.",
         "position": "",
         "status": "Out",
         "team": "MEM"
       },
       {
         "name": "Santi Aldama",
-        "position": "",
-        "status": "Out",
-        "team": "MEM"
-      },
-      {
-        "name": "Ty Jerome",
         "position": "",
         "status": "Out",
         "team": "MEM"
@@ -459,6 +429,18 @@
         "injury": "Suspension",
         "team": "MIA",
         "position": ""
+      },
+      {
+        "name": "Norman Powell",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MIA"
+      },
+      {
+        "name": "Bam Adebayo",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "MIA"
       },
       {
         "name": "Pelle Larsson",
@@ -497,7 +479,7 @@
       {
         "name": "Kyle Kuzma",
         "position": "",
-        "status": "Out",
+        "status": "Day-To-Day",
         "team": "MIL"
       },
       {
@@ -510,12 +492,6 @@
     "MIN": [
       {
         "name": "Julian Phillips",
-        "position": "",
-        "status": "Out",
-        "team": "MIN"
-      },
-      {
-        "name": "Ayo Dosunmu",
         "position": "",
         "status": "Out",
         "team": "MIN"
@@ -548,21 +524,9 @@
         "injury": "Hand",
         "team": "NOP",
         "position": ""
-      },
-      {
-        "name": "Hunter Dickinson",
-        "position": "",
-        "status": "Out",
-        "team": "NOP"
       }
     ],
     "NYK": [
-      {
-        "name": "Jose Alvarado",
-        "position": "",
-        "status": "Day-To-Day",
-        "team": "NYK"
-      },
       {
         "name": "Josh Hart",
         "position": "",
@@ -667,13 +631,7 @@
         "team": "PHX"
       },
       {
-        "name": "Jalen Green",
-        "position": "",
-        "status": "Out",
-        "team": "PHX"
-      },
-      {
-        "name": "Devin Booker",
+        "name": "Cole Anthony",
         "position": "",
         "status": "Out",
         "team": "PHX"
@@ -693,6 +651,24 @@
         "team": "POR"
       },
       {
+        "name": "Shaedon Sharpe",
+        "position": "",
+        "status": "Out",
+        "team": "POR"
+      },
+      {
+        "name": "Robert Williams III",
+        "position": "",
+        "status": "Out",
+        "team": "POR"
+      },
+      {
+        "name": "Scoot Henderson",
+        "position": "",
+        "status": "Out",
+        "team": "POR"
+      },
+      {
         "name": "Matisse Thybulle",
         "position": "",
         "status": "Out",
@@ -706,6 +682,18 @@
       }
     ],
     "SAC": [
+      {
+        "name": "Malik Monk",
+        "position": "",
+        "status": "Out",
+        "team": "SAC"
+      },
+      {
+        "name": "Zach LaVine",
+        "position": "",
+        "status": "Out",
+        "team": "SAC"
+      },
       {
         "name": "Domantas Sabonis",
         "position": "",
@@ -728,21 +716,9 @@
         "position": ""
       },
       {
-        "name": "Jeremy Sochan",
-        "position": "",
-        "status": "Out",
-        "team": "SAS"
-      },
-      {
         "name": "Lindy Waters III",
         "position": "",
         "status": "Out",
-        "team": "SAS"
-      },
-      {
-        "name": "Luke Kornet",
-        "position": "",
-        "status": "Day-To-Day",
         "team": "SAS"
       },
       {
@@ -761,7 +737,7 @@
         "position": ""
       },
       {
-        "name": "Trayce Jackson-Davis",
+        "name": "Immanuel Quickley",
         "position": "",
         "status": "Day-To-Day",
         "team": "TOR"
@@ -781,15 +757,9 @@
     ],
     "UTA": [
       {
-        "name": "Kevin Love",
-        "position": "",
-        "status": "Day-To-Day",
-        "team": "UTA"
-      },
-      {
         "name": "Keyonte George",
         "position": "",
-        "status": "Out",
+        "status": "Day-To-Day",
         "team": "UTA"
       },
       {
@@ -807,19 +777,13 @@
     ],
     "WAS": [
       {
+        "name": "Alex Sarr",
+        "position": "",
+        "status": "Day-To-Day",
+        "team": "WAS"
+      },
+      {
         "name": "Jaden Hardy",
-        "position": "",
-        "status": "Out",
-        "team": "WAS"
-      },
-      {
-        "name": "Tre Johnson",
-        "position": "",
-        "status": "Out",
-        "team": "WAS"
-      },
-      {
-        "name": "Bilal Coulibaly",
         "position": "",
         "status": "Day-To-Day",
         "team": "WAS"
@@ -831,19 +795,25 @@
         "team": "WAS"
       },
       {
-        "name": "Alex Sarr",
+        "name": "Bilal Coulibaly",
         "position": "",
         "status": "Day-To-Day",
         "team": "WAS"
       },
       {
-        "name": "Dante Exum",
+        "name": "Anthony Davis",
         "position": "",
         "status": "Out",
         "team": "WAS"
       },
       {
-        "name": "Anthony Davis",
+        "name": "Tre Johnson",
+        "position": "",
+        "status": "Out",
+        "team": "WAS"
+      },
+      {
+        "name": "Dante Exum",
         "position": "",
         "status": "Out",
         "team": "WAS"

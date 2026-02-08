@@ -1,8 +1,25 @@
 {
   "player_name": "Desmond Bane",
   "player_id": 1630217,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500750",
+      "player_id": 1630217,
+      "player_name": "Desmond Bane",
+      "1Q_PTS": "9",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "8:06",
+      "1H_PTS": "9",
+      "1H_REB": "2",
+      "1H_AST": "1",
+      "1H_MIN": "17:42",
+      "FULL_PTS": "22",
+      "FULL_REB": "3",
+      "FULL_AST": "2",
+      "FULL_MIN": "35:35"
+    },
     {
       "game_id": "0022500734",
       "player_id": 1630217,
@@ -542,20 +559,20 @@
       "1H_MIN": "17:05"
     }
   ],
-  "last_updated": "2026-02-06T22:25:24.505893",
-  "1Q_PTS_avg": 4.911764705882353,
-  "1Q_REB_avg": 1.0294117647058822,
-  "1Q_AST_avg": 0.9117647058823529,
-  "1H_PTS_avg": 9.705882352941176,
+  "last_updated": "2026-02-08T04:40:16.239370",
+  "1Q_PTS_avg": 5.0285714285714285,
+  "1Q_REB_avg": 1.0285714285714285,
+  "1Q_AST_avg": 0.8857142857142857,
+  "1H_PTS_avg": 9.685714285714285,
   "1H_REB_avg": 2.0,
-  "1H_AST_avg": 2.0294117647058822,
-  "FULL_PTS_avg": 21.25,
-  "FULL_REB_avg": 4.25,
-  "FULL_AST_avg": 4.416666666666667,
-  "1H_PTS_ratio": 0.4567474048442906,
-  "1Q_PTS_ratio": 0.23114186851211074,
-  "1H_REB_ratio": 0.47058823529411764,
-  "1Q_REB_ratio": 0.24221453287197228,
-  "1H_AST_ratio": 0.45948945615982234,
-  "1Q_AST_ratio": 0.2064372918978912
+  "1H_AST_avg": 2.0,
+  "FULL_PTS_avg": 21.28,
+  "FULL_REB_avg": 4.2,
+  "FULL_AST_avg": 4.32,
+  "1H_PTS_ratio": 0.45515574650912993,
+  "1Q_PTS_ratio": 0.2363050483351235,
+  "1H_REB_ratio": 0.47619047619047616,
+  "1Q_REB_ratio": 0.24489795918367344,
+  "1H_AST_ratio": 0.4629629629629629,
+  "1Q_AST_ratio": 0.205026455026455
 }

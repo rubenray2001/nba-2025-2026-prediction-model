@@ -1,8 +1,25 @@
 {
   "player_name": "Anthony Black",
   "player_id": 1641710,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500750",
+      "player_id": 1641710,
+      "player_name": "Anthony Black",
+      "1Q_PTS": "7",
+      "1Q_REB": "2",
+      "1Q_AST": "3",
+      "1Q_MIN": "10:07",
+      "1H_PTS": "11",
+      "1H_REB": "3",
+      "1H_AST": "3",
+      "1H_MIN": "18:55",
+      "FULL_PTS": "21",
+      "FULL_REB": "3",
+      "FULL_AST": "4",
+      "FULL_MIN": "38:03"
+    },
     {
       "game_id": "0022500734",
       "player_id": 1641710,
@@ -542,20 +559,20 @@
       "1H_MIN": "16:26"
     }
   ],
-  "last_updated": "2026-02-06T22:05:38.320021",
-  "1Q_PTS_avg": 4.882352941176471,
-  "1Q_REB_avg": 1.2352941176470589,
-  "1Q_AST_avg": 1.1176470588235294,
-  "1H_PTS_avg": 9.352941176470589,
-  "1H_REB_avg": 2.5588235294117645,
-  "1H_AST_avg": 2.5294117647058822,
-  "FULL_PTS_avg": 18.458333333333332,
-  "FULL_REB_avg": 4.5,
-  "FULL_AST_avg": 4.666666666666667,
-  "1H_PTS_ratio": 0.5067056167839596,
-  "1Q_PTS_ratio": 0.264506705616784,
-  "1H_REB_ratio": 0.5686274509803921,
-  "1Q_REB_ratio": 0.27450980392156865,
-  "1H_AST_ratio": 0.542016806722689,
-  "1Q_AST_ratio": 0.2394957983193277
+  "last_updated": "2026-02-08T04:19:05.740713",
+  "1Q_PTS_avg": 4.942857142857143,
+  "1Q_REB_avg": 1.2571428571428571,
+  "1Q_AST_avg": 1.1714285714285715,
+  "1H_PTS_avg": 9.4,
+  "1H_REB_avg": 2.5714285714285716,
+  "1H_AST_avg": 2.5428571428571427,
+  "FULL_PTS_avg": 18.56,
+  "FULL_REB_avg": 4.44,
+  "FULL_AST_avg": 4.64,
+  "1H_PTS_ratio": 0.5064655172413793,
+  "1Q_PTS_ratio": 0.2663177339901478,
+  "1H_REB_ratio": 0.5791505791505791,
+  "1Q_REB_ratio": 0.2831402831402831,
+  "1H_AST_ratio": 0.5480295566502463,
+  "1Q_AST_ratio": 0.25246305418719217
 }

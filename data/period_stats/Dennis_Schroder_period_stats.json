@@ -1,8 +1,25 @@
 {
   "player_name": "Dennis Schroder",
   "player_id": 203471,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500756",
+      "player_id": 203471,
+      "player_name": "Dennis Schroder",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "3:33",
+      "1H_PTS": "3",
+      "1H_REB": "1",
+      "1H_AST": "3",
+      "1H_MIN": "8:55",
+      "FULL_PTS": "7",
+      "FULL_REB": "3",
+      "FULL_AST": "4",
+      "FULL_MIN": "17:00"
+    },
     {
       "game_id": "0022500732",
       "player_id": 203471,
@@ -471,20 +488,20 @@
       "1H_AST": "3"
     }
   ],
-  "last_updated": "2026-02-05T08:44:23.887757",
-  "1Q_PTS_avg": 3.129032258064516,
-  "1Q_REB_avg": 0.8064516129032258,
-  "1Q_AST_avg": 1.6451612903225807,
-  "1H_PTS_avg": 6.516129032258065,
-  "1H_REB_avg": 1.7096774193548387,
-  "1H_AST_avg": 2.935483870967742,
-  "FULL_PTS_avg": 12.80952380952381,
-  "FULL_REB_avg": 3.2857142857142856,
-  "FULL_AST_avg": 5.095238095238095,
-  "1H_PTS_ratio": 0.5086940880201463,
-  "1Q_PTS_ratio": 0.24427389375224845,
-  "1H_REB_ratio": 0.5203366058906032,
-  "1Q_REB_ratio": 0.24544179523141654,
-  "1H_AST_ratio": 0.5761230027132952,
-  "1Q_AST_ratio": 0.32288212239975883
+  "last_updated": "2026-02-08T04:40:01.033995",
+  "1Q_PTS_avg": 3.03125,
+  "1Q_REB_avg": 0.78125,
+  "1Q_AST_avg": 1.59375,
+  "1H_PTS_avg": 6.40625,
+  "1H_REB_avg": 1.6875,
+  "1H_AST_avg": 2.9375,
+  "FULL_PTS_avg": 12.545454545454545,
+  "FULL_REB_avg": 3.272727272727273,
+  "FULL_AST_avg": 5.045454545454546,
+  "1H_PTS_ratio": 0.510643115942029,
+  "1Q_PTS_ratio": 0.2416213768115942,
+  "1H_REB_ratio": 0.515625,
+  "1Q_REB_ratio": 0.23871527777777776,
+  "1H_AST_ratio": 0.5822072072072072,
+  "1Q_AST_ratio": 0.31587837837837834
 }

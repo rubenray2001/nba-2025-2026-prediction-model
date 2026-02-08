@@ -1,8 +1,25 @@
 {
   "player_name": "JD Davison",
   "player_id": 1631120,
-  "games_collected": 7,
+  "games_collected": 8,
   "games_data": [
+    {
+      "game_id": "0022500748",
+      "player_id": 1631120,
+      "player_name": "JD Davison",
+      "1Q_PTS": "2",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "2:38",
+      "1H_PTS": "5",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "8:48",
+      "FULL_PTS": "8",
+      "FULL_REB": "4",
+      "FULL_AST": "1",
+      "FULL_MIN": "17:54"
+    },
     {
       "game_id": "0022500728",
       "player_id": 1631120,
@@ -103,20 +120,20 @@
       "1H_MIN": "11:34"
     }
   ],
-  "last_updated": "2026-02-05T09:00:09.003288",
-  "1Q_PTS_avg": 0.3333333333333333,
-  "1Q_REB_avg": 1.0,
-  "1Q_AST_avg": 0.3333333333333333,
-  "1H_PTS_avg": 1.0,
-  "1H_REB_avg": 0.8571428571428571,
-  "1H_AST_avg": 1.0,
-  "FULL_PTS_avg": 3.6666666666666665,
-  "FULL_REB_avg": 0.6666666666666666,
-  "FULL_AST_avg": 2.6666666666666665,
-  "1H_PTS_ratio": 0.27272727272727276,
-  "1Q_PTS_ratio": 0.09090909090909091,
-  "1H_REB_ratio": 1.2857142857142858,
-  "1Q_REB_ratio": 1.5,
-  "1H_AST_ratio": 0.375,
-  "1Q_AST_ratio": 0.125
+  "last_updated": "2026-02-08T04:56:45.018217",
+  "1Q_PTS_avg": 0.5714285714285714,
+  "1Q_REB_avg": 0.8571428571428571,
+  "1Q_AST_avg": 0.2857142857142857,
+  "1H_PTS_avg": 1.5,
+  "1H_REB_avg": 1.125,
+  "1H_AST_avg": 0.875,
+  "FULL_PTS_avg": 4.75,
+  "FULL_REB_avg": 1.5,
+  "FULL_AST_avg": 2.25,
+  "1H_PTS_ratio": 0.3157894736842105,
+  "1Q_PTS_ratio": 0.12030075187969924,
+  "1H_REB_ratio": 0.75,
+  "1Q_REB_ratio": 0.5714285714285714,
+  "1H_AST_ratio": 0.3888888888888889,
+  "1Q_AST_ratio": 0.12698412698412698
 }

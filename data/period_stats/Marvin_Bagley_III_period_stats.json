@@ -1,8 +1,25 @@
 {
   "player_name": "Marvin Bagley III",
   "player_id": 1628963,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500749",
+      "player_id": 1628963,
+      "player_name": "Marvin Bagley III",
+      "1Q_PTS": "6",
+      "1Q_REB": "2",
+      "1Q_AST": "2",
+      "1Q_MIN": "8:16",
+      "1H_PTS": "9",
+      "1H_REB": "7",
+      "1H_AST": "2",
+      "1H_MIN": "15:55",
+      "FULL_PTS": "16",
+      "FULL_REB": "12",
+      "FULL_AST": "2",
+      "FULL_MIN": "24:23"
+    },
     {
       "game_id": "0022500718",
       "player_id": 1628963,
@@ -508,20 +525,20 @@
       "1H_MIN": "9:38"
     }
   ],
-  "last_updated": "2026-02-04T08:50:18.636964",
-  "1Q_PTS_avg": 2.78125,
-  "1Q_REB_avg": 1.65625,
-  "1Q_AST_avg": 0.28125,
-  "1H_PTS_avg": 5.65625,
-  "1H_REB_avg": 3.0,
-  "1H_AST_avg": 0.75,
-  "FULL_PTS_avg": 11.136363636363637,
-  "FULL_REB_avg": 6.2272727272727275,
-  "FULL_AST_avg": 1.5909090909090908,
-  "1H_PTS_ratio": 0.5079081632653061,
-  "1Q_PTS_ratio": 0.24974489795918367,
-  "1H_REB_ratio": 0.4817518248175182,
-  "1Q_REB_ratio": 0.2659671532846715,
-  "1H_AST_ratio": 0.4714285714285715,
-  "1Q_AST_ratio": 0.1767857142857143
+  "last_updated": "2026-02-08T05:18:45.654134",
+  "1Q_PTS_avg": 2.878787878787879,
+  "1Q_REB_avg": 1.6666666666666667,
+  "1Q_AST_avg": 0.3333333333333333,
+  "1H_PTS_avg": 5.757575757575758,
+  "1H_REB_avg": 3.121212121212121,
+  "1H_AST_avg": 0.7878787878787878,
+  "FULL_PTS_avg": 11.347826086956522,
+  "FULL_REB_avg": 6.478260869565218,
+  "FULL_AST_avg": 1.608695652173913,
+  "1H_PTS_ratio": 0.5073725763380936,
+  "1Q_PTS_ratio": 0.2536862881690468,
+  "1H_REB_ratio": 0.48179784421395155,
+  "1Q_REB_ratio": 0.25727069351230425,
+  "1H_AST_ratio": 0.4897624897624897,
+  "1Q_AST_ratio": 0.2072072072072072
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Tyrese Maxey",
   "player_id": 1630178,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500754",
+      "player_id": 1630178,
+      "player_name": "Tyrese Maxey",
+      "1Q_PTS": "8",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "10:27",
+      "1H_PTS": "14",
+      "1H_REB": "4",
+      "1H_AST": "4",
+      "1H_MIN": "17:53",
+      "FULL_PTS": "29",
+      "FULL_REB": "9",
+      "FULL_AST": "6",
+      "FULL_MIN": "39:50"
+    },
     {
       "game_id": "0022500740",
       "player_id": 1630178,
@@ -542,20 +559,20 @@
       "1H_MIN": "18:45"
     }
   ],
-  "last_updated": "2026-02-06T23:30:19.854428",
-  "1Q_PTS_avg": 7.676470588235294,
-  "1Q_REB_avg": 1.2058823529411764,
-  "1Q_AST_avg": 1.911764705882353,
-  "1H_PTS_avg": 13.588235294117647,
-  "1H_REB_avg": 2.0588235294117645,
-  "1H_AST_avg": 3.3529411764705883,
-  "FULL_PTS_avg": 27.291666666666668,
-  "FULL_REB_avg": 4.083333333333333,
-  "FULL_AST_avg": 6.25,
-  "1H_PTS_ratio": 0.497889537494387,
-  "1Q_PTS_ratio": 0.28127525819488103,
-  "1H_REB_ratio": 0.5042016806722689,
-  "1Q_REB_ratio": 0.29531812725090034,
-  "1H_AST_ratio": 0.5364705882352941,
-  "1Q_AST_ratio": 0.3058823529411765
+  "last_updated": "2026-02-08T05:44:02.638144",
+  "1Q_PTS_avg": 7.685714285714286,
+  "1Q_REB_avg": 1.2,
+  "1Q_AST_avg": 1.8571428571428572,
+  "1H_PTS_avg": 13.6,
+  "1H_REB_avg": 2.1142857142857143,
+  "1H_AST_avg": 3.3714285714285714,
+  "FULL_PTS_avg": 27.36,
+  "FULL_REB_avg": 4.28,
+  "FULL_AST_avg": 6.24,
+  "1H_PTS_ratio": 0.49707602339181284,
+  "1Q_PTS_ratio": 0.2809106098579783,
+  "1H_REB_ratio": 0.4939919893190921,
+  "1Q_REB_ratio": 0.2803738317757009,
+  "1H_AST_ratio": 0.5402930402930403,
+  "1Q_AST_ratio": 0.2976190476190476
 }

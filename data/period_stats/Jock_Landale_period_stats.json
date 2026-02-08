@@ -1,8 +1,25 @@
 {
   "player_name": "Jock Landale",
   "player_id": 1629111,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500751",
+      "player_id": 1629111,
+      "player_name": "Jock Landale",
+      "1Q_PTS": "2",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:04",
+      "1H_PTS": "2",
+      "1H_REB": "0",
+      "1H_AST": "1",
+      "1H_MIN": "9:42",
+      "FULL_PTS": "5",
+      "FULL_REB": "0",
+      "FULL_AST": "1",
+      "FULL_MIN": "17:09"
+    },
     {
       "game_id": "0022500735",
       "player_id": 1629111,
@@ -542,20 +559,20 @@
       "1H_MIN": "13:15"
     }
   ],
-  "last_updated": "2026-02-06T22:47:09.754852",
-  "1Q_PTS_avg": 3.5,
-  "1Q_REB_avg": 1.7647058823529411,
-  "1Q_AST_avg": 0.5,
-  "1H_PTS_avg": 6.9411764705882355,
-  "1H_REB_avg": 3.2058823529411766,
-  "1H_AST_avg": 0.8529411764705882,
-  "FULL_PTS_avg": 11.333333333333334,
-  "FULL_REB_avg": 6.416666666666667,
-  "FULL_AST_avg": 1.6666666666666667,
-  "1H_PTS_ratio": 0.6124567474048442,
-  "1Q_PTS_ratio": 0.30882352941176466,
-  "1H_REB_ratio": 0.49961802902979374,
-  "1Q_REB_ratio": 0.2750190985485103,
-  "1H_AST_ratio": 0.5117647058823529,
-  "1Q_AST_ratio": 0.3
+  "last_updated": "2026-02-08T05:01:00.743585",
+  "1Q_PTS_avg": 3.4571428571428573,
+  "1Q_REB_avg": 1.7142857142857142,
+  "1Q_AST_avg": 0.4857142857142857,
+  "1H_PTS_avg": 6.8,
+  "1H_REB_avg": 3.1142857142857143,
+  "1H_AST_avg": 0.8571428571428571,
+  "FULL_PTS_avg": 11.08,
+  "FULL_REB_avg": 6.16,
+  "FULL_AST_avg": 1.64,
+  "1H_PTS_ratio": 0.6137184115523465,
+  "1Q_PTS_ratio": 0.31201650335224346,
+  "1H_REB_ratio": 0.5055658627087198,
+  "1Q_REB_ratio": 0.27829313543599254,
+  "1H_AST_ratio": 0.5226480836236934,
+  "1Q_AST_ratio": 0.2961672473867596
 }

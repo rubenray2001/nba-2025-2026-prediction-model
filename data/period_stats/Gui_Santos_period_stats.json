@@ -1,8 +1,25 @@
 {
   "player_name": "Gui Santos",
   "player_id": 1630611,
-  "games_collected": 24,
+  "games_collected": 25,
   "games_data": [
+    {
+      "game_id": "0022500753",
+      "player_id": 1630611,
+      "player_name": "Gui Santos",
+      "1Q_PTS": "0",
+      "1Q_REB": "3",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:13",
+      "1H_PTS": "0",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "7:03",
+      "FULL_PTS": "15",
+      "FULL_REB": "8",
+      "FULL_AST": "3",
+      "FULL_MIN": "26:19"
+    },
     {
       "game_id": "0022500739",
       "player_id": 1630611,
@@ -356,20 +373,20 @@
       "1H_MIN": "8:57"
     }
   ],
-  "last_updated": "2026-02-06T22:31:20.379122",
-  "1Q_PTS_avg": 1.4761904761904763,
-  "1Q_REB_avg": 0.9047619047619048,
-  "1Q_AST_avg": 0.7142857142857143,
-  "1H_PTS_avg": 3.7916666666666665,
-  "1H_REB_avg": 1.5833333333333333,
-  "1H_AST_avg": 1.2083333333333333,
-  "FULL_PTS_avg": 7.3076923076923075,
-  "FULL_REB_avg": 3.6923076923076925,
-  "FULL_AST_avg": 2.076923076923077,
-  "1H_PTS_ratio": 0.518859649122807,
-  "1Q_PTS_ratio": 0.20200501253132833,
-  "1H_REB_ratio": 0.4288194444444444,
-  "1Q_REB_ratio": 0.24503968253968253,
-  "1H_AST_ratio": 0.58179012345679,
-  "1Q_AST_ratio": 0.3439153439153439
+  "last_updated": "2026-02-08T04:45:59.070730",
+  "1Q_PTS_avg": 1.4090909090909092,
+  "1Q_REB_avg": 1.0,
+  "1Q_AST_avg": 0.6818181818181818,
+  "1H_PTS_avg": 3.64,
+  "1H_REB_avg": 1.64,
+  "1H_AST_avg": 1.16,
+  "FULL_PTS_avg": 7.857142857142857,
+  "FULL_REB_avg": 4.0,
+  "FULL_AST_avg": 2.142857142857143,
+  "1H_PTS_ratio": 0.46327272727272734,
+  "1Q_PTS_ratio": 0.17933884297520664,
+  "1H_REB_ratio": 0.41,
+  "1Q_REB_ratio": 0.25,
+  "1H_AST_ratio": 0.5413333333333333,
+  "1Q_AST_ratio": 0.3181818181818182
 }

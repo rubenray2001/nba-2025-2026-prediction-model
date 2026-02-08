@@ -1,8 +1,25 @@
 {
   "player_name": "Austin Reaves",
   "player_id": 1630559,
-  "games_collected": 25,
+  "games_collected": 26,
   "games_data": [
+    {
+      "game_id": "0022500753",
+      "player_id": 1630559,
+      "player_name": "Austin Reaves",
+      "1Q_PTS": "0",
+      "1Q_REB": "2",
+      "1Q_AST": "4",
+      "1Q_MIN": "6:30",
+      "1H_PTS": "4",
+      "1H_REB": "4",
+      "1H_AST": "7",
+      "1H_MIN": "13:01",
+      "FULL_PTS": "16",
+      "FULL_REB": "5",
+      "FULL_AST": "8",
+      "FULL_MIN": "23:57"
+    },
     {
       "game_id": "0022500740",
       "player_id": 1630559,
@@ -389,20 +406,20 @@
       "1H_MIN": "16:33"
     }
   ],
-  "last_updated": "2026-02-06T22:08:40.259142",
-  "1Q_PTS_avg": 5.04,
-  "1Q_REB_avg": 1.28,
-  "1Q_AST_avg": 1.68,
-  "1H_PTS_avg": 12.6,
-  "1H_REB_avg": 2.72,
-  "1H_AST_avg": 3.4,
-  "FULL_PTS_avg": 27.266666666666666,
-  "FULL_REB_avg": 5.4,
-  "FULL_AST_avg": 6.533333333333333,
-  "1H_PTS_ratio": 0.4621026894865526,
-  "1Q_PTS_ratio": 0.18484107579462103,
-  "1H_REB_ratio": 0.5037037037037037,
-  "1Q_REB_ratio": 0.23703703703703702,
-  "1H_AST_ratio": 0.5204081632653061,
-  "1Q_AST_ratio": 0.2571428571428571
+  "last_updated": "2026-02-08T04:23:17.974668",
+  "1Q_PTS_avg": 4.846153846153846,
+  "1Q_REB_avg": 1.3076923076923077,
+  "1Q_AST_avg": 1.7692307692307692,
+  "1H_PTS_avg": 12.26923076923077,
+  "1H_REB_avg": 2.769230769230769,
+  "1H_AST_avg": 3.5384615384615383,
+  "FULL_PTS_avg": 26.5625,
+  "FULL_REB_avg": 5.375,
+  "FULL_AST_avg": 6.625,
+  "1H_PTS_ratio": 0.46190045248868783,
+  "1Q_PTS_ratio": 0.18244343891402715,
+  "1H_REB_ratio": 0.51520572450805,
+  "1Q_REB_ratio": 0.24329159212880144,
+  "1H_AST_ratio": 0.5341074020319303,
+  "1Q_AST_ratio": 0.26705370101596515
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Dominick Barlow",
   "player_id": 1631230,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500754",
+      "player_id": 1631230,
+      "player_name": "Dominick Barlow",
+      "1Q_PTS": "2",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:11",
+      "1H_PTS": "6",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "9:45",
+      "FULL_PTS": "6",
+      "FULL_REB": "4",
+      "FULL_AST": "0",
+      "FULL_MIN": "17:35"
+    },
     {
       "game_id": "0022500740",
       "player_id": 1631230,
@@ -538,20 +555,20 @@
       "1H_MIN": "11:10"
     }
   ],
-  "last_updated": "2026-02-06T22:26:14.335783",
-  "1Q_PTS_avg": 3.121212121212121,
-  "1Q_REB_avg": 2.0303030303030303,
-  "1Q_AST_avg": 0.3939393939393939,
-  "1H_PTS_avg": 4.705882352941177,
-  "1H_REB_avg": 3.0588235294117645,
-  "1H_AST_avg": 0.6470588235294118,
-  "FULL_PTS_avg": 9.833333333333334,
-  "FULL_REB_avg": 5.416666666666667,
-  "FULL_AST_avg": 1.1666666666666667,
-  "1H_PTS_ratio": 0.4785643070787637,
-  "1Q_PTS_ratio": 0.31741140215716485,
-  "1H_REB_ratio": 0.5647058823529411,
-  "1Q_REB_ratio": 0.3748251748251748,
-  "1H_AST_ratio": 0.5546218487394958,
-  "1Q_AST_ratio": 0.3376623376623376
+  "last_updated": "2026-02-08T04:41:09.611268",
+  "1Q_PTS_avg": 3.088235294117647,
+  "1Q_REB_avg": 2.0,
+  "1Q_AST_avg": 0.38235294117647056,
+  "1H_PTS_avg": 4.742857142857143,
+  "1H_REB_avg": 3.057142857142857,
+  "1H_AST_avg": 0.6285714285714286,
+  "FULL_PTS_avg": 9.68,
+  "FULL_REB_avg": 5.36,
+  "FULL_AST_avg": 1.12,
+  "1H_PTS_ratio": 0.4899645808736718,
+  "1Q_PTS_ratio": 0.3190325717063685,
+  "1H_REB_ratio": 0.5703624733475479,
+  "1Q_REB_ratio": 0.3731343283582089,
+  "1H_AST_ratio": 0.5612244897959183,
+  "1Q_AST_ratio": 0.3413865546218487
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "VJ Edgecombe",
   "player_id": 1642845,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500754",
+      "player_id": 1642845,
+      "player_name": "VJ Edgecombe",
+      "1Q_PTS": "2",
+      "1Q_REB": "4",
+      "1Q_AST": "2",
+      "1Q_MIN": "7:50",
+      "1H_PTS": "2",
+      "1H_REB": "4",
+      "1H_AST": "2",
+      "1H_MIN": "8:44",
+      "FULL_PTS": "5",
+      "FULL_REB": "6",
+      "FULL_AST": "2",
+      "FULL_MIN": "25:13"
+    },
     {
       "game_id": "0022500740",
       "player_id": 1642845,
@@ -542,20 +559,20 @@
       "1H_MIN": "18:02"
     }
   ],
-  "last_updated": "2026-02-06T23:31:12.169252",
-  "1Q_PTS_avg": 4.470588235294118,
-  "1Q_REB_avg": 1.2058823529411764,
-  "1Q_AST_avg": 1.1764705882352942,
-  "1H_PTS_avg": 7.088235294117647,
-  "1H_REB_avg": 2.264705882352941,
-  "1H_AST_avg": 2.264705882352941,
-  "FULL_PTS_avg": 15.708333333333334,
-  "FULL_REB_avg": 5.25,
-  "FULL_AST_avg": 4.291666666666667,
-  "1H_PTS_ratio": 0.45124044312685285,
-  "1Q_PTS_ratio": 0.2845997815571852,
-  "1H_REB_ratio": 0.4313725490196078,
-  "1Q_REB_ratio": 0.22969187675070027,
-  "1H_AST_ratio": 0.5276984580239863,
-  "1Q_AST_ratio": 0.2741290691033695
+  "last_updated": "2026-02-08T05:45:01.492895",
+  "1Q_PTS_avg": 4.4,
+  "1Q_REB_avg": 1.2857142857142858,
+  "1Q_AST_avg": 1.2,
+  "1H_PTS_avg": 6.942857142857143,
+  "1H_REB_avg": 2.3142857142857145,
+  "1H_AST_avg": 2.257142857142857,
+  "FULL_PTS_avg": 15.28,
+  "FULL_REB_avg": 5.28,
+  "FULL_AST_avg": 4.2,
+  "1H_PTS_ratio": 0.4543754674644727,
+  "1Q_PTS_ratio": 0.2879581151832461,
+  "1H_REB_ratio": 0.4383116883116883,
+  "1Q_REB_ratio": 0.2435064935064935,
+  "1H_AST_ratio": 0.5374149659863945,
+  "1Q_AST_ratio": 0.2857142857142857
 }

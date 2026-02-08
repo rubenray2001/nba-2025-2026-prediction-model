@@ -1,8 +1,25 @@
 {
   "player_name": "Luguentz Dort",
   "player_id": 1629652,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500748",
+      "player_id": 1629652,
+      "player_name": "Luguentz Dort",
+      "1Q_PTS": "2",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "9:43",
+      "1H_PTS": "2",
+      "1H_REB": "0",
+      "1H_AST": "2",
+      "1H_MIN": "15:30",
+      "FULL_PTS": "2",
+      "FULL_REB": "2",
+      "FULL_AST": "3",
+      "FULL_MIN": "26:47"
+    },
     {
       "game_id": "0022500723",
       "player_id": 1629652,
@@ -508,20 +525,20 @@
       "1H_MIN": "12:47"
     }
   ],
-  "last_updated": "2026-02-04T08:47:32.038843",
-  "1Q_PTS_avg": 2.84375,
-  "1Q_REB_avg": 1.34375,
-  "1Q_AST_avg": 0.1875,
-  "1H_PTS_avg": 5.5,
-  "1H_REB_avg": 1.9375,
-  "1H_AST_avg": 0.53125,
-  "FULL_PTS_avg": 8.681818181818182,
-  "FULL_REB_avg": 3.227272727272727,
-  "FULL_AST_avg": 0.8636363636363636,
-  "1H_PTS_ratio": 0.6335078534031414,
-  "1Q_PTS_ratio": 0.3275523560209424,
-  "1H_REB_ratio": 0.6003521126760564,
-  "1Q_REB_ratio": 0.41637323943661975,
-  "1H_AST_ratio": 0.6151315789473684,
-  "1Q_AST_ratio": 0.21710526315789475
+  "last_updated": "2026-02-08T05:15:50.823076",
+  "1Q_PTS_avg": 2.8181818181818183,
+  "1Q_REB_avg": 1.303030303030303,
+  "1Q_AST_avg": 0.18181818181818182,
+  "1H_PTS_avg": 5.393939393939394,
+  "1H_REB_avg": 1.878787878787879,
+  "1H_AST_avg": 0.5757575757575758,
+  "FULL_PTS_avg": 8.391304347826088,
+  "FULL_REB_avg": 3.1739130434782608,
+  "FULL_AST_avg": 0.9565217391304348,
+  "1H_PTS_ratio": 0.6428010676715339,
+  "1Q_PTS_ratio": 0.33584550164861043,
+  "1H_REB_ratio": 0.5919468659194688,
+  "1Q_REB_ratio": 0.41054379410543795,
+  "1H_AST_ratio": 0.6019283746556474,
+  "1Q_AST_ratio": 0.19008264462809918
 }

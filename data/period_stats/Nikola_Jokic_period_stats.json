@@ -1,8 +1,25 @@
 {
   "player_name": "Nikola Jokic",
   "player_id": 203999,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500752",
+      "player_id": 203999,
+      "player_name": "Nikola Jokic",
+      "1Q_PTS": "7",
+      "1Q_REB": "5",
+      "1Q_AST": "5",
+      "1Q_MIN": "8:21",
+      "1H_PTS": "9",
+      "1H_REB": "11",
+      "1H_AST": "7",
+      "1H_MIN": "17:16",
+      "FULL_PTS": "22",
+      "FULL_REB": "14",
+      "FULL_AST": "17",
+      "FULL_MIN": "33:24"
+    },
     {
       "game_id": "0022500726",
       "player_id": 203999,
@@ -488,20 +505,20 @@
       "1H_AST": "6"
     }
   ],
-  "last_updated": "2026-02-05T09:28:28.373658",
-  "1Q_PTS_avg": 8.375,
-  "1Q_REB_avg": 4.0625,
-  "1Q_AST_avg": 3.53125,
-  "1H_PTS_avg": 14.125,
-  "1H_REB_avg": 6.03125,
-  "1H_AST_avg": 5.625,
-  "FULL_PTS_avg": 29.90909090909091,
-  "FULL_REB_avg": 11.863636363636363,
-  "FULL_AST_avg": 10.136363636363637,
-  "1H_PTS_ratio": 0.47226443768996956,
-  "1Q_PTS_ratio": 0.28001519756838905,
-  "1H_REB_ratio": 0.5083812260536399,
-  "1Q_REB_ratio": 0.3424329501915709,
-  "1H_AST_ratio": 0.554932735426009,
-  "1Q_AST_ratio": 0.3483744394618834
+  "last_updated": "2026-02-08T05:25:53.590177",
+  "1Q_PTS_avg": 8.333333333333334,
+  "1Q_REB_avg": 4.090909090909091,
+  "1Q_AST_avg": 3.5757575757575757,
+  "1H_PTS_avg": 13.969696969696969,
+  "1H_REB_avg": 6.181818181818182,
+  "1H_AST_avg": 5.666666666666667,
+  "FULL_PTS_avg": 29.565217391304348,
+  "FULL_REB_avg": 11.956521739130435,
+  "FULL_AST_avg": 10.434782608695652,
+  "1H_PTS_ratio": 0.4725044563279857,
+  "1Q_PTS_ratio": 0.2818627450980392,
+  "1H_REB_ratio": 0.5170247933884297,
+  "1Q_REB_ratio": 0.3421487603305785,
+  "1H_AST_ratio": 0.5430555555555556,
+  "1Q_AST_ratio": 0.3426767676767677
 }

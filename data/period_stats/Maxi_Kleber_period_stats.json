@@ -1,8 +1,25 @@
 {
   "player_name": "Maxi Kleber",
   "player_id": 1628467,
-  "games_collected": 14,
+  "games_collected": 15,
   "games_data": [
+    {
+      "game_id": "0022500753",
+      "player_id": 1628467,
+      "player_name": "Maxi Kleber",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:26",
+      "1H_PTS": "2",
+      "1H_REB": "2",
+      "1H_AST": "0",
+      "1H_MIN": "12:01",
+      "FULL_PTS": "5",
+      "FULL_REB": "7",
+      "FULL_AST": "1",
+      "FULL_MIN": "27:58"
+    },
     {
       "game_id": "0022500740",
       "player_id": 1628467,
@@ -210,20 +227,20 @@
       "1H_MIN": "8:26"
     }
   ],
-  "last_updated": "2026-02-06T23:06:05.053274",
-  "1Q_PTS_avg": 1.2307692307692308,
-  "1Q_REB_avg": 0.5384615384615384,
-  "1Q_AST_avg": 0.15384615384615385,
-  "1H_PTS_avg": 1.5714285714285714,
-  "1H_REB_avg": 1.0,
-  "1H_AST_avg": 0.35714285714285715,
-  "FULL_PTS_avg": 2.2857142857142856,
-  "FULL_REB_avg": 1.7142857142857142,
-  "FULL_AST_avg": 1.1428571428571428,
-  "1H_PTS_ratio": 0.6875,
-  "1Q_PTS_ratio": 0.5384615384615385,
-  "1H_REB_ratio": 0.5833333333333334,
-  "1Q_REB_ratio": 0.3141025641025641,
-  "1H_AST_ratio": 0.3125,
-  "1Q_AST_ratio": 0.13461538461538464
+  "last_updated": "2026-02-08T05:19:59.317749",
+  "1Q_PTS_avg": 1.1428571428571428,
+  "1Q_REB_avg": 0.5,
+  "1Q_AST_avg": 0.14285714285714285,
+  "1H_PTS_avg": 1.6,
+  "1H_REB_avg": 1.0666666666666667,
+  "1H_AST_avg": 0.3333333333333333,
+  "FULL_PTS_avg": 2.625,
+  "FULL_REB_avg": 2.375,
+  "FULL_AST_avg": 1.125,
+  "1H_PTS_ratio": 0.6095238095238096,
+  "1Q_PTS_ratio": 0.43537414965986393,
+  "1H_REB_ratio": 0.44912280701754387,
+  "1Q_REB_ratio": 0.21052631578947367,
+  "1H_AST_ratio": 0.2962962962962963,
+  "1Q_AST_ratio": 0.12698412698412698
 }

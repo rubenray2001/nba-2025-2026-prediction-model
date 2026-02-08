@@ -1,8 +1,25 @@
 {
   "player_name": "Jerami Grant",
   "player_id": 203924,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500755",
+      "player_id": 203924,
+      "player_name": "Jerami Grant",
+      "1Q_PTS": "7",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "9:44",
+      "1H_PTS": "21",
+      "1H_REB": "1",
+      "1H_AST": "1",
+      "1H_MIN": "16:19",
+      "FULL_PTS": "29",
+      "FULL_REB": "5",
+      "FULL_AST": "3",
+      "FULL_MIN": "32:52"
+    },
     {
       "game_id": "0022500745",
       "player_id": 203924,
@@ -542,20 +559,20 @@
       "1H_MIN": "15:28"
     }
   ],
-  "last_updated": "2026-02-06T22:43:47.987384",
-  "1Q_PTS_avg": 4.382352941176471,
-  "1Q_REB_avg": 0.6176470588235294,
-  "1Q_AST_avg": 0.5882352941176471,
-  "1H_PTS_avg": 9.5,
-  "1H_REB_avg": 1.6176470588235294,
-  "1H_AST_avg": 1.1176470588235294,
-  "FULL_PTS_avg": 18.625,
-  "FULL_REB_avg": 3.4583333333333335,
-  "FULL_AST_avg": 2.6666666666666665,
-  "1H_PTS_ratio": 0.5100671140939598,
-  "1Q_PTS_ratio": 0.23529411764705885,
-  "1H_REB_ratio": 0.46775336640680365,
-  "1Q_REB_ratio": 0.1785967399007796,
-  "1H_AST_ratio": 0.41911764705882354,
-  "1Q_AST_ratio": 0.22058823529411767
+  "last_updated": "2026-02-08T04:57:43.615044",
+  "1Q_PTS_avg": 4.457142857142857,
+  "1Q_REB_avg": 0.6285714285714286,
+  "1Q_AST_avg": 0.5714285714285714,
+  "1H_PTS_avg": 9.82857142857143,
+  "1H_REB_avg": 1.6,
+  "1H_AST_avg": 1.1142857142857143,
+  "FULL_PTS_avg": 19.04,
+  "FULL_REB_avg": 3.52,
+  "FULL_AST_avg": 2.68,
+  "1H_PTS_ratio": 0.5162064825930373,
+  "1Q_PTS_ratio": 0.23409363745498202,
+  "1H_REB_ratio": 0.4545454545454546,
+  "1Q_REB_ratio": 0.17857142857142858,
+  "1H_AST_ratio": 0.4157782515991471,
+  "1Q_AST_ratio": 0.21321961620469082
 }

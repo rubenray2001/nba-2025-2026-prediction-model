@@ -1,8 +1,25 @@
 {
   "player_name": "Jusuf Nurki\u0107",
   "player_id": 203994,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500750",
+      "player_id": 203994,
+      "player_name": "Jusuf Nurki\u0107",
+      "1Q_PTS": "0",
+      "1Q_REB": "3",
+      "1Q_AST": "3",
+      "1Q_MIN": "8:51",
+      "1H_PTS": "3",
+      "1H_REB": "11",
+      "1H_AST": "3",
+      "1H_MIN": "15:56",
+      "FULL_PTS": "3",
+      "FULL_REB": "14",
+      "FULL_AST": "6",
+      "FULL_MIN": "23:42"
+    },
     {
       "game_id": "0022500706",
       "player_id": 203994,
@@ -491,20 +508,20 @@
       "1H_MIN": "14:25"
     }
   ],
-  "last_updated": "2026-02-03T10:37:50.459292",
-  "1Q_PTS_avg": 3.3225806451612905,
-  "1Q_REB_avg": 2.6451612903225805,
-  "1Q_AST_avg": 1.4838709677419355,
-  "1H_PTS_avg": 5.67741935483871,
-  "1H_REB_avg": 5.774193548387097,
-  "1H_AST_avg": 3.064516129032258,
-  "FULL_PTS_avg": 9.523809523809524,
-  "FULL_REB_avg": 10.142857142857142,
-  "FULL_AST_avg": 4.476190476190476,
-  "1H_PTS_ratio": 0.5961290322580646,
-  "1Q_PTS_ratio": 0.3488709677419355,
-  "1H_REB_ratio": 0.5692866878691505,
-  "1Q_REB_ratio": 0.26079054975011356,
-  "1H_AST_ratio": 0.6846259437199725,
-  "1Q_AST_ratio": 0.33150308853809196
+  "last_updated": "2026-02-08T05:08:16.545359",
+  "1Q_PTS_avg": 3.21875,
+  "1Q_REB_avg": 2.65625,
+  "1Q_AST_avg": 1.53125,
+  "1H_PTS_avg": 5.59375,
+  "1H_REB_avg": 5.9375,
+  "1H_AST_avg": 3.0625,
+  "FULL_PTS_avg": 9.227272727272727,
+  "FULL_REB_avg": 10.318181818181818,
+  "FULL_AST_avg": 4.545454545454546,
+  "1H_PTS_ratio": 0.6062192118226601,
+  "1Q_PTS_ratio": 0.34883004926108374,
+  "1H_REB_ratio": 0.5754405286343612,
+  "1Q_REB_ratio": 0.25743392070484583,
+  "1H_AST_ratio": 0.67375,
+  "1Q_AST_ratio": 0.336875
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Clint Capela",
   "player_id": 203991,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500748",
+      "player_id": 203991,
+      "player_name": "Clint Capela",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:21",
+      "1H_PTS": "0",
+      "1H_REB": "1",
+      "1H_AST": "1",
+      "1H_MIN": "7:37",
+      "FULL_PTS": "0",
+      "FULL_REB": "1",
+      "FULL_AST": "1",
+      "FULL_MIN": "7:37"
+    },
     {
       "game_id": "0022500737",
       "player_id": 203991,
@@ -504,20 +521,20 @@
       "1H_MIN": "4:53"
     }
   ],
-  "last_updated": "2026-02-06T22:20:43.561933",
-  "1Q_PTS_avg": 1.064516129032258,
-  "1Q_REB_avg": 1.4838709677419355,
-  "1Q_AST_avg": 0.12903225806451613,
-  "1H_PTS_avg": 1.90625,
-  "1H_REB_avg": 2.6875,
-  "1H_AST_avg": 0.34375,
-  "FULL_PTS_avg": 4.363636363636363,
-  "FULL_REB_avg": 5.318181818181818,
-  "FULL_AST_avg": 0.6818181818181818,
-  "1H_PTS_ratio": 0.43684895833333337,
-  "1Q_PTS_ratio": 0.2439516129032258,
-  "1H_REB_ratio": 0.5053418803418803,
-  "1Q_REB_ratio": 0.27901847256685963,
-  "1H_AST_ratio": 0.5041666666666667,
-  "1Q_AST_ratio": 0.189247311827957
+  "last_updated": "2026-02-08T04:35:22.182112",
+  "1Q_PTS_avg": 1.03125,
+  "1Q_REB_avg": 1.46875,
+  "1Q_AST_avg": 0.125,
+  "1H_PTS_avg": 1.8484848484848484,
+  "1H_REB_avg": 2.6363636363636362,
+  "1H_AST_avg": 0.36363636363636365,
+  "FULL_PTS_avg": 4.173913043478261,
+  "FULL_REB_avg": 5.130434782608695,
+  "FULL_AST_avg": 0.6956521739130435,
+  "1H_PTS_ratio": 0.4428661616161616,
+  "1Q_PTS_ratio": 0.2470703125,
+  "1H_REB_ratio": 0.5138674884437596,
+  "1Q_REB_ratio": 0.286281779661017,
+  "1H_AST_ratio": 0.5227272727272727,
+  "1Q_AST_ratio": 0.1796875
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Maxime Raynaud",
   "player_id": 1642875,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500756",
+      "player_id": 1642875,
+      "player_name": "Maxime Raynaud",
+      "1Q_PTS": "0",
+      "1Q_REB": "4",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:48",
+      "1H_PTS": "4",
+      "1H_REB": "4",
+      "1H_AST": "0",
+      "1H_MIN": "11:01",
+      "FULL_PTS": "14",
+      "FULL_REB": "7",
+      "FULL_AST": "0",
+      "FULL_MIN": "22:45"
+    },
     {
       "game_id": "0022500746",
       "player_id": 1642875,
@@ -542,20 +559,20 @@
       "1H_MIN": "6:27"
     }
   ],
-  "last_updated": "2026-02-06T23:05:20.787615",
-  "1Q_PTS_avg": 2.8529411764705883,
-  "1Q_REB_avg": 1.8235294117647058,
-  "1Q_AST_avg": 0.2647058823529412,
-  "1H_PTS_avg": 5.5588235294117645,
-  "1H_REB_avg": 3.8529411764705883,
-  "1H_AST_avg": 0.6176470588235294,
-  "FULL_PTS_avg": 13.0,
-  "FULL_REB_avg": 8.041666666666666,
-  "FULL_AST_avg": 1.2916666666666667,
-  "1H_PTS_ratio": 0.4276018099547511,
-  "1Q_PTS_ratio": 0.21945701357466063,
-  "1H_REB_ratio": 0.47912221883572087,
-  "1Q_REB_ratio": 0.22676013410545567,
-  "1H_AST_ratio": 0.4781783681214421,
-  "1Q_AST_ratio": 0.2049335863377609
+  "last_updated": "2026-02-08T05:19:19.887992",
+  "1Q_PTS_avg": 2.7714285714285714,
+  "1Q_REB_avg": 1.8857142857142857,
+  "1Q_AST_avg": 0.2571428571428571,
+  "1H_PTS_avg": 5.514285714285714,
+  "1H_REB_avg": 3.857142857142857,
+  "1H_AST_avg": 0.6,
+  "FULL_PTS_avg": 13.04,
+  "FULL_REB_avg": 8.0,
+  "FULL_AST_avg": 1.24,
+  "1H_PTS_ratio": 0.42287467134092904,
+  "1Q_PTS_ratio": 0.21253286590709905,
+  "1H_REB_ratio": 0.48214285714285715,
+  "1Q_REB_ratio": 0.2357142857142857,
+  "1H_AST_ratio": 0.48387096774193544,
+  "1Q_AST_ratio": 0.2073732718894009
 }

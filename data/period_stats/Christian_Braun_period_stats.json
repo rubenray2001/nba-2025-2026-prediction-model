@@ -1,8 +1,25 @@
 {
   "player_name": "Christian Braun",
   "player_id": 1631128,
-  "games_collected": 16,
+  "games_collected": 17,
   "games_data": [
+    {
+      "game_id": "0022500752",
+      "player_id": 1631128,
+      "player_name": "Christian Braun",
+      "1Q_PTS": "4",
+      "1Q_REB": "2",
+      "1Q_AST": "1",
+      "1Q_MIN": "12:00",
+      "1H_PTS": "4",
+      "1H_REB": "2",
+      "1H_AST": "1",
+      "1H_MIN": "17:04",
+      "FULL_PTS": "10",
+      "FULL_REB": "4",
+      "FULL_AST": "2",
+      "FULL_MIN": "31:41"
+    },
     {
       "game_id": "0022500726",
       "player_id": 1631128,
@@ -236,20 +253,20 @@
       "1H_MIN": "16:01"
     }
   ],
-  "last_updated": "2026-02-05T08:38:04.376764",
-  "1Q_PTS_avg": 3.375,
-  "1Q_REB_avg": 1.25,
-  "1Q_AST_avg": 1.0625,
-  "1H_PTS_avg": 4.875,
-  "1H_REB_avg": 2.5,
-  "1H_AST_avg": 1.9375,
-  "FULL_PTS_avg": 9.666666666666666,
-  "FULL_REB_avg": 2.8333333333333335,
-  "FULL_AST_avg": 2.8333333333333335,
-  "1H_PTS_ratio": 0.5043103448275862,
-  "1Q_PTS_ratio": 0.34913793103448276,
-  "1H_REB_ratio": 0.8823529411764706,
-  "1Q_REB_ratio": 0.4411764705882353,
-  "1H_AST_ratio": 0.6838235294117647,
-  "1Q_AST_ratio": 0.375
+  "last_updated": "2026-02-08T04:32:51.019082",
+  "1Q_PTS_avg": 3.411764705882353,
+  "1Q_REB_avg": 1.2941176470588236,
+  "1Q_AST_avg": 1.0588235294117647,
+  "1H_PTS_avg": 4.823529411764706,
+  "1H_REB_avg": 2.4705882352941178,
+  "1H_AST_avg": 1.8823529411764706,
+  "FULL_PTS_avg": 9.714285714285714,
+  "FULL_REB_avg": 3.0,
+  "FULL_AST_avg": 2.7142857142857144,
+  "1H_PTS_ratio": 0.49653979238754326,
+  "1Q_PTS_ratio": 0.35121107266435986,
+  "1H_REB_ratio": 0.823529411764706,
+  "1Q_REB_ratio": 0.43137254901960786,
+  "1H_AST_ratio": 0.6934984520123838,
+  "1Q_AST_ratio": 0.39009287925696595
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Cody Williams",
   "player_id": 1642262,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500750",
+      "player_id": 1642262,
+      "player_name": "Cody Williams",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:47",
+      "1H_PTS": "0",
+      "1H_REB": "1",
+      "1H_AST": "0",
+      "1H_MIN": "5:47",
+      "FULL_PTS": "0",
+      "FULL_REB": "2",
+      "FULL_AST": "0",
+      "FULL_MIN": "13:34"
+    },
     {
       "game_id": "0022500735",
       "player_id": 1642262,
@@ -479,20 +496,20 @@
       "1H_MIN": "14:11"
     }
   ],
-  "last_updated": "2026-02-06T22:20:56.624624",
-  "1Q_PTS_avg": 1.8928571428571428,
-  "1Q_REB_avg": 0.4642857142857143,
-  "1Q_AST_avg": 0.32142857142857145,
-  "1H_PTS_avg": 3.838709677419355,
-  "1H_REB_avg": 1.1935483870967742,
-  "1H_AST_avg": 0.45161290322580644,
-  "FULL_PTS_avg": 5.380952380952381,
+  "last_updated": "2026-02-08T04:35:35.450977",
+  "1Q_PTS_avg": 1.8275862068965518,
+  "1Q_REB_avg": 0.4827586206896552,
+  "1Q_AST_avg": 0.3103448275862069,
+  "1H_PTS_avg": 3.71875,
+  "1H_REB_avg": 1.1875,
+  "1H_AST_avg": 0.4375,
+  "FULL_PTS_avg": 5.136363636363637,
   "FULL_REB_avg": 2.0,
-  "FULL_AST_avg": 1.0,
-  "1H_PTS_ratio": 0.713388524122181,
-  "1Q_PTS_ratio": 0.3517699115044247,
-  "1H_REB_ratio": 0.5967741935483871,
-  "1Q_REB_ratio": 0.23214285714285715,
-  "1H_AST_ratio": 0.45161290322580644,
-  "1Q_AST_ratio": 0.32142857142857145
+  "FULL_AST_avg": 0.9545454545454546,
+  "1H_PTS_ratio": 0.724004424778761,
+  "1Q_PTS_ratio": 0.3558132438205676,
+  "1H_REB_ratio": 0.59375,
+  "1Q_REB_ratio": 0.2413793103448276,
+  "1H_AST_ratio": 0.4583333333333333,
+  "1Q_AST_ratio": 0.3251231527093596
 }

@@ -1,8 +1,25 @@
 {
   "player_name": "Ryan Kalkbrenner",
   "player_id": 1641750,
-  "games_collected": 33,
+  "games_collected": 34,
   "games_data": [
+    {
+      "game_id": "0022500751",
+      "player_id": 1641750,
+      "player_name": "Ryan Kalkbrenner",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "3:26",
+      "1H_PTS": "0",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "7:38",
+      "FULL_PTS": "6",
+      "FULL_REB": "5",
+      "FULL_AST": "0",
+      "FULL_MIN": "15:05"
+    },
     {
       "game_id": "0022500737",
       "player_id": 1641750,
@@ -525,20 +542,20 @@
       "1H_MIN": "9:11"
     }
   ],
-  "last_updated": "2026-02-06T23:23:06.438802",
-  "1Q_PTS_avg": 2.515151515151515,
-  "1Q_REB_avg": 1.5757575757575757,
-  "1Q_AST_avg": 0.2727272727272727,
-  "1H_PTS_avg": 4.0,
-  "1H_REB_avg": 3.1515151515151514,
-  "1H_AST_avg": 0.3939393939393939,
-  "FULL_PTS_avg": 8.08695652173913,
-  "FULL_REB_avg": 6.043478260869565,
-  "FULL_AST_avg": 0.6521739130434783,
-  "1H_PTS_ratio": 0.49462365591397844,
-  "1Q_PTS_ratio": 0.31101335940045616,
-  "1H_REB_ratio": 0.5214737301068236,
-  "1Q_REB_ratio": 0.2607368650534118,
-  "1H_AST_ratio": 0.604040404040404,
-  "1Q_AST_ratio": 0.41818181818181815
+  "last_updated": "2026-02-08T05:37:11.135192",
+  "1Q_PTS_avg": 2.4411764705882355,
+  "1Q_REB_avg": 1.5294117647058822,
+  "1Q_AST_avg": 0.2647058823529412,
+  "1H_PTS_avg": 3.8823529411764706,
+  "1H_REB_avg": 3.1470588235294117,
+  "1H_AST_avg": 0.38235294117647056,
+  "FULL_PTS_avg": 8.0,
+  "FULL_REB_avg": 6.0,
+  "FULL_AST_avg": 0.625,
+  "1H_PTS_ratio": 0.4852941176470588,
+  "1Q_PTS_ratio": 0.30514705882352944,
+  "1H_REB_ratio": 0.5245098039215687,
+  "1Q_REB_ratio": 0.2549019607843137,
+  "1H_AST_ratio": 0.6117647058823529,
+  "1Q_AST_ratio": 0.4235294117647059
 }

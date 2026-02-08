@@ -1,8 +1,25 @@
 {
   "player_name": "Craig Porter Jr",
   "player_id": 1641854,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500756",
+      "player_id": 1641854,
+      "player_name": "Craig Porter Jr",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "2",
+      "1Q_MIN": "7:23",
+      "1H_PTS": "0",
+      "1H_REB": "1",
+      "1H_AST": "3",
+      "1H_MIN": "12:06",
+      "FULL_PTS": "4",
+      "FULL_REB": "3",
+      "FULL_AST": "4",
+      "FULL_MIN": "22:48"
+    },
     {
       "game_id": "0022500732",
       "player_id": 1641854,
@@ -487,20 +504,20 @@
       "1H_MIN": "9:42"
     }
   ],
-  "last_updated": "2026-02-05T08:41:06.630355",
-  "1Q_PTS_avg": 1.3870967741935485,
-  "1Q_REB_avg": 1.1612903225806452,
-  "1Q_AST_avg": 0.6451612903225806,
-  "1H_PTS_avg": 2.193548387096774,
-  "1H_REB_avg": 1.903225806451613,
-  "1H_AST_avg": 1.4516129032258065,
-  "FULL_PTS_avg": 4.6,
-  "FULL_REB_avg": 4.0,
-  "FULL_AST_avg": 3.25,
-  "1H_PTS_ratio": 0.47685834502103785,
-  "1Q_PTS_ratio": 0.3015427769985975,
-  "1H_REB_ratio": 0.47580645161290325,
-  "1Q_REB_ratio": 0.2903225806451613,
-  "1H_AST_ratio": 0.4466501240694789,
-  "1Q_AST_ratio": 0.19851116625310172
+  "last_updated": "2026-02-08T04:36:28.562584",
+  "1Q_PTS_avg": 1.34375,
+  "1Q_REB_avg": 1.15625,
+  "1Q_AST_avg": 0.6875,
+  "1H_PTS_avg": 2.125,
+  "1H_REB_avg": 1.875,
+  "1H_AST_avg": 1.5,
+  "FULL_PTS_avg": 4.571428571428571,
+  "FULL_REB_avg": 3.9523809523809526,
+  "FULL_AST_avg": 3.2857142857142856,
+  "1H_PTS_ratio": 0.46484375,
+  "1Q_PTS_ratio": 0.2939453125,
+  "1H_REB_ratio": 0.47439759036144574,
+  "1Q_REB_ratio": 0.29254518072289154,
+  "1H_AST_ratio": 0.4565217391304348,
+  "1Q_AST_ratio": 0.20923913043478262
 }

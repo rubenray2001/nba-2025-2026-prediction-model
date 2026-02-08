@@ -1,8 +1,25 @@
 {
   "player_name": "Ben Saraf",
   "player_id": 1642879,
-  "games_collected": 17,
+  "games_collected": 18,
   "games_data": [
+    {
+      "game_id": "0022500747",
+      "player_id": 1642879,
+      "player_name": "Ben Saraf",
+      "1Q_PTS": "3",
+      "1Q_REB": "3",
+      "1Q_AST": "3",
+      "1Q_MIN": "6:22",
+      "1H_PTS": "5",
+      "1H_REB": "4",
+      "1H_AST": "4",
+      "1H_MIN": "14:12",
+      "FULL_PTS": "10",
+      "FULL_REB": "4",
+      "FULL_AST": "4",
+      "FULL_MIN": "24:23"
+    },
     {
       "game_id": "0022500734",
       "player_id": 1642879,
@@ -261,20 +278,20 @@
       "1H_MIN": "5:19"
     }
   ],
-  "last_updated": "2026-02-06T22:09:12.903725",
-  "1Q_PTS_avg": 1.0,
-  "1Q_REB_avg": 0.4117647058823529,
-  "1Q_AST_avg": 1.0,
-  "1H_PTS_avg": 2.411764705882353,
-  "1H_REB_avg": 0.7647058823529411,
-  "1H_AST_avg": 2.0,
-  "FULL_PTS_avg": 3.2222222222222223,
-  "FULL_REB_avg": 1.8888888888888888,
-  "FULL_AST_avg": 3.3333333333333335,
-  "1H_PTS_ratio": 0.7484787018255578,
-  "1Q_PTS_ratio": 0.3103448275862069,
-  "1H_REB_ratio": 0.40484429065743943,
-  "1Q_REB_ratio": 0.21799307958477507,
-  "1H_AST_ratio": 0.6,
-  "1Q_AST_ratio": 0.3
+  "last_updated": "2026-02-08T04:23:49.006961",
+  "1Q_PTS_avg": 1.1111111111111112,
+  "1Q_REB_avg": 0.5555555555555556,
+  "1Q_AST_avg": 1.1111111111111112,
+  "1H_PTS_avg": 2.5555555555555554,
+  "1H_REB_avg": 0.9444444444444444,
+  "1H_AST_avg": 2.111111111111111,
+  "FULL_PTS_avg": 3.9,
+  "FULL_REB_avg": 2.1,
+  "FULL_AST_avg": 3.4,
+  "1H_PTS_ratio": 0.6552706552706552,
+  "1Q_PTS_ratio": 0.2849002849002849,
+  "1H_REB_ratio": 0.4497354497354497,
+  "1Q_REB_ratio": 0.26455026455026454,
+  "1H_AST_ratio": 0.6209150326797386,
+  "1Q_AST_ratio": 0.32679738562091504
 }

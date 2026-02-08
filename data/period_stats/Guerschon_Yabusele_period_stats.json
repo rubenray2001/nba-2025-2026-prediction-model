@@ -1,8 +1,25 @@
 {
   "player_name": "Guerschon Yabusele",
   "player_id": 1627824,
-  "games_collected": 27,
+  "games_collected": 28,
   "games_data": [
+    {
+      "game_id": "0022500752",
+      "player_id": 1627824,
+      "player_name": "Guerschon Yabusele",
+      "1Q_PTS": "3",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:22",
+      "1H_PTS": "6",
+      "1H_REB": "2",
+      "1H_AST": "0",
+      "1H_MIN": "14:18",
+      "FULL_PTS": "12",
+      "FULL_REB": "2",
+      "FULL_AST": "0",
+      "FULL_MIN": "26:06"
+    },
     {
       "game_id": "0022500736",
       "player_id": 1627824,
@@ -431,20 +448,20 @@
       "1H_MIN": "6:23"
     }
   ],
-  "last_updated": "2026-02-06T22:30:52.264334",
-  "1Q_PTS_avg": 1.3333333333333333,
-  "1Q_REB_avg": 0.9259259259259259,
-  "1Q_AST_avg": 0.18518518518518517,
-  "1H_PTS_avg": 2.0,
-  "1H_REB_avg": 1.2592592592592593,
-  "1H_AST_avg": 0.2962962962962963,
-  "FULL_PTS_avg": 3.8421052631578947,
-  "FULL_REB_avg": 2.3157894736842106,
-  "FULL_AST_avg": 0.6842105263157895,
-  "1H_PTS_ratio": 0.5205479452054794,
-  "1Q_PTS_ratio": 0.3470319634703196,
-  "1H_REB_ratio": 0.5437710437710438,
-  "1Q_REB_ratio": 0.3998316498316498,
-  "1H_AST_ratio": 0.433048433048433,
-  "1Q_AST_ratio": 0.2706552706552706
+  "last_updated": "2026-02-08T04:45:33.775081",
+  "1Q_PTS_avg": 1.3928571428571428,
+  "1Q_REB_avg": 0.9285714285714286,
+  "1Q_AST_avg": 0.17857142857142858,
+  "1H_PTS_avg": 2.142857142857143,
+  "1H_REB_avg": 1.2857142857142858,
+  "1H_AST_avg": 0.2857142857142857,
+  "FULL_PTS_avg": 4.25,
+  "FULL_REB_avg": 2.3,
+  "FULL_AST_avg": 0.65,
+  "1H_PTS_ratio": 0.5042016806722689,
+  "1Q_PTS_ratio": 0.3277310924369748,
+  "1H_REB_ratio": 0.5590062111801243,
+  "1Q_REB_ratio": 0.4037267080745342,
+  "1H_AST_ratio": 0.4395604395604395,
+  "1Q_AST_ratio": 0.27472527472527475
 }

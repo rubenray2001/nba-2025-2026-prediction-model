@@ -1,8 +1,25 @@
 {
   "player_name": "Marcus Smart",
   "player_id": 203935,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500753",
+      "player_id": 203935,
+      "player_name": "Marcus Smart",
+      "1Q_PTS": "3",
+      "1Q_REB": "0",
+      "1Q_AST": "1",
+      "1Q_MIN": "7:34",
+      "1H_PTS": "5",
+      "1H_REB": "1",
+      "1H_AST": "2",
+      "1H_MIN": "14:01",
+      "FULL_PTS": "15",
+      "FULL_REB": "3",
+      "FULL_AST": "4",
+      "FULL_MIN": "32:32"
+    },
     {
       "game_id": "0022500740",
       "player_id": 203935,
@@ -542,20 +559,20 @@
       "1H_MIN": "16:36"
     }
   ],
-  "last_updated": "2026-02-06T23:04:23.928057",
-  "1Q_PTS_avg": 1.7647058823529411,
-  "1Q_REB_avg": 0.8529411764705882,
-  "1Q_AST_avg": 0.6470588235294118,
-  "1H_PTS_avg": 4.147058823529412,
-  "1H_REB_avg": 1.7352941176470589,
-  "1H_AST_avg": 1.1764705882352942,
-  "FULL_PTS_avg": 8.583333333333334,
-  "FULL_REB_avg": 3.125,
-  "FULL_AST_avg": 2.875,
-  "1H_PTS_ratio": 0.48315248429468877,
-  "1Q_PTS_ratio": 0.2055968018275271,
-  "1H_REB_ratio": 0.5552941176470588,
-  "1Q_REB_ratio": 0.27294117647058824,
-  "1H_AST_ratio": 0.4092071611253197,
-  "1Q_AST_ratio": 0.22506393861892585
+  "last_updated": "2026-02-08T05:18:14.584856",
+  "1Q_PTS_avg": 1.8,
+  "1Q_REB_avg": 0.8285714285714286,
+  "1Q_AST_avg": 0.6571428571428571,
+  "1H_PTS_avg": 4.171428571428572,
+  "1H_REB_avg": 1.7142857142857142,
+  "1H_AST_avg": 1.2,
+  "FULL_PTS_avg": 8.84,
+  "FULL_REB_avg": 3.12,
+  "FULL_AST_avg": 2.92,
+  "1H_PTS_ratio": 0.4718810601163543,
+  "1Q_PTS_ratio": 0.20361990950226244,
+  "1H_REB_ratio": 0.5494505494505494,
+  "1Q_REB_ratio": 0.26556776556776557,
+  "1H_AST_ratio": 0.410958904109589,
+  "1Q_AST_ratio": 0.22504892367906068
 }

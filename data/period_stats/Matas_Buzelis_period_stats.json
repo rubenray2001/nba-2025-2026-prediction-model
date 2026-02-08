@@ -1,8 +1,25 @@
 {
   "player_name": "Matas Buzelis",
   "player_id": 1641824,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500752",
+      "player_id": 1641824,
+      "player_name": "Matas Buzelis",
+      "1Q_PTS": "8",
+      "1Q_REB": "1",
+      "1Q_AST": "1",
+      "1Q_MIN": "8:21",
+      "1H_PTS": "10",
+      "1H_REB": "7",
+      "1H_AST": "3",
+      "1H_MIN": "17:55",
+      "FULL_PTS": "21",
+      "FULL_REB": "8",
+      "FULL_AST": "3",
+      "FULL_MIN": "30:20"
+    },
     {
       "game_id": "0022500736",
       "player_id": 1641824,
@@ -542,20 +559,20 @@
       "1H_MIN": "12:46"
     }
   ],
-  "last_updated": "2026-02-06T23:05:16.057641",
-  "1Q_PTS_avg": 4.088235294117647,
-  "1Q_REB_avg": 1.4411764705882353,
-  "1Q_AST_avg": 0.6176470588235294,
-  "1H_PTS_avg": 8.088235294117647,
-  "1H_REB_avg": 3.0588235294117645,
-  "1H_AST_avg": 1.3529411764705883,
-  "FULL_PTS_avg": 16.083333333333332,
-  "FULL_REB_avg": 5.291666666666667,
-  "FULL_AST_avg": 2.125,
-  "1H_PTS_ratio": 0.5028954587016153,
-  "1Q_PTS_ratio": 0.2541907954891801,
-  "1H_REB_ratio": 0.5780453913849003,
-  "1Q_REB_ratio": 0.27234830940250115,
-  "1H_AST_ratio": 0.6366782006920415,
-  "1Q_AST_ratio": 0.2906574394463668
+  "last_updated": "2026-02-08T05:19:14.729044",
+  "1Q_PTS_avg": 4.2,
+  "1Q_REB_avg": 1.4285714285714286,
+  "1Q_AST_avg": 0.6285714285714286,
+  "1H_PTS_avg": 8.142857142857142,
+  "1H_REB_avg": 3.1714285714285713,
+  "1H_AST_avg": 1.4,
+  "FULL_PTS_avg": 16.28,
+  "FULL_REB_avg": 5.4,
+  "FULL_AST_avg": 2.16,
+  "1H_PTS_ratio": 0.5001755001755,
+  "1Q_PTS_ratio": 0.25798525798525795,
+  "1H_REB_ratio": 0.5873015873015872,
+  "1Q_REB_ratio": 0.26455026455026454,
+  "1H_AST_ratio": 0.648148148148148,
+  "1Q_AST_ratio": 0.291005291005291
 }

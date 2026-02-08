@@ -1,8 +1,25 @@
 {
   "player_name": "Chet Holmgren",
   "player_id": 1631096,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500748",
+      "player_id": 1631096,
+      "player_name": "Chet Holmgren",
+      "1Q_PTS": "3",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:24",
+      "1H_PTS": "10",
+      "1H_REB": "10",
+      "1H_AST": "0",
+      "1H_MIN": "16:12",
+      "FULL_PTS": "17",
+      "FULL_REB": "14",
+      "FULL_AST": "0",
+      "FULL_MIN": "34:40"
+    },
     {
       "game_id": "0022500723",
       "player_id": 1631096,
@@ -508,20 +525,20 @@
       "1H_MIN": "16:14"
     }
   ],
-  "last_updated": "2026-02-04T08:06:02.607138",
-  "1Q_PTS_avg": 4.84375,
-  "1Q_REB_avg": 2.28125,
-  "1Q_AST_avg": 0.46875,
-  "1H_PTS_avg": 8.90625,
-  "1H_REB_avg": 4.4375,
-  "1H_AST_avg": 0.84375,
-  "FULL_PTS_avg": 16.90909090909091,
-  "FULL_REB_avg": 8.136363636363637,
-  "FULL_AST_avg": 1.5909090909090908,
-  "1H_PTS_ratio": 0.5267137096774194,
-  "1Q_PTS_ratio": 0.2864583333333333,
-  "1H_REB_ratio": 0.5453910614525139,
-  "1Q_REB_ratio": 0.28037709497206703,
-  "1H_AST_ratio": 0.5303571428571429,
-  "1Q_AST_ratio": 0.29464285714285715
+  "last_updated": "2026-02-08T04:32:46.972161",
+  "1Q_PTS_avg": 4.787878787878788,
+  "1Q_REB_avg": 2.272727272727273,
+  "1Q_AST_avg": 0.45454545454545453,
+  "1H_PTS_avg": 8.93939393939394,
+  "1H_REB_avg": 4.606060606060606,
+  "1H_AST_avg": 0.8181818181818182,
+  "FULL_PTS_avg": 16.91304347826087,
+  "FULL_REB_avg": 8.391304347826088,
+  "FULL_AST_avg": 1.5217391304347827,
+  "1H_PTS_ratio": 0.528550284334346,
+  "1Q_PTS_ratio": 0.28308794889771755,
+  "1H_REB_ratio": 0.5489087768880515,
+  "1Q_REB_ratio": 0.27084314649081487,
+  "1H_AST_ratio": 0.5376623376623376,
+  "1Q_AST_ratio": 0.2987012987012987
 }

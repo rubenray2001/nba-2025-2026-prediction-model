@@ -1,8 +1,25 @@
 {
   "player_name": "Toumani Camara",
   "player_id": 1641739,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500755",
+      "player_id": 1641739,
+      "player_name": "Toumani Camara",
+      "1Q_PTS": "0",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:12",
+      "1H_PTS": "3",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "13:30",
+      "FULL_PTS": "8",
+      "FULL_REB": "7",
+      "FULL_AST": "1",
+      "FULL_MIN": "33:48"
+    },
     {
       "game_id": "0022500745",
       "player_id": 1641739,
@@ -542,20 +559,20 @@
       "1H_MIN": "18:55"
     }
   ],
-  "last_updated": "2026-02-06T23:27:14.191314",
-  "1Q_PTS_avg": 4.5588235294117645,
-  "1Q_REB_avg": 1.3529411764705883,
-  "1Q_AST_avg": 0.7941176470588235,
-  "1H_PTS_avg": 6.911764705882353,
-  "1H_REB_avg": 2.5294117647058822,
-  "1H_AST_avg": 1.411764705882353,
-  "FULL_PTS_avg": 12.958333333333334,
-  "FULL_REB_avg": 5.291666666666667,
-  "FULL_AST_avg": 2.6666666666666665,
-  "1H_PTS_ratio": 0.5333837715150369,
-  "1Q_PTS_ratio": 0.3518063173822583,
-  "1H_REB_ratio": 0.47799907364520605,
-  "1Q_REB_ratio": 0.2556739231125521,
-  "1H_AST_ratio": 0.5294117647058825,
-  "1Q_AST_ratio": 0.2977941176470588
+  "last_updated": "2026-02-08T05:41:11.060723",
+  "1Q_PTS_avg": 4.428571428571429,
+  "1Q_REB_avg": 1.3714285714285714,
+  "1Q_AST_avg": 0.7714285714285715,
+  "1H_PTS_avg": 6.8,
+  "1H_REB_avg": 2.5428571428571427,
+  "1H_AST_avg": 1.3714285714285714,
+  "FULL_PTS_avg": 12.76,
+  "FULL_REB_avg": 5.36,
+  "FULL_AST_avg": 2.6,
+  "1H_PTS_ratio": 0.5329153605015674,
+  "1Q_PTS_ratio": 0.34706672637707126,
+  "1H_REB_ratio": 0.47441364605543707,
+  "1Q_REB_ratio": 0.255863539445629,
+  "1H_AST_ratio": 0.5274725274725275,
+  "1Q_AST_ratio": 0.2967032967032967
 }

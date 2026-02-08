@@ -1,8 +1,25 @@
 {
   "player_name": "Victor Wembanyama",
   "player_id": 1641705,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500749",
+      "player_id": 1641705,
+      "player_name": "Victor Wembanyama",
+      "1Q_PTS": "7",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:43",
+      "1H_PTS": "12",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "14:13",
+      "FULL_PTS": "16",
+      "FULL_REB": "11",
+      "FULL_AST": "1",
+      "FULL_MIN": "26:43"
+    },
     {
       "game_id": "0022500738",
       "player_id": 1641705,
@@ -538,20 +555,20 @@
       "1H_MIN": "11:57"
     }
   ],
-  "last_updated": "2026-02-06T23:31:07.363647",
-  "1Q_PTS_avg": 4.666666666666667,
-  "1Q_REB_avg": 2.1515151515151514,
-  "1Q_AST_avg": 0.6060606060606061,
-  "1H_PTS_avg": 10.882352941176471,
-  "1H_REB_avg": 5.147058823529412,
-  "1H_AST_avg": 1.3235294117647058,
-  "FULL_PTS_avg": 22.875,
-  "FULL_REB_avg": 11.083333333333334,
-  "FULL_AST_avg": 3.3333333333333335,
-  "1H_PTS_ratio": 0.4757312761170042,
-  "1Q_PTS_ratio": 0.2040072859744991,
-  "1H_REB_ratio": 0.4643962848297214,
-  "1Q_REB_ratio": 0.1941216678058783,
-  "1H_AST_ratio": 0.39705882352941174,
-  "1Q_AST_ratio": 0.18181818181818182
+  "last_updated": "2026-02-08T05:44:53.377387",
+  "1Q_PTS_avg": 4.735294117647059,
+  "1Q_REB_avg": 2.1470588235294117,
+  "1Q_AST_avg": 0.5882352941176471,
+  "1H_PTS_avg": 10.914285714285715,
+  "1H_REB_avg": 5.085714285714285,
+  "1H_AST_avg": 1.2857142857142858,
+  "FULL_PTS_avg": 22.6,
+  "FULL_REB_avg": 11.08,
+  "FULL_AST_avg": 3.24,
+  "1H_PTS_ratio": 0.4829329962073325,
+  "1Q_PTS_ratio": 0.20952628839146276,
+  "1H_REB_ratio": 0.45899948427024234,
+  "1Q_REB_ratio": 0.1937778721596942,
+  "1H_AST_ratio": 0.3968253968253968,
+  "1Q_AST_ratio": 0.18155410312273057
 }

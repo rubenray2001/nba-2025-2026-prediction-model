@@ -1,8 +1,25 @@
 {
   "player_name": "Rob Dillingham",
   "player_id": 1642265,
-  "games_collected": 21,
+  "games_collected": 22,
   "games_data": [
+    {
+      "game_id": "0022500752",
+      "player_id": 1642265,
+      "player_name": "Rob Dillingham",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "3:39",
+      "1H_PTS": "3",
+      "1H_REB": "1",
+      "1H_AST": "0",
+      "1H_MIN": "9:26",
+      "FULL_PTS": "9",
+      "FULL_REB": "3",
+      "FULL_AST": "4",
+      "FULL_MIN": "21:57"
+    },
     {
       "game_id": "0022500368",
       "player_id": 1642265,
@@ -305,20 +322,20 @@
       "1H_MIN": "6:02"
     }
   ],
-  "last_updated": "2026-01-30T14:52:32.254828",
-  "1Q_PTS_avg": 0.2222222222222222,
-  "1Q_REB_avg": 0.1111111111111111,
-  "1Q_AST_avg": 0.1111111111111111,
-  "1H_PTS_avg": 1.9047619047619047,
-  "1H_REB_avg": 0.9047619047619048,
-  "1H_AST_avg": 1.0952380952380953,
-  "FULL_PTS_avg": 3.6842105263157894,
-  "FULL_REB_avg": 1.1578947368421053,
-  "FULL_AST_avg": 1.7894736842105263,
-  "1H_PTS_ratio": 0.5170068027210885,
-  "1Q_PTS_ratio": 0.06031746031746032,
-  "1H_REB_ratio": 0.7813852813852814,
-  "1Q_REB_ratio": 0.09595959595959595,
-  "1H_AST_ratio": 0.6120448179271709,
-  "1Q_AST_ratio": 0.06209150326797385
+  "last_updated": "2026-02-08T05:36:29.858385",
+  "1Q_PTS_avg": 0.2,
+  "1Q_REB_avg": 0.2,
+  "1Q_AST_avg": 0.1,
+  "1H_PTS_avg": 1.9545454545454546,
+  "1H_REB_avg": 0.9090909090909091,
+  "1H_AST_avg": 1.0454545454545454,
+  "FULL_PTS_avg": 3.95,
+  "FULL_REB_avg": 1.25,
+  "FULL_AST_avg": 1.9,
+  "1H_PTS_ratio": 0.49482163406214036,
+  "1Q_PTS_ratio": 0.05063291139240506,
+  "1H_REB_ratio": 0.7272727272727273,
+  "1Q_REB_ratio": 0.16,
+  "1H_AST_ratio": 0.5502392344497608,
+  "1Q_AST_ratio": 0.052631578947368425
 }

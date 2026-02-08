@@ -1,8 +1,25 @@
 {
   "player_name": "Nikola Joki\u0107",
   "player_id": 203999,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500752",
+      "player_id": 203999,
+      "player_name": "Nikola Joki\u0107",
+      "1Q_PTS": "7",
+      "1Q_REB": "5",
+      "1Q_AST": "5",
+      "1Q_MIN": "8:21",
+      "1H_PTS": "9",
+      "1H_REB": "11",
+      "1H_AST": "7",
+      "1H_MIN": "17:16",
+      "FULL_PTS": "22",
+      "FULL_REB": "14",
+      "FULL_AST": "17",
+      "FULL_MIN": "33:24"
+    },
     {
       "game_id": "0022500726",
       "player_id": 203999,
@@ -542,20 +559,20 @@
       "1H_MIN": "16:02"
     }
   ],
-  "last_updated": "2026-02-05T09:28:32.094016",
-  "1Q_PTS_avg": 8.588235294117647,
-  "1Q_REB_avg": 4.117647058823529,
-  "1Q_AST_avg": 3.5588235294117645,
-  "1H_PTS_avg": 14.117647058823529,
-  "1H_REB_avg": 6.0588235294117645,
-  "1H_AST_avg": 5.617647058823529,
-  "FULL_PTS_avg": 29.333333333333332,
-  "FULL_REB_avg": 12.166666666666666,
-  "FULL_AST_avg": 10.125,
-  "1H_PTS_ratio": 0.48128342245989303,
-  "1Q_PTS_ratio": 0.2927807486631016,
-  "1H_REB_ratio": 0.49798549556809024,
-  "1Q_REB_ratio": 0.338436744560838,
-  "1H_AST_ratio": 0.5548293391430645,
-  "1Q_AST_ratio": 0.3514887436456064
+  "last_updated": "2026-02-08T05:25:57.713369",
+  "1Q_PTS_avg": 8.542857142857143,
+  "1Q_REB_avg": 4.142857142857143,
+  "1Q_AST_avg": 3.6,
+  "1H_PTS_avg": 13.971428571428572,
+  "1H_REB_avg": 6.2,
+  "1H_AST_avg": 5.6571428571428575,
+  "FULL_PTS_avg": 29.04,
+  "FULL_REB_avg": 12.24,
+  "FULL_AST_avg": 10.4,
+  "1H_PTS_ratio": 0.4811097992916175,
+  "1Q_PTS_ratio": 0.2941755214482487,
+  "1H_REB_ratio": 0.5065359477124183,
+  "1Q_REB_ratio": 0.338468720821662,
+  "1H_AST_ratio": 0.543956043956044,
+  "1Q_AST_ratio": 0.34615384615384615
 }
