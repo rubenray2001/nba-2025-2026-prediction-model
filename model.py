@@ -333,67 +333,30 @@ class NBA1HEnsembleModel:
             ratio = real_ratio
         
         # =====================================================================
-        # CONTEXTUAL ADJUSTMENTS (apply to ALL paths)
-        # Opponent, home/away, rest affect performance regardless of data source
-        # =====================================================================
-        context_multiplier = 1.0
-        
-        is_home = features.get('IS_HOME', 0)
-        is_b2b = features.get('IS_B2B', 0)
-        opp_def_tier = features.get('OPP_DEF_TIER', 3)
-        opp_pace_tier = features.get('OPP_PACE_TIER', 3)
-        
-        # Home court advantage (+1.5%)
-        if is_home:
-            context_multiplier *= 1.015
-        else:
-            context_multiplier *= 0.985
-        
-        # Back-to-back fatigue (-4%)
-        if is_b2b:
-            context_multiplier *= 0.96
-        
-        # Opponent defense impact (tier 1=elite, 5=worst)
-        if opp_def_tier <= 2:
-            context_multiplier *= 0.96  # Tougher defense, slightly less scoring
-        elif opp_def_tier >= 4:
-            context_multiplier *= 1.04  # Weaker defense, slightly more scoring
-        
-        # Pace impact
-        if opp_pace_tier >= 4:
-            context_multiplier *= 1.02  # Faster pace, more possessions
-        elif opp_pace_tier <= 2:
-            context_multiplier *= 0.98  # Slower pace
-        
-        # =====================================================================
-        # FINAL PREDICTION: Blend real data + ML model + stats with context
+        # FINAL PREDICTION
+        # Priority: Real period data > ML+Stats blend > Stats estimation
+        # Real 1H/1Q averages are the most accurate predictor.
+        # ML models are used as a VALIDATION signal in the lock score,
+        # not to distort the core prediction.
         # =====================================================================
         if has_real_data and real_period_avg is not None:
-            # Real period data available - use as primary anchor
-            real_pred = real_period_avg * context_multiplier
-            
-            if ml_available:
-                # ML model predicts FULL GAME - convert to period
-                ml_period_pred = ml_pred * ratio * context_multiplier
-                # Blend: 60% real period data, 40% ML model
-                # Real data is most reliable but ML captures patterns/context
-                period_pred = real_pred * 0.60 + ml_period_pred * 0.40
-            else:
-                period_pred = real_pred
-            
+            # USE REAL PERIOD AVERAGE - proven most accurate
+            period_pred = real_period_avg
             full_game_pred = period_pred / ratio if ratio > 0 else period_pred * 2
-            data_source = "REAL+ML" if ml_available else "REAL"
-        elif ml_available:
-            # No real period data, but ML model is available
-            # Blend ML model (60%) with stats-based (40%)
-            ml_full_game = ml_pred * context_multiplier
-            stats_full_game = stats_pred * context_multiplier
-            full_game_pred = ml_full_game * 0.60 + stats_full_game * 0.40
-            period_pred = full_game_pred * ratio
-            data_source = "ML+STATS"
+            data_source = "REAL"
         else:
-            # No ML, no real data - pure stats estimation
-            full_game_pred = stats_pred * context_multiplier
+            # No real period data - use stats-based estimation
+            full_game_pred = stats_pred
+            
+            # Apply contextual adjustments (only on estimated path)
+            is_home = features.get('IS_HOME', 0)
+            is_b2b = features.get('IS_B2B', 0)
+            
+            if is_home:
+                full_game_pred *= 1.02
+            if is_b2b:
+                full_game_pred *= 0.95
+            
             period_pred = full_game_pred * ratio
             data_source = "ESTIMATED"
         
