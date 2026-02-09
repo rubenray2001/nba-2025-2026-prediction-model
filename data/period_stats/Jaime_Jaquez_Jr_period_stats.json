@@ -1,8 +1,25 @@
 {
   "player_name": "Jaime Jaquez Jr",
   "player_id": 1631170,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500758",
+      "player_id": 1631170,
+      "player_name": "Jaime Jaquez Jr",
+      "1Q_PTS": "2",
+      "1Q_REB": "4",
+      "1Q_AST": "1",
+      "1Q_MIN": "9:33",
+      "1H_PTS": "2",
+      "1H_REB": "4",
+      "1H_AST": "5",
+      "1H_MIN": "15:35",
+      "FULL_PTS": "4",
+      "FULL_REB": "4",
+      "FULL_AST": "6",
+      "FULL_MIN": "23:31"
+    },
     {
       "game_id": "0022500741",
       "player_id": 1631170,
@@ -542,20 +559,20 @@
       "1H_MIN": "9:57"
     }
   ],
-  "last_updated": "2026-02-06T22:36:42.962931",
-  "1Q_PTS_avg": 3.4411764705882355,
-  "1Q_REB_avg": 1.2941176470588236,
-  "1Q_AST_avg": 1.088235294117647,
-  "1H_PTS_avg": 7.529411764705882,
-  "1H_REB_avg": 2.911764705882353,
-  "1H_AST_avg": 2.264705882352941,
-  "FULL_PTS_avg": 16.041666666666668,
-  "FULL_REB_avg": 4.791666666666667,
-  "FULL_AST_avg": 4.583333333333333,
-  "1H_PTS_ratio": 0.46936592818945755,
-  "1Q_PTS_ratio": 0.21451489686783803,
-  "1H_REB_ratio": 0.6076726342710996,
-  "1Q_REB_ratio": 0.270076726342711,
-  "1H_AST_ratio": 0.49411764705882355,
-  "1Q_AST_ratio": 0.2374331550802139
+  "last_updated": "2026-02-09T07:12:45.180403",
+  "1Q_PTS_avg": 3.4,
+  "1Q_REB_avg": 1.3714285714285714,
+  "1Q_AST_avg": 1.0857142857142856,
+  "1H_PTS_avg": 7.371428571428571,
+  "1H_REB_avg": 2.942857142857143,
+  "1H_AST_avg": 2.342857142857143,
+  "FULL_PTS_avg": 15.56,
+  "FULL_REB_avg": 4.76,
+  "FULL_AST_avg": 4.64,
+  "1H_PTS_ratio": 0.4737421961072346,
+  "1Q_PTS_ratio": 0.2185089974293059,
+  "1H_REB_ratio": 0.6182472989195679,
+  "1Q_REB_ratio": 0.2881152460984394,
+  "1H_AST_ratio": 0.5049261083743843,
+  "1Q_AST_ratio": 0.23399014778325122
 }

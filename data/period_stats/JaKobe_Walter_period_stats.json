@@ -1,8 +1,25 @@
 {
   "player_name": "JaKobe Walter",
   "player_id": 1642266,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500759",
+      "player_id": 1642266,
+      "player_name": "JaKobe Walter",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "2:50",
+      "1H_PTS": "3",
+      "1H_REB": "2",
+      "1H_AST": "1",
+      "1H_MIN": "10:40",
+      "FULL_PTS": "6",
+      "FULL_REB": "4",
+      "FULL_AST": "2",
+      "FULL_MIN": "27:15"
+    },
     {
       "game_id": "0022500736",
       "player_id": 1642266,
@@ -534,20 +551,20 @@
       "1H_MIN": "11:53"
     }
   ],
-  "last_updated": "2026-02-06T22:36:50.904100",
-  "1Q_PTS_avg": 1.875,
-  "1Q_REB_avg": 0.5625,
-  "1Q_AST_avg": 0.21875,
-  "1H_PTS_avg": 3.2941176470588234,
-  "1H_REB_avg": 1.0588235294117647,
-  "1H_AST_avg": 0.5294117647058824,
-  "FULL_PTS_avg": 7.125,
-  "FULL_REB_avg": 2.125,
-  "FULL_AST_avg": 0.9583333333333334,
-  "1H_PTS_ratio": 0.46233230134158926,
-  "1Q_PTS_ratio": 0.2631578947368421,
-  "1H_REB_ratio": 0.49826989619377166,
-  "1Q_REB_ratio": 0.2647058823529412,
-  "1H_AST_ratio": 0.5524296675191815,
-  "1Q_AST_ratio": 0.22826086956521738
+  "last_updated": "2026-02-09T07:12:49.910053",
+  "1Q_PTS_avg": 1.8181818181818181,
+  "1Q_REB_avg": 0.5454545454545454,
+  "1Q_AST_avg": 0.21212121212121213,
+  "1H_PTS_avg": 3.2857142857142856,
+  "1H_REB_avg": 1.0857142857142856,
+  "1H_AST_avg": 0.5428571428571428,
+  "FULL_PTS_avg": 7.08,
+  "FULL_REB_avg": 2.2,
+  "FULL_AST_avg": 1.0,
+  "1H_PTS_ratio": 0.4640839386602098,
+  "1Q_PTS_ratio": 0.25680534155110424,
+  "1H_REB_ratio": 0.49350649350649345,
+  "1Q_REB_ratio": 0.2479338842975206,
+  "1H_AST_ratio": 0.5428571428571428,
+  "1Q_AST_ratio": 0.21212121212121213
 }

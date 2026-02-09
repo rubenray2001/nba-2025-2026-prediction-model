@@ -1,8 +1,25 @@
 {
   "player_name": "Ben Sheppard",
   "player_id": 1641767,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500759",
+      "player_id": 1641767,
+      "player_name": "Ben Sheppard",
+      "1Q_PTS": "2",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:26",
+      "1H_PTS": "5",
+      "1H_REB": "2",
+      "1H_AST": "0",
+      "1H_MIN": "9:51",
+      "FULL_PTS": "12",
+      "FULL_REB": "5",
+      "FULL_AST": "4",
+      "FULL_MIN": "26:51"
+    },
     {
       "game_id": "0022500743",
       "player_id": 1641767,
@@ -542,20 +559,20 @@
       "1H_MIN": "13:52"
     }
   ],
-  "last_updated": "2026-02-06T22:09:16.705882",
-  "1Q_PTS_avg": 1.588235294117647,
-  "1Q_REB_avg": 0.6470588235294118,
-  "1Q_AST_avg": 0.4411764705882353,
-  "1H_PTS_avg": 3.2058823529411766,
-  "1H_REB_avg": 1.088235294117647,
-  "1H_AST_avg": 0.8235294117647058,
-  "FULL_PTS_avg": 6.75,
-  "FULL_REB_avg": 3.0416666666666665,
-  "FULL_AST_avg": 1.6666666666666667,
-  "1H_PTS_ratio": 0.4749455337690632,
-  "1Q_PTS_ratio": 0.23529411764705882,
-  "1H_REB_ratio": 0.3577759871071716,
-  "1Q_REB_ratio": 0.21273166800966964,
-  "1H_AST_ratio": 0.4941176470588235,
-  "1Q_AST_ratio": 0.2647058823529412
+  "last_updated": "2026-02-09T06:48:00.334906",
+  "1Q_PTS_avg": 1.6,
+  "1Q_REB_avg": 0.6571428571428571,
+  "1Q_AST_avg": 0.42857142857142855,
+  "1H_PTS_avg": 3.257142857142857,
+  "1H_REB_avg": 1.1142857142857143,
+  "1H_AST_avg": 0.8,
+  "FULL_PTS_avg": 6.96,
+  "FULL_REB_avg": 3.12,
+  "FULL_AST_avg": 1.76,
+  "1H_PTS_ratio": 0.46798029556650245,
+  "1Q_PTS_ratio": 0.2298850574712644,
+  "1H_REB_ratio": 0.35714285714285715,
+  "1Q_REB_ratio": 0.21062271062271062,
+  "1H_AST_ratio": 0.4545454545454546,
+  "1Q_AST_ratio": 0.2435064935064935
 }

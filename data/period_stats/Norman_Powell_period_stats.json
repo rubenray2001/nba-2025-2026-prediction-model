@@ -1,8 +1,25 @@
 {
   "player_name": "Norman Powell",
   "player_id": 1626181,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500758",
+      "player_id": 1626181,
+      "player_name": "Norman Powell",
+      "1Q_PTS": "6",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "7:43",
+      "1H_PTS": "15",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "16:35",
+      "FULL_PTS": "21",
+      "FULL_REB": "4",
+      "FULL_AST": "0",
+      "FULL_MIN": "25:00"
+    },
     {
       "game_id": "0022500741",
       "player_id": 1626181,
@@ -491,20 +508,20 @@
       "1H_MIN": "14:48"
     }
   ],
-  "last_updated": "2026-02-06T23:13:30.599788",
-  "1Q_PTS_avg": 5.741935483870968,
-  "1Q_REB_avg": 1.032258064516129,
-  "1Q_AST_avg": 0.8064516129032258,
-  "1H_PTS_avg": 11.838709677419354,
-  "1H_REB_avg": 2.0,
-  "1H_AST_avg": 1.4193548387096775,
-  "FULL_PTS_avg": 23.761904761904763,
-  "FULL_REB_avg": 3.4285714285714284,
-  "FULL_AST_avg": 2.857142857142857,
-  "1H_PTS_ratio": 0.4982222509535199,
-  "1Q_PTS_ratio": 0.24164457948154372,
-  "1H_REB_ratio": 0.5833333333333334,
-  "1Q_REB_ratio": 0.3010752688172043,
-  "1H_AST_ratio": 0.4967741935483871,
-  "1Q_AST_ratio": 0.282258064516129
+  "last_updated": "2026-02-09T07:57:19.115168",
+  "1Q_PTS_avg": 5.75,
+  "1Q_REB_avg": 1.0,
+  "1Q_AST_avg": 0.78125,
+  "1H_PTS_avg": 11.9375,
+  "1H_REB_avg": 2.03125,
+  "1H_AST_avg": 1.375,
+  "FULL_PTS_avg": 23.636363636363637,
+  "FULL_REB_avg": 3.4545454545454546,
+  "FULL_AST_avg": 2.727272727272727,
+  "1H_PTS_ratio": 0.505048076923077,
+  "1Q_PTS_ratio": 0.24326923076923077,
+  "1H_REB_ratio": 0.5879934210526315,
+  "1Q_REB_ratio": 0.2894736842105263,
+  "1H_AST_ratio": 0.5041666666666667,
+  "1Q_AST_ratio": 0.28645833333333337
 }

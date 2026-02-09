@@ -1,8 +1,25 @@
 {
   "player_name": "Simone Fontecchio",
   "player_id": 1631323,
-  "games_collected": 28,
+  "games_collected": 29,
   "games_data": [
+    {
+      "game_id": "0022500758",
+      "player_id": 1631323,
+      "player_name": "Simone Fontecchio",
+      "1Q_PTS": "5",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:17",
+      "1H_PTS": "8",
+      "1H_REB": "3",
+      "1H_AST": "2",
+      "1H_MIN": "9:05",
+      "FULL_PTS": "12",
+      "FULL_REB": "5",
+      "FULL_AST": "3",
+      "FULL_MIN": "19:04"
+    },
     {
       "game_id": "0022500741",
       "player_id": 1631323,
@@ -432,20 +449,20 @@
       "1H_MIN": "7:14"
     }
   ],
-  "last_updated": "2026-02-06T23:24:18.120094",
-  "1Q_PTS_avg": 1.4166666666666667,
-  "1Q_REB_avg": 0.9583333333333334,
-  "1Q_AST_avg": 0.5833333333333334,
-  "1H_PTS_avg": 4.357142857142857,
-  "1H_REB_avg": 2.2142857142857144,
-  "1H_AST_avg": 1.1785714285714286,
-  "FULL_PTS_avg": 6.7,
-  "FULL_REB_avg": 3.45,
-  "FULL_AST_avg": 1.95,
-  "1H_PTS_ratio": 0.650319829424307,
-  "1Q_PTS_ratio": 0.21144278606965175,
-  "1H_REB_ratio": 0.6418219461697723,
-  "1Q_REB_ratio": 0.2777777777777778,
-  "1H_AST_ratio": 0.6043956043956045,
-  "1Q_AST_ratio": 0.2991452991452992
+  "last_updated": "2026-02-09T08:11:56.700126",
+  "1Q_PTS_avg": 1.56,
+  "1Q_REB_avg": 1.0,
+  "1Q_AST_avg": 0.56,
+  "1H_PTS_avg": 4.482758620689655,
+  "1H_REB_avg": 2.2413793103448274,
+  "1H_AST_avg": 1.206896551724138,
+  "FULL_PTS_avg": 6.9523809523809526,
+  "FULL_REB_avg": 3.5238095238095237,
+  "FULL_AST_avg": 2.0,
+  "1H_PTS_ratio": 0.6447803495512517,
+  "1Q_PTS_ratio": 0.2243835616438356,
+  "1H_REB_ratio": 0.6360671015843429,
+  "1Q_REB_ratio": 0.28378378378378377,
+  "1H_AST_ratio": 0.603448275862069,
+  "1Q_AST_ratio": 0.28
 }

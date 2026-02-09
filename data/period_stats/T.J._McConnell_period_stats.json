@@ -1,8 +1,25 @@
 {
   "player_name": "T.J. McConnell",
   "player_id": 204456,
-  "games_collected": 31,
+  "games_collected": 32,
   "games_data": [
+    {
+      "game_id": "0022500759",
+      "player_id": 204456,
+      "player_name": "T.J. McConnell",
+      "1Q_PTS": "0",
+      "1Q_REB": "2",
+      "1Q_AST": "2",
+      "1Q_MIN": "5:11",
+      "1H_PTS": "2",
+      "1H_REB": "2",
+      "1H_AST": "3",
+      "1H_MIN": "8:50",
+      "FULL_PTS": "10",
+      "FULL_REB": "3",
+      "FULL_AST": "7",
+      "FULL_MIN": "15:43"
+    },
     {
       "game_id": "0022500743",
       "player_id": 204456,
@@ -531,20 +548,20 @@
       "FULL_MIN": "17:31"
     }
   ],
-  "last_updated": "2026-02-06T23:24:36.302720",
-  "1Q_PTS_avg": 2.935483870967742,
-  "1Q_REB_avg": 0.5161290322580645,
-  "1Q_AST_avg": 1.2580645161290323,
-  "1H_PTS_avg": 5.0,
-  "1H_REB_avg": 1.1612903225806452,
+  "last_updated": "2026-02-09T08:12:06.234212",
+  "1Q_PTS_avg": 2.84375,
+  "1Q_REB_avg": 0.5625,
+  "1Q_AST_avg": 1.28125,
+  "1H_PTS_avg": 4.90625,
+  "1H_REB_avg": 1.1875,
   "1H_AST_avg": 3.0,
-  "FULL_PTS_avg": 9.483870967741936,
-  "FULL_REB_avg": 2.2580645161290325,
-  "FULL_AST_avg": 5.032258064516129,
-  "1H_PTS_ratio": 0.5272108843537414,
-  "1Q_PTS_ratio": 0.30952380952380953,
-  "1H_REB_ratio": 0.5142857142857142,
-  "1Q_REB_ratio": 0.22857142857142854,
-  "1H_AST_ratio": 0.5961538461538461,
-  "1Q_AST_ratio": 0.25
+  "FULL_PTS_avg": 9.5,
+  "FULL_REB_avg": 2.28125,
+  "FULL_AST_avg": 5.09375,
+  "1H_PTS_ratio": 0.5164473684210527,
+  "1Q_PTS_ratio": 0.2993421052631579,
+  "1H_REB_ratio": 0.5205479452054794,
+  "1Q_REB_ratio": 0.2465753424657534,
+  "1H_AST_ratio": 0.588957055214724,
+  "1Q_AST_ratio": 0.25153374233128833
 }

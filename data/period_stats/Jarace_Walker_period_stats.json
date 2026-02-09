@@ -1,8 +1,25 @@
 {
   "player_name": "Jarace Walker",
   "player_id": 1641716,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500759",
+      "player_id": 1641716,
+      "player_name": "Jarace Walker",
+      "1Q_PTS": "5",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "6:41",
+      "1H_PTS": "8",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "11:54",
+      "FULL_PTS": "13",
+      "FULL_REB": "6",
+      "FULL_AST": "2",
+      "FULL_MIN": "27:52"
+    },
     {
       "game_id": "0022500743",
       "player_id": 1641716,
@@ -542,20 +559,20 @@
       "1H_MIN": "13:23"
     }
   ],
-  "last_updated": "2026-02-06T22:39:46.491166",
-  "1Q_PTS_avg": 2.823529411764706,
-  "1Q_REB_avg": 1.5,
-  "1Q_AST_avg": 0.5294117647058824,
-  "1H_PTS_avg": 5.176470588235294,
-  "1H_REB_avg": 2.3823529411764706,
-  "1H_AST_avg": 0.8823529411764706,
-  "FULL_PTS_avg": 8.666666666666666,
-  "FULL_REB_avg": 3.8333333333333335,
-  "FULL_AST_avg": 1.4166666666666667,
-  "1H_PTS_ratio": 0.5972850678733033,
-  "1Q_PTS_ratio": 0.32579185520362,
-  "1H_REB_ratio": 0.6214833759590792,
-  "1Q_REB_ratio": 0.3913043478260869,
-  "1H_AST_ratio": 0.6228373702422145,
-  "1Q_AST_ratio": 0.3737024221453287
+  "last_updated": "2026-02-09T07:15:20.757808",
+  "1Q_PTS_avg": 2.8857142857142857,
+  "1Q_REB_avg": 1.5142857142857142,
+  "1Q_AST_avg": 0.5142857142857142,
+  "1H_PTS_avg": 5.257142857142857,
+  "1H_REB_avg": 2.4,
+  "1H_AST_avg": 0.8571428571428571,
+  "FULL_PTS_avg": 8.84,
+  "FULL_REB_avg": 3.92,
+  "FULL_AST_avg": 1.44,
+  "1H_PTS_ratio": 0.59469941822883,
+  "1Q_PTS_ratio": 0.3264382676147382,
+  "1H_REB_ratio": 0.6122448979591837,
+  "1Q_REB_ratio": 0.38629737609329445,
+  "1H_AST_ratio": 0.5952380952380952,
+  "1Q_AST_ratio": 0.3571428571428571
 }

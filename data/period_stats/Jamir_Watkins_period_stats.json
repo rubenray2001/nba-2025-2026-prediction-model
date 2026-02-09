@@ -1,8 +1,25 @@
 {
   "player_name": "Jamir Watkins",
   "player_id": 1642364,
-  "games_collected": 23,
+  "games_collected": 24,
   "games_data": [
+    {
+      "game_id": "0022500758",
+      "player_id": 1642364,
+      "player_name": "Jamir Watkins",
+      "1Q_PTS": "2",
+      "1Q_REB": "2",
+      "1Q_AST": "0",
+      "1Q_MIN": "5:45",
+      "1H_PTS": "2",
+      "1H_REB": "3",
+      "1H_AST": "0",
+      "1H_MIN": "14:29",
+      "FULL_PTS": "12",
+      "FULL_REB": "7",
+      "FULL_AST": "2",
+      "FULL_MIN": "33:25"
+    },
     {
       "game_id": "0022500747",
       "player_id": 1642364,
@@ -347,20 +364,20 @@
       "1H_MIN": "5:45"
     }
   ],
-  "last_updated": "2026-02-08T04:53:07.194842",
-  "1Q_PTS_avg": 0.75,
-  "1Q_REB_avg": 0.65,
-  "1Q_AST_avg": 0.2,
-  "1H_PTS_avg": 1.9130434782608696,
-  "1H_REB_avg": 1.4782608695652173,
-  "1H_AST_avg": 0.2608695652173913,
-  "FULL_PTS_avg": 4.857142857142857,
-  "FULL_REB_avg": 3.5,
-  "FULL_AST_avg": 0.6428571428571429,
-  "1H_PTS_ratio": 0.39386189258312027,
-  "1Q_PTS_ratio": 0.15441176470588236,
-  "1H_REB_ratio": 0.42236024844720493,
-  "1Q_REB_ratio": 0.18571428571428572,
-  "1H_AST_ratio": 0.40579710144927533,
-  "1Q_AST_ratio": 0.3111111111111111
+  "last_updated": "2026-02-09T07:14:40.381086",
+  "1Q_PTS_avg": 0.8095238095238095,
+  "1Q_REB_avg": 0.7142857142857143,
+  "1Q_AST_avg": 0.19047619047619047,
+  "1H_PTS_avg": 1.9166666666666667,
+  "1H_REB_avg": 1.5416666666666667,
+  "1H_AST_avg": 0.25,
+  "FULL_PTS_avg": 5.333333333333333,
+  "FULL_REB_avg": 3.7333333333333334,
+  "FULL_AST_avg": 0.7333333333333333,
+  "1H_PTS_ratio": 0.35937500000000006,
+  "1Q_PTS_ratio": 0.1517857142857143,
+  "1H_REB_ratio": 0.4129464285714286,
+  "1Q_REB_ratio": 0.1913265306122449,
+  "1H_AST_ratio": 0.34090909090909094,
+  "1Q_AST_ratio": 0.25974025974025977
 }

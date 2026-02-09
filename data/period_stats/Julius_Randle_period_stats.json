@@ -1,8 +1,25 @@
 {
   "player_name": "Julius Randle",
   "player_id": 203944,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500760",
+      "player_id": 203944,
+      "player_name": "Julius Randle",
+      "1Q_PTS": "0",
+      "1Q_REB": "2",
+      "1Q_AST": "1",
+      "1Q_MIN": "8:42",
+      "1H_PTS": "6",
+      "1H_REB": "5",
+      "1H_AST": "2",
+      "1H_MIN": "16:05",
+      "FULL_PTS": "17",
+      "FULL_REB": "8",
+      "FULL_AST": "2",
+      "FULL_MIN": "33:26"
+    },
     {
       "game_id": "0022500744",
       "player_id": 203944,
@@ -542,20 +559,20 @@
       "1H_MIN": "15:52"
     }
   ],
-  "last_updated": "2026-02-06T22:54:03.074407",
-  "1Q_PTS_avg": 5.264705882352941,
-  "1Q_REB_avg": 1.7647058823529411,
-  "1Q_AST_avg": 1.5294117647058822,
-  "1H_PTS_avg": 10.970588235294118,
-  "1H_REB_avg": 2.8823529411764706,
-  "1H_AST_avg": 2.5294117647058822,
-  "FULL_PTS_avg": 20.75,
-  "FULL_REB_avg": 6.583333333333333,
-  "FULL_AST_avg": 5.875,
-  "1H_PTS_ratio": 0.5287030474840538,
-  "1Q_PTS_ratio": 0.2537207654145996,
-  "1H_REB_ratio": 0.4378257632166791,
-  "1Q_REB_ratio": 0.2680565897244974,
-  "1H_AST_ratio": 0.43053817271589484,
-  "1Q_AST_ratio": 0.26032540675844806
+  "last_updated": "2026-02-09T07:31:51.124373",
+  "1Q_PTS_avg": 5.114285714285714,
+  "1Q_REB_avg": 1.7714285714285714,
+  "1Q_AST_avg": 1.5142857142857142,
+  "1H_PTS_avg": 10.82857142857143,
+  "1H_REB_avg": 2.942857142857143,
+  "1H_AST_avg": 2.5142857142857142,
+  "FULL_PTS_avg": 20.6,
+  "FULL_REB_avg": 6.64,
+  "FULL_AST_avg": 5.72,
+  "1H_PTS_ratio": 0.5256588072122053,
+  "1Q_PTS_ratio": 0.2482662968099861,
+  "1H_REB_ratio": 0.4432013769363167,
+  "1Q_REB_ratio": 0.2667814113597246,
+  "1H_AST_ratio": 0.43956043956043955,
+  "1Q_AST_ratio": 0.26473526473526476
 }

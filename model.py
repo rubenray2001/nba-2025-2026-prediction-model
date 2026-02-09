@@ -539,6 +539,70 @@ class NBA1HEnsembleModel:
             })
         
         # =================================================================
+        # FACTOR 0C: REAL HIT RATE FROM ACTUAL PERIOD DATA (CRITICAL!)
+        # This is the most accurate predictor - uses actual 1H/1Q values
+        # =================================================================
+        player_name = features.get('PLAYER_NAME', '')
+        real_hit_data = get_real_hit_rate_and_variance(player_name, self.target, prop_line, period)
+        
+        if real_hit_data:
+            games_ct = real_hit_data['games_counted']
+            is_volatile = real_hit_data['is_volatile']
+            max_val = real_hit_data['max_value']
+            min_val = real_hit_data['min_value']
+            
+            if is_over:
+                # OVER pick - need high over_hit_rate
+                real_hit_rate = real_hit_data['over_hit_rate']
+                if real_hit_rate >= 0.75:
+                    score += 15
+                    factors.append({'name': '🎯 Elite Real Hit Rate', 'score': '+15', 
+                        'desc': f'{real_hit_rate:.0%} of {games_ct} games went OVER {prop_line} (actual 1H data)'})
+                elif real_hit_rate >= 0.60:
+                    score += 8
+                    factors.append({'name': '✅ Good Real Hit Rate', 'score': '+8', 
+                        'desc': f'{real_hit_rate:.0%} of {games_ct} games went OVER {prop_line}'})
+                elif real_hit_rate < 0.40:
+                    score -= 25  # MAJOR penalty - more than half miss!
+                    factors.append({'name': '🚨 Poor OVER Hit Rate', 'score': '-25', 
+                        'desc': f'Only {real_hit_rate:.0%} of {games_ct} real games went OVER - RISKY!'})
+                elif real_hit_rate < 0.50:
+                    score -= 12
+                    factors.append({'name': '⚠️ Below 50% OVER Rate', 'score': '-12', 
+                        'desc': f'{real_hit_rate:.0%} of {games_ct} games went OVER - coinflip'})
+            else:
+                # UNDER pick - need high under_hit_rate
+                real_hit_rate = real_hit_data['under_hit_rate']
+                if real_hit_rate >= 0.75:
+                    score += 15
+                    factors.append({'name': '🎯 Elite Real Hit Rate', 'score': '+15', 
+                        'desc': f'{real_hit_rate:.0%} of {games_ct} games went UNDER {prop_line} (actual 1H data)'})
+                elif real_hit_rate >= 0.60:
+                    score += 8
+                    factors.append({'name': '✅ Good Real Hit Rate', 'score': '+8', 
+                        'desc': f'{real_hit_rate:.0%} of {games_ct} games went UNDER {prop_line}'})
+                elif real_hit_rate < 0.40:
+                    score -= 25  # MAJOR penalty
+                    factors.append({'name': '🚨 Poor UNDER Hit Rate', 'score': '-25', 
+                        'desc': f'Only {real_hit_rate:.0%} of {games_ct} real games went UNDER - RISKY!'})
+                elif real_hit_rate < 0.50:
+                    score -= 12
+                    factors.append({'name': '⚠️ Below 50% UNDER Rate', 'score': '-12', 
+                        'desc': f'{real_hit_rate:.0%} of {games_ct} games went UNDER - coinflip'})
+                
+                # CRITICAL: Ceiling check for UNDER picks
+                if max_val > prop_line * 1.3:  # Player's max is 30%+ above line
+                    score -= 15
+                    factors.append({'name': '🚨 High Ceiling Risk', 'score': '-15', 
+                        'desc': f'Player hit {max_val:.0f} before - can easily exceed {prop_line}'})
+            
+            # Volatility penalty applies to ALL picks
+            if is_volatile:
+                score -= 12
+                factors.append({'name': '🎰 High Variance Player', 'score': '-12', 
+                    'desc': f'Range: {min_val:.0f}-{max_val:.0f} | Unpredictable - use caution'})
+        
+        # =================================================================
         # FACTOR 1: Edge Size (0-20 points)
         # =================================================================
         if abs_diff >= 3.5:
@@ -1402,6 +1466,91 @@ def get_player_period_average(player_name: str, prop_type: str, period: str = '1
         pass
     
     return (None, False)  # No real data available
+
+
+def get_real_hit_rate_and_variance(player_name: str, prop_type: str, prop_line: float, period: str = '1h') -> dict:
+    """
+    Calculate REAL hit rate against a specific line using actual period data.
+    Also returns variance metrics to detect volatile players.
+    
+    Returns:
+        dict with:
+        - over_hit_rate: % of games player went OVER the line
+        - under_hit_rate: % of games player went UNDER the line
+        - games_counted: number of games analyzed
+        - values: list of actual period values
+        - std_dev: standard deviation of period values
+        - is_volatile: True if player is high variance
+        - max_value: highest period value
+        - min_value: lowest period value
+    """
+    try:
+        import os
+        period_file = os.path.join('data', 'period_stats', 
+            f"{player_name.replace(' ', '_')}_period_stats.json")
+        
+        if not os.path.exists(period_file):
+            return None
+        
+        with open(period_file, 'r') as f:
+            pdata = json.load(f)
+        
+        games_data = pdata.get('games_data', [])
+        if not games_data:
+            return None
+        
+        period_prefix = '1H' if period.lower() == '1h' else '1Q'
+        stat_map = {'points': 'PTS', 'rebounds': 'REB', 'assists': 'AST', 'pra': 'PRA'}
+        
+        values = []
+        for g in games_data:
+            if prop_type == 'pra':
+                pts = float(g.get(f'{period_prefix}_PTS', 0) or 0)
+                reb = float(g.get(f'{period_prefix}_REB', 0) or 0)
+                ast = float(g.get(f'{period_prefix}_AST', 0) or 0)
+                val = pts + reb + ast
+            else:
+                stat_key = stat_map.get(prop_type, 'PTS')
+                val = float(g.get(f'{period_prefix}_{stat_key}', 0) or 0)
+            
+            if val >= 0:  # Valid value
+                values.append(val)
+        
+        if len(values) < 5:
+            return None
+        
+        # Calculate hit rates
+        over_count = sum(1 for v in values if v > prop_line)
+        under_count = sum(1 for v in values if v < prop_line)
+        push_count = sum(1 for v in values if v == prop_line)
+        total = len(values)
+        
+        # Calculate variance metrics
+        import statistics
+        avg = statistics.mean(values)
+        std_dev = statistics.stdev(values) if len(values) > 1 else 0
+        coefficient_of_variation = std_dev / avg if avg > 0 else 0
+        
+        # Player is volatile if CV > 0.35 (35% variation) or range is wide
+        value_range = max(values) - min(values)
+        is_volatile = coefficient_of_variation > 0.35 or value_range > prop_line * 0.8
+        
+        return {
+            'over_hit_rate': over_count / total,
+            'under_hit_rate': under_count / total,
+            'push_rate': push_count / total,
+            'games_counted': total,
+            'values': values[-10:],  # Last 10 for display
+            'avg': avg,
+            'std_dev': std_dev,
+            'cv': coefficient_of_variation,
+            'is_volatile': is_volatile,
+            'max_value': max(values),
+            'min_value': min(values),
+            'value_range': value_range
+        }
+    except Exception as e:
+        return None
 
 
 def get_lock_thresholds(period: str = '1h') -> dict:

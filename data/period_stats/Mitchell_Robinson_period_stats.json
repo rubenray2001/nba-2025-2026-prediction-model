@@ -1,8 +1,25 @@
 {
   "player_name": "Mitchell Robinson",
   "player_id": 1629011,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500757",
+      "player_id": 1629011,
+      "player_name": "Mitchell Robinson",
+      "1Q_PTS": "2",
+      "1Q_REB": "2",
+      "1Q_AST": "1",
+      "1Q_MIN": "5:32",
+      "1H_PTS": "2",
+      "1H_REB": "3",
+      "1H_AST": "1",
+      "1H_MIN": "7:13",
+      "FULL_PTS": "5",
+      "FULL_REB": "9",
+      "FULL_AST": "2",
+      "FULL_MIN": "15:58"
+    },
     {
       "game_id": "0022500742",
       "player_id": 1629011,
@@ -542,20 +559,20 @@
       "1H_MIN": "16:27"
     }
   ],
-  "last_updated": "2026-02-06T23:07:04.951914",
-  "1Q_PTS_avg": 1.2058823529411764,
-  "1Q_REB_avg": 2.8823529411764706,
-  "1Q_AST_avg": 0.2647058823529412,
-  "1H_PTS_avg": 2.8823529411764706,
-  "1H_REB_avg": 5.117647058823529,
-  "1H_AST_avg": 0.47058823529411764,
-  "FULL_PTS_avg": 4.416666666666667,
-  "FULL_REB_avg": 8.083333333333334,
-  "FULL_AST_avg": 1.0416666666666667,
-  "1H_PTS_ratio": 0.6526082130965594,
-  "1Q_PTS_ratio": 0.2730299667036626,
-  "1H_REB_ratio": 0.6331109763493025,
-  "1Q_REB_ratio": 0.3565797453001819,
-  "1H_AST_ratio": 0.4517647058823529,
-  "1Q_AST_ratio": 0.2541176470588235
+  "last_updated": "2026-02-09T07:49:05.785904",
+  "1Q_PTS_avg": 1.2285714285714286,
+  "1Q_REB_avg": 2.857142857142857,
+  "1Q_AST_avg": 0.2857142857142857,
+  "1H_PTS_avg": 2.857142857142857,
+  "1H_REB_avg": 5.057142857142857,
+  "1H_AST_avg": 0.4857142857142857,
+  "FULL_PTS_avg": 4.44,
+  "FULL_REB_avg": 8.12,
+  "FULL_AST_avg": 1.08,
+  "1H_PTS_ratio": 0.6435006435006435,
+  "1Q_PTS_ratio": 0.27670527670527667,
+  "1H_REB_ratio": 0.6228008444757214,
+  "1Q_REB_ratio": 0.35186488388458836,
+  "1H_AST_ratio": 0.4497354497354497,
+  "1Q_AST_ratio": 0.26455026455026454
 }

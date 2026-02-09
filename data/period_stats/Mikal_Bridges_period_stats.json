@@ -1,8 +1,25 @@
 {
   "player_name": "Mikal Bridges",
   "player_id": 1628969,
-  "games_collected": 35,
+  "games_collected": 36,
   "games_data": [
+    {
+      "game_id": "0022500757",
+      "player_id": 1628969,
+      "player_name": "Mikal Bridges",
+      "1Q_PTS": "5",
+      "1Q_REB": "4",
+      "1Q_AST": "1",
+      "1Q_MIN": "9:05",
+      "1H_PTS": "11",
+      "1H_REB": "4",
+      "1H_AST": "1",
+      "1H_MIN": "18:18",
+      "FULL_PTS": "14",
+      "FULL_REB": "4",
+      "FULL_AST": "1",
+      "FULL_MIN": "30:24"
+    },
     {
       "game_id": "0022500742",
       "player_id": 1628969,
@@ -559,20 +576,20 @@
       "1H_MIN": "17:45"
     }
   ],
-  "last_updated": "2026-02-06T23:06:34.150891",
-  "1Q_PTS_avg": 3.6285714285714286,
-  "1Q_REB_avg": 1.0857142857142856,
-  "1Q_AST_avg": 1.0857142857142856,
-  "1H_PTS_avg": 7.4,
-  "1H_REB_avg": 1.9714285714285715,
-  "1H_AST_avg": 1.7428571428571429,
-  "FULL_PTS_avg": 15.12,
-  "FULL_REB_avg": 4.08,
-  "FULL_AST_avg": 4.0,
-  "1H_PTS_ratio": 0.4894179894179895,
-  "1Q_PTS_ratio": 0.2399848828420257,
-  "1H_REB_ratio": 0.4831932773109244,
-  "1Q_REB_ratio": 0.2661064425770308,
-  "1H_AST_ratio": 0.4357142857142857,
-  "1Q_AST_ratio": 0.2714285714285714
+  "last_updated": "2026-02-09T07:48:13.498345",
+  "1Q_PTS_avg": 3.6666666666666665,
+  "1Q_REB_avg": 1.1666666666666667,
+  "1Q_AST_avg": 1.0833333333333333,
+  "1H_PTS_avg": 7.5,
+  "1H_REB_avg": 2.0277777777777777,
+  "1H_AST_avg": 1.7222222222222223,
+  "FULL_PTS_avg": 15.076923076923077,
+  "FULL_REB_avg": 4.076923076923077,
+  "FULL_AST_avg": 3.8846153846153846,
+  "1H_PTS_ratio": 0.49744897959183676,
+  "1Q_PTS_ratio": 0.24319727891156462,
+  "1H_REB_ratio": 0.4973794549266247,
+  "1Q_REB_ratio": 0.28616352201257866,
+  "1H_AST_ratio": 0.4433443344334434,
+  "1Q_AST_ratio": 0.27887788778877887
 }

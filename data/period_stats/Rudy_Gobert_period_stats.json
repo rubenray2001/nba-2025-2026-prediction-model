@@ -1,8 +1,25 @@
 {
   "player_name": "Rudy Gobert",
   "player_id": 203497,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500760",
+      "player_id": 203497,
+      "player_name": "Rudy Gobert",
+      "1Q_PTS": "2",
+      "1Q_REB": "1",
+      "1Q_AST": "1",
+      "1Q_MIN": "9:55",
+      "1H_PTS": "6",
+      "1H_REB": "4",
+      "1H_AST": "2",
+      "1H_MIN": "18:25",
+      "FULL_PTS": "10",
+      "FULL_REB": "7",
+      "FULL_AST": "2",
+      "FULL_MIN": "29:49"
+    },
     {
       "game_id": "0022500744",
       "player_id": 203497,
@@ -542,20 +559,20 @@
       "1H_MIN": "18:00"
     }
   ],
-  "last_updated": "2026-02-06T23:22:47.194789",
-  "1Q_PTS_avg": 3.4411764705882355,
-  "1Q_REB_avg": 3.823529411764706,
-  "1Q_AST_avg": 0.5882352941176471,
-  "1H_PTS_avg": 6.529411764705882,
-  "1H_REB_avg": 6.970588235294118,
-  "1H_AST_avg": 1.0,
-  "FULL_PTS_avg": 11.166666666666666,
-  "FULL_REB_avg": 11.958333333333334,
-  "FULL_AST_avg": 1.75,
-  "1H_PTS_ratio": 0.5847234416154522,
-  "1Q_PTS_ratio": 0.3081650570676032,
-  "1H_REB_ratio": 0.5829063332650133,
-  "1Q_REB_ratio": 0.31973765115802416,
-  "1H_AST_ratio": 0.5714285714285714,
-  "1Q_AST_ratio": 0.33613445378151263
+  "last_updated": "2026-02-09T08:10:59.049568",
+  "1Q_PTS_avg": 3.4,
+  "1Q_REB_avg": 3.742857142857143,
+  "1Q_AST_avg": 0.6,
+  "1H_PTS_avg": 6.514285714285714,
+  "1H_REB_avg": 6.885714285714286,
+  "1H_AST_avg": 1.0285714285714285,
+  "FULL_PTS_avg": 11.12,
+  "FULL_REB_avg": 11.76,
+  "FULL_AST_avg": 1.76,
+  "1H_PTS_ratio": 0.5858170606372045,
+  "1Q_PTS_ratio": 0.3057553956834532,
+  "1H_REB_ratio": 0.5855199222546161,
+  "1Q_REB_ratio": 0.31827016520894075,
+  "1H_AST_ratio": 0.5844155844155844,
+  "1Q_AST_ratio": 0.3409090909090909
 }

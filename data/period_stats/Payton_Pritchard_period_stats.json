@@ -1,8 +1,25 @@
 {
   "player_name": "Payton Pritchard",
   "player_id": 1630202,
-  "games_collected": 35,
+  "games_collected": 36,
   "games_data": [
+    {
+      "game_id": "0022500757",
+      "player_id": 1630202,
+      "player_name": "Payton Pritchard",
+      "1Q_PTS": "2",
+      "1Q_REB": "1",
+      "1Q_AST": "1",
+      "1Q_MIN": "7:14",
+      "1H_PTS": "3",
+      "1H_REB": "1",
+      "1H_AST": "5",
+      "1H_MIN": "16:20",
+      "FULL_PTS": "6",
+      "FULL_REB": "2",
+      "FULL_AST": "7",
+      "FULL_MIN": "30:31"
+    },
     {
       "game_id": "0022500741",
       "player_id": 1630202,
@@ -559,20 +576,20 @@
       "1H_MIN": "12:38"
     }
   ],
-  "last_updated": "2026-02-06T23:18:36.696023",
-  "1Q_PTS_avg": 4.0285714285714285,
-  "1Q_REB_avg": 1.1142857142857143,
-  "1Q_AST_avg": 1.8,
-  "1H_PTS_avg": 8.714285714285714,
-  "1H_REB_avg": 2.1714285714285713,
-  "1H_AST_avg": 3.142857142857143,
-  "FULL_PTS_avg": 18.28,
-  "FULL_REB_avg": 4.24,
-  "FULL_AST_avg": 5.44,
-  "1H_PTS_ratio": 0.47671147233510464,
-  "1Q_PTS_ratio": 0.22038136917786808,
-  "1H_REB_ratio": 0.5121293800539083,
-  "1Q_REB_ratio": 0.2628032345013477,
-  "1H_AST_ratio": 0.5777310924369747,
-  "1Q_AST_ratio": 0.33088235294117646
+  "last_updated": "2026-02-09T08:05:47.670256",
+  "1Q_PTS_avg": 3.9722222222222223,
+  "1Q_REB_avg": 1.1111111111111112,
+  "1Q_AST_avg": 1.7777777777777777,
+  "1H_PTS_avg": 8.555555555555555,
+  "1H_REB_avg": 2.138888888888889,
+  "1H_AST_avg": 3.1944444444444446,
+  "FULL_PTS_avg": 17.807692307692307,
+  "FULL_REB_avg": 4.153846153846154,
+  "FULL_AST_avg": 5.5,
+  "1H_PTS_ratio": 0.480441564674826,
+  "1Q_PTS_ratio": 0.22306215502759782,
+  "1H_REB_ratio": 0.514917695473251,
+  "1Q_REB_ratio": 0.2674897119341564,
+  "1H_AST_ratio": 0.5808080808080809,
+  "1Q_AST_ratio": 0.3232323232323232
 }

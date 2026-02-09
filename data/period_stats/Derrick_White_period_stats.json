@@ -1,8 +1,25 @@
 {
   "player_name": "Derrick White",
   "player_id": 1628401,
-  "games_collected": 35,
+  "games_collected": 36,
   "games_data": [
+    {
+      "game_id": "0022500757",
+      "player_id": 1628401,
+      "player_name": "Derrick White",
+      "1Q_PTS": "5",
+      "1Q_REB": "1",
+      "1Q_AST": "1",
+      "1Q_MIN": "8:26",
+      "1H_PTS": "17",
+      "1H_REB": "1",
+      "1H_AST": "2",
+      "1H_MIN": "20:26",
+      "FULL_PTS": "19",
+      "FULL_REB": "1",
+      "FULL_AST": "4",
+      "FULL_MIN": "34:12"
+    },
     {
       "game_id": "0022500741",
       "player_id": 1628401,
@@ -559,20 +576,20 @@
       "1H_MIN": "18:19"
     }
   ],
-  "last_updated": "2026-02-06T22:25:20.763555",
-  "1Q_PTS_avg": 3.9714285714285715,
-  "1Q_REB_avg": 1.1142857142857143,
-  "1Q_AST_avg": 1.7428571428571429,
-  "1H_PTS_avg": 8.542857142857143,
-  "1H_REB_avg": 2.1142857142857143,
-  "1H_AST_avg": 3.0,
-  "FULL_PTS_avg": 19.52,
-  "FULL_REB_avg": 4.28,
-  "FULL_AST_avg": 5.72,
-  "1H_PTS_ratio": 0.4376463700234192,
-  "1Q_PTS_ratio": 0.2034543325526932,
-  "1H_REB_ratio": 0.4939919893190921,
-  "1Q_REB_ratio": 0.260347129506008,
-  "1H_AST_ratio": 0.5244755244755245,
-  "1Q_AST_ratio": 0.3046953046953047
+  "last_updated": "2026-02-09T07:02:42.629862",
+  "1Q_PTS_avg": 4.0,
+  "1Q_REB_avg": 1.1111111111111112,
+  "1Q_AST_avg": 1.7222222222222223,
+  "1H_PTS_avg": 8.777777777777779,
+  "1H_REB_avg": 2.0833333333333335,
+  "1H_AST_avg": 2.9722222222222223,
+  "FULL_PTS_avg": 19.5,
+  "FULL_REB_avg": 4.153846153846154,
+  "FULL_AST_avg": 5.653846153846154,
+  "1H_PTS_ratio": 0.4501424501424502,
+  "1Q_PTS_ratio": 0.20512820512820512,
+  "1H_REB_ratio": 0.5015432098765432,
+  "1Q_REB_ratio": 0.2674897119341564,
+  "1H_AST_ratio": 0.5256991685563114,
+  "1Q_AST_ratio": 0.30461073318216175
 }

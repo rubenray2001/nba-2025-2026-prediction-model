@@ -1,8 +1,25 @@
 {
   "player_name": "Myron Gardner",
   "player_id": 1642066,
-  "games_collected": 10,
+  "games_collected": 11,
   "games_data": [
+    {
+      "game_id": "0022500758",
+      "player_id": 1642066,
+      "player_name": "Myron Gardner",
+      "1Q_PTS": "0",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "2:27",
+      "1H_PTS": "2",
+      "1H_REB": "2",
+      "1H_AST": "0",
+      "1H_MIN": "3:39",
+      "FULL_PTS": "10",
+      "FULL_REB": "7",
+      "FULL_AST": "6",
+      "FULL_MIN": "21:00"
+    },
     {
       "game_id": "0022500720",
       "player_id": 1642066,
@@ -138,20 +155,20 @@
       "1H_MIN": "6:13"
     }
   ],
-  "last_updated": "2026-02-04T08:54:33.221743",
-  "1Q_PTS_avg": 0.8571428571428571,
-  "1Q_REB_avg": 0.8571428571428571,
-  "1Q_AST_avg": 0.14285714285714285,
-  "1H_PTS_avg": 3.4,
-  "1H_REB_avg": 1.8,
-  "1H_AST_avg": 0.5,
-  "FULL_PTS_avg": 9.0,
-  "FULL_REB_avg": 6.5,
-  "FULL_AST_avg": 0.75,
-  "1H_PTS_ratio": 0.37777777777777777,
-  "1Q_PTS_ratio": 0.09523809523809523,
-  "1H_REB_ratio": 0.27692307692307694,
-  "1Q_REB_ratio": 0.13186813186813187,
-  "1H_AST_ratio": 0.6666666666666666,
-  "1Q_AST_ratio": 0.19047619047619047
+  "last_updated": "2026-02-09T07:51:55.467681",
+  "1Q_PTS_avg": 0.75,
+  "1Q_REB_avg": 0.75,
+  "1Q_AST_avg": 0.125,
+  "1H_PTS_avg": 3.272727272727273,
+  "1H_REB_avg": 1.8181818181818181,
+  "1H_AST_avg": 0.45454545454545453,
+  "FULL_PTS_avg": 9.2,
+  "FULL_REB_avg": 6.6,
+  "FULL_AST_avg": 1.8,
+  "1H_PTS_ratio": 0.35573122529644274,
+  "1Q_PTS_ratio": 0.08152173913043478,
+  "1H_REB_ratio": 0.27548209366391185,
+  "1Q_REB_ratio": 0.11363636363636365,
+  "1H_AST_ratio": 0.2525252525252525,
+  "1Q_AST_ratio": 0.06944444444444445
 }

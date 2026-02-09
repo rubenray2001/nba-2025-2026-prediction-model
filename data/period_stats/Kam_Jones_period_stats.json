@@ -1,8 +1,25 @@
 {
   "player_name": "Kam Jones",
   "player_id": 1642880,
-  "games_collected": 6,
+  "games_collected": 7,
   "games_data": [
+    {
+      "game_id": "0022500759",
+      "player_id": 1642880,
+      "player_name": "Kam Jones",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "3:51",
+      "1H_PTS": "0",
+      "1H_REB": "1",
+      "1H_AST": "0",
+      "1H_MIN": "7:39",
+      "FULL_PTS": "7",
+      "FULL_REB": "1",
+      "FULL_AST": "1",
+      "FULL_MIN": "25:02"
+    },
     {
       "game_id": "0022500743",
       "player_id": 1642880,
@@ -86,20 +103,20 @@
       "1H_MIN": "6:50"
     }
   ],
-  "last_updated": "2026-02-06T22:55:12.327634",
-  "1Q_PTS_avg": 1.0,
-  "1Q_REB_avg": 0.2,
-  "1Q_AST_avg": 1.0,
-  "1H_PTS_avg": 1.3333333333333333,
+  "last_updated": "2026-02-09T07:33:15.056865",
+  "1Q_PTS_avg": 0.8333333333333334,
+  "1Q_REB_avg": 0.3333333333333333,
+  "1Q_AST_avg": 0.8333333333333334,
+  "1H_PTS_avg": 1.1428571428571428,
   "1H_REB_avg": 1.0,
-  "1H_AST_avg": 1.3333333333333333,
+  "1H_AST_avg": 1.1428571428571428,
   "FULL_PTS_avg": 7.0,
-  "FULL_REB_avg": 3.0,
-  "FULL_AST_avg": 4.0,
-  "1H_PTS_ratio": 0.19047619047619047,
-  "1Q_PTS_ratio": 0.14285714285714285,
-  "1H_REB_ratio": 0.3333333333333333,
-  "1Q_REB_ratio": 0.06666666666666667,
-  "1H_AST_ratio": 0.3333333333333333,
-  "1Q_AST_ratio": 0.25
+  "FULL_REB_avg": 2.3333333333333335,
+  "FULL_AST_avg": 3.0,
+  "1H_PTS_ratio": 0.16326530612244897,
+  "1Q_PTS_ratio": 0.11904761904761905,
+  "1H_REB_ratio": 0.42857142857142855,
+  "1Q_REB_ratio": 0.14285714285714285,
+  "1H_AST_ratio": 0.38095238095238093,
+  "1Q_AST_ratio": 0.2777777777777778
 }

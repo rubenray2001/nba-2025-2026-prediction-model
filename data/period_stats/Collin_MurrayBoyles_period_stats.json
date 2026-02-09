@@ -1,8 +1,25 @@
 {
   "player_name": "Collin MurrayBoyles",
   "player_id": 1642867,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500759",
+      "player_id": 1642867,
+      "player_name": "Collin MurrayBoyles",
+      "1Q_PTS": "2",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "8:13",
+      "1H_PTS": "2",
+      "1H_REB": "0",
+      "1H_AST": "0",
+      "1H_MIN": "8:13",
+      "FULL_PTS": "2",
+      "FULL_REB": "0",
+      "FULL_AST": "0",
+      "FULL_MIN": "8:13"
+    },
     {
       "game_id": "0022500736",
       "player_id": 1642867,
@@ -538,20 +555,20 @@
       "1H_MIN": "12:07"
     }
   ],
-  "last_updated": "2026-02-06T22:21:26.123561",
-  "1Q_PTS_avg": 2.5757575757575757,
-  "1Q_REB_avg": 1.2424242424242424,
-  "1Q_AST_avg": 0.7878787878787878,
-  "1H_PTS_avg": 4.529411764705882,
-  "1H_REB_avg": 2.6176470588235294,
-  "1H_AST_avg": 1.4705882352941178,
-  "FULL_PTS_avg": 7.0,
-  "FULL_REB_avg": 4.5,
-  "FULL_AST_avg": 1.75,
-  "1H_PTS_ratio": 0.6470588235294118,
-  "1Q_PTS_ratio": 0.36796536796536794,
-  "1H_REB_ratio": 0.5816993464052288,
-  "1Q_REB_ratio": 0.2760942760942761,
-  "1H_AST_ratio": 0.8403361344537815,
-  "1Q_AST_ratio": 0.4502164502164502
+  "last_updated": "2026-02-09T06:59:07.904162",
+  "1Q_PTS_avg": 2.5588235294117645,
+  "1Q_REB_avg": 1.2058823529411764,
+  "1Q_AST_avg": 0.7647058823529411,
+  "1H_PTS_avg": 4.457142857142857,
+  "1H_REB_avg": 2.5428571428571427,
+  "1H_AST_avg": 1.4285714285714286,
+  "FULL_PTS_avg": 6.8,
+  "FULL_REB_avg": 4.32,
+  "FULL_AST_avg": 1.68,
+  "1H_PTS_ratio": 0.6554621848739496,
+  "1Q_PTS_ratio": 0.3762975778546713,
+  "1H_REB_ratio": 0.5886243386243386,
+  "1Q_REB_ratio": 0.27913943355119825,
+  "1H_AST_ratio": 0.8503401360544218,
+  "1Q_AST_ratio": 0.45518207282913165
 }

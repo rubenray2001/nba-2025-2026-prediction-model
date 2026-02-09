@@ -1,8 +1,25 @@
 {
   "player_name": "Andrew Wiggins",
   "player_id": 203952,
-  "games_collected": 33,
+  "games_collected": 34,
   "games_data": [
+    {
+      "game_id": "0022500758",
+      "player_id": 203952,
+      "player_name": "Andrew Wiggins",
+      "1Q_PTS": "6",
+      "1Q_REB": "2",
+      "1Q_AST": "1",
+      "1Q_MIN": "9:05",
+      "1H_PTS": "6",
+      "1H_REB": "5",
+      "1H_AST": "1",
+      "1H_MIN": "16:17",
+      "FULL_PTS": "11",
+      "FULL_REB": "10",
+      "FULL_AST": "2",
+      "FULL_MIN": "23:25"
+    },
     {
       "game_id": "0022500741",
       "player_id": 203952,
@@ -525,20 +542,20 @@
       "1H_MIN": "16:23"
     }
   ],
-  "last_updated": "2026-02-06T22:04:11.811988",
-  "1Q_PTS_avg": 4.454545454545454,
-  "1Q_REB_avg": 1.5757575757575757,
-  "1Q_AST_avg": 0.9090909090909091,
-  "1H_PTS_avg": 8.06060606060606,
-  "1H_REB_avg": 2.606060606060606,
-  "1H_AST_avg": 1.5151515151515151,
-  "FULL_PTS_avg": 15.347826086956522,
-  "FULL_REB_avg": 4.434782608695652,
-  "FULL_AST_avg": 2.652173913043478,
-  "1H_PTS_ratio": 0.5251952957335394,
-  "1Q_PTS_ratio": 0.29023950553695593,
-  "1H_REB_ratio": 0.5876411170528817,
-  "1Q_REB_ratio": 0.3553178847296494,
-  "1H_AST_ratio": 0.5712866368604074,
-  "1Q_AST_ratio": 0.34277198211624443
+  "last_updated": "2026-02-09T06:43:21.081712",
+  "1Q_PTS_avg": 4.5,
+  "1Q_REB_avg": 1.588235294117647,
+  "1Q_AST_avg": 0.9117647058823529,
+  "1H_PTS_avg": 8.0,
+  "1H_REB_avg": 2.676470588235294,
+  "1H_AST_avg": 1.5,
+  "FULL_PTS_avg": 15.166666666666666,
+  "FULL_REB_avg": 4.666666666666667,
+  "FULL_AST_avg": 2.625,
+  "1H_PTS_ratio": 0.5274725274725275,
+  "1Q_PTS_ratio": 0.2967032967032967,
+  "1H_REB_ratio": 0.5735294117647058,
+  "1Q_REB_ratio": 0.34033613445378147,
+  "1H_AST_ratio": 0.5714285714285714,
+  "1Q_AST_ratio": 0.3473389355742297
 }

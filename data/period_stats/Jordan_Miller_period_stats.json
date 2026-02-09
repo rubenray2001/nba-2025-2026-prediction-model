@@ -1,8 +1,25 @@
 {
   "player_name": "Jordan Miller",
   "player_id": 1641757,
-  "games_collected": 25,
+  "games_collected": 26,
   "games_data": [
+    {
+      "game_id": "0022500760",
+      "player_id": 1641757,
+      "player_name": "Jordan Miller",
+      "1Q_PTS": "2",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "4:15",
+      "1H_PTS": "4",
+      "1H_REB": "0",
+      "1H_AST": "1",
+      "1H_MIN": "9:30",
+      "FULL_PTS": "8",
+      "FULL_REB": "1",
+      "FULL_AST": "4",
+      "FULL_MIN": "22:41"
+    },
     {
       "game_id": "0022500746",
       "player_id": 1641757,
@@ -385,20 +402,20 @@
       "1H_MIN": "12:15"
     }
   ],
-  "last_updated": "2026-02-06T22:52:37.564897",
-  "1Q_PTS_avg": 1.625,
-  "1Q_REB_avg": 0.6666666666666666,
-  "1Q_AST_avg": 0.375,
-  "1H_PTS_avg": 4.2,
-  "1H_REB_avg": 1.8,
-  "1H_AST_avg": 0.92,
-  "FULL_PTS_avg": 8.133333333333333,
-  "FULL_REB_avg": 3.533333333333333,
-  "FULL_AST_avg": 1.5333333333333334,
-  "1H_PTS_ratio": 0.5163934426229508,
-  "1Q_PTS_ratio": 0.19979508196721313,
-  "1H_REB_ratio": 0.5094339622641509,
-  "1Q_REB_ratio": 0.18867924528301885,
-  "1H_AST_ratio": 0.6,
-  "1Q_AST_ratio": 0.24456521739130432
+  "last_updated": "2026-02-09T07:30:29.398381",
+  "1Q_PTS_avg": 1.64,
+  "1Q_REB_avg": 0.64,
+  "1Q_AST_avg": 0.36,
+  "1H_PTS_avg": 4.1923076923076925,
+  "1H_REB_avg": 1.7307692307692308,
+  "1H_AST_avg": 0.9230769230769231,
+  "FULL_PTS_avg": 8.125,
+  "FULL_REB_avg": 3.375,
+  "FULL_AST_avg": 1.6875,
+  "1H_PTS_ratio": 0.5159763313609468,
+  "1Q_PTS_ratio": 0.20184615384615384,
+  "1H_REB_ratio": 0.5128205128205129,
+  "1Q_REB_ratio": 0.18962962962962962,
+  "1H_AST_ratio": 0.5470085470085471,
+  "1Q_AST_ratio": 0.21333333333333332
 }

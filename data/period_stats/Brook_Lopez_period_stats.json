@@ -1,8 +1,25 @@
 {
   "player_name": "Brook Lopez",
   "player_id": 201572,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500760",
+      "player_id": 201572,
+      "player_name": "Brook Lopez",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "0",
+      "1Q_MIN": "9:17",
+      "1H_PTS": "2",
+      "1H_REB": "1",
+      "1H_AST": "1",
+      "1H_MIN": "15:58",
+      "FULL_PTS": "5",
+      "FULL_REB": "2",
+      "FULL_AST": "2",
+      "FULL_MIN": "26:24"
+    },
     {
       "game_id": "0022500746",
       "player_id": 201572,
@@ -542,20 +559,20 @@
       "1H_MIN": "10:05"
     }
   ],
-  "last_updated": "2026-02-08T04:27:51.840349",
-  "1Q_PTS_avg": 1.3529411764705883,
-  "1Q_REB_avg": 0.5882352941176471,
-  "1Q_AST_avg": 0.29411764705882354,
-  "1H_PTS_avg": 3.2941176470588234,
-  "1H_REB_avg": 1.2352941176470589,
-  "1H_AST_avg": 0.6764705882352942,
-  "FULL_PTS_avg": 6.875,
-  "FULL_REB_avg": 2.5,
-  "FULL_AST_avg": 1.1666666666666667,
-  "1H_PTS_ratio": 0.47914438502673795,
-  "1Q_PTS_ratio": 0.1967914438502674,
-  "1H_REB_ratio": 0.49411764705882355,
-  "1Q_REB_ratio": 0.23529411764705882,
-  "1H_AST_ratio": 0.5798319327731093,
-  "1Q_AST_ratio": 0.25210084033613445
+  "last_updated": "2026-02-09T06:51:50.499951",
+  "1Q_PTS_avg": 1.3142857142857143,
+  "1Q_REB_avg": 0.6,
+  "1Q_AST_avg": 0.2857142857142857,
+  "1H_PTS_avg": 3.257142857142857,
+  "1H_REB_avg": 1.2285714285714286,
+  "1H_AST_avg": 0.6857142857142857,
+  "FULL_PTS_avg": 6.8,
+  "FULL_REB_avg": 2.48,
+  "FULL_AST_avg": 1.2,
+  "1H_PTS_ratio": 0.4789915966386555,
+  "1Q_PTS_ratio": 0.19327731092436976,
+  "1H_REB_ratio": 0.49539170506912444,
+  "1Q_REB_ratio": 0.24193548387096772,
+  "1H_AST_ratio": 0.5714285714285715,
+  "1Q_AST_ratio": 0.23809523809523808
 }

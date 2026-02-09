@@ -1,8 +1,25 @@
 {
   "player_name": "Jaden McDaniels",
   "player_id": 1630183,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500760",
+      "player_id": 1630183,
+      "player_name": "Jaden McDaniels",
+      "1Q_PTS": "2",
+      "1Q_REB": "0",
+      "1Q_AST": "0",
+      "1Q_MIN": "7:45",
+      "1H_PTS": "2",
+      "1H_REB": "1",
+      "1H_AST": "0",
+      "1H_MIN": "13:51",
+      "FULL_PTS": "2",
+      "FULL_REB": "2",
+      "FULL_AST": "0",
+      "FULL_MIN": "28:14"
+    },
     {
       "game_id": "0022500744",
       "player_id": 1630183,
@@ -542,20 +559,20 @@
       "1H_MIN": "8:30"
     }
   ],
-  "last_updated": "2026-02-06T22:34:41.746462",
-  "1Q_PTS_avg": 3.911764705882353,
-  "1Q_REB_avg": 1.2352941176470589,
-  "1Q_AST_avg": 1.1176470588235294,
-  "1H_PTS_avg": 6.9411764705882355,
-  "1H_REB_avg": 2.2058823529411766,
-  "1H_AST_avg": 1.7941176470588236,
-  "FULL_PTS_avg": 14.708333333333334,
-  "FULL_REB_avg": 3.7916666666666665,
-  "FULL_AST_avg": 3.0416666666666665,
-  "1H_PTS_ratio": 0.47192134644225964,
-  "1Q_PTS_ratio": 0.26595567405432424,
-  "1H_REB_ratio": 0.5817711700064642,
-  "1Q_REB_ratio": 0.3257918552036199,
-  "1H_AST_ratio": 0.5898468976631749,
-  "1Q_AST_ratio": 0.36744560838033846
+  "last_updated": "2026-02-09T07:10:42.430515",
+  "1Q_PTS_avg": 3.857142857142857,
+  "1Q_REB_avg": 1.2,
+  "1Q_AST_avg": 1.0857142857142856,
+  "1H_PTS_avg": 6.8,
+  "1H_REB_avg": 2.1714285714285713,
+  "1H_AST_avg": 1.7428571428571429,
+  "FULL_PTS_avg": 14.2,
+  "FULL_REB_avg": 3.72,
+  "FULL_AST_avg": 2.92,
+  "1H_PTS_ratio": 0.47887323943661975,
+  "1Q_PTS_ratio": 0.2716297786720322,
+  "1H_REB_ratio": 0.5837173579109062,
+  "1Q_REB_ratio": 0.3225806451612903,
+  "1H_AST_ratio": 0.5968688845401174,
+  "1Q_AST_ratio": 0.37181996086105673
 }

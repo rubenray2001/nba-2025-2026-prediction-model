@@ -1,8 +1,25 @@
 {
   "player_name": "Jordan Clarkson",
   "player_id": 203903,
-  "games_collected": 32,
+  "games_collected": 33,
   "games_data": [
+    {
+      "game_id": "0022500757",
+      "player_id": 203903,
+      "player_name": "Jordan Clarkson",
+      "1Q_PTS": "0",
+      "1Q_REB": "1",
+      "1Q_AST": "1",
+      "1Q_MIN": "5:32",
+      "1H_PTS": "0",
+      "1H_REB": "1",
+      "1H_AST": "1",
+      "1H_MIN": "5:32",
+      "FULL_PTS": "0",
+      "FULL_REB": "2",
+      "FULL_AST": "1",
+      "FULL_MIN": "7:32"
+    },
     {
       "game_id": "0022500742",
       "player_id": 203903,
@@ -512,20 +529,20 @@
       "1H_MIN": "10:29"
     }
   ],
-  "last_updated": "2026-02-06T22:51:11.538040",
-  "1Q_PTS_avg": 2.1875,
-  "1Q_REB_avg": 0.3125,
-  "1Q_AST_avg": 0.21875,
-  "1H_PTS_avg": 5.21875,
-  "1H_REB_avg": 0.8125,
-  "1H_AST_avg": 0.5625,
-  "FULL_PTS_avg": 9.782608695652174,
-  "FULL_REB_avg": 1.7391304347826086,
-  "FULL_AST_avg": 1.3478260869565217,
-  "1H_PTS_ratio": 0.5334722222222222,
-  "1Q_PTS_ratio": 0.22361111111111112,
-  "1H_REB_ratio": 0.46718750000000003,
-  "1Q_REB_ratio": 0.1796875,
-  "1H_AST_ratio": 0.4173387096774194,
-  "1Q_AST_ratio": 0.1622983870967742
+  "last_updated": "2026-02-09T07:27:48.507484",
+  "1Q_PTS_avg": 2.121212121212121,
+  "1Q_REB_avg": 0.3333333333333333,
+  "1Q_AST_avg": 0.24242424242424243,
+  "1H_PTS_avg": 5.0606060606060606,
+  "1H_REB_avg": 0.8181818181818182,
+  "1H_AST_avg": 0.5757575757575758,
+  "FULL_PTS_avg": 9.375,
+  "FULL_REB_avg": 1.75,
+  "FULL_AST_avg": 1.3333333333333333,
+  "1H_PTS_ratio": 0.5397979797979798,
+  "1Q_PTS_ratio": 0.22626262626262625,
+  "1H_REB_ratio": 0.4675324675324676,
+  "1Q_REB_ratio": 0.19047619047619047,
+  "1H_AST_ratio": 0.4318181818181819,
+  "1Q_AST_ratio": 0.18181818181818182
 }

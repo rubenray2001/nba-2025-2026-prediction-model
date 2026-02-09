@@ -1,8 +1,25 @@
 {
   "player_name": "Immanuel Quickley",
   "player_id": 1630193,
-  "games_collected": 34,
+  "games_collected": 35,
   "games_data": [
+    {
+      "game_id": "0022500759",
+      "player_id": 1630193,
+      "player_name": "Immanuel Quickley",
+      "1Q_PTS": "0",
+      "1Q_REB": "3",
+      "1Q_AST": "1",
+      "1Q_MIN": "6:49",
+      "1H_PTS": "2",
+      "1H_REB": "4",
+      "1H_AST": "1",
+      "1H_MIN": "15:23",
+      "FULL_PTS": "13",
+      "FULL_REB": "4",
+      "FULL_AST": "6",
+      "FULL_MIN": "28:09"
+    },
     {
       "game_id": "0022500736",
       "player_id": 1630193,
@@ -542,20 +559,20 @@
       "1H_MIN": "15:36"
     }
   ],
-  "last_updated": "2026-02-06T22:32:53.937244",
-  "1Q_PTS_avg": 4.088235294117647,
-  "1Q_REB_avg": 1.0588235294117647,
-  "1Q_AST_avg": 1.4411764705882353,
-  "1H_PTS_avg": 7.970588235294118,
-  "1H_REB_avg": 2.1470588235294117,
-  "1H_AST_avg": 2.911764705882353,
-  "FULL_PTS_avg": 16.708333333333332,
+  "last_updated": "2026-02-09T07:09:15.857488",
+  "1Q_PTS_avg": 3.9714285714285715,
+  "1Q_REB_avg": 1.1142857142857143,
+  "1Q_AST_avg": 1.4285714285714286,
+  "1H_PTS_avg": 7.8,
+  "1H_REB_avg": 2.2,
+  "1H_AST_avg": 2.857142857142857,
+  "FULL_PTS_avg": 16.56,
   "FULL_REB_avg": 4.0,
   "FULL_AST_avg": 6.0,
-  "1H_PTS_ratio": 0.47704268739914923,
-  "1Q_PTS_ratio": 0.2446824116180138,
-  "1H_REB_ratio": 0.5367647058823529,
-  "1Q_REB_ratio": 0.2647058823529412,
-  "1H_AST_ratio": 0.4852941176470588,
-  "1Q_AST_ratio": 0.24019607843137256
+  "1H_PTS_ratio": 0.4710144927536232,
+  "1Q_PTS_ratio": 0.23982056590752246,
+  "1H_REB_ratio": 0.55,
+  "1Q_REB_ratio": 0.2785714285714286,
+  "1H_AST_ratio": 0.4761904761904762,
+  "1Q_AST_ratio": 0.2380952380952381
 }
